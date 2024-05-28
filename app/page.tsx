@@ -16,21 +16,23 @@ import { Button } from "@nextui-org/button";
 
 export default function Home() {
   return (
-    <Page
-      style={{
-        backgroundImage:
-          "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6065960015886eb52bbe65e1_Image_1.jpg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
-      }}
-      className="relative h-max"
-    >
-      <section className="flex w-full  my-auto h-[100vh] max-w-[1220px] mx-auto items-center justify-start gap-4 py-8 md:py-10">
-        <div className="flex flex-col w-1/2">
+    <Page className="relative h-max">
+      <Image
+        alt="banner"
+        width={500}
+        height={500}
+        className="w-full h-screen absolute top-0 left-0 "
+        src={
+          "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6065960015886eb52bbe65e1_Image_1.jpg"
+        }
+      />
+      <section className="flex w-full my-auto h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-start gap-4 py-8 md:py-10">
+        <div className="flex z-10 flex-col justify-center items-center md:items-start w-full md:w-1/2">
           <h1
             className={title({
               size: "sm",
-              className: "text-white text-left !text-xl md:!text-4xl ",
+              className:
+                "text-white text-center md:text-left !text-xl md:!text-4xl ",
             })}
           >
             Check out our services for your
@@ -72,39 +74,34 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <div
-        style={{
-          background: "linear-gradient(to bottom, lightblue, white)",
-        }}
-        className="relative h-max"
-      >
-        <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max max-w-[1220px] mx-auto items-center justify-around gap-4 py-8 md:py-10">
+      <div className="relative h-max">
+        <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
           <Image
             src={
-              "https://marksmanhealthcare.com/wp-content/uploads/2023/03/MM_-12.png"
+              "https://www.en.etemaaddaily.com/pages/world/hyderabad/1428aloeveracarrotmadman6.jpg"
             }
-            className="md:w-1/4 w-1/2"
+            className="w-1/2"
             width={500}
             height={500}
             alt="image"
           />
-          <div className="md:w-1/2 w-full">
-            <p className="font-semibold text-xl text-[#0078A1] mb-4">
+          <div className="md:w-1/2 px-[7%] w-full">
+            <p className="font-semibold text-2xl text-[#333091] mb-4">
               Our Company
             </p>
             <h2
               className={title({
                 size: "sm",
                 className:
-                  "text-gray-600 !font-normal text-center !text-2xl !leading-[35px] ",
+                  "text-gray-600  !font-normal text-center !text-xl !leading-[35px] ",
               })}
             >
-              <p className={title({ color: "cyan", className: "!text-2xl" })}>
+              <p className={title({ className: "!text-xl text-[#333091]" })}>
                 Novo Evidenza &nbsp;
               </p>
               is registered LLP and established in 2024, Co Founder of Novo
               Evidenza is{" "}
-              <p className={title({ color: "violet", className: "!text-2xl" })}>
+              <p className={title({ className: "!text-xl text-[#333091]" })}>
                 Dr. Kunal Maheswari
               </p>{" "}
               , the organization goal is to serve healthcare domain and help
@@ -112,6 +109,22 @@ export default function Home() {
               for HEOR services, Medical Writing, PV , Regulatory, Medical
               scribe.
             </h2>
+            <div>
+              <Button
+                isExternal
+                as={Link}
+                className={buttonStyles({
+                  color: "danger",
+                  radius: "full",
+                  variant: "shadow",
+                  className: "font-bold shadow-none mt-6 w-max ",
+                })}
+                href={siteConfig.links.sponsor}
+                variant="flat"
+              >
+                Let's Connect
+              </Button>
+            </div>
           </div>
         </section>
       </div>

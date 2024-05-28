@@ -3,7 +3,10 @@ const nextConfig = {
     images:{
         remotePatterns: [
             {
-                hostname:'marksmanhealthcare.com'
+                hostname:'www.en.etemaaddaily.com'
+            },
+            {
+                hostname: 'uploads-ssl.webflow.com'
             }
         ]
     }
