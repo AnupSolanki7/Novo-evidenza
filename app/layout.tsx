@@ -38,13 +38,13 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontPoppins.className,
+          fontPoppins.className
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col">
             <Navbar />
-              {children}
+            {children}
             <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal

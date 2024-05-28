@@ -1,15 +1,11 @@
 "use client";
 
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
-import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import { TypeAnimation } from "react-type-animation";
 
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { title } from "@/components/primitives";
 import Page from "@/components/page";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
@@ -70,7 +66,7 @@ export default function Home() {
             href={siteConfig.links.sponsor}
             variant="flat"
           >
-            Let's Connect
+            Let&apos;s Connect
           </Button>
         </div>
       </section>
@@ -122,7 +118,7 @@ export default function Home() {
                 href={siteConfig.links.sponsor}
                 variant="flat"
               >
-                Let's Connect
+                Let&apos;s Connect
               </Button>
             </div>
           </div>

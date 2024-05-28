@@ -17,7 +17,6 @@ import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { SearchIcon } from "@/components/icons";
 import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import { MENU_LIST } from "@/utils/Constant";
 import { usePathname } from "next/navigation";
