@@ -13,7 +13,7 @@ const Page = ({
   return (
     <div
       style={style}
-      className={clsx("px-6 gap-4 w-full  max-w-full", className)}
+      className={clsx("gap-4 w-full  max-w-full", className)}
     >
       {children}
     </div>

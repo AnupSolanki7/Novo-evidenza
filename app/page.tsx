@@ -1,67 +1,74 @@
+"use client";
+
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import Logo from "../public/image_novo_evidenza-removebg-preview.png";
+import { TypeAnimation } from "react-type-animation";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import Page from "@/components/page";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 
 export default function Home() {
   return (
-    <>
-      <Page
-        style={{
-          backgroundImage:
-            "url(https://mtechaccess.co.uk/wp-content/uploads/2021/07/iStock-926462276-scaled.jpg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        className="relative h-max"
-      >
-        <div className="absolute inset-0 bg-red-400 opacity-50 pointer-events-none"></div>
-        <section className="flex  my-auto h-max max-w-[1220px] mx-auto items-center justify-center gap-4 py-8 md:py-10">
-          <Image
-            src={Logo}
-            alt="logo"
-            width={500}
-            height={500}
-            className="w-1/3 z-10"
+    <Page
+      style={{
+        backgroundImage:
+          "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6065960015886eb52bbe65e1_Image_1.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+      }}
+      className="relative h-max"
+    >
+      <section className="flex flex-col w-full  my-auto h-[100vh] max-w-[1220px] mx-auto items-center justify-start gap-4 py-8 md:py-10">
+        <h1
+          className={title({
+            size: "sm",
+            className: "text-white text-left !text-xl md:!text-4xl w-1/2",
+          })}
+        >
+          Check out our services for your
+          <TypeAnimation
+            // Same String at the start will only be typed once, initially
+            className={"data-rotate-text !text-xl md:!text-4xl text-yellow-600 "}
+            sequence={[
+              " HEOR solutions",
+              1000,
+              " PV",
+              1000,
+              " Regulatory",
+              1000,
+              " Medical Writing",
+              1000,
+            ]}
+            speed={50} // Custom Speed from 1-99 - Default Speed: 40
+            style={{ fontSize: "50px" }}
+            wrapper="p" // Animation will be rendered as a <span>
+            repeat={Infinity} // Repeat this Animation Sequence infinitely
           />
-        </section>
-      </Page>
-      <Page className="relative h-max">
-        <section className="flex my-auto mb-[100px] h-max max-w-[1220px] mx-auto items-center justify-center gap-4 py-8 md:py-10">
-          <h1
-            className={title({
-              size: "sm",
-              className: "text-gray-600 text-center !text-xl md:!text-4xl ",
+          , we have a team of experts in these domains
+        </h1>
+        <Button
+            isExternal
+            as={Link}
+            className={buttonStyles({
+              color: "warning",
+              radius: "full",
+              variant: "shadow",
+              className:"font-semibold"
             })}
+            href={siteConfig.links.sponsor}
+            variant="flat"
           >
-            Check out our services for your{" "}
-            <p className={title({ color: "blue", className:"!text-xl md:!text-4xl"})}>
-              HEOR solutions &nbsp;
-            </p>{" "}
-            / <p className={title({ color: "blue", className:"!text-xl md:!text-4xl"})}>PV &nbsp;</p>/ &nbsp;
-            <p className={title({ color: "blue", className:"!text-xl md:!text-4xl"})}>
-              Regulatory &nbsp;
-            </p>
-            /{" "}
-            <p className={title({ color: "blue", className:"!text-xl md:!text-4xl"})}>
-              Medical Writing &nbsp;
-            </p>{" "}
-            /{" "}
-            <p className={title({ color: "blue", className:"!text-xl md:!text-4xl"})}>
-              Medical Scribe &nbsp;
-            </p>
-            , we have a team of experts in these domains
-          </h1>
-        </section>
-      </Page>
-      <Page
+            Let's Connect
+          </Button>
+      </section>
+      <div
         style={{
           background: "linear-gradient(to bottom, lightblue, white)",
         }}
@@ -103,7 +110,7 @@ export default function Home() {
             </h2>
           </div>
         </section>
-      </Page>
-    </>
+      </div>
+    </Page>
   );
 }

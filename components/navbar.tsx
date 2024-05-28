@@ -18,21 +18,52 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
-import Logo from "../public/image_novo_evidenza-removebg-preview.png"
+import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import { MENU_LIST } from "@/utils/Constant";
 import { usePathname } from "next/navigation";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
 
 export const Navbar = () => {
   const path = usePathname();
+  const [y, setY] = useState(typeof window !== "undefined" ? window?.scrollY : 0);
+
+
+  const handleNavigation = useCallback(
+    (e: { currentTarget: any; }) => { 
+      const window = e.currentTarget;
+      setY(window?.scrollY);
+    },
+    [y]
+  );
+
+  useEffect(() => {
+    setY(window?.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
 
   return (
-    <NextUINavbar maxWidth="full" className="py-2" shouldHideOnScroll position="sticky">
+    <NextUINavbar
+      maxWidth="full"
+      isBlurred={false}
+      className={clsx("py-2 fixed transition-all ease-in-out bg-[#333091]", y> 0 && ' shadow-lg ' ,y === 0 && "transition-all ease-in-out bg-transparent")}
+      position="sticky"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Image src={Logo} alt="logo" width={150} height={180} />
+            <Image
+              className="mix-blend-color-dodge"
+              src={Logo}
+              alt="logo"
+              width={150}
+              height={180}
+            />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -47,7 +78,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-extrabold"
+                  "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
                 )}
                 color="foreground"
                 href={item.slug}
@@ -58,16 +89,17 @@ export const Navbar = () => {
           ))}
         </ul>
         <NavbarItem className="hidden sm:flex gap-2">
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
-          <Button 
+          <Button
             isExternal
             as={Link}
             className={buttonStyles({
-              color: "primary",
+              color: "warning",
               radius: "full",
               variant: "shadow",
+              className:"font-semibold"
             })}
             href={siteConfig.links.sponsor}
             variant="flat"
