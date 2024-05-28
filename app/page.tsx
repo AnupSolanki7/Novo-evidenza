@@ -25,48 +25,52 @@ export default function Home() {
       }}
       className="relative h-max"
     >
-      <section className="flex flex-col w-full  my-auto h-[100vh] max-w-[1220px] mx-auto items-center justify-start gap-4 py-8 md:py-10">
-        <h1
-          className={title({
-            size: "sm",
-            className: "text-white text-left !text-xl md:!text-4xl w-1/2",
-          })}
-        >
-          Check out our services for your
-          <TypeAnimation
-            // Same String at the start will only be typed once, initially
-            className={"data-rotate-text !text-xl md:!text-4xl text-yellow-600 "}
-            sequence={[
-              " HEOR solutions",
-              1000,
-              " PV",
-              1000,
-              " Regulatory",
-              1000,
-              " Medical Writing",
-              1000,
-            ]}
-            speed={50} // Custom Speed from 1-99 - Default Speed: 40
-            style={{ fontSize: "50px" }}
-            wrapper="p" // Animation will be rendered as a <span>
-            repeat={Infinity} // Repeat this Animation Sequence infinitely
-          />
-          , we have a team of experts in these domains
-        </h1>
-        <Button
+      <section className="flex w-full  my-auto h-[100vh] max-w-[1220px] mx-auto items-center justify-start gap-4 py-8 md:py-10">
+        <div className="flex flex-col w-1/2">
+          <h1
+            className={title({
+              size: "sm",
+              className: "text-white text-left !text-xl md:!text-4xl ",
+            })}
+          >
+            Check out our services for your
+            <TypeAnimation
+              // Same String at the start will only be typed once, initially
+              className={
+                "data-rotate-text !text-xl md:!text-4xl text-yellow-600 "
+              }
+              sequence={[
+                " HEOR solutions",
+                1000,
+                " PV",
+                1000,
+                " Regulatory",
+                1000,
+                " Medical Writing",
+                1000,
+              ]}
+              speed={50} // Custom Speed from 1-99 - Default Speed: 40
+              style={{ fontSize: "50px" }}
+              wrapper="p" // Animation will be rendered as a <span>
+              repeat={Infinity} // Repeat this Animation Sequence infinitely
+            />
+            , we have a team of experts in these domains
+          </h1>
+          <Button
             isExternal
             as={Link}
             className={buttonStyles({
-              color: "warning",
+              color: "danger",
               radius: "full",
               variant: "shadow",
-              className:"font-semibold"
+              className: "font-bold shadow-none mt-6 w-max ",
             })}
             href={siteConfig.links.sponsor}
             variant="flat"
           >
             Let's Connect
           </Button>
+        </div>
       </section>
       <div
         style={{

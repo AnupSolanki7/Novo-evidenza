@@ -96,10 +96,10 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className={buttonStyles({
-              color: "warning",
+              color: "danger",
               radius: "full",
               variant: "shadow",
-              className:"font-semibold"
+              className:"font-bold shadow-none"
             })}
             href={siteConfig.links.sponsor}
             variant="flat"
