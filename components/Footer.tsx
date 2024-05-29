@@ -114,7 +114,7 @@ const Footer = () => {
       </div>
       <div className="border-t-2 text-white w-full text-sm mt-6">
         <div className="flex w-full justify-between px-6 my-4" >
-        <p>copyright Bring On Monday 2021. All rights reserved.</p>
+        <p>copyright Novo Evidenza 2024. All rights reserved.</p>
         <p>Crafted by Anup</p>
         </div>
       </div>
