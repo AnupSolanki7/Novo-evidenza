@@ -16,7 +16,7 @@ import clsx from "clsx";
 import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
+
 import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import { MENU_LIST } from "@/utils/Constant";
 import { usePathname } from "next/navigation";
@@ -26,11 +26,12 @@ import { useCallback, useEffect, useState } from "react";
 
 export const Navbar = () => {
   const path = usePathname();
-  const [y, setY] = useState(typeof window !== "undefined" ? window?.scrollY : 0);
-
+  const [y, setY] = useState(
+    typeof window !== "undefined" ? window?.scrollY : 0
+  );
 
   const handleNavigation = useCallback(
-    (e: { currentTarget: any; }) => { 
+    (e: { currentTarget: any }) => {
       const window = e.currentTarget;
       setY(window?.scrollY);
     },
@@ -50,7 +51,11 @@ export const Navbar = () => {
     <NextUINavbar
       maxWidth="full"
       isBlurred={false}
-      className={clsx("py-2 fixed transition-all ease-in-out bg-[#333091]", y> 0 && ' shadow-lg ' ,y === 0 && "transition-all ease-in-out bg-transparent")}
+      className={clsx(
+        "py-2 fixed transition-all ease-in-out bg-[#333091]",
+        y > 0 && " shadow-lg ",
+        y === 0 && path === "/" && "transition-all ease-in-out bg-transparent"
+      )}
       position="sticky"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -87,9 +92,7 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        <NavbarItem className="hidden sm:flex gap-2">
-          {/* <ThemeSwitch /> */}
-        </NavbarItem>
+        <NavbarItem className="hidden sm:flex gap-2"></NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
             isExternal
@@ -98,7 +101,7 @@ export const Navbar = () => {
               color: "danger",
               radius: "full",
               variant: "shadow",
-              className:"font-bold shadow-none"
+              className: "font-bold shadow-none",
             })}
             href={siteConfig.links.sponsor}
             variant="flat"
@@ -109,7 +112,6 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <ThemeSwitch />
         <NavbarMenuToggle className="" />
       </NavbarContent>
 
