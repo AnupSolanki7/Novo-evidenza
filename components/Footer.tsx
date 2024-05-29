@@ -43,19 +43,19 @@ const Footer = () => {
           </span>
         </div>
         <div className=" w-full md:w-1/3  justify-start items-start md:items-center flex flex-col gap-4 ">
+          <span className="flex flex-col gap-2">
           <span className="border-b-2 text-white font-semibold ">
             <p>Quick Links</p>
           </span>
-          <span className=" flex  flex-col gap-2">
             <Link
               className={clsx(
                 linkStyles({ color: "foreground" }),
                 "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"contact-us"}
+              href={"about-us"}
             >
-              Contact Us
+              About us
             </Link>
             <Link
               className={clsx(
@@ -63,9 +63,9 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"contact-us"}
+              href={"services"}
             >
-              Career
+              Our services
             </Link>
             <Link
               className={clsx(
@@ -73,9 +73,9 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"contact-us"}
+              href={"ra"}
             >
-              Services
+              RA
             </Link>
             <Link
               className={clsx(
@@ -83,7 +83,17 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"contact-us"}
+              href={"medical-writing"}
+            >
+              Medical Writing
+            </Link>
+            <Link
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+              )}
+              color="foreground"
+              href={"heor"}
             >
               HEOR
             </Link>

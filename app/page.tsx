@@ -94,8 +94,8 @@ export default function Home() {
             height={500}
             alt="image"
           />
-          <div className="md:w-1/2 px-[7%] w-full">
-            <p className="font-semibold text-2xl text-[#333091] mb-4">
+          <div className="md:w-1/2 my-8 px-[7%] w-full">
+            <p className="font-bold text-2xl text-[#333091] mb-4">
               Our Company
             </p>
             <h2
@@ -111,6 +111,116 @@ export default function Home() {
               is registered LLP and established in 2024, Co Founder of Novo
               Evidenza is{" "}
               <p className={title({ className: "!text-xl text-[#333091]" })}>
+                Dr. Kunal Maheswari
+              </p>{" "}
+              , the organization goal is to serve healthcare domain and help
+              pharmaceutical, biotechnology, research organization, Institute
+              for HEOR services, Medical Writing, PV , Regulatory, Medical
+              scribe.
+            </h2>
+            <div>
+              <Button
+                isExternal
+                as={Link}
+                className={buttonStyles({
+                  color: "danger",
+                  radius: "full",
+                  variant: "shadow",
+                  className: "font-bold shadow-none mt-6 w-max ",
+                })}
+                href={siteConfig.links.sponsor}
+                variant="flat"
+              >
+                Let&apos;s Connect
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className="flex bg-danger-500 h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4">
+          <Image
+            src={
+              "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
+            }
+            alt="banner-item"
+            width={1000}
+            height={1000}
+            quality={100}
+            className="w-[20%]"
+          />
+          <div className="md:w-1/2 my-8 w-full">
+            <p className="font-bold text-2xl text-white mb-4">Our Company</p>
+            <h2
+              className={title({
+                size: "sm",
+                className:
+                  "text-white  !font-normal text-center !text-xl !leading-[35px] ",
+              })}
+            >
+              <p className={title({ className: "!text-xl text-white" })}>
+                Novo Evidenza &nbsp;
+              </p>
+              is registered LLP and established in 2024, Co Founder of Novo
+              Evidenza is{" "}
+              <p className={title({ className: "!text-xl text-white" })}>
+                Dr. Kunal Maheswari
+              </p>{" "}
+              , the organization goal is to serve healthcare domain and help
+              pharmaceutical, biotechnology, research organization, Institute
+              for HEOR services, Medical Writing, PV , Regulatory, Medical
+              scribe.
+            </h2>
+            <div>
+              <Button
+                isExternal
+                as={Link}
+                className={buttonStyles({
+                  color: "danger",
+                  radius: "full",
+                  variant: "shadow",
+                  className: "font-bold shadow-none mt-6 w-max ",
+                })}
+                href={siteConfig.links.sponsor}
+                variant="flat"
+              >
+                Let&apos;s Connect
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section
+          style={{
+            backgroundImage:
+              "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6066a36d593d3ecd83e3efe1_2-layers.jpg)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className="flex h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4"
+        >
+          <Image
+            src={
+              "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
+            }
+            alt="banner-item"
+            width={1000}
+            height={1000}
+            quality={100}
+            className="w-[20%]"
+          />
+          <div className="md:w-1/2 my-8 w-full">
+            <p className="font-bold text-2xl text-white mb-4">Our Company</p>
+            <h2
+              className={title({
+                size: "sm",
+                className:
+                  "text-white  !font-normal text-center !text-xl !leading-[35px] ",
+              })}
+            >
+              <p className={title({ className: "!text-xl text-white" })}>
+                Novo Evidenza &nbsp;
+              </p>
+              is registered LLP and established in 2024, Co Founder of Novo
+              Evidenza is{" "}
+              <p className={title({ className: "!text-xl text-white" })}>
                 Dr. Kunal Maheswari
               </p>{" "}
               , the organization goal is to serve healthcare domain and help
