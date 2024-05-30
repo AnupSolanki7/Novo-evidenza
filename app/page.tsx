@@ -105,7 +105,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-gray-600  !font-normal text-center !text-xl !leading-[35px] ",
+                  "text-gray-600  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-[#333091]" })}>
@@ -157,7 +157,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-white  !font-normal text-center !text-xl !leading-[35px] ",
+                  "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-white" })}>
@@ -216,7 +216,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-white  !font-normal text-center !text-xl !leading-[35px] ",
+                  "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-white" })}>
@@ -276,7 +276,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-white  !font-normal text-center !text-xl !leading-[35px] ",
+                  "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-white" })}>
@@ -329,7 +329,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-[#333091]  !font-normal text-center !text-xl !leading-[35px] ",
+                  "text-[#333091]  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-[#333091]" })}>

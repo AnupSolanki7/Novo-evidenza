@@ -53,7 +53,7 @@ export const Navbar = () => {
       maxWidth="full"
       isBlurred={false}
       className={clsx(
-        "py-2 fixed transition-all ease-in-out bg-[#333091]",
+        "py-2 fixed transition-all h-[100px] ease-in-out bg-[#333091]",
         y > 0 && " shadow-lg ",
         y === 0 && path === "/" && "transition-all ease-in-out bg-transparent"
       )}
@@ -96,7 +96,6 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2"></NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
-            isExternal
             as={Link}
             className={buttonStyles({
               color: "danger",
@@ -104,10 +103,10 @@ export const Navbar = () => {
               variant: "shadow",
               className: "font-bold shadow-none",
             })}
-            href={siteConfig.links.sponsor}
+            href={"about"}
             variant="flat"
           >
-            Contact Us
+            About Us
           </Button>
         </NavbarItem>
       </NavbarContent>
