@@ -54,6 +54,7 @@ export default function AboutPage() {
             loading="lazy"
             className="border-0 h-[200px] w-full mb-8"
             referrerPolicy="no-referrer-when-downgrade"
+            title="address"
           ></iframe>
         </div>
 
