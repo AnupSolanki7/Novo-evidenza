@@ -15,13 +15,11 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { button as buttonStyles } from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
-
-import Logo from "../public/image_novo_evidenza-removebg-preview.png";
+// import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import { MENU_LIST } from "@/utils/Constant";
 import { usePathname } from "next/navigation";
 import { Button } from "@nextui-org/button";
-import Image from "next/image";
+// import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { title } from "./primitives";
 
@@ -62,13 +60,20 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Image
+            {/* <Image
               className="mix-blend-color-dodge"
               src={Logo}
               alt="logo"
               width={150}
               height={180}
-            />
+            /> */}
+            <h2
+              className={title({
+                className: "text-white text-2xl ",
+              })}
+            >
+              NOVO EVIDENZA
+            </h2>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -117,7 +122,7 @@ export const Navbar = () => {
 
       <NavbarMenu className="bg-[#333091]">
         <div className="mx-4 justify-between pb-8 h-full mt-8 flex flex-col gap-2">
-          <div className="flex flex-col gap-3" >
+          <div className="flex flex-col gap-3">
             {MENU_LIST.map((item, index) => (
               <NavbarMenuItem key={item.id}>
                 <Link
@@ -129,6 +134,21 @@ export const Navbar = () => {
                 </Link>
               </NavbarMenuItem>
             ))}
+            <Button
+              isExternal
+              as={Link}
+              className={buttonStyles({
+                radius: "full",
+                variant: "shadow",
+                color:"danger",
+                className:
+                  "font-bold text-white shadow-none mt-6 w-max ",
+              })}
+              href={"/contact"}
+              variant="flat"
+            >
+              About us
+            </Button>
           </div>
           <div className="mx-auto w-full">
             {/* <Image
@@ -138,7 +158,9 @@ export const Navbar = () => {
               width={150}
               height={180}
             /> */}
-            <h2 className={title({ className: "text-white text-center w-full " })}>
+            <h2
+              className={title({ className: "text-white text-center w-full " })}
+            >
               NOVO EVIDENZA
             </h2>
             <div className="border-t-2 text-white w-full text-sm ">

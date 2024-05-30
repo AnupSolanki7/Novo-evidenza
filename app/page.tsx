@@ -65,7 +65,7 @@ export default function Home() {
               variant: "shadow",
               className: "font-bold shadow-none mt-6 w-max ",
             })}
-            href={siteConfig.links.sponsor}
+            href={"/contact"}
             variant="flat"
           >
             Let&apos;s Connect
@@ -131,7 +131,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none mt-6 w-max ",
                 })}
-                href={siteConfig.links.sponsor}
+                href={"/contact"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -182,7 +182,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold bg-[#333091] text-white shadow-none mt-6 w-max ",
                 })}
-                href={siteConfig.links.sponsor}
+                href={"/contact"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -242,7 +242,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none mt-6 w-max ",
                 })}
-                href={siteConfig.links.sponsor}
+                href={"/contact"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -301,7 +301,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold bg-[#333091] text-white shadow-none mt-6 w-max ",
                 })}
-                href={siteConfig.links.sponsor}
+                href={"/contact"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -355,7 +355,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none mt-6 w-max ",
                 })}
-                href={siteConfig.links.sponsor}
+                href={"/contact"}
                 variant="flat"
               >
                 Let&apos;s Connect
