@@ -135,7 +135,6 @@ export const Navbar = () => {
               </NavbarMenuItem>
             ))}
             <Button
-              isExternal
               as={Link}
               className={buttonStyles({
                 radius: "full",
@@ -144,7 +143,7 @@ export const Navbar = () => {
                 className:
                   "font-bold text-white shadow-none mt-6 w-max ",
               })}
-              href={"/contact"}
+              href={"/about"}
               variant="flat"
             >
               About us
