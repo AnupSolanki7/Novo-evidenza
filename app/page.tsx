@@ -57,7 +57,6 @@ export default function Home() {
             , we have a team of experts in these domains
           </h1>
           <Button
-            isExternal
             as={Link}
             className={buttonStyles({
               color: "danger",
@@ -65,7 +64,7 @@ export default function Home() {
               variant: "shadow",
               className: "font-bold shadow-none mt-6 w-max ",
             })}
-            href={"/contact"}
+            href={"/about"}
             variant="flat"
           >
             Let&apos;s Connect
@@ -123,7 +122,7 @@ export default function Home() {
             </h2>
             <div>
               <Button
-                isExternal
+  
                 as={Link}
                 className={buttonStyles({
                   color: "danger",
@@ -131,7 +130,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none mt-6 w-max ",
                 })}
-                href={"/contact"}
+                href={"/about"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -175,14 +174,14 @@ export default function Home() {
             </h2>
             <div>
               <Button
-                isExternal
+  
                 as={Link}
                 className={buttonStyles({
                   radius: "full",
                   variant: "shadow",
                   className: "font-bold bg-[#333091] text-white shadow-none mt-6 w-max ",
                 })}
-                href={"/contact"}
+                href={"/about"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -234,7 +233,7 @@ export default function Home() {
             </h2>
             <div>
               <Button
-                isExternal
+  
                 as={Link}
                 className={buttonStyles({
                   color: "danger",
@@ -242,7 +241,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none mt-6 w-max ",
                 })}
-                href={"/contact"}
+                href={"/about"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -294,14 +293,14 @@ export default function Home() {
             </h2>
             <div>
               <Button
-                isExternal
+  
                 as={Link}
                 className={buttonStyles({
                   radius: "full",
                   variant: "shadow",
                   className: "font-bold bg-[#333091] text-white shadow-none mt-6 w-max ",
                 })}
-                href={"/contact"}
+                href={"/about"}
                 variant="flat"
               >
                 Let&apos;s Connect
@@ -347,7 +346,7 @@ export default function Home() {
             </h2>
             <div>
               <Button
-                isExternal
+  
                 as={Link}
                 className={buttonStyles({
                   color: "danger",
@@ -355,7 +354,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none mt-6 w-max ",
                 })}
-                href={"/contact"}
+                href={"/about"}
                 variant="flat"
               >
                 Let&apos;s Connect
