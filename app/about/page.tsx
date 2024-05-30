@@ -1,20 +1,94 @@
+"use client";
+
 import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import {Input, Textarea} from "@nextui-org/input";
+import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { siteConfig } from "@/config/site";
+import { useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function AboutPage() {
+  const formRef: any = useRef(null);
+  const [loader, setLoader] = useState(false);
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    phone: false,
+    message: false,
+  });
+
+  const onChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+    setErrors({ ...errors, [name]: false });
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      name: !values.name.length,
+      email:
+        !values.email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(values.email),
+      phone: !values.phone || !/^\d{10}$/.test(values.phone),
+      message: !values.message.length,
+    };
+    setErrors(newErrors);
+    return !Object.values(newErrors).some((error) => error);
+  };
+
+  const handleSubmit = async (event: any) => {
+    setLoader(true);
+    event.preventDefault();
+    if (!validateForm()) {
+      setLoader(false);
+      return;
+    }
+
+    const formData = new FormData(event.target);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "post",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`response status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      toast.success(
+        "Thank you for your enquiry, we will get back to you shortly!"
+      );
+      setValues({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      setLoader(false);
+    } catch (err) {
+      setLoader(false);
+      toast.error("Error, please try resubmitting the form");
+    }
+  };
+
   return (
     <Page className="relative h-max md:h-screen">
       <section className="flex flex-col md:flex-row my-auto h-full mx-auto items-center justify-around gap-4">
         <div className="w-full md:w-1/2 flex flex-col px-[7%] justify-start pt-[150px] md:pt-[180px] items-center h-full">
           <div className="w-full flex flex-col">
             <p className="font-bold text-3xl text-[#333091] mb-4 md:mb-8 ">
-            Send Us Your Enquiry
+              Send Us Your Enquiry
             </p>
             <p className="font-bold text-left w-full text-sm text-[#333091] mb-4 md:mb-8 ">
               {" "}
@@ -59,29 +133,98 @@ export default function AboutPage() {
         </div>
 
         <div className="contact px-[7%] pt-[7%] md:pt-[180px] w-full md:w-1/2 h-full">
-        <h2 className={title({className:"text-white"})} >GET IN TOUCH!</h2>
-        <form action="" className="py-[7%] flex flex-col justify-start items-center gap-6">
-          <Input placeholder="Enter your name" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Name" />
-          <Input placeholder="Enter your email" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Email" />
-          <Input placeholder="Enter your phone" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Phone" />
-          <Textarea placeholder="Enter your message" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Message" />
-          <div className="w-full justify-start items-center flex" >
-
-          <Button
-                isExternal
-                as={Link}
+          <h2 className={title({ className: "text-white" })}>GET IN TOUCH!</h2>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="py-[7%] flex flex-col justify-start items-center gap-6"
+          >
+            <Input
+              onChange={onChange}
+              type="text"
+              name="name"
+              className="input"
+              placeholder="Enter your name"
+              radius="none"
+              labelPlacement="outside"
+              classNames={{
+                label: "!text-white font-semibold",
+                helperWrapper: "absolute bottom-[-50%] font-semibold",
+              }}
+              value={values.name}
+              label="Name"
+              isInvalid={errors.name}
+              errorMessage={errors.name ? "Name is required" : ""}
+            />
+            <Input
+              type="email"
+              name="email"
+              onChange={onChange}
+              placeholder="Enter your email"
+              radius="none"
+              value={values.email}
+              labelPlacement="outside"
+              classNames={{
+                label: "!text-white font-semibold",
+                helperWrapper: "absolute bottom-[-50%] font-semibold",
+              }}
+              label="Email"
+              isInvalid={errors.email}
+              errorMessage={errors.email ? "Valid email is required" : ""}
+            />
+            <Input
+              type="number"
+              name="phone"
+              onChange={onChange}
+              placeholder="Enter your phone"
+              radius="none"
+              value={values.phone}
+              labelPlacement="outside"
+              classNames={{
+                label: "!text-white font-semibold",
+                helperWrapper: "absolute bottom-[-50%] font-semibold",
+              }}
+              label="Phone"
+              isInvalid={errors.phone}
+              errorMessage={
+                errors.phone ? "Valid phone number is required" : ""
+              }
+            />
+            <div className="w-full relative">
+              <Textarea
+                type="text"
+                name="message"
+                onChange={onChange}
+                placeholder="Enter your message"
+                radius="none"
+                value={values.message}
+                labelPlacement="outside"
+                classNames={{
+                  label: "!text-white font-semibold",
+                  helperWrapper: "absolute bottom-[-20%] font-semibold",
+                  mainWrapper: "relative",
+                }}
+                label="Message"
+                isInvalid={errors.message}
+                errorMessage={errors.message ? "Message is required" : ""}
+              />
+            </div>
+            <div className="w-full justify-start items-center flex">
+              <Button
+                isLoading={loader}
                 className={buttonStyles({
                   radius: "full",
                   variant: "shadow",
-                  className: "font-bold bg-[#333091] text-white shadow-none w-max ",
+                  className:
+                    "font-bold bg-[#333091] text-white shadow-none w-max ",
                 })}
-                href={siteConfig.links.sponsor}
                 variant="flat"
+                type="submit"
               >
                 Send
               </Button>
-          </div>
-        </form>
+            </div>
+          </form>
         </div>
       </section>
     </Page>
