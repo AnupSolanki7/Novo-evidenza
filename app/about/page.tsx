@@ -1,16 +1,20 @@
 import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
+import { button as buttonStyles } from "@nextui-org/theme";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import {Input, Textarea} from "@nextui-org/input";
+import { Button } from "@nextui-org/button";
+import { siteConfig } from "@/config/site";
 
 export default function AboutPage() {
   return (
-    <Page className="relative h-screen">
+    <Page className="relative h-max md:h-screen">
       <section className="flex flex-col md:flex-row my-auto h-full mx-auto items-center justify-around gap-4">
         <div className="w-full md:w-1/2 flex flex-col px-[7%] justify-start pt-[150px] md:pt-[180px] items-center h-full">
           <div className="w-full flex flex-col">
             <p className="font-bold text-3xl text-[#333091] mb-4 md:mb-8 ">
-              The first step towards stress-free small business accounting
+            Send Us Your Enquiry
             </p>
             <p className="font-bold text-left w-full text-sm text-[#333091] mb-4 md:mb-8 ">
               {" "}
@@ -53,7 +57,31 @@ export default function AboutPage() {
           ></iframe>
         </div>
 
-        <div className="contact w-full md:w-1/2 h-full"></div>
+        <div className="contact px-[7%] pt-[7%] md:pt-[180px] w-full md:w-1/2 h-full">
+        <h2 className={title({className:"text-white"})} >GET IN TOUCH!</h2>
+        <form action="" className="py-[7%] flex flex-col justify-start items-center gap-6">
+          <Input placeholder="Enter your name" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Name" />
+          <Input placeholder="Enter your email" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Email" />
+          <Input placeholder="Enter your phone" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Phone" />
+          <Textarea placeholder="Enter your message" radius="none" labelPlacement="outside" classNames={{label:"!text-white font-semibold"}} label="Message" />
+          <div className="w-full justify-start items-center flex" >
+
+          <Button
+                isExternal
+                as={Link}
+                className={buttonStyles({
+                  radius: "full",
+                  variant: "shadow",
+                  className: "font-bold bg-[#333091] text-white shadow-none w-max ",
+                })}
+                href={siteConfig.links.sponsor}
+                variant="flat"
+              >
+                Send
+              </Button>
+          </div>
+        </form>
+        </div>
       </section>
     </Page>
   );
