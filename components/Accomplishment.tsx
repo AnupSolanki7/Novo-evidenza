@@ -4,20 +4,7 @@ import { title } from "./primitives";
 import { ACHEIVEMENTS, SERVICES } from "@/utils/Constant";
 import MotionCard from "./MotionCard";
 import clsx from "clsx";
-
-const CardItem = ({ item }: { item: any }) => {
-  return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-2 md:gap-4">
-      <span className="w-full flex justify-center items-center md:w-[20%] [&>*]:fill-white [&>*]:[&>*]:fill-white ">
-        <item.icon />
-      </span>
-      <div className=" flex justify-center items-center w-full md:w-[80%] flex-col ">
-        <p className="text-4xl font-bold">{item.number}</p>
-        <p className="whitespace-nowrap">{item.title}</p>
-      </div>
-    </div>
-  );
-};
+import CardItem from "./AccItemCard";
 
 const Accomplishment = () => {
   return (

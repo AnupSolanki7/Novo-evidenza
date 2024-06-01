@@ -69,22 +69,22 @@ export const SERVICES = [
 export const ACHEIVEMENTS = [
   {
     icon: Achieve1,
-    number: "200+",
+    number: 2000,
     title: "Project Deliverables",
   },
   {
     icon: Achieve2,
-    number: "200+",
+    number: 2000,
     title: "Project Deliverables",
   },
   {
     icon: Achieve3,
-    number: "200+",
+    number: 2000,
     title: "Project Deliverables",
   },
   {
     icon: Achieve4,
-    number: "200+",
+    number: 2000,
     title: "Project Deliverables",
   },
 ];

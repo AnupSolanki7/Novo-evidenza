@@ -8,30 +8,47 @@ import clsx from "clsx";
 const MotionDiv = ({
   children,
   className,
+  initialOpacity = 0,
+  initialTranslateY = 150,
+  animateOpacity = 1,
+  animateTranslateY = 0,
+  transitionDuration = 1,
+  transitionEase = "easeOut",
+  triggerOnce = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  initialOpacity?: number;
+  initialTranslateY?: number;
+  animateOpacity?: number;
+  animateTranslateY?: number;
+  transitionDuration?: number;
+  transitionEase?: string;
+  triggerOnce?: boolean;
 }) => {
   const controls = useAnimation();
-  const { ref, inView }: any = useInView({ triggerOnce: false });
+  const { ref, inView }: any = useInView({ triggerOnce });
 
   useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, translateY: 0 });
+      controls.start({
+        opacity: animateOpacity,
+        translateY: animateTranslateY,
+      });
     } else {
       controls.start({
-        opacity: 0,
-        translateY: window.scrollY > ref.current?.offsetTop ? -100 : 100,
+        opacity: initialOpacity,
+        translateY: initialTranslateY,
       });
     }
-  }, [inView, controls, ref]);
+  }, [inView, controls, initialOpacity, initialTranslateY, animateOpacity, animateTranslateY]);
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, translateY: 150 }}
+      initial={{ opacity: initialOpacity, translateY: initialTranslateY }}
       animate={controls}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: transitionDuration, ease: transitionEase }}
       className={clsx(className)}
     >
       {children}
