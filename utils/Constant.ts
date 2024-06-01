@@ -12,7 +12,7 @@ export const MENU_LIST = [
   {
     id: "home",
     title: "HEOR",
-    slug: "/",
+    slug: "/heor",
   },
   {
     id: "medical",

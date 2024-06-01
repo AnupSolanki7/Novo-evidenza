@@ -106,7 +106,8 @@ export const Navbar = () => {
                 <NextLink
                   className={clsx(
                     linkStyles({ color: "foreground" }),
-                    "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+                    " text-white  ",
+                    path === item.slug && "text-primary border-b-1"
                   )}
                   color="foreground"
                   href={item.slug}
@@ -145,7 +146,7 @@ export const Navbar = () => {
             {MENU_LIST.map((item, index) => (
               <NavbarMenuItem key={item.id}>
                 <Link
-                  className="text-white underline "
+                  className="text-white underline"
                   href={item.slug}
                   size="lg"
                   onClick={() => setIsMenuOpen(false)}
