@@ -16,7 +16,7 @@ const CardItem = ({ item }: { item: any }) => {
 
   return (
     <div
-      className="flex flex-col md:flex-row justify-center items-start gap-2 md:gap-4"
+      className="flex flex-col md:flex-row justify-center items-center md:items-start gap-2 md:gap-4"
       ref={ref}
     >
       <span className="text-6xl flex justify-center items-center [&>*]:fill-white [&>*]:[&>*]:fill-white ">
