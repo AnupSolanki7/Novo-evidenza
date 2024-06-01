@@ -7,10 +7,14 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { siteConfig } from "@/config/site";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import MotionDiv from "@/components/MotionDiv";
+import MotionCard from "@/components/MotionCard";
+import { FOUNDERS } from "@/utils/Constant";
+import clsx from "clsx";
+import FounderCard from "@/components/FounderCard";
+
 
 export default function AboutPage() {
   const formRef: any = useRef(null);
@@ -84,9 +88,9 @@ export default function AboutPage() {
   };
 
   return (
-    <Page className="relative h-max md:h-screen">
-      <section className="flex flex-col md:flex-row my-auto h-full mx-auto items-center justify-around gap-4">
-        <div className="w-full md:w-1/2 flex flex-col px-[7%] justify-start pt-[150px] md:pt-[180px] items-center h-full">
+    <Page className="relative h-max ">
+      <section className="flex flex-col md:flex-row mt-[100px] h-full mx-auto items-center justify-around gap-4">
+        <div className="w-full md:w-1/2 flex flex-col pt-[20px] md:pt-0 px-[7%] justify-start items-center h-full">
           <MotionDiv initialTranslateY={50} className="w-full flex flex-col">
             <p className="font-bold text-3xl text-[#333091] mb-4 md:mb-8 ">
               Send Us Your Enquiry
@@ -133,7 +137,7 @@ export default function AboutPage() {
           ></iframe>
         </div>
 
-        <div className="contact px-[7%] pt-[7%] md:pt-[180px] w-full md:w-1/2 h-full">
+        <div className="contact px-[7%] pt-[80px] w-full md:w-1/2 h-full">
           <MotionDiv>
             <h2 className={title({ className: "text-white" })}>
               GET IN TOUCH!
@@ -228,6 +232,36 @@ export default function AboutPage() {
               </div>
             </MotionDiv>
           </form>
+        </div>
+      </section>
+      <section className="w-full about h-max md:h-[87vh] relative text-white">
+        <MotionDiv className="w-full sticky px-6 py-[50px] z-10 flex flex-col text-center justify-center items-center">
+          <h2
+            className={title({
+              size: "sm",
+              className:
+                "text-white mb-4 font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
+            })}
+          >
+            Meet your small business partners
+          </h2>
+          <p className="md:text-xl text-md text-white ">
+            We are , co-founders of{" "}
+            <p className={title({ className: "!text-[20px] text-[#333091]" })}>
+              Novo Evidenza
+            </p>{" "}
+            and united by our love and passion for using business as a force for
+            good
+          </p>
+        </MotionDiv>
+        <div className="px-6 grid sticky pt-6 py-12 grid-cols-1 sm:grid-cols-2  lg:grid-cols-2 gap-12 md:gap-4 justify-between h-max items-center max-w-[1220px] mx-auto">
+          {FOUNDERS.map((item, index) => (
+            <MotionCard
+              key={index}
+            >
+              <FounderCard item={item} />
+            </MotionCard>
+          ))}
         </div>
       </section>
     </Page>

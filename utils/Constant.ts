@@ -2,7 +2,7 @@ import ServiceIcon1 from "@/assets/icons/ServiceIcon1";
 import ServiceIcon2 from "@/assets/icons/ServiceIcon2";
 import { HiSpeakerphone } from "react-icons/hi";
 import ServiceIcon4 from "@/assets/icons/ServiceIcon4";
-import { subtitle } from "@/components/primitives";
+import Profile from "../assets/image/profile.png";
 import Achieve1 from "@/assets/icons/Achieve1";
 import Achieve2 from "@/assets/icons/Achieve2";
 import Achieve3 from "@/assets/icons/Achieve3";
@@ -68,23 +68,48 @@ export const SERVICES = [
 
 export const ACHEIVEMENTS = [
   {
-    icon: Achieve1,
-    number: 2000,
-    title: "Project Deliverables",
+    icon: Achieve3,
+    number: 64,
+    title: "Project Delivery",
   },
   {
     icon: Achieve2,
-    number: 2000,
-    title: "Project Deliverables",
+    number: 12,
+    title: "HTA Submissions",
   },
   {
-    icon: Achieve3,
-    number: 2000,
-    title: "Project Deliverables",
+    icon: Achieve1,
+    number: 3,
+    title: "Pharmacovigilance Project",
   },
   {
     icon: Achieve4,
-    number: 2000,
-    title: "Project Deliverables",
+    number: 58,
+    title: "CER for clients",
+  },
+  // {
+  //   icon: HiSpeakerphone,
+  //   number: 100,
+  //   title: "Conference Support",
+  // },
+  // {
+  //   icon: Achieve2,
+  //   number: 150,
+  //   title: "Publication Support",
+  // },
+];
+
+export const FOUNDERS = [
+  {
+    image: Profile,
+    name: "Kunal",
+    role: "Co-Founder",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ",
+  },
+  {
+    image: Profile,
+    name: "Kunal",
+    role: "Co-Founder",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ",
   },
 ];

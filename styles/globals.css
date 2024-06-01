@@ -7,3 +7,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.about{
+    background-image: url("../assets//image/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

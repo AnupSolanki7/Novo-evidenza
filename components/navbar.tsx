@@ -136,59 +136,57 @@ export const Navbar = () => {
         <NavbarMenuToggle className=" [&>span]:before:bg-white [&>span]:before:h-[2px] [&>span]:after:h-[1.5px] [&>span]:after:bg-white " />
       </NavbarContent>
 
-      <MotionDiv initialTranslateY={10} className="z-50">
-        <NavbarMenu className="bg-[#333091]">
-          <div className="mx-4 justify-between pb-8 h-full mt-8 flex flex-col gap-2">
-            <div className="flex flex-col gap-3">
-              {MENU_LIST.map((item, index) => (
-                <NavbarMenuItem key={item.id}>
-                  <Link
-                    className="text-white underline "
-                    href={item.slug}
-                    size="lg"
-                  >
-                    {item.title}
-                  </Link>
-                </NavbarMenuItem>
-              ))}
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  radius: "full",
-                  variant: "shadow",
-                  color: "danger",
-                  className: "font-bold text-white shadow-none mt-6 w-max ",
-                })}
-                href={"/about"}
-                variant="flat"
-              >
-                About us
-              </Button>
-            </div>
-            <div className="mx-auto w-full">
-              {/* <Image
+      <NavbarMenu className="bg-[#333091]">
+        <div className="mx-4 justify-between pb-8 h-full mt-8 flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
+            {MENU_LIST.map((item, index) => (
+              <NavbarMenuItem key={item.id}>
+                <Link
+                  className="text-white underline "
+                  href={item.slug}
+                  size="lg"
+                >
+                  {item.title}
+                </Link>
+              </NavbarMenuItem>
+            ))}
+            <Button
+              as={Link}
+              className={buttonStyles({
+                radius: "full",
+                variant: "shadow",
+                color: "danger",
+                className: "font-bold text-white shadow-none mt-6 w-max ",
+              })}
+              href={"/about"}
+              variant="flat"
+            >
+              About us
+            </Button>
+          </div>
+          <div className="mx-auto w-full">
+            {/* <Image
               className="mix-blend-color-dodge"
               src={Logo}
               alt="logo"
               width={150}
               height={180}
             /> */}
-              <h2
-                className={title({
-                  className: "text-white text-center w-full ",
-                })}
-              >
-                NOVO EVIDENZA
-              </h2>
-              <div className="border-t-2 text-white w-full text-sm ">
-                <div className="flex flex-col w-full justify-between my-4">
-                  <p>copyright Novo Evidenza 2024. All rights reserved.</p>
-                </div>
+            <h2
+              className={title({
+                className: "text-white text-center w-full ",
+              })}
+            >
+              NOVO EVIDENZA
+            </h2>
+            <div className="border-t-2 text-white w-full text-sm ">
+              <div className="flex flex-col w-full justify-between my-4">
+                <p>copyright Novo Evidenza 2024. All rights reserved.</p>
               </div>
             </div>
           </div>
-        </NavbarMenu>
-      </MotionDiv>
+        </div>
+      </NavbarMenu>
     </NextUINavbar>
   );
 };

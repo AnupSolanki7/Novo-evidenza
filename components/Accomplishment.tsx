@@ -34,7 +34,7 @@ const Accomplishment = () => {
         {ACHEIVEMENTS.map((item, index) => (
           <MotionCard
             key={item.title}
-            className={clsx(index < 3 && "border-r-none md:border-r-1")}
+            className={clsx(index < 3 && "border-r-none md:border-r-1", "h-max md:h-[80px]")}
           >
             <CardItem item={item} />
           </MotionCard>
