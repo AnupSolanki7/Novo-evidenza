@@ -13,9 +13,6 @@ export async function POST(request:any) {
   const email = formData.get("email");
   const message = formData.get("message");
 
-  console.log(username, password);
-  
-
   const transporter = nodemailer.createTransport({
     service:"gmail",
     auth: {

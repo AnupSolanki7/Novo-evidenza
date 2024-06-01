@@ -25,9 +25,11 @@ import { title } from "./primitives";
 
 export const Navbar = () => {
   const path = usePathname();
+  const [isNavActive, setIsNavActive]= useState(false)
   const [y, setY] = useState(
     typeof window !== "undefined" ? window?.scrollY : 0
   );
+
 
   const handleNavigation = useCallback(
     (e: { currentTarget: any }) => {
@@ -36,6 +38,7 @@ export const Navbar = () => {
     },
     [y]
   );
+
 
   useEffect(() => {
     setY(window?.scrollY);
@@ -46,14 +49,22 @@ export const Navbar = () => {
     };
   }, [handleNavigation]);
 
+  useEffect(() => {
+    if(y < 10 && path === "/"){
+      setIsNavActive(true)
+    }else{
+      setIsNavActive(false)
+    }
+  }, [y])
+
+
   return (
     <NextUINavbar
       maxWidth="full"
       isBlurred={false}
       className={clsx(
         "py-2 fixed transition-all h-[100px] ease-in-out bg-[#333091]",
-        y > 0 && " shadow-lg ",
-        y === 0 && path === "/" && "transition-all ease-in-out bg-transparent"
+        isNavActive ? "transition-all ease-in-out bg-transparent" : "shadow-lg "
       )}
       position="sticky"
     >
