@@ -14,6 +14,7 @@ import { Button } from "@nextui-org/button";
 import OurServices from "@/components/OurServices";
 import MotionDiv from "@/components/MotionDiv";
 import Accomplishment from "@/components/Accomplishment";
+import MotionCard from "@/components/MotionCard";
 
 export default function Home() {
   return (
@@ -77,7 +78,7 @@ export default function Home() {
             </Button>
           </MotionDiv>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center items-center z-10">
+        <MotionCard className="w-full md:w-1/2 flex justify-center items-center z-10">
           <Image
             src={
               "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
@@ -88,21 +89,23 @@ export default function Home() {
             quality={100}
             className="w-[60%]"
           />
-        </div>
+        </MotionCard>
       </section>
       {/* info */}
       <div className="relative h-max">
         {/* section1 */}
         <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
-          <Image
-            src={
-              "https://www.en.etemaaddaily.com/pages/world/hyderabad/1428aloeveracarrotmadman6.jpg"
-            }
-            className="w-full md:w-1/2"
-            width={500}
-            height={500}
-            alt="image"
-          />
+          <MotionCard className="w-full md:w-1/2">
+            <Image
+              src={
+                "https://www.en.etemaaddaily.com/pages/world/hyderabad/1428aloeveracarrotmadman6.jpg"
+              }
+              className="w-full "
+              width={500}
+              height={500}
+              alt="image"
+            />
+          </MotionCard>
           <MotionDiv className="md:w-1/2 my-8 px-[7%] w-full">
             <p className="font-bold text-2xl text-[#333091] mb-4">
               Our Company
@@ -146,16 +149,18 @@ export default function Home() {
         </section>
         {/* section2 */}
         <section className="flex bg-danger-500 h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4">
-          <Image
-            src={
-              "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-            }
-            alt="banner-item"
-            width={1000}
-            height={1000}
-            quality={100}
-            className="w-[50%] md:w-[20%]"
-          />
+          <MotionCard className="w-[50%] md:w-[20%]">
+            <Image
+              src={
+                "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
+              }
+              alt="banner-item"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="w-full"
+            />
+          </MotionCard>
           <MotionDiv className="md:w-1/2 my-8 px-6  w-full">
             <p className="font-bold text-2xl text-white mb-4">Our Company</p>
             <h2
@@ -207,16 +212,18 @@ export default function Home() {
           }}
           className="flex h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4"
         >
-          <Image
-            src={
-              "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-            }
-            alt="banner-item"
-            width={1000}
-            height={1000}
-            quality={100}
-            className="w-[50%] md:w-[20%]"
-          />
+          <MotionCard className="w-[50%] md:w-[20%]">
+            <Image
+              src={
+                "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
+              }
+              alt="banner-item"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="w-full"
+            />
+          </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
             <p className="font-bold text-2xl text-white mb-4">Our Company</p>
             <h2
@@ -260,16 +267,18 @@ export default function Home() {
         <Accomplishment />
         {/* section5 */}
         <section className="flex h-screen text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
-          <Image
-            src={
-              "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-            }
-            alt="banner-item"
-            width={1000}
-            height={1000}
-            quality={100}
-            className="w-[50%] md:w-[20%]"
-          />
+        <MotionCard className="w-[50%] md:w-[20%]">
+            <Image
+              src={
+                "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
+              }
+              alt="banner-item"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="w-full"
+            />
+          </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
             <p className="font-bold text-2xl text-[#333091] mb-4">
               Our Company
