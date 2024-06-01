@@ -4,7 +4,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
 import { button as buttonStyles } from "@nextui-org/theme";
-import Page from "@/components/page";
+import Pages from "@/components/page";
 import { title } from "@/components/primitives";
 import { HEORLIST } from "@/utils/Constant";
 import clsx from "clsx";
@@ -13,11 +13,11 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
 
-const page = () => {
+const Page = () => {
   const [selected, setSelected] = useState<any>(HEORLIST[0]);
 
   return (
-    <Page
+    <Pages
       style={{
         backgroundImage:
           "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
@@ -56,6 +56,7 @@ const page = () => {
             )}
           >
             <div
+                role="presentation"
               onClick={() => setSelected(item)}
               className={clsx(
                 "min-h-[200px] h-[40%] hover:bg-[#333091] [&>h3]:hover:text-white [&>button]:hover:text-white [&>button]:hover:bg-danger-500 cursor-pointer  transition-all ease-in-out rounded-[30px] [&>*]:[&>*]:hover:fill-white [&>p]:hover:text-gray-200 bg-white flex justify-start items-center gap-4 flex-col p-8",
@@ -83,8 +84,8 @@ const page = () => {
             {selected.subTitle}
           </p>
           <ul className="pl-3 mt-8 flex flex-col gap-2">
-            {selected.list.map((item: any) => (
-              <li className="flex justify-start font-medium items-center text-[#333091] gap-1">
+            {selected.list.map((item: any, index:number) => (
+              <li key={index} className="flex justify-start font-medium items-center text-[#333091] gap-1">
                 <IoIosCheckmarkCircle className="flex-shrink-0 text-[#333091]" />
                 {item}
               </li>
@@ -108,8 +109,8 @@ const page = () => {
             <Image src={selected.image} className="w-full md:w-[50%] h-max" alt="img" width={500} height={500} />
         </div>
       </MotionDiv>
-    </Page>
+    </Pages>
   );
 };
 
-export default page;
+export default Page;
