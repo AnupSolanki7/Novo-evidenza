@@ -1,3 +1,5 @@
+'use client'
+
 import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import Image from "next/image";
 import { link as linkStyles } from "@nextui-org/theme";
@@ -5,14 +7,15 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import React from "react";
-import { subtitle, title } from "./primitives";
+import {  title } from "./primitives";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import MotionDiv from "./MotionDiv";
 
 const Footer = () => {
   return (
     <footer className="w-full flex-col bg-danger-500 flex items-center justify-center py-3">
-      <div className="px-6 mx-auto  flex justify-start w-full mt-6 ">
+      <MotionDiv  className="px-6 mx-auto  flex justify-start w-full mt-6 ">
         {/* <Image
               className="mix-blend-color-dodge"
               src={Logo}
@@ -23,8 +26,8 @@ const Footer = () => {
         <h2 className={title({ className: "text-white mb-4 border-b-2 " })}>
           NOVO EVIDENZA
         </h2>
-      </div>
-      <div className="px-6 mx-auto flex overflow-hidden flex-col md:flex-row justify-start w-full mt-6 gap-12 md:gap-0 ">
+      </MotionDiv>
+      <MotionDiv className="px-6 mx-auto flex overflow-hidden flex-col md:flex-row justify-start w-full mt-6 gap-12 md:gap-0 ">
         <div className=" w-full md:w-1/3 justify-start items-start flex flex-col gap-4 ">
           <span className="flex justify-start gap-1 text-white font-semibold items-start">
             <IoLocationSharp className="text-xl w-6 flex-shrink-0" />
@@ -111,7 +114,7 @@ const Footer = () => {
             </p>
           </span>
         </div>
-      </div>
+      </MotionDiv>
       <div className="border-t-2 text-white w-full text-sm mt-6">
         <div className="flex w-full justify-between px-6 my-4" >
         <p>copyright Novo Evidenza 2024. All rights reserved.</p>
