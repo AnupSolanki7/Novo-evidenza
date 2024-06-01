@@ -32,7 +32,7 @@ const MotionDiv = ({
       initial={{ opacity: 0, translateY: 150 }}
       animate={controls}
       transition={{ duration: 1, ease: "easeOut" }}
-      className={clsx(className, "font-poppins")}
+      className={clsx(className)}
     >
       {children}
     </motion.div>

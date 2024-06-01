@@ -13,6 +13,7 @@ import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import OurServices from "@/components/OurServices";
 import MotionDiv from "@/components/MotionDiv";
+import Accomplishment from "@/components/Accomplishment";
 
 export default function Home() {
   return (
@@ -255,6 +256,8 @@ export default function Home() {
             </div>
           </MotionDiv>
         </section>
+        {/* Accomplishment */}
+        <Accomplishment />
         {/* section5 */}
         <section className="flex h-screen text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
           <Image
