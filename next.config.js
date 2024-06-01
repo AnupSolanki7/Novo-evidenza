@@ -7,6 +7,8 @@ const nextConfig = {
             },
             {
                 hostname: 'uploads-ssl.webflow.com'
+            },{
+                hostname:"marksmanhealthcare.com"
             }
         ]
     }

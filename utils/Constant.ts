@@ -7,6 +7,11 @@ import Achieve1 from "@/assets/icons/Achieve1";
 import Achieve2 from "@/assets/icons/Achieve2";
 import Achieve3 from "@/assets/icons/Achieve3";
 import Achieve4 from "@/assets/icons/Achieve4";
+import HeorIcon1 from "@/assets/icons/HeorIcon1";
+import HeorIcon2 from "@/assets/icons/HeorIcon2";
+import HeorIcon3 from "@/assets/icons/HeorIcon3";
+import HeorIcon4 from "@/assets/icons/HeorIcon4";
+import HeorIcon5 from "@/assets/icons/HeorIcon5";
 
 export const MENU_LIST = [
   {
@@ -111,5 +116,83 @@ export const FOUNDERS = [
     name: "Kunal",
     role: "Co-Founder",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ",
+  },
+];
+
+export const HEORLIST = [
+  {
+    id: 1,
+    icon: HeorIcon1,
+    title: "Literature Reviews",
+    subTitle:
+      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+    list: [
+      "PICOS, search strategy preparing and executing",
+      "SLR protocol preparation and registration",
+      "Database and grey literature search, screening, data extraction, quality assessment",
+      "SLR report writing, periodic updates",
+    ],
+    image:
+      "https://marksmanhealthcare.com/wp-content/uploads/2021/05/Literature-Reviews-Services.png",
+  },
+  {
+    id: 2,
+    icon: HeorIcon2,
+    title: "Meta-Analysis",
+    subTitle:
+      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+    list: [
+      "PICOS, search strategy preparing and executing",
+      "SLR protocol preparation and registration",
+      "Database and grey literature search, screening, data extraction, quality assessment",
+      "SLR report writing, periodic updates",
+    ],
+    image:
+      "https://marksmanhealthcare.com/wp-content/uploads/2021/05/Evidence-generation-service-1.png",
+  },
+  {
+    id: 3,
+    icon: HeorIcon3,
+    title: "Economic Modelling",
+    subTitle:
+      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+    list: [
+      "PICOS, search strategy preparing and executing",
+      "SLR protocol preparation and registration",
+      "Database and grey literature search, screening, data extraction, quality assessment",
+      "SLR report writing, periodic updates",
+    ],
+    image:
+      "https://marksmanhealthcare.com/wp-content/uploads/2021/05/Economic-modelling.png",
+  },
+  {
+    id: 4,
+    icon: HeorIcon4,
+    title: "Market Access",
+    subTitle:
+      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+    list: [
+      "PICOS, search strategy preparing and executing",
+      "SLR protocol preparation and registration",
+      "Database and grey literature search, screening, data extraction, quality assessment",
+      "SLR report writing, periodic updates",
+    ],
+    image:
+      "https://marksmanhealthcare.com/wp-content/uploads/2021/06/Market-Access-services.png",
+  },
+  {
+    id: 5,
+    icon: HeorIcon5,
+    title: "CER",
+    subTitle:
+      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+    list: [
+      "PICOS, search strategy preparing and executing",
+      "SLR protocol preparation and registration",
+      "Database and grey literature search, screening, data extraction, quality assessment",
+      "SLR report writing, periodic updates",
+    ],
+    image:
+      "https://marksmanhealthcare.com/wp-content/uploads/2023/03/Clinical-Evaluation-Report-Service-1.png",
   },
 ];
