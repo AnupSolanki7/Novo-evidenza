@@ -25,6 +25,7 @@ import { title } from "./primitives";
 import MotionDiv from "./MotionDiv";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
   const [isNavActive, setIsNavActive] = useState(false);
   const [y, setY] = useState(
@@ -60,6 +61,8 @@ export const Navbar = () => {
     <NextUINavbar
       maxWidth="full"
       isBlurred={false}
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
       className={clsx(
         "py-2 fixed transition-all h-[100px] ease-in-out bg-[#333091]",
         isNavActive ? "transition-all ease-in-out bg-transparent" : "shadow-lg "
@@ -137,7 +140,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu className="bg-[#333091]">
-        <div className="mx-4 justify-between pb-8 h-full mt-8 flex flex-col gap-2">
+        <div className="mx-4 justify-between pb-8 mt-[70px] h-[80vh]  flex flex-col gap-2">
           <div className="flex flex-col gap-3">
             {MENU_LIST.map((item, index) => (
               <NavbarMenuItem key={item.id}>
@@ -145,6 +148,7 @@ export const Navbar = () => {
                   className="text-white underline "
                   href={item.slug}
                   size="lg"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.title}
                 </Link>
@@ -160,6 +164,7 @@ export const Navbar = () => {
               })}
               href={"/about"}
               variant="flat"
+              onClick={() => setIsMenuOpen(false)}
             >
               About us
             </Button>
