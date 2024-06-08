@@ -40,14 +40,11 @@ const Page = () => {
           Research Publications in which our contribution was acknowledged
         </h2>
       </MotionDiv>
-      <div className="px-6 flex flex-col md:gap-6 mb-20 justify-between h-max items-center max-w-[1220px] mx-auto">
+      <div className="px-6 flex flex-col gap-6 mb-20 justify-between h-max items-center max-w-[1220px] mx-auto">
         {PUBLICATIONS.map((item, index) => (
           <MotionCard
             key={item.title}
-            className={clsx(
-              index < 3 && "border-r-none md:border-r-1 w-full",
-              "mx-[15%] sm:mx-0 h-max"
-            )}
+            className={clsx("border-r-none md:border-r-1 w-full")}
           >
             <Link href={item.file} target="_blank">
               <div
@@ -61,7 +58,7 @@ const Page = () => {
                 </p>
                 <div className="w-full flex justify-start">
                   <span className="px-4 bg-[#333091] text-white py-2 border-2 rounded-full w-[150px] gap-2 flex justify-center items-center  ">
-                  <FaFilePdf />  Download
+                    <FaFilePdf /> Download
                   </span>
                 </div>
               </div>
