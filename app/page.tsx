@@ -18,31 +18,30 @@ import MotionCard from "@/components/MotionCard";
 
 export default function Home() {
   return (
-    <Page className="relative h-max">
+    <Page className="relative h-max bg-[#333091]">
       {/* banner */}
       <section className="flex relative flex-col pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
-        <Image
-          alt="banner"
-          width={1000}
-          height={1000}
-          className="w-full h-full md:h-screen absolute top-0 left-0 "
-          quality={100}
-          src={Banner}
-        />
+      <Image
+        alt="banner"
+        width={1000}
+        height={1000}
+        className="w-full h-full md:h-screen absolute top-0 left-0 "
+        quality={100}
+        src={Banner}
+      />
         <div className="flex z-10 flex-col justify-center items-center md:items-start w-full md:w-1/2">
           <MotionDiv>
             <h1
               className={title({
                 size: "sm",
-                className:
-                  "text-white text-left !text-xl md:!text-4xl ",
+                className: "text-white text-left !text-3xl md:!text-4xl ",
               })}
             >
               Novo Evidence is LLP established in 2024
               <TypeAnimation
                 // Same String at the start will only be typed once, initially
                 className={
-                  "data-rotate-text text-shadow !text-xl md:!text-4xl text-danger-600 "
+                  "data-rotate-text  !text-xl md:!text-4xl text-danger-600 "
                 }
                 sequence={[
                   " HEOR Solutions",
