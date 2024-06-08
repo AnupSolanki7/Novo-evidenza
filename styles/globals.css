@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.contact{
-    background-image: url("../assets//image//contactLayer.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.contact {
+  background-image: url("../assets//image//contactLayer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.about{
-    background-image: url("../assets//image/about.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.about {
+  background-image: url("../assets//image/about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 5px rgb(155, 188, 253);
 }

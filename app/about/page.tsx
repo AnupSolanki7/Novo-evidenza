@@ -222,7 +222,7 @@ export default function AboutPage() {
                     radius: "full",
                     variant: "shadow",
                     className:
-                      "font-bold bg-[#333091] text-white shadow-none w-max ",
+                      "font-bold bg-[#333091] p-6 text-white shadow-none w-max ",
                   })}
                   variant="flat"
                   type="submit"

@@ -7,7 +7,7 @@ import Banner from "../assets/image/banner.jpg";
 import BannerItem from "../assets/image/homeCompany.png";
 
 import { siteConfig } from "@/config/site";
-import { title } from "@/components/primitives";
+import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
@@ -19,39 +19,41 @@ import MotionCard from "@/components/MotionCard";
 export default function Home() {
   return (
     <Page className="relative h-max">
-      <Image
-        alt="banner"
-        width={1000}
-        height={1000}
-        className="w-full h-screen absolute top-0 left-0 "
-        quality={100}
-        src={Banner}
-      />
       {/* banner */}
-      <section className="flex flex-col md:flex-row w-full my-auto h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[80px] md:gap-4 py-8 md:py-10">
+      <section className="flex relative flex-col pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
+        <Image
+          alt="banner"
+          width={1000}
+          height={1000}
+          className="w-full h-full md:h-screen absolute top-0 left-0 "
+          quality={100}
+          src={Banner}
+        />
         <div className="flex z-10 flex-col justify-center items-center md:items-start w-full md:w-1/2">
           <MotionDiv>
             <h1
               className={title({
                 size: "sm",
                 className:
-                  "text-white text-center md:text-left !text-xl md:!text-4xl ",
+                  "text-white text-left !text-xl md:!text-4xl ",
               })}
             >
-              Check out our services for your
+              Novo Evidence is LLP established in 2024
               <TypeAnimation
                 // Same String at the start will only be typed once, initially
                 className={
-                  "data-rotate-text !text-xl md:!text-4xl text-yellow-600 "
+                  "data-rotate-text text-shadow !text-xl md:!text-4xl text-danger-600 "
                 }
                 sequence={[
-                  " HEOR solutions",
+                  " HEOR Solutions",
                   1000,
-                  " PV",
+                  " PV Regulatory",
                   1000,
-                  " Regulatory",
+                  " RWE Solutions ",
                   1000,
                   " Medical Writing",
+                  1000,
+                  " Pharmacovigilance",
                   1000,
                 ]}
                 speed={50} // Custom Speed from 1-99 - Default Speed: 40
@@ -59,8 +61,15 @@ export default function Home() {
                 wrapper="p" // Animation will be rendered as a <span>
                 repeat={Infinity} // Repeat this Animation Sequence infinitely
               />
-              , we have a team of experts in these domains
             </h1>
+            <p className={subtitle({ className: "text-white !text-md" })}>
+              Novo Evidenza is Global Solutions and Services Provider
+              Supporting, Large, Mid & Small global Life Sciences companies,
+              (Pharmaceutical | Generics | Medical Device | Consumer Healthcare
+              | Cosmetics | Biotechnology in their entire Regulatory process and
+              Services, Pharmacovigilance Services, Health Economics and Outcome
+              Research , Medical Writing, Medical Scribe)
+            </p>
           </MotionDiv>
           <MotionDiv>
             <Button
@@ -69,7 +78,7 @@ export default function Home() {
                 color: "danger",
                 radius: "full",
                 variant: "shadow",
-                className: "font-bold shadow-none mt-6 w-max ",
+                className: "font-bold shadow-none mt-6 p-6 w-max ",
               })}
               href={"/about"}
               variant="flat"
@@ -92,7 +101,7 @@ export default function Home() {
         </MotionCard>
       </section>
       {/* info */}
-      <div className="relative h-max">
+      <div className="relative bg-white h-max">
         {/* section1 */}
         <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
           <MotionCard className="w-full md:w-1/2">
@@ -135,7 +144,7 @@ export default function Home() {
                   color: "danger",
                   radius: "full",
                   variant: "shadow",
-                  className: "font-bold shadow-none mt-6 w-max ",
+                  className: "font-bold shadow-none p-6 mt-6 w-max ",
                 })}
                 href={"/about"}
                 variant="flat"
@@ -188,7 +197,7 @@ export default function Home() {
                   radius: "full",
                   variant: "shadow",
                   className:
-                    "font-bold bg-[#333091] text-white shadow-none mt-6 w-max ",
+                    "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
                 })}
                 href={"/about"}
                 variant="flat"
@@ -251,7 +260,7 @@ export default function Home() {
                   radius: "full",
                   variant: "shadow",
                   className:
-                    "font-bold bg-[#333091] text-white shadow-none mt-6 w-max ",
+                    "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
                 })}
                 href={"/about"}
                 variant="flat"
@@ -308,7 +317,7 @@ export default function Home() {
                   color: "danger",
                   radius: "full",
                   variant: "shadow",
-                  className: "font-bold shadow-none mt-6 w-max ",
+                  className: "font-bold shadow-none p-6 mt-6 w-max ",
                 })}
                 href={"/about"}
                 variant="flat"

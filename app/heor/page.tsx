@@ -97,7 +97,7 @@ const Page = () => {
               color: "danger",
               radius: "full",
               variant: "shadow",
-              className: "font-bold shadow-none mt-6 w-max ",
+              className: "font-bold p-6 shadow-none mt-6 w-max ",
             })}
             href={"/about"}
             variant="flat"

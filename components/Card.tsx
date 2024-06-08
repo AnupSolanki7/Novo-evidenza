@@ -29,7 +29,7 @@ const Card = ({
       </h3>
       <p className="text-gray-500">{item.subtitle}</p>
       <Button
-        className="font-bold shadow-none mt-6 w-max "
+        className="font-bold shadow-none p-6 mt-6 w-max "
         href={"/about"}
         variant="flat"
       >

@@ -55,7 +55,7 @@ export const Navbar = () => {
     } else {
       setIsNavActive(false);
     }
-  }, [y]);
+  }, [y, path]);
 
   return (
     <NextUINavbar
@@ -65,7 +65,10 @@ export const Navbar = () => {
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
         "py-2 fixed transition-all h-[100px] ease-in-out bg-[#333091]",
-        isNavActive ? "transition-all ease-in-out bg-transparent" : "shadow-lg "
+        isNavActive
+          ? "transition-all ease-in-out bg-transparent"
+          : "shadow-lg ",
+        isMenuOpen && "bg-[#333091]"
       )}
       position="sticky"
     >
@@ -75,6 +78,7 @@ export const Navbar = () => {
             <NextLink
               className="flex justify-start items-center gap-1"
               href="/"
+              onClick={() => setIsMenuOpen(false)}
             >
               {/* <Image
               className="mix-blend-color-dodge"
@@ -125,7 +129,7 @@ export const Navbar = () => {
                 color: "danger",
                 radius: "full",
                 variant: "shadow",
-                className: "font-bold shadow-none",
+                className: "font-bold p-6 shadow-none",
               })}
               href={"about"}
               variant="flat"
@@ -161,7 +165,7 @@ export const Navbar = () => {
                 radius: "full",
                 variant: "shadow",
                 color: "danger",
-                className: "font-bold text-white shadow-none mt-6 w-max ",
+                className: "font-bold text-white p-6 shadow-none mt-6 w-max ",
               })}
               href={"/about"}
               variant="flat"
