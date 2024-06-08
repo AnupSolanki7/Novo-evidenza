@@ -22,7 +22,7 @@ export const MENU_LIST = [
   {
     id: "medical",
     title: "Medical Writing",
-    slug: "/medical-writting",
+    slug: "/medical-writing",
   },
   {
     id: "pv-regulatory",
@@ -30,9 +30,9 @@ export const MENU_LIST = [
     slug: "/pv-regulatory",
   },
   {
-    id: "medical-scribe",
-    title: "Medical Scribe",
-    slug: "/medical-scribe",
+    id: "publications",
+    title: "Publications",
+    slug: "/publications",
   },
 ];
 
@@ -125,7 +125,7 @@ export const HEORLIST = [
     icon: HeorIcon1,
     title: "Literature Reviews",
     subTitle:
-      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+      "Novo Evidenza specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
     list: [
       "PICOS, search strategy preparing and executing",
       "SLR protocol preparation and registration",
@@ -140,12 +140,12 @@ export const HEORLIST = [
     icon: HeorIcon2,
     title: "Meta-Analysis",
     subTitle:
-      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+      "Our statisticians are proficient in data analysis using appropriate forms of statistical methods and generate insights about various outcomes. We have expertise in multiple forms of direct and indirect comparisons, using both frequentist and Bayesian methods",
     list: [
-      "PICOS, search strategy preparing and executing",
-      "SLR protocol preparation and registration",
-      "Database and grey literature search, screening, data extraction, quality assessment",
-      "SLR report writing, periodic updates",
+      "Direct and indirect treatment comparisons",
+      "Meta-analyses, network meta-analysis",
+      "Bayesian and frequentist statistics",
+      "R, Stata, SPSS, WinBUGS/OpenBUGS, RevMan, and other software",
     ],
     image:
       "https://marksmanhealthcare.com/wp-content/uploads/2021/05/Evidence-generation-service-1.png",
@@ -155,12 +155,12 @@ export const HEORLIST = [
     icon: HeorIcon3,
     title: "Economic Modelling",
     subTitle:
-      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+      "Novo Evidenza assists in development of health economic models to support reimbursements, health technology assessment (HTA) submissions, and to optimize market access strategies",
     list: [
-      "PICOS, search strategy preparing and executing",
-      "SLR protocol preparation and registration",
-      "Database and grey literature search, screening, data extraction, quality assessment",
-      "SLR report writing, periodic updates",
+      "Decision tree model, Markov model, partitioned survival model",
+      "Different types of cost analysis: CEA, CUA, COI/ BOI, CBA, BMI",
+      "De-novo model conceptualization",
+      "Country-specific modeling adaptations",
     ],
     image:
       "https://marksmanhealthcare.com/wp-content/uploads/2021/05/Economic-modelling.png",
@@ -170,12 +170,12 @@ export const HEORLIST = [
     icon: HeorIcon4,
     title: "Market Access",
     subTitle:
-      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+      "We understand that successful market access also depends on real-world evidence and HEOR. Because of our breadth of knowledge, we provide services throughout the product lifecycle to ensure optimal pricing and access.",
     list: [
-      "PICOS, search strategy preparing and executing",
-      "SLR protocol preparation and registration",
-      "Database and grey literature search, screening, data extraction, quality assessment",
-      "SLR report writing, periodic updates",
+      "Market access landscape assessment",
+      "Reimbursement and pricing strategy",
+      "Payer and pricing research",
+      "Product assessment",
     ],
     image:
       "https://marksmanhealthcare.com/wp-content/uploads/2021/06/Market-Access-services.png",
@@ -185,14 +185,65 @@ export const HEORLIST = [
     icon: HeorIcon5,
     title: "CER",
     subTitle:
-      "MarksMan specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+      "Medical devices seeking marketing authorization must submit a detailed clinical evaluation report (CER) to the regulators. Our team is experienced with preparing CERs for medical devices in accordance with the relevant guidelines, including MEDDEV 2.7/1",
     list: [
-      "PICOS, search strategy preparing and executing",
-      "SLR protocol preparation and registration",
-      "Database and grey literature search, screening, data extraction, quality assessment",
-      "SLR report writing, periodic updates",
+      "Clinical evaluation planning (CEP) and clinical evaluation report (CER)",
+      "Background, current knowledge, state-of-the-art (SOTA)",
+      "Detailed literature analysis for device under evaluation (DUE)",
+      "Medical device details: design, materials, mode of operation, site of use, etc",
     ],
     image:
       "https://marksmanhealthcare.com/wp-content/uploads/2023/03/Clinical-Evaluation-Report-Service-1.png",
+  },
+];
+
+export const PUBLICATIONS = [
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+
+  {
+    title:
+      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
+    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
+    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
   },
 ];

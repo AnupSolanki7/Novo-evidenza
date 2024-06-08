@@ -4,7 +4,7 @@ import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { TypeAnimation } from "react-type-animation";
 import Banner from "../assets/image/banner.jpg";
-import BannerItem from "../assets/image/banner-item.png";
+import BannerItem from "../assets/image/homeCompany.png";
 
 import { siteConfig } from "@/config/site";
 import { title } from "@/components/primitives";
@@ -97,9 +97,7 @@ export default function Home() {
         <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
           <MotionCard className="w-full md:w-1/2">
             <Image
-              src={
-                "https://www.en.etemaaddaily.com/pages/world/hyderabad/1428aloeveracarrotmadman6.jpg"
-              }
+              src={BannerItem}
               className="w-full "
               width={500}
               height={500}
@@ -267,7 +265,7 @@ export default function Home() {
         <Accomplishment />
         {/* section5 */}
         <section className="flex h-screen text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
-        <MotionCard className="w-[50%] md:w-[20%]">
+          <MotionCard className="w-[50%] md:w-[20%]">
             <Image
               src={
                 "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
