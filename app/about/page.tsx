@@ -88,7 +88,7 @@ export default function AboutPage() {
   };
 
   return (
-    <Page className="relative h-max ">
+    <Page className="relative h-max bg-white ">
       <section className="flex flex-col md:flex-row mt-[100px] h-full mx-auto items-center justify-around gap-4">
         <div className="w-full md:w-1/2 flex flex-col pt-[20px] md:pt-0 px-[7%] justify-start items-center h-full">
           <MotionDiv initialTranslateY={50} className="w-full flex flex-col">
