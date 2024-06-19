@@ -15,7 +15,6 @@ import { FOUNDERS } from "@/utils/Constant";
 import clsx from "clsx";
 import FounderCard from "@/components/FounderCard";
 
-
 export default function AboutPage() {
   const formRef: any = useRef(null);
   const [loader, setLoader] = useState(false);
@@ -149,13 +148,14 @@ export default function AboutPage() {
                 onChange={onChange}
                 type="text"
                 name="name"
-                className="input bg-white "
+                className="input "
                 placeholder="Enter your name"
                 radius="none"
                 labelPlacement="outside"
                 classNames={{
                   label: "!text-white font-semibold",
                   helperWrapper: "absolute bottom-[-50%] font-semibold",
+                  inputWrapper: "bg-white",
                 }}
                 value={values.name}
                 label="Name"
@@ -174,6 +174,7 @@ export default function AboutPage() {
                 classNames={{
                   label: "!text-white font-semibold",
                   helperWrapper: "absolute bottom-[-50%] font-semibold",
+                  inputWrapper: "bg-white",
                 }}
                 label="Email"
                 isInvalid={errors.email}
@@ -191,6 +192,7 @@ export default function AboutPage() {
                 classNames={{
                   label: "!text-white font-semibold",
                   helperWrapper: "absolute bottom-[-50%] font-semibold",
+                  inputWrapper: "bg-white",
                 }}
                 label="Phone"
                 isInvalid={errors.phone}
@@ -212,6 +214,7 @@ export default function AboutPage() {
                     label: "!text-white font-semibold",
                     helperWrapper: "absolute bottom-[-20%] font-semibold",
                     mainWrapper: "relative",
+                    inputWrapper: "bg-white",
                   }}
                   label="Message"
                   isInvalid={errors.message}
@@ -259,9 +262,7 @@ export default function AboutPage() {
         </MotionDiv>
         <div className="px-6 grid sticky pt-6 py-12 grid-cols-1 sm:grid-cols-2  lg:grid-cols-2 gap-12 md:gap-4 justify-between h-max items-center max-w-[1220px] mx-auto">
           {FOUNDERS.map((item, index) => (
-            <MotionCard
-              key={index}
-            >
+            <MotionCard key={index}>
               <FounderCard item={item} />
             </MotionCard>
           ))}
