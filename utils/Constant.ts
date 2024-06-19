@@ -19,11 +19,11 @@ export const MENU_LIST = [
     title: "HEOR",
     slug: "/heor",
   },
-  {
-    id: "medical",
-    title: "Medical Writing",
-    slug: "/medical-writing",
-  },
+  // {
+  //   id: "medical",
+  //   title: "Medical Writing",
+  //   slug: "/medical-writing",
+  // },
   {
     id: "pv-regulatory",
     title: "PV and Regulatory",

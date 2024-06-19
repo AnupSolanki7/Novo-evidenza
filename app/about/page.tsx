@@ -144,12 +144,12 @@ export default function AboutPage() {
             </h2>
           </MotionDiv>
           <form ref={formRef} onSubmit={handleSubmit} className="py-[7%] ">
-            <MotionDiv className="w-full flex flex-col justify-start items-center gap-6">
+            <MotionDiv className="w-full flex  flex-col justify-start items-center gap-6">
               <Input
                 onChange={onChange}
                 type="text"
                 name="name"
-                className="input"
+                className="input bg-white "
                 placeholder="Enter your name"
                 radius="none"
                 labelPlacement="outside"
@@ -168,6 +168,7 @@ export default function AboutPage() {
                 onChange={onChange}
                 placeholder="Enter your email"
                 radius="none"
+                className="bg-white "
                 value={values.email}
                 labelPlacement="outside"
                 classNames={{
@@ -181,6 +182,7 @@ export default function AboutPage() {
               <Input
                 type="number"
                 name="phone"
+                className="bg-white "
                 onChange={onChange}
                 placeholder="Enter your phone"
                 radius="none"
@@ -201,6 +203,7 @@ export default function AboutPage() {
                   type="text"
                   name="message"
                   onChange={onChange}
+                  className="bg-white "
                   placeholder="Enter your message"
                   radius="none"
                   value={values.message}

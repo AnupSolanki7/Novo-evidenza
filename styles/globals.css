@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .input{
-  background-color: white;
+  background-color: red;
 }
 
 .contact {
