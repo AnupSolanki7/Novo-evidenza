@@ -6,7 +6,6 @@ import { TypeAnimation } from "react-type-animation";
 import Banner from "../assets/image/banner.jpg";
 import BannerItem from "../assets/image/homeCompany.png";
 
-import { siteConfig } from "@/config/site";
 import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
 import Image from "next/image";

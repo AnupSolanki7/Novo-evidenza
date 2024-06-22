@@ -12,6 +12,7 @@ import HeorIcon2 from "@/assets/icons/HeorIcon2";
 import HeorIcon3 from "@/assets/icons/HeorIcon3";
 import HeorIcon4 from "@/assets/icons/HeorIcon4";
 import HeorIcon5 from "@/assets/icons/HeorIcon5";
+import ServiceIcon3 from "@/assets/icons/ServiceIcon3";
 
 export const MENU_LIST = [
   {
@@ -245,5 +246,43 @@ export const PUBLICATIONS = [
       "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
     subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
     file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+  },
+];
+
+export const PVSERVICES = [
+  {
+    title: "ICSR",
+    description:
+      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+    icon: ServiceIcon4,
+    position: 5,
+  },
+  {
+    title: "Case Submission",
+    description:
+      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+    icon: HeorIcon5,
+    position: 35,
+  },
+  {
+    title: "Literature review",
+    description:
+      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+    icon: HeorIcon1,
+    position: 65,
+  },
+  {
+    title: "Aggregate Reporting",
+    description:
+      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+    icon: HeorIcon2,
+    position: 20,
+  },
+  {
+    title: "Signal detection",
+    description:
+      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+    icon: HeorIcon3,
+    position: 55,
   },
 ];
