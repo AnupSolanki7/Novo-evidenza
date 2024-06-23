@@ -6,6 +6,8 @@ import { TypeAnimation } from "react-type-animation";
 import Banner from "../assets/image/banner.jpg";
 import BannerItem from "../assets/image/homeCompany.png";
 import Pharma from "../assets/image/pharma.png";
+import Pharma1 from "../assets/image/pharma2.png";
+import Pharma2 from "../assets/image/pharma3.png";
 
 import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
@@ -159,7 +161,7 @@ export default function Home() {
         <section className="flex bg-danger-500 min-h-screen h-max text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4">
           <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
-              src={Pharma}
+              src={Pharma1}
               alt="banner-item"
               width={1000}
               height={1000}
@@ -258,7 +260,7 @@ export default function Home() {
         >
           <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
-              src={Pharma}
+              src={Pharma2}
               alt="banner-item"
               width={1000}
               height={1000}
