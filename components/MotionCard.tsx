@@ -6,11 +6,13 @@ import React from "react";
 const GrowFromDot = ({
   children,
   className,
-  style
+  style,
+  bounce = false
 }: {
   children: React.ReactNode;
   className?: string;
-  style?:any
+  style?: any;
+  bounce?: boolean;
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
@@ -18,9 +20,19 @@ const GrowFromDot = ({
     <motion.div
       ref={ref}
       style={style}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={bounce ? {} : { opacity: 0, translate: 0 }}
+      animate={
+        bounce
+          ? { y: [0, -10, 0] }
+          : inView
+          ? { opacity: 1, translate: 1 }
+          : { opacity: 0, translate: 0 }
+      }
+      transition={
+        bounce
+          ? { duration: 1, ease: "easeInOut", repeat: Infinity }
+          : { duration: 0.5, ease: "easeOut" }
+      }
       className={className}
     >
       {children}

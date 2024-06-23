@@ -5,6 +5,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { TypeAnimation } from "react-type-animation";
 import Banner from "../assets/image/banner.jpg";
 import BannerItem from "../assets/image/homeCompany.png";
+import Pharma from "../assets/image/pharma.png";
 
 import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
@@ -20,7 +21,7 @@ export default function Home() {
   return (
     <Page className="relative h-max bg-[#333091]">
       {/* banner */}
-      <section className="flex relative flex-col pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
+      <section className="flex relative flex-col-reverse pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
         <Image
           alt="banner"
           width={1000}
@@ -29,7 +30,7 @@ export default function Home() {
           quality={100}
           src={Banner}
         />
-        <div className="flex z-10 flex-col justify-center items-center md:items-start w-full md:w-1/2">
+        <div className="flex z-10 flex-col text-center md:text-left justify-center items-center md:items-start w-full md:w-1/2">
           <MotionDiv>
             <h1
               className={title({
@@ -41,7 +42,7 @@ export default function Home() {
               <TypeAnimation
                 // Same String at the start will only be typed once, initially
                 className={
-                  "data-rotate-text  !text-xl md:!text-4xl text-danger-600 "
+                  "data-rotate-text text-center md:text-left !text-xl md:!text-4xl text-danger-600 "
                 }
                 sequence={[
                   " HEOR Solutions",
@@ -86,16 +87,17 @@ export default function Home() {
             </Button>
           </MotionDiv>
         </div>
-        <MotionCard className="w-full md:w-1/2 flex justify-center items-center z-10">
+        <MotionCard
+          bounce
+          className="w-full md:w-1/2 flex justify-center items-center z-10"
+        >
           <Image
-            src={
-              "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-            }
+            src={Pharma}
             alt="banner-item"
             width={1000}
             height={1000}
             quality={100}
-            className="w-[60%]"
+            className="w-[90%]"
           />
         </MotionCard>
       </section>
@@ -154,12 +156,10 @@ export default function Home() {
           </MotionDiv>
         </section>
         {/* section2 */}
-        <section className="flex bg-danger-500 h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4">
-          <MotionCard className="w-[50%] md:w-[20%]">
+        <section className="flex bg-danger-500 min-h-screen h-max text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4">
+          <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
-              src={
-                "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-              }
+              src={Pharma}
               alt="banner-item"
               width={1000}
               height={1000}
@@ -175,7 +175,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                  "text-white text-left block  !font-normal md:text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-[#333091]" })}>
@@ -256,11 +256,9 @@ export default function Home() {
           }}
           className="flex h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4"
         >
-          <MotionCard className="w-[50%] md:w-[20%]">
+          <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
-              src={
-                "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-              }
+              src={Pharma}
               alt="banner-item"
               width={1000}
               height={1000}
@@ -286,7 +284,7 @@ export default function Home() {
               in all prospective and we understand the industry demand as per
               TAT MET we will driver our services to clients
             </h2>
-            <ul className="list-disc pl-4 flex flex-col gap-4 text-white font-semibold">
+            <ul className="list-disc pl-4 flex text-left flex-col gap-4 text-white font-semibold">
               {PVSERVICES.map((item) => (
                 <li key={item.title}>{item?.title}</li>
               ))}
@@ -311,12 +309,10 @@ export default function Home() {
         {/* Accomplishment */}
         <Accomplishment />
         {/* section5 */}
-        <section className="flex h-screen text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
-          <MotionCard className="w-[50%] md:w-[20%]">
+        <section className="flex min-h-screen h-maxtext-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
+          <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
-              src={
-                "https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/60669f3771e8b7227d00b04d_33-layers.png"
-              }
+              src={Pharma}
               alt="banner-item"
               width={1000}
               height={1000}
@@ -328,7 +324,7 @@ export default function Home() {
             <p className="font-bold text-2xl text-[#333091] mb-4">
               Regulatory Affairs
             </p>
-            <ul className="list-disc pl-4 flex flex-col gap-4 text-[#333091] font-semibold">
+            <ul className="list-disc pl-4 flex text-left flex-col gap-4 text-[#333091] font-semibold">
               {REGULATORY.map((item) => (
                 <li key={item.title}>{item?.title}</li>
               ))}
