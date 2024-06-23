@@ -86,7 +86,7 @@ const Page = () => {
             commercialization journey, reducing time to market.
           </p>
         </div>
-        <section className="flex flex-col w-full md:flex-row h-max ">
+        <section className="flex flex-col relative w-full md:flex-row h-max ">
           <div className="left relative z-10 w-full md:w-1/3">
             {PVSERVICES?.slice(0, 3)?.map((item, index) => (
               <MotionCard
@@ -108,7 +108,7 @@ const Page = () => {
               </MotionCard>
             ))}
           </div>
-          <div className="w-full z-[1] opacity-40 absolute md:static md:w-1/3 flex justify-center items-start">
+          <div className="w-full z-[1] opacity-40 absolute top-[15%] md:static md:w-1/3 flex justify-center items-start">
             <Image src={Footprint} alt="gif" />
           </div>
           <div className="right relative z-10 w-full md:w-1/3">

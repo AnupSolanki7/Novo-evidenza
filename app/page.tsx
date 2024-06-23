@@ -14,20 +14,21 @@ import OurServices from "@/components/OurServices";
 import MotionDiv from "@/components/MotionDiv";
 import Accomplishment from "@/components/Accomplishment";
 import MotionCard from "@/components/MotionCard";
+import { PVSERVICES } from "@/utils/Constant";
 
 export default function Home() {
   return (
     <Page className="relative h-max bg-[#333091]">
       {/* banner */}
       <section className="flex relative flex-col pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
-      <Image
-        alt="banner"
-        width={1000}
-        height={1000}
-        className="w-full h-full md:h-screen absolute top-0 left-0 "
-        quality={100}
-        src={Banner}
-      />
+        <Image
+          alt="banner"
+          width={1000}
+          height={1000}
+          className="w-full h-full md:h-screen absolute top-0 left-0 "
+          quality={100}
+          src={Banner}
+        />
         <div className="flex z-10 flex-col justify-center items-center md:items-start w-full md:w-1/2">
           <MotionDiv>
             <h1
@@ -167,7 +168,9 @@ export default function Home() {
             />
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8 px-6  w-full">
-            <p className="font-bold text-2xl text-white mb-4">Our Company</p>
+            <p className="font-bold text-3xl text-white mb-4">
+              Health Economic and Outcome Research
+            </p>
             <h2
               className={title({
                 size: "sm",
@@ -175,19 +178,55 @@ export default function Home() {
                   "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
-              <p className={title({ className: "!text-xl text-white" })}>
+              <p className={title({ className: "!text-xl text-[#333091]" })}>
                 Novo Evidenza &nbsp;
               </p>
-              is registered LLP and established in 2024, Co Founder of Novo
-              Evidenza is{" "}
-              <p className={title({ className: "!text-xl text-white" })}>
-                Dr. Kunal Maheswari
-              </p>{" "}
-              , the organization goal is to serve healthcare domain and help
-              pharmaceutical, biotechnology, research organization, Institute
-              for HEOR services, Medical Writing, PV , Regulatory, Medical
-              scribe.
+              is providing end to end support for health economics and outcomes
+              services.
             </h2>
+            <ul className="flex flex-col gap-2 justify-start items-start ">
+              <li
+                className={title({
+                  size: "sm",
+                  className:
+                    "text-white  !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                })}
+              >
+                <p className={title({ className: "!text-xl text-[#333091]" })}>
+                  Value :- &nbsp;
+                </p>
+                We are committed to creating the high quality scientific
+                evidence to improve the value of medications and health
+                technology.
+              </li>
+              <li
+                className={title({
+                  size: "sm",
+                  className:
+                    "text-white  !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                })}
+              >
+                <p className={title({ className: "!text-xl text-[#333091]" })}>
+                  Motive :- &nbsp;
+                </p>
+                To generate high quality evidence based products with cost
+                effective and budget effective as per client demands .
+              </li>
+              <li
+                className={title({
+                  size: "sm",
+                  className:
+                    "text-white  !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                })}
+              >
+                Our
+                <p className={title({ className: "!text-xl text-white" })}>
+                  &nbsp; HEOR &nbsp;
+                </p>
+                team is globally working and we are providing below services
+                under the roof of solutions.
+              </li>
+            </ul>
             <div>
               <Button
                 as={Link}
@@ -230,7 +269,9 @@ export default function Home() {
             />
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
-            <p className="font-bold text-2xl text-white mb-4">Our Company</p>
+            <p className="font-bold text-2xl text-white mb-4">
+              Pharmacovigilance
+            </p>
             <h2
               className={title({
                 size: "sm",
@@ -238,19 +279,18 @@ export default function Home() {
                   "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
-              <p className={title({ className: "!text-xl text-white" })}>
+              <p className={title({ className: "!text-xl text-[#333091]" })}>
                 Novo Evidenza &nbsp;
               </p>
-              is registered LLP and established in 2024, Co Founder of Novo
-              Evidenza is{" "}
-              <p className={title({ className: "!text-xl text-white" })}>
-                Dr. Kunal Maheswari
-              </p>{" "}
-              , the organization goal is to serve healthcare domain and help
-              pharmaceutical, biotechnology, research organization, Institute
-              for HEOR services, Medical Writing, PV , Regulatory, Medical
-              scribe.
+              is helping pharmacovigilance activities our team is well trained
+              in all prospective and we understand the industry demand as per
+              TAT MET we will driver our services to client’s
             </h2>
+            <ul className="list-disc pl-4 text-white font-semibold">
+              {PVSERVICES.map((item) => (
+                <li>{item?.title}</li>
+              ))}
+            </ul>
             <div>
               <Button
                 as={Link}
@@ -286,7 +326,7 @@ export default function Home() {
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
             <p className="font-bold text-2xl text-[#333091] mb-4">
-              Our Company
+              Regulatory Affairs
             </p>
             <h2
               className={title({
