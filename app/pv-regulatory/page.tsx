@@ -87,13 +87,13 @@ const Page = () => {
           </p>
         </div>
         <section className="flex flex-col w-full md:flex-row h-max ">
-          <div className="left relative w-full md:w-1/3">
+          <div className="left relative z-10 w-full md:w-1/3">
             {PVSERVICES?.slice(0, 3)?.map((item, index) => (
               <MotionCard
                 key={index}
                 style={{ top: `${String(item?.position)}%` }}
                 className={clsx(
-                  "static md:absolute w-full md:w-[70%] right-0 py-8 mx-auto flex flex-col justify-center items-center"
+                  "static md:absolute  w-full md:w-[100%] lg:w-[70%] right-0 py-8 mx-auto flex flex-col justify-center items-center"
                 )}
               >
                 <span className="w-12 h-12 [&>*]:fill-[#333091] [&>*]:w-12 [&>*]:h-12">
@@ -108,16 +108,16 @@ const Page = () => {
               </MotionCard>
             ))}
           </div>
-          <div className="w-1/3 hidden md:flex justify-center items-start">
+          <div className="w-full z-[1] opacity-40 absolute md:static md:w-1/3 flex justify-center items-start">
             <Image src={Footprint} alt="gif" />
           </div>
-          <div className="right relative w-full md:w-1/3">
+          <div className="right relative z-10 w-full md:w-1/3">
             {PVSERVICES?.slice(3, 5)?.map((item, index) => (
               <MotionCard
                 key={index}
                 style={{ top: `${String(item?.position)}%` }}
                 className={clsx(
-                  "static md:absolute w-full md:w-[70%] left-0 py-8 mx-auto flex flex-col justify-center items-center"
+                  "static md:absolute w-full md:w-[100%] lg:w-[70%] left-0 py-8 mx-auto flex flex-col justify-center items-center"
                 )}
               >
                 <span className="w-12 h-12 [&>*]:fill-[#333091] [&>*]:w-12 [&>*]:h-12">
