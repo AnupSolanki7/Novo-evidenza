@@ -43,7 +43,7 @@ export const SERVICES = [
     title: "Health Economics & Outcomes Research",
     subtitle:
       "Delivering Holistic and Integrated HEOR Solutions Tailored to Meet Your Every Need",
-    link: "/",
+    link: "/heor",
     Icon: ServiceIcon1,
   },
   {
@@ -51,7 +51,7 @@ export const SERVICES = [
     title: "Real World Evidence",
     subtitle:
       "RWE Abstraction of Data from Real-World Sources and Synthesizing Real-World Evidence",
-    link: "/",
+    link: "/heor",
     Icon: ServiceIcon2,
   },
   {
@@ -59,7 +59,7 @@ export const SERVICES = [
     title: "Value Communications",
     subtitle:
       "Elevating Research Impact with Engaging Scientific Publications, Conference Assistance and Beyond",
-    link: "/",
+    link: "/about",
     Icon: HiSpeakerphone,
   },
   {
@@ -67,7 +67,7 @@ export const SERVICES = [
     title: "Competitive Intelligence",
     subtitle:
       "Generating Credible and Actionable Insights Enabling You to Stay Ahead of the Competition",
-    link: "/",
+    link: "/about",
     Icon: ServiceIcon4,
   },
 ];

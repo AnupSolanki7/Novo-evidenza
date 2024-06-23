@@ -23,7 +23,7 @@
         initial={bounce ? {} : { opacity: 0, scale: 0 }}
         animate={
           bounce
-            ? { y: [0, -25, 0] }
+            ? { y: [0, -15, 0] }
             : inView
             ? { opacity: 1, scale: 1 }
             : { opacity: 0, scale: 0 }

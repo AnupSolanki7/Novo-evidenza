@@ -108,7 +108,7 @@ export default function Home() {
       <div className="relative bg-white h-max">
         {/* section1 */}
         <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
-          <MotionCard className="w-full flex justify-center h-screen md:w-1/2">
+          <MotionCard  className="w-full flex justify-center md:w-1/2">
             <Image
               src={BannerItem}
               className="w-[70%] object-contain"
@@ -239,7 +239,7 @@ export default function Home() {
                   className:
                     "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
                 })}
-                href={"/about"}
+                href={"/heor"}
                 variant="flat"
               >
                 HEOR Services
@@ -301,7 +301,7 @@ export default function Home() {
                   className:
                     "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
                 })}
-                href={"/about"}
+                href={"/pv-regulatory"}
                 variant="flat"
               >
                 PV Services
@@ -341,7 +341,7 @@ export default function Home() {
                   variant: "shadow",
                   className: "font-bold shadow-none p-6 mt-6 w-max ",
                 })}
-                href={"/about"}
+                href={"/pv-regulatory"}
                 variant="flat"
               >
                 Regulatory Services

@@ -30,7 +30,7 @@ const Page = () => {
         className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
       >
         {" "}
-        <MotionCard className="w-full flex justify-center md:w-1/2">
+        <MotionCard bounce className="w-full flex justify-center md:w-1/2">
           <Image
             src={BannerItem}
             className="w-[70%] object-contain"
