@@ -288,7 +288,7 @@ export default function Home() {
             </h2>
             <ul className="list-disc pl-4 flex flex-col gap-4 text-white font-semibold">
               {PVSERVICES.map((item) => (
-                <li>{item?.title}</li>
+                <li key={item.title}>{item?.title}</li>
               ))}
             </ul>
             <div>
@@ -330,7 +330,7 @@ export default function Home() {
             </p>
             <ul className="list-disc pl-4 flex flex-col gap-4 text-[#333091] font-semibold">
               {REGULATORY.map((item) => (
-                <li>{item?.title}</li>
+                <li key={item.title}>{item?.title}</li>
               ))}
             </ul>
             <div>
