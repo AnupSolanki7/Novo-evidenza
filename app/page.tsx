@@ -309,7 +309,7 @@ export default function Home() {
         {/* Accomplishment */}
         <Accomplishment />
         {/* section5 */}
-        <section className="flex min-h-screen h-maxtext-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
+        <section className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
           <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
               src={Pharma}
