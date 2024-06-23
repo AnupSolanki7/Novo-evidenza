@@ -74,7 +74,7 @@ const Page = () => {
           </div>
         </MotionDiv>
       </section>
-      <section className="pt-8 md:pt-[100px] px-4 ">
+      <section className="pt-8 md:pt-[100px] px-4 bg-white ">
         <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
           <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
             Services We Provide

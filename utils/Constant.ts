@@ -17,14 +17,14 @@ import ServiceIcon3 from "@/assets/icons/ServiceIcon3";
 export const MENU_LIST = [
   {
     id: "home",
+    title: "Home",
+    slug: "/",
+  },
+  {
+    id: "heor",
     title: "HEOR",
     slug: "/heor",
   },
-  // {
-  //   id: "medical",
-  //   title: "Medical Writing",
-  //   slug: "/medical-writing",
-  // },
   {
     id: "pv-regulatory",
     title: "PV and Regulatory",
