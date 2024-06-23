@@ -4,10 +4,11 @@ import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { TypeAnimation } from "react-type-animation";
 import Banner from "../assets/image/banner.jpg";
-import BannerItem from "../assets/image/homeCompany.png";
+import BannerItem from "../assets/image/homeCompany2.png";
 import Pharma from "../assets/image/pharma.png";
 import Pharma1 from "../assets/image/pharma2.png";
 import Pharma2 from "../assets/image/pharma3.png";
+import Pharma3 from "../assets/image/pharma4.png";
 
 import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
@@ -107,10 +108,10 @@ export default function Home() {
       <div className="relative bg-white h-max">
         {/* section1 */}
         <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
-          <MotionCard className="w-full md:w-1/2">
+          <MotionCard className="w-full flex justify-center h-screen md:w-1/2">
             <Image
               src={BannerItem}
-              className="w-full "
+              className="w-[70%] object-contain"
               width={500}
               height={500}
               alt="image"
@@ -152,7 +153,7 @@ export default function Home() {
                 href={"/about"}
                 variant="flat"
               >
-                Let&apos;s Connect
+                Know More
               </Button>
             </div>
           </MotionDiv>
@@ -177,7 +178,7 @@ export default function Home() {
               className={title({
                 size: "sm",
                 className:
-                  "text-white text-left block  !font-normal md:text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                  "text-white text-left block  !font-normal  text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
               })}
             >
               <p className={title({ className: "!text-xl text-[#333091]" })}>
@@ -241,7 +242,7 @@ export default function Home() {
                 href={"/about"}
                 variant="flat"
               >
-                Let&apos;s Connect
+                HEOR Services
               </Button>
             </div>
           </MotionDiv>
@@ -303,7 +304,7 @@ export default function Home() {
                 href={"/about"}
                 variant="flat"
               >
-                Let&apos;s Connect
+                PV Services
               </Button>
             </div>
           </MotionDiv>
@@ -314,7 +315,7 @@ export default function Home() {
         <section className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
           <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
-              src={Pharma}
+              src={Pharma3}
               alt="banner-item"
               width={1000}
               height={1000}
@@ -343,7 +344,7 @@ export default function Home() {
                 href={"/about"}
                 variant="flat"
               >
-                Let&apos;s Connect
+                Regulatory Services
               </Button>
             </div>
           </MotionDiv>
