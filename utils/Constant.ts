@@ -286,3 +286,27 @@ export const PVSERVICES = [
     position: 55,
   },
 ];
+
+export const REGULATORY = [
+  {
+    title: "Submission Document Management and Tracking",
+  },
+  {
+    title: "Regulatory Content Management",
+  },
+  {
+    title: "Change Control Management",
+  },
+  {
+    title: "Label Change Tracking",
+  },
+  {
+    title: "Integrated Regulatory Information",
+  },
+  {
+    title: "Regulatory Intelligence",
+  },
+  {
+    title: "Reporting and Analytics",
+  },
+];

@@ -14,7 +14,7 @@ import OurServices from "@/components/OurServices";
 import MotionDiv from "@/components/MotionDiv";
 import Accomplishment from "@/components/Accomplishment";
 import MotionCard from "@/components/MotionCard";
-import { PVSERVICES } from "@/utils/Constant";
+import { PVSERVICES, REGULATORY } from "@/utils/Constant";
 
 export default function Home() {
   return (
@@ -286,7 +286,7 @@ export default function Home() {
               in all prospective and we understand the industry demand as per
               TAT MET we will driver our services to client’s
             </h2>
-            <ul className="list-disc pl-4 text-white font-semibold">
+            <ul className="list-disc pl-4 flex flex-col gap-4 text-white font-semibold">
               {PVSERVICES.map((item) => (
                 <li>{item?.title}</li>
               ))}
@@ -328,26 +328,11 @@ export default function Home() {
             <p className="font-bold text-2xl text-[#333091] mb-4">
               Regulatory Affairs
             </p>
-            <h2
-              className={title({
-                size: "sm",
-                className:
-                  "text-[#333091]  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-              })}
-            >
-              <p className={title({ className: "!text-xl text-[#333091]" })}>
-                Novo Evidenza &nbsp;
-              </p>
-              is registered LLP and established in 2024, Co Founder of Novo
-              Evidenza is{" "}
-              <p className={title({ className: "!text-xl text-[#333091]" })}>
-                Dr. Kunal Maheswari
-              </p>{" "}
-              , the organization goal is to serve healthcare domain and help
-              pharmaceutical, biotechnology, research organization, Institute
-              for HEOR services, Medical Writing, PV , Regulatory, Medical
-              scribe.
-            </h2>
+            <ul className="list-disc pl-4 flex flex-col gap-4 text-[#333091] font-semibold">
+              {REGULATORY.map((item) => (
+                <li>{item?.title}</li>
+              ))}
+            </ul>
             <div>
               <Button
                 as={Link}
