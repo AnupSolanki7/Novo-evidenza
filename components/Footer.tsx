@@ -14,7 +14,7 @@ import MotionDiv from "./MotionDiv";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex-col bg-danger-500 flex items-center justify-center py-3">
+    <footer className="w-full flex-col bg-[#333091] flex items-center justify-center py-3">
       <MotionDiv  className="px-6 mx-auto  flex justify-start w-full mt-6 ">
         {/* <Image
               className="mix-blend-color-dodge"

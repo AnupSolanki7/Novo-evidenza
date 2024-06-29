@@ -5,17 +5,15 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 import { fontPoppins } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  title: "Novo Evidenza | LLP established in 2024",
+  description:
+    "Novo Evidenza is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
   icons: {
     icon: "/favicon.ico",
   },
@@ -47,7 +45,7 @@ export default function RootLayout({
             <Navbar />
             <Toaster />
             {children}
-            <Footer/>
+            <Footer />
           </div>
         </Providers>
       </body>
