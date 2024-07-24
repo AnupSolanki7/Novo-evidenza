@@ -207,6 +207,7 @@ const Page = () => {
         <div className="py-8 h-max w-[70%] mx-auto gap-8  flex-wrap flex justify-between">
           {REGULATORY_SERVICES?.map((service) => (
             <span
+            key={service}
               style={{
                 backgroundImage: 
                   "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
