@@ -1,6 +1,5 @@
 'use client'
 
-import Logo from "../public/image_novo_evidenza-removebg-preview.png";
 import Image from "next/image";
 import { link as linkStyles } from "@nextui-org/theme";
 import { IoLocationSharp } from "react-icons/io5";
@@ -11,21 +10,13 @@ import {  title } from "./primitives";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import MotionDiv from "./MotionDiv";
+import Logo from "@/assets/icons/Logo";
 
 const Footer = () => {
   return (
     <footer className="w-full flex-col bg-[#333091] flex items-center justify-center py-3">
       <MotionDiv  className="px-6 mx-auto  flex justify-start w-full mt-6 ">
-        {/* <Image
-              className="mix-blend-color-dodge"
-              src={Logo}
-              alt="logo"
-              width={150}
-              height={180}
-            /> */}
-        <h2 className={title({ className: "text-white mb-4 border-b-2 " })}>
-          NOVO EVIDENZA
-        </h2>
+      <Logo/>
       </MotionDiv>
       <MotionDiv className="px-6 mx-auto flex overflow-hidden flex-col md:flex-row justify-start w-full mt-6 gap-12 md:gap-0 ">
         <div className=" w-full md:w-1/3 justify-start items-start flex flex-col gap-4 ">

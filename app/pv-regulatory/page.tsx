@@ -1,6 +1,6 @@
 import React from "react";
 import Pages from "@/components/page";
-import BannerItem from "../../assets/image/homeCompany.png";
+import BannerItem from "../../assets/image/homeBg.png";
 import Footprint from "../../assets/image/footprints.gif";
 import { button as buttonStyles } from "@nextui-org/theme";
 import MotionDiv from "@/components/MotionDiv";
@@ -9,7 +9,8 @@ import Image from "next/image";
 import MotionCard from "@/components/MotionCard";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { PVSERVICES } from "@/utils/Constant";
+import { PVSERVICES, REGULATORY_SERVICES } from "@/utils/Constant";
+import Pv2 from "../../assets/image/pv2.png";
 import clsx from "clsx";
 
 const Page = () => {
@@ -40,8 +41,8 @@ const Page = () => {
           />
         </MotionCard>
         <MotionDiv className="md:w-1/2 px-[7%] py-[7%] w-full">
-          <p className="font-bold text-2xl text-[#333091] mb-4">
-            Pharmacovigilance Service End to end PV solutions{" "}
+          <p className="font-bold text-4xl text-[#333091] mb-4">
+            Pharmacovigilance
           </p>
           <h2
             className={title({
@@ -51,11 +52,13 @@ const Page = () => {
             })}
           >
             <p className={title({ className: "!text-xl text-[#333091]" })}>
-              Novo Evidenza &nbsp;
+              Pharmacovigilance &nbsp;
             </p>
-            is helping pharmacovigilance activities our team is well trained in
-            all prospective and we understand the industry demand as per TAT MET
-            we will driver our services to client’s
+            is the science and activities related to the detection, assessment,
+            understanding, and prevention of adverse effects or any other
+            drug-related problems. The main aim of PV is to ensure patient
+            safety and to improve public health by identifying and evaluating
+            potential risks associated with pharmaceuticals.
           </h2>
           <div>
             <Button
@@ -112,7 +115,7 @@ const Page = () => {
             <Image src={Footprint} alt="gif" />
           </div>
           <div className="right relative z-10 w-full md:w-1/3">
-            {PVSERVICES?.slice(3, 5)?.map((item, index) => (
+            {PVSERVICES?.slice(3, 6)?.map((item, index) => (
               <MotionCard
                 key={index}
                 style={{ top: `${String(item?.position)}%` }}
@@ -133,6 +136,89 @@ const Page = () => {
             ))}
           </div>
         </section>
+      </section>
+      <section
+        style={{
+          backgroundImage:
+            "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className="flex text-center md:text-left flex-col md:flex-row-reverse my-auto h-max mx-auto items-center justify-around gap-4"
+      >
+        {" "}
+        <MotionCard bounce className="w-full flex justify-center md:w-1/2">
+          <Image
+            src={Pv2}
+            className="w-[70%] object-contain"
+            width={500}
+            height={500}
+            alt="image"
+          />
+        </MotionCard>
+        <MotionDiv className="md:w-1/2 px-[7%] py-[7%] w-full">
+          <p className="font-bold text-4xl text-[#333091] mb-4">
+            Regulatory Services
+          </p>
+          <h2
+            className={title({
+              size: "sm",
+              className:
+                "text-gray-600  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+            })}
+          >
+            <p className={title({ className: "!text-xl text-[#333091]" })}>
+              Regulatory &nbsp;
+            </p>
+            services involve ensuring that pharmaceutical products meet all
+            regulatory requirements set by government authorities. Our services
+            ensure that products are safe, effective, and of high quality before
+            they reach the market and while they are on the market.
+          </h2>
+          <div>
+            <Button
+              as={Link}
+              className={buttonStyles({
+                color: "danger",
+                radius: "full",
+                variant: "shadow",
+                className: "font-bold shadow-none p-6 mt-6 w-max ",
+              })}
+              href={"/about"}
+              variant="flat"
+            >
+              Let&apos;s Connect
+            </Button>
+          </div>
+        </MotionDiv>
+      </section>
+      <section className="pt-8 md:py-[100px] px-4 bg-white ">
+        <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
+          <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
+            Services We Provide
+          </h1>
+          <p className="mt-4 text-sm md:text-md font-semibold text-[#333091] text-center">
+            We are a provider of pharmacovigilance, regulatory and quality &
+            compliance consultancy, and operational services. We help innovative
+            life sciences companies expedite the product development and
+            commercialization journey, reducing time to market.
+          </p>
+        </div>
+        <div className="py-8 h-max w-[70%] mx-auto gap-8  flex-wrap flex justify-between">
+          {REGULATORY_SERVICES?.map((service) => (
+            <span
+              style={{
+                backgroundImage: 
+                  "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+              className="px-4 flex justify-center w-[300px] hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full "
+            >
+              {service}
+            </span>
+          ))}
+        </div>
       </section>
     </Pages>
   );

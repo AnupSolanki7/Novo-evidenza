@@ -251,41 +251,58 @@ export const PUBLICATIONS = [
 
 export const PVSERVICES = [
   {
-    title: "ICSR",
+    title: "Adverse Event Reporting",
     description:
-      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+      "Collection and management of adverse event reports from healthcare professionals, patients, and other stakeholders.",
     icon: ServiceIcon4,
     position: 5,
   },
   {
-    title: "Case Submission",
+    title: "Signal Detection",
     description:
-      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+      "Identifying new risks associated with pharmaceuticals through data analysis.",
     icon: HeorIcon5,
     position: 35,
   },
   {
-    title: "Literature review",
+    title: "Risk Management",
     description:
-      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+      "Developing and implementing strategies to minimize risks associated with drug use.",
     icon: HeorIcon1,
     position: 65,
   },
   {
-    title: "Aggregate Reporting",
+    title: "Periodic Safety Update Reports (PSURs)",
     description:
-      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+      "Regular reports submitted to regulatory authorities that summarize the safety profile of a drug.",
     icon: HeorIcon2,
-    position: 20,
+    position: 15,
   },
   {
-    title: "Signal detection",
+    title: "Risk Evaluation",
     description:
-      "We are a provider of pharmacovigilance, regulatory and quality & compliance consultancy, and operational services. We help innovative life sciences companies expedite the product development and commercialization journey, reducing time to market.",
+      "Continuous assessment of the balance between the benefits and risks of a drug.",
     icon: HeorIcon3,
-    position: 55,
+    position: 47,
+  },
+  {
+    title: "Patient Safety Communication",
+    description:
+      "Informing healthcare providers and the public about safety issues related to pharmaceuticals.7.  Follow Up Question/ LSO Connection etc.",
+    icon: HeorIcon4,
+    position: 75,
   },
 ];
+
+export const REGULATORY_SERVICES = [
+  "Regulatory Strategy Development",
+  "Regulatory Submission",
+  "Compliance",
+  "Labeling and Advertising Compliance",
+  "Regulatory Intelligence",
+  "Health Authority Interactions"
+]
+
 
 export const REGULATORY = [
   {

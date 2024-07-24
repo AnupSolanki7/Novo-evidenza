@@ -15,7 +15,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { button as buttonStyles } from "@nextui-org/theme";
 
-// import Logo from "../public/image_novo_evidenza-removebg-preview.png";
+import Logo from "../assets/icons/Logo";
 import { MENU_LIST } from "@/utils/Constant";
 import { usePathname } from "next/navigation";
 import { Button } from "@nextui-org/button";
@@ -23,6 +23,7 @@ import { Button } from "@nextui-org/button";
 import { useCallback, useEffect, useState } from "react";
 import { title } from "./primitives";
 import MotionDiv from "./MotionDiv";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,20 +81,7 @@ export const Navbar = () => {
               href="/"
               onClick={() => setIsMenuOpen(false)}
             >
-              {/* <Image
-              className="mix-blend-color-dodge"
-              src={Logo}
-              alt="logo"
-              width={150}
-              height={180}
-            /> */}
-              <h2
-                className={title({
-                  className: "text-white text-2xl ",
-                })}
-              >
-                NOVO EVIDENZA
-              </h2>
+              <Logo/>
             </NextLink>
           </NavbarBrand>
         </NavbarContent>
