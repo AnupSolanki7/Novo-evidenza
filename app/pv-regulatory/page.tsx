@@ -214,7 +214,7 @@ const Page = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="px-4 flex justify-center w-[300px] hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full "
+              className="px-4 flex justify-center h-[70px] w-[300px] hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full "
             >
               {service}
             </span>
