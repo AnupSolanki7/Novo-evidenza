@@ -115,9 +115,9 @@ export const FOUNDERS = [
   },
   {
     image: Profile2,
-    name: "Dr. Kunal Maheshwari",
+    name: "Dr. Kunal Maheshwari, PharmD",
     role: "Co-Founder",
-    text: "Dr. Kunal Maheshwari has edited books on clinical research and medical writing. From organizations like Biolegues, NFPS, and Tech Awards. Kunal is dedicated to expanding and promoting healthcare through Novo Evidenza for better patient safety and a better world.",
+    text: "Dr. Kunal Maheshwari, founder of Novo Evidenza, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
   },
 ];
 

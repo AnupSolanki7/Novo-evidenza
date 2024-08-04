@@ -111,13 +111,17 @@ export default function AboutPage() {
                 <p className="font-bold text-xl text-[#333091] mb-4 ">
                   Contact
                 </p>
-                <p className="text-sm text-[#333091] ">+91 9617330774</p>
                 <Link
+                  className="text-sm text-[#333091] "
+                  href={"tel:9617330774"}
+                >
+                  +91 9617330774
+                </Link>
+                <Link
+                  className="text-sm text-[#333091] "
                   href={"mailto:info.novoevidenza01@gmail.com"}
                 >
-                  <p className="text-sm text-[#333091] ">
-                    info.novoevidenza01@gmail.com
-                  </p>
+                  info.novoevidenza01@gmail.com
                 </Link>
               </span>
             </div>

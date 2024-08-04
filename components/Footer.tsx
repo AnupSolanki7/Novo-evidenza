@@ -26,11 +26,15 @@ const Footer = () => {
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <FaPhoneAlt className="text-xl w-6 flex-shrink-0" />
-            <p>Call Us: +91-9617330774</p>
+            <Link className="text-white" href={"tel:9617330774"}>
+            Call Us: +91-9617330774
+            </Link>
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <IoIosMail className="text-xl w-6 flex-shrink-0" />
-            <p className="flex-wrap">info.novoevidenza01@gmail.com</p>
+            <Link className="flex-wrap text-white" href={"mailto:info.novoevidenza01@gmail.com"}>
+              info.novoevidenza01@gmail.com
+            </Link>
           </span>
         </div>
         <div className=" w-full md:w-1/3  justify-start items-start md:items-center flex flex-col gap-4 ">
