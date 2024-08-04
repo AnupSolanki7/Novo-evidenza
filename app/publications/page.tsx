@@ -39,20 +39,26 @@ const Page = () => {
         >
           Research Publications in which our contribution was acknowledged
         </h2>
+        <p className="md:text-lg max-w-[70%] text-md text-gray-500 font-semibold my-4">
+          The highly experienced medico-writing team have developed procedures
+          and templates to ensure the modules of CTD’s are detail-oriented and
+          additionally provide expertise in Bio Waiver Justifications and Well
+          Established Use.
+        </p>
       </MotionDiv>
       <div className="px-6 flex flex-col gap-6 mb-20 justify-between h-max items-center max-w-[1220px] mx-auto">
         {PUBLICATIONS.map((item, index) => (
           <MotionCard
             key={item.title}
-            className={clsx("border-r-none md:border-r-1 w-full")}
+            className={clsx("border-r-none min-w-full md:border-r-1 w-full")}
           >
-            <Link href={item.file} target="_blank">
+            <Link href={item.file} target="_blank" className="w-full">
               <div
                 className={clsx(
-                  "hover:bg-[#333091] [&>h3]:hover:text-white  [&>*]:[&>*]:hover:bg-danger-500 [&>button]:hover:bg-danger-500 cursor-pointer  transition-all ease-in-out rounded-[30px] [&>*]:[&>*]:hover:fill-white [&>p]:hover:text-gray-200 bg-white flex justify-start items-center gap-4 flex-col p-6"
+                  "hover:bg-[#333091] w-full [&>h3]:hover:text-white  [&>*]:[&>*]:hover:bg-danger-500 [&>button]:hover:bg-danger-500 cursor-pointer  transition-all ease-in-out rounded-[30px] [&>*]:[&>*]:hover:fill-white [&>p]:hover:text-gray-200 bg-white flex justify-start items-center gap-4 flex-col p-6"
                 )}
               >
-                <h3 className="text-md font-semibold">{item.title}</h3>
+                <h3 className="text-md text-left w-full font-semibold">{item.title}</h3>
                 <p className="text-danger-500 text-left w-full font-semibold text-xs">
                   {item.subtitle}
                 </p>

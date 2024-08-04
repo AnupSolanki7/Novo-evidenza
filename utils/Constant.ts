@@ -2,7 +2,8 @@ import ServiceIcon1 from "@/assets/icons/ServiceIcon1";
 import ServiceIcon2 from "@/assets/icons/ServiceIcon2";
 import { HiSpeakerphone } from "react-icons/hi";
 import ServiceIcon4 from "@/assets/icons/ServiceIcon4";
-import Profile from "../assets/image/profile.png";
+import Profile1 from "../assets/image/profile1.png";
+import Profile2 from "../assets/image/profile2.png";
 import Achieve1 from "@/assets/icons/Achieve1";
 import Achieve2 from "@/assets/icons/Achieve2";
 import Achieve3 from "@/assets/icons/Achieve3";
@@ -107,16 +108,16 @@ export const ACHEIVEMENTS = [
 
 export const FOUNDERS = [
   {
-    image: Profile,
-    name: "Kunal",
+    image: Profile1,
+    name: "Md G Khan",
     role: "Co-Founder",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ",
+    text: "Md G Khan having 4 years experience in PV industry, he had published 68 papers in peer reviewed journals , 27+ book chapters and edited 2 books ( Clinical Research and Medical Writing) received several awards such as Young Researcher, Best Emerging Scientist through different organisations such as Biolegues , NFPS , Tech Awards . He has holding 1200+ on his name , khan is expanding and promoting healthcare through Novo Evidenza for better patient safety and better world",
   },
   {
-    image: Profile,
-    name: "Kunal",
+    image: Profile2,
+    name: "Dr. Kunal Maheshwari",
     role: "Co-Founder",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ",
+    text: "Dr. Kunal Maheshwari has edited books on clinical research and medical writing. From organizations like Biolegues, NFPS, and Tech Awards. Kunal is dedicated to expanding and promoting healthcare through Novo Evidenza for better patient safety and a better world.",
   },
 ];
 
@@ -200,52 +201,27 @@ export const HEORLIST = [
 
 export const PUBLICATIONS = [
   {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+    title: `A versatile tissue matrix multifunctional scaffold protein
+with multifaceted signaling: Unveiling its potential in the cancer battle`,
+    subtitle: `Nidhi N. Shah · Bhavarth P. Dave · Kashvi C. Shah · Disha D. Shah · Kunal G. Maheshwari ·
+Mehul R. Chorawala · Priyajeet S. Parekh · Maharsh Jani`,
+    file: "https://drive.google.com/file/d/1mp2OK1zssbVXD1GHaH5qGT4l458tDa09/view?usp=sharing",
   },
-
   {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+    title: `A versatile tissue matrix multifunctional scaffold protein
+with multifaceted signaling: Unveiling its potential in the cancer battleAnalytical methods for quantification of non-steroidal anti-inflammatory
+drugs in pharmaceutical and biological samples: An overview of
+developments in the last decade`,
+    subtitle: `Nisha H. Parikh a, Jyoti Solanki a, Palak K. Parikh a, Ketan Ranch b, Anuradha Gajjar a,
+Bhavarth Dave c, Kunal Maheshwari c, Bharaneeswar Renukuntla d, Sai HS. Boddu e,f,*`,
+    file: "https://drive.google.com/file/d/1tg1NSGqssOTX__QPar2QA1hXZ3admL-g/view?usp=sharing",
   },
-
   {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
-  },
-
-  {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
-  },
-
-  {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
-  },
-
-  {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
-  },
-
-  {
-    title:
-      "The Efficacy, Safety, and Economic Outcomes of Using Ferric Derisomaltose for the Management of Iron Deficiency in China: A Rapid Health Technology Assessment",
-    subtitle: "Cureus 15(11): e48717. doi:10.7759/cureus.48717",
-    file: "https://marksmanhealthcare.com/wp-content/uploads/2023/11/Real-world-Safety-and-Effectiveness-of-Sodium-Oxybate-in-the-Management-of-Narcolepsy.pdf",
+    title: `Pathophysiological Aspects and Therapeutic Armamentarium
+of Alzheimer’s Disease: Recent Trends and Future Development`,
+    subtitle: `Bhavarth P. Dave · Yesha B. Shah · Kunal G. Maheshwari · Kaif A. Mansuri · Bhadrawati S. Prajapati ·
+Humzah I. Postwala · Mehul R. Chorawala`,
+    file: "https://drive.google.com/file/d/1Dp8d-a4MHI6ZzIeRWBPyWg6oesqLxSDb/view?usp=sharing",
   },
 ];
 
@@ -300,9 +276,8 @@ export const REGULATORY_SERVICES = [
   "Compliance",
   "Labeling and Advertising Compliance",
   "Regulatory Intelligence",
-  "Health Authority Interactions"
-]
-
+  "Health Authority Interactions",
+];
 
 export const REGULATORY = [
   {
