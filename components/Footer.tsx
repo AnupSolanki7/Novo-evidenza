@@ -26,13 +26,24 @@ const Footer = () => {
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <FaPhoneAlt className="text-xl w-6 flex-shrink-0" />
-            <Link className="text-white" href={"tel:9617330774"}>
-            Call Us: +91-9617330774
-            </Link>
+            <span className="text-white flex justify-start items-center gap-2">
+              Call Us:
+              <span className="flex gap-2">
+                <Link className="text-white" href={"tel:9617330774"}>
+                  +91-9617330774
+                </Link>
+                <Link className="text-white" href={"tel:9974525632"}>
+                  +91-9974525632
+                </Link>
+              </span>
+            </span>
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <IoIosMail className="text-xl w-6 flex-shrink-0" />
-            <Link className="flex-wrap text-white" href={"mailto:info.novoevidenza01@gmail.com"}>
+            <Link
+              className="flex-wrap text-white"
+              href={"mailto:info.novoevidenza01@gmail.com"}
+            >
               info.novoevidenza01@gmail.com
             </Link>
           </span>
@@ -48,49 +59,39 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"about-us"}
-            >
-              About us
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"services"}
-            >
-              Our services
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"ra"}
-            >
-              RA
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"medical-writing"}
-            >
-              Medical Writing
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"heor"}
+              href={"/heor"}
             >
               HEOR
+            </Link>
+            <Link
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+              )}
+              color="foreground"
+              href={"/pv-regulatory"}
+            >
+              PV & Regulatory
+            </Link>
+            <Link
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+              )}
+              color="foreground"
+              href={"/publications"}
+            >
+              Publications
+            </Link>
+            <Link
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+              )}
+              color="foreground"
+              href={"/about"}
+            >
+              About Us
             </Link>
           </span>
         </div>
@@ -100,7 +101,10 @@ const Footer = () => {
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <p className="">
-            Partner with Novo Evidenza to experience a partnership rooted in expertise and innovation. Together, we’ll navigate the intricate pharmaceutical landscape, unlocking potential and creating lasting impact on a global scale.
+              Partner with Novo Evidenza to experience a partnership rooted in
+              expertise and innovation. Together, we’ll navigate the intricate
+              pharmaceutical landscape, unlocking potential and creating lasting
+              impact on a global scale.
             </p>
           </span>
         </div>

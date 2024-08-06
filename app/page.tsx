@@ -297,7 +297,7 @@ export default function Home() {
               </p>
               is helping pharmacovigilance activities our team is well trained
               in all prospective and we understand the industry demand as per
-              TAT MET we will driver our services to clients
+              TAT MET we will deliver our services to clients
             </h2>
             <ul className="list-disc pl-4 flex text-left flex-col gap-4 text-white font-semibold">
               {PVSERVICES.map((item) => (

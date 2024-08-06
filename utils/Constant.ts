@@ -110,7 +110,7 @@ export const FOUNDERS = [
   {
     image: Profile2,
     name: "Dr. Kunal Maheshwari",
-    role: "Co-Founder",
+    role: "Founder",
     text: "Dr. Kunal Maheshwari, founder of Novo Evidenza, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
   },
   {
@@ -208,8 +208,7 @@ Mehul R. Chorawala · Priyajeet S. Parekh · Maharsh Jani`,
     file: "https://drive.google.com/file/d/1mp2OK1zssbVXD1GHaH5qGT4l458tDa09/view?usp=sharing",
   },
   {
-    title: `A versatile tissue matrix multifunctional scaffold protein
-with multifaceted signaling: Unveiling its potential in the cancer battleAnalytical methods for quantification of non-steroidal anti-inflammatory
+    title: `Analytical methods for quantification of non-steroidal anti-inflammatory
 drugs in pharmaceutical and biological samples: An overview of
 developments in the last decade`,
     subtitle: `Nisha H. Parikh a, Jyoti Solanki a, Palak K. Parikh a, Ketan Ranch b, Anuradha Gajjar a,
