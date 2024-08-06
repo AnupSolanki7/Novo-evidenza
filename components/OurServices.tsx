@@ -18,11 +18,11 @@ const OurServices = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="flex h-max lg:h-[95vh] text-center md:text-left flex-col  my-auto mx-auto items-center justify-start gap-4"
+      className="flex h-max min-h-[95vh] text-center md:text-left flex-col  my-auto mx-auto items-center justify-start gap-4"
     >
       <div className=" my-8  px-6  w-full">
         <MotionDiv className="w-full mt-4 flex flex-col text-center justify-center items-center">
-          <p className="font-bold text-2xl text-white mb-4">Our Services</p>
+          <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">Our Services</p>
           <h2
             className={title({
               size: "sm",
@@ -30,9 +30,9 @@ const OurServices = () => {
                 "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
             })}
           >
-            Providing Innovative Solutions and Services Across All HEOR and RWE
-            Domains
+            We offer a comprehensive suite of services designed to meet the diverse needs of the pharmaceutical industry
           </h2>
+          
         </MotionDiv>
         <div className="px-6 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 justify-between mt-8 h-full items-center max-w-[1220px] mx-auto">
           {SERVICES.map((item) => (

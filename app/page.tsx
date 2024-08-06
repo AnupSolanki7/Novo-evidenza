@@ -2,13 +2,12 @@
 
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { TypeAnimation } from "react-type-animation";
 import Banner from "../assets/image/banner.jpg";
-import BannerItem from "../assets/image/homeCompany2.png";
 import Pharma from "../assets/image/pharma.png";
 import Pharma1 from "../assets/image/pharma2.png";
 import Pharma2 from "../assets/image/pharma3.png";
 import Pharma3 from "../assets/image/pharma4.png";
+import White from "../assets/image/white.jpg";
 
 import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
@@ -19,12 +18,13 @@ import MotionDiv from "@/components/MotionDiv";
 import Accomplishment from "@/components/Accomplishment";
 import MotionCard from "@/components/MotionCard";
 import { PVSERVICES, REGULATORY } from "@/utils/Constant";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   return (
     <Page className="relative h-max bg-[#333091]">
       {/* banner */}
-      <section className="flex relative flex-col-reverse pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
+      <section className="flex relative flex-col pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
         <Image
           alt="banner"
           width={1000}
@@ -38,40 +38,13 @@ export default function Home() {
             <h1
               className={title({
                 size: "sm",
-                className: "text-white text-left !text-3xl md:!text-4xl ",
+                className: "text-white text-left !text-3xl md:!text-5xl ",
               })}
             >
-              Novo Evidence is LLP established in 2024
-              <TypeAnimation
-                // Same String at the start will only be typed once, initially
-                className={
-                  "data-rotate-text text-center md:text-left !text-xl md:!text-4xl text-danger-600 "
-                }
-                sequence={[
-                  " HEOR Solutions",
-                  1000,
-                  " PV Regulatory",
-                  1000,
-                  " RWE Solutions ",
-                  1000,
-                  " Medical Writing",
-                  1000,
-                  " Pharmacovigilance",
-                  1000,
-                ]}
-                speed={50} // Custom Speed from 1-99 - Default Speed: 40
-                style={{ fontSize: "50px" }}
-                wrapper="p" // Animation will be rendered as a <span>
-                repeat={Infinity} // Repeat this Animation Sequence infinitely
-              />
+              Welcome to Novo Evidenza: Pioneering Pharmaceutical Solutions.
             </h1>
-            <p className={subtitle({ className: "text-white !text-md" })}>
-              Novo Evidenza is Global Solutions and Services Provider
-              Supporting, Large, Mid & Small global Life Sciences companies,
-              (Pharmaceutical | Generics | Medical Device | Consumer Healthcare
-              | Cosmetics | Biotechnology in their entire Regulatory process and
-              Services, Pharmacovigilance Services, Health Economics and Outcome
-              Research , Medical Writing, Medical Scribe)
+            <p className={subtitle({ className: "text-white" })}>
+            At Novo Evidenza, we are at the forefront of pharmaceutical consultancy, delivering innovative solutions that propel your research forward. With expertise in Health Economics and Outcomes Research (HEOR), medical writing, pharmacovigilance, and regulatory affairs, we empower organizations worldwide to achieve their research and development goals.
             </p>
           </MotionDiv>
           <MotionDiv>
@@ -86,7 +59,7 @@ export default function Home() {
               href={"/about"}
               variant="flat"
             >
-              Let&apos;s Connect
+              Let&apos;s Connect <FaArrowRight/>
             </Button>
           </MotionDiv>
         </div>
@@ -107,8 +80,14 @@ export default function Home() {
       {/* info */}
       <div className="relative bg-white h-max">
         {/* section1 */}
-        <section className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
-          <MotionCard  className="w-full flex justify-center md:w-1/2">
+        <section     style={{
+            backgroundImage:
+              `url(${White.src})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }} className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
+          
+          {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
             <Image
               src={BannerItem}
               className="w-[70%] object-contain"
@@ -116,30 +95,18 @@ export default function Home() {
               height={500}
               alt="image"
             />
-          </MotionCard>
-          <MotionDiv className="md:w-1/2 my-8 px-[7%] w-full">
-            <p className="font-bold text-2xl text-[#333091] mb-4">
-              Our Company
+          </MotionCard> */}
+          <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
+            <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
+            Our Vision
             </p>
             <h2
-              className={title({
-                size: "sm",
+              className={subtitle({
                 className:
-                  "text-gray-600  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                  "text-gray-600 font-[500] text-center !leading-[14px] !text-[18px] ",
               })}
             >
-              <p className={title({ className: "!text-xl text-[#333091]" })}>
-                Novo Evidenza &nbsp;
-              </p>
-              is registered LLP and established in 2024, Co Founder of Novo
-              Evidenza is{" "}
-              <p className={title({ className: "!text-xl text-[#333091]" })}>
-                Dr. Kunal Maheswari
-              </p>{" "}
-              , the organization goal is to serve healthcare domain and help
-              pharmaceutical, biotechnology, research organization, Institute
-              for HEOR services, Medical Writing, PV , Regulatory, Medical
-              scribe.
+              We envision a world where pharmaceutical innovation thrives, driven by seamless and effective research processes. Our mission is to simplify complexities, enabling your organization to focus on developing transformative therapies that improve lives globally.
             </h2>
             <div>
               <Button
@@ -171,7 +138,7 @@ export default function Home() {
             />
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8 px-6  w-full">
-            <p className="font-bold text-3xl text-white mb-4">
+            <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">
               Health Economic and Outcome Research
             </p>
             <h2
@@ -250,6 +217,51 @@ export default function Home() {
         {/* section3 */}
         <OurServices />
         {/* section4 */}
+        <section     style={{
+            backgroundImage:
+              `url(${White.src})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }} className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
+          
+          {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
+            <Image
+              src={BannerItem}
+              className="w-[70%] object-contain"
+              width={500}
+              height={500}
+              alt="image"
+            />
+          </MotionCard> */}
+          <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
+            <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
+            Who We Are
+            </p>
+            <h2
+              className={subtitle({
+                className:
+                  "text-gray-600  font-[500]  text-center !leading-[14px] !text-[18px] ",
+              })}
+            >
+              Novo Evidenza is a leading international consultancy led by a team of seasoned pharmaceutical professionals. Our experts combine deep industry knowledge with practical experience, ensuring that every project is handled with precision and care.
+            </h2>
+            <div>
+              <Button
+                as={Link}
+                className={buttonStyles({
+                  color: "danger",
+                  radius: "full",
+                  variant: "shadow",
+                  className: "font-bold shadow-none p-6 mt-6 w-max ",
+                })}
+                href={"/about"}
+                variant="flat"
+              >
+                Know More
+              </Button>
+            </div>
+          </MotionDiv>
+        </section>
         <section
           style={{
             backgroundImage:
@@ -257,7 +269,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="flex h-screen text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4"
+          className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4"
         >
           <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
@@ -270,7 +282,7 @@ export default function Home() {
             />
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
-            <p className="font-bold text-2xl text-white mb-4">
+            <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">
               Pharmacovigilance
             </p>
             <h2
@@ -324,7 +336,7 @@ export default function Home() {
             />
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
-            <p className="font-bold text-2xl text-[#333091] mb-4">
+            <p className="font-bold text-3xl lg:text-5xl mb-8 text-[#333091]">
               Regulatory Affairs
             </p>
             <ul className="list-disc pl-4 flex text-left flex-col gap-4 text-[#333091] font-semibold">

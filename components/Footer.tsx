@@ -96,19 +96,17 @@ const Footer = () => {
         </div>
         <div className=" w-full md:w-1/3  justify-start items-start flex flex-col gap-4 ">
           <span className="border-b-2 text-white font-semibold">
-            <p>Work with us</p>
+            <p>Join Us on a Global Journey of Innovation</p>
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <p className="">
-              We believe that work is to be pursued and enjoyed through
-              commitment, teamwork, creative thinking, and an ethical approach
-              in everything we do.
+            Partner with Novo Evidenza to experience a partnership rooted in expertise and innovation. Together, we’ll navigate the intricate pharmaceutical landscape, unlocking potential and creating lasting impact on a global scale.
             </p>
           </span>
         </div>
       </MotionDiv>
       <div className="border-t-2 text-white w-full text-sm mt-6">
-        <div className="flex w-full justify-between px-6 my-4">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between px-6 my-4">
           <p>copyright Novo Evidenza 2024. All rights reserved.</p>
           <p>Crafted by Anup</p>
         </div>

@@ -43,32 +43,32 @@ export const SERVICES = [
     id: "1",
     title: "Health Economics & Outcomes Research",
     subtitle:
-      "Delivering Holistic and Integrated HEOR Solutions Tailored to Meet Your Every Need",
+      "Providing critical insights for strategic decision-making and maximizing product value.",
     link: "/heor",
     Icon: ServiceIcon1,
   },
   {
     id: "2",
-    title: "Real World Evidence",
+    title: "Medical Writing",
     subtitle:
-      "RWE Abstraction of Data from Real-World Sources and Synthesizing Real-World Evidence",
-    link: "/heor",
+      "Delivering clear, impactful scientific communication that resonates with global audiences.",
+    link: "/about",
     Icon: ServiceIcon2,
   },
   {
     id: "3",
-    title: "Value Communications",
+    title: "Pharmacovigilance",
     subtitle:
-      "Elevating Research Impact with Engaging Scientific Publications, Conference Assistance and Beyond",
-    link: "/about",
+      " Enhancing patient safety through rigorous monitoring and analysis.",
+    link: "/pv-regulatory",
     Icon: HiSpeakerphone,
   },
   {
     id: "4",
-    title: "Competitive Intelligence",
+    title: "Regulatory Affairs",
     subtitle:
-      "Generating Credible and Actionable Insights Enabling You to Stay Ahead of the Competition",
-    link: "/about",
+      " Navigating complex international regulations to ensure compliance and expedite market access",
+    link: "/pv-regulatory",
     Icon: ServiceIcon4,
   },
 ];
@@ -108,16 +108,16 @@ export const ACHEIVEMENTS = [
 
 export const FOUNDERS = [
   {
+    image: Profile2,
+    name: "Dr. Kunal Maheshwari",
+    role: "Co-Founder",
+    text: "Dr. Kunal Maheshwari, founder of Novo Evidenza, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
+  },
+  {
     image: Profile1,
     name: "Md G Khan",
     role: "Co-Founder",
     text: "Md G Khan having 4 years experience in PV industry, he had published 68 papers in peer reviewed journals , 27+ book chapters and edited 2 books ( Clinical Research and Medical Writing) received several awards such as Young Researcher, Best Emerging Scientist through different organisations such as Biolegues , NFPS , Tech Awards . He has holding 1200+ on his name , khan is expanding and promoting healthcare through Novo Evidenza for better patient safety and better world",
-  },
-  {
-    image: Profile2,
-    name: "Dr. Kunal Maheshwari, PharmD",
-    role: "Co-Founder",
-    text: "Dr. Kunal Maheshwari, founder of Novo Evidenza, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
   },
 ];
 

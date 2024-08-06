@@ -15,7 +15,7 @@ const Accomplishment = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="w-full h-max md:h-[60vh] relative text-white"
+      className="w-full h-max min-h-[60vh] relative text-white"
     >
       <div className="absolute inset-0 bg-[#06194b] opacity-90 "></div>
       <MotionDiv className="w-full sticky px-6 py-[50px] z-10 flex flex-col text-center justify-center items-center">
