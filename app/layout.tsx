@@ -4,7 +4,6 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 
-import { siteConfig } from "@/config/site";
 import { Toaster } from "react-hot-toast";
 import { fontPoppins } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
@@ -17,6 +16,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    title: "Novo Evidenza | LLP established in 2024",
+    description :  "Novo Evidenza is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
+    images: "https://novo-evidenza.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLogo.64d38d4b.png&w=96&q=75"
+  }
 };
 
 export const viewport: Viewport = {
