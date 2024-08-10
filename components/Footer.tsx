@@ -42,9 +42,9 @@ const Footer = () => {
             <IoIosMail className="text-xl w-6 flex-shrink-0" />
             <Link
               className="flex-wrap text-white"
-              href={"mailto:info.novoevidenza01@gmail.com"}
+              href={"mailto:Info.novoevidenza@gmail.com"}
             >
-              info.novoevidenza01@gmail.com
+              Info.novoevidenza@gmail.com
             </Link>
           </span>
         </div>

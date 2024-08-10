@@ -128,9 +128,9 @@ export default function AboutPage() {
                 </span>
                 <Link
                   className="text-sm text-[#333091] "
-                  href={"mailto:info.novoevidenza01@gmail.com"}
+                  href={"mailto:Info.novoevidenza@gmail.com"}
                 >
-                  info.novoevidenza01@gmail.com
+                  Info.novoevidenza@gmail.com
                 </Link>
               </span>
             </div>
@@ -266,7 +266,7 @@ export default function AboutPage() {
                 "text-white mb-4 font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
             })}
           >
-            Meet your small business partners
+            Meet your business partners
           </h2>
           <p className="md:text-xl text-md text-white ">
             We are , co-founders of{" "}
