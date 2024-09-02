@@ -22,7 +22,7 @@ const Footer = () => {
         <div className=" w-full md:w-1/3 justify-start items-start flex flex-col gap-4 ">
           <span className="flex justify-start gap-1 text-white font-semibold items-start">
             <IoLocationSharp className="text-xl w-6 flex-shrink-0" />
-            <p>Salar Nagar , Old City Hyderabad 50059</p>
+            <p>Near AEC Cross Road , Memnagar, Ahmedabad</p>
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <FaPhoneAlt className="text-xl w-6 flex-shrink-0" />
@@ -121,7 +121,7 @@ const Footer = () => {
             target="_blank"
             href={"https://anup-gamma.vercel.app/"}
           >
-            <p>Crafted by Anup</p>
+            <p>Crafted by Anup Solanki</p>
           </Link>
         </div>
       </div>

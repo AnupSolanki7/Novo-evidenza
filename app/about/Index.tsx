@@ -103,7 +103,7 @@ export default function AboutPage() {
                   Address
                 </p>
                 <p className="text-sm text-[#333091] ">
-                  Salar Nagar , Old City Hyderabad 50059 India
+                  Near AEC Cross Road , Memnagar, Ahmedabad 380052 India
                 </p>
               </span>
               <span className="w-1/2 md:w-1/3 ">
