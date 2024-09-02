@@ -4,7 +4,7 @@ import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { useRef, useState } from "react";
@@ -110,20 +110,19 @@ export default function AboutPage() {
                 <p className="font-bold text-xl text-[#333091] mb-4 ">
                   Contact
                 </p>
-                <span className="flex gap-2" >
-
-                <Link
+                <span className="flex gap-2">
+                  {/* <Link
                   className="text-sm whitespace-nowrap text-[#333091] "
                   href={"tel:9617330774"}
                 >
                   +91 9617330774
-                </Link>
-                <Link
-                  className="text-sm whitespace-nowrap text-[#333091] "
-                  href={"tel:9974525632"}
-                >
-                  +91 9974525632
-                </Link>
+                </Link> */}
+                  <Link
+                    className="text-sm whitespace-nowrap text-[#333091] "
+                    href={"tel:9974525632"}
+                  >
+                    +91 9974525632
+                  </Link>
                 </span>
                 <Link
                   className="text-sm text-[#333091] "
@@ -134,16 +133,20 @@ export default function AboutPage() {
               </span>
             </div>
             <span className="w-full flex gap-4 justify-start items-center mb-8">
-              <Link className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-[#333091] ">
-                <FaFacebookF className="text-lg text-white" />
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/company/novo-evidenza/"
+                className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-[#333091] "
+              >
+                <FaLinkedin className="text-lg text-white" />
               </Link>
-              <Link className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-[#333091] ">
+              {/* <Link className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-[#333091] ">
                 <FaInstagram className="text-lg text-white" />
-              </Link>
+              </Link> */}
             </span>
           </MotionDiv>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.286690223052!2d78.45181602493382!3d17.349932433530785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97e98efc09ff%3A0xee42372b3c660ce9!2sSalar%20Nagar%2C%20Ramnas%20Pura%2C%20Hyderabad%2C%20Telangana%20500264!5e0!3m2!1sen!2sin!4v1722759973823!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.142446574321!2d72.54400357509287!3d23.05523867915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e849f1da34b99%3A0x4fa0ffc47a78afa9!2sAEC%20Cross%20Rd%2C%20Naranpura%2C%20Ahmedabad%2C%20Gujarat%20380063!5e0!3m2!1sen!2sin!4v1725298358308!5m2!1sen!2sin"
             allowFullScreen
             loading="lazy"
             className="border-0 h-[200px] w-full mb-8"

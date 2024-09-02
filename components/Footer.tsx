@@ -29,9 +29,9 @@ const Footer = () => {
             <span className="text-white flex justify-start items-center gap-2">
               Call Us:
               <span className="flex gap-2">
-                <Link className="text-white" href={"tel:9617330774"}>
+                {/* <Link className="text-white" href={"tel:9617330774"}>
                   +91-9617330774
-                </Link>
+                </Link> */}
                 <Link className="text-white" href={"tel:9974525632"}>
                   +91-9974525632
                 </Link>
@@ -112,7 +112,17 @@ const Footer = () => {
       <div className="border-t-2 text-white w-full text-sm mt-6">
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between px-6 my-4">
           <p>copyright Novo Evidenza 2024. All rights reserved.</p>
-          <p>Crafted by Anup</p>
+          <Link
+            className={clsx(
+              linkStyles({ color: "foreground" }),
+              "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+            )}
+            color="foreground"
+            target="_blank"
+            href={"https://anup-gamma.vercel.app/"}
+          >
+            <p>Crafted by Anup</p>
+          </Link>
         </div>
       </div>
     </footer>
