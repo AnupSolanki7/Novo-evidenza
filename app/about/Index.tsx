@@ -107,10 +107,10 @@ export default function AboutPage() {
                 </p>
               </span>
               <span className="w-1/2 md:w-1/3 ">
-                {/* <p className="font-bold text-xl text-[#333091] mb-4 ">
+                <p className="font-bold text-xl text-[#333091] mb-4 ">
                   Contact
                 </p>
-                <span className="flex gap-2">
+                {/* <span className="flex gap-2">
                   <Link
                   className="text-sm whitespace-nowrap text-[#333091] "
                   href={"tel:9617330774"}
