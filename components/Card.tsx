@@ -12,7 +12,7 @@ const Card = ({
     id: string;
     title: string;
     subtitle: string;
-    link: string;
+    link?: string;
     Icon: any;
   };
 }) => {
