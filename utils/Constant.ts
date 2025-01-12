@@ -121,7 +121,7 @@ export const ACHEIVEMENTS = [
 export const FOUNDERS = [
   {
     image: Profile2,
-    name: "Dr. Kunal Maheshwari",
+    name: "Dr. K. G. Maheshwari",
     role: "Founder",
     text: "Dr. Kunal Maheshwari, founder of Vivoclin Research, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
   },
@@ -212,27 +212,32 @@ export const HEORLIST = [
 ];
 
 export const PUBLICATIONS = [
-  {
-    title: `A versatile tissue matrix multifunctional scaffold protein
-with multifaceted signaling: Unveiling its potential in the cancer battle`,
-    subtitle: `Nidhi N. Shah · Bhavarth P. Dave · Kashvi C. Shah · Disha D. Shah · Kunal G. Maheshwari ·
-Mehul R. Chorawala · Priyajeet S. Parekh · Maharsh Jani`,
-    file: "https://drive.google.com/file/d/1mp2OK1zssbVXD1GHaH5qGT4l458tDa09/view?usp=sharing",
-  },
-  {
-    title: `Analytical methods for quantification of non-steroidal anti-inflammatory
-drugs in pharmaceutical and biological samples: An overview of
-developments in the last decade`,
-    subtitle: `Nisha H. Parikh a, Jyoti Solanki a, Palak K. Parikh a, Ketan Ranch b, Anuradha Gajjar a,
-Bhavarth Dave c, Kunal Maheshwari c, Bharaneeswar Renukuntla d, Sai HS. Boddu e,f,*`,
-    file: "https://drive.google.com/file/d/1tg1NSGqssOTX__QPar2QA1hXZ3admL-g/view?usp=sharing",
-  },
+  //   {
+  //     title: `A versatile tissue matrix multifunctional scaffold protein
+  // with multifaceted signaling: Unveiling its potential in the cancer battle`,
+  //     subtitle: `Nidhi N. Shah · Bhavarth P. Dave · Kashvi C. Shah · Disha D. Shah · Kunal G. Maheshwari ·
+  // Mehul R. Chorawala · Priyajeet S. Parekh · Maharsh Jani`,
+  //     file: "https://drive.google.com/file/d/1mp2OK1zssbVXD1GHaH5qGT4l458tDa09/view?usp=sharing",
+  //   },
+  //   {
+  //     title: `Analytical methods for quantification of non-steroidal anti-inflammatory
+  // drugs in pharmaceutical and biological samples: An overview of
+  // developments in the last decade`,
+  //     subtitle: `Nisha H. Parikh a, Jyoti Solanki a, Palak K. Parikh a, Ketan Ranch b, Anuradha Gajjar a,
+  // Bhavarth Dave c, Kunal Maheshwari c, Bharaneeswar Renukuntla d, Sai HS. Boddu e,f,*`,
+  //     file: "https://drive.google.com/file/d/1tg1NSGqssOTX__QPar2QA1hXZ3admL-g/view?usp=sharing",
+  //   },
   {
     title: `Pathophysiological Aspects and Therapeutic Armamentarium
 of Alzheimer’s Disease: Recent Trends and Future Development`,
     subtitle: `Bhavarth P. Dave · Yesha B. Shah · Kunal G. Maheshwari · Kaif A. Mansuri · Bhadrawati S. Prajapati ·
 Humzah I. Postwala · Mehul R. Chorawala`,
     file: "https://drive.google.com/file/d/1Dp8d-a4MHI6ZzIeRWBPyWg6oesqLxSDb/view?usp=sharing",
+  },
+  {
+    title: `A comprehensive study of the basic formulation of supersaturated self-nanoemulsifying drug delivery systems (SNEDDS) of albendazolum`,
+    subtitle: `Hani Alothaid, Mohammed S. Aldughaim, Azeez Oriyomi Yusuf, Umama Yezdani, Alaa Alhazmi, Mahmoud M. Habibullah, and Mohammad Gayoor Khang`,
+    file: "https://ncbi.nlm.nih.gov/pmc/articles/PMC8510591/",
   },
 ];
 

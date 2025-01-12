@@ -29,20 +29,20 @@ const Footer = () => {
             <IoLocationSharp className="text-xl w-6 flex-shrink-0" />
             <p>Near AEC Cross Road , Memnagar, Ahmedabad</p>
           </span>
-          <span className="flex justify-start gap-1 text-white font-semibold items-center">
+          {/* <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <FaPhoneAlt className="text-xl w-6 flex-shrink-0" />
             <span className="text-white flex justify-start items-center gap-2">
               Call Us:
               <span className="flex gap-2">
-                {/* <Link className="text-white" href={"tel:9617330774"}>
+                <Link className="text-white" href={"tel:9617330774"}>
                   +91-9617330774
-                </Link> */}
+                </Link>
                 <Link className="text-white" href={"tel:9974525632"}>
                   +91-9974525632
                 </Link>
               </span>
             </span>
-          </span>
+          </span> */}
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <IoIosMail className="text-xl w-6 flex-shrink-0" />
             <Link

@@ -110,20 +110,20 @@ export default function AboutPage() {
                 <p className="font-bold text-xl text-[#333091] mb-4 ">
                   Contact
                 </p>
-                <span className="flex gap-2">
-                  {/* <Link
+                {/* <span className="flex gap-2">
+                  <Link
                   className="text-sm whitespace-nowrap text-[#333091] "
                   href={"tel:9617330774"}
                 >
                   +91 9617330774
-                </Link> */}
+                </Link>
                   <Link
                     className="text-sm whitespace-nowrap text-[#333091] "
                     href={"tel:9974525632"}
                   >
                     +91 9974525632
                   </Link>
-                </span>
+                </span> */}
                 <Link
                   className="text-sm text-[#333091] "
                   href={"mailto:Info.novoevidenza@gmail.com"}
