@@ -1,9 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { title } from "./primitives";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
 import Card from "./Card";
 import { SERVICES } from "@/utils/Constant";
 import MotionDiv from "./MotionDiv";

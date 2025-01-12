@@ -16,7 +16,12 @@ const Footer = () => {
   return (
     <footer className="w-full flex-col bg-[#333091] flex items-center justify-center py-3">
       <MotionDiv className="px-6 mx-auto  flex justify-start w-full mt-6 ">
-        <Logo />
+        <span className="flex items-center" >
+          <Logo />{" "}
+          <h2 className="md:text-3xl text-xl w-full text-center font-extrabold text-white">
+            VivoClin Research
+          </h2>
+        </span>
       </MotionDiv>
       <MotionDiv className="px-6 mx-auto flex overflow-hidden flex-col md:flex-row justify-start w-full mt-6 gap-12 md:gap-0 ">
         <div className=" w-full md:w-1/3 justify-start items-start flex flex-col gap-4 ">
@@ -101,17 +106,17 @@ const Footer = () => {
           </span>
           <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <p className="">
-              Partner with Novo Evidenza to experience a partnership rooted in
-              expertise and innovation. Together, we’ll navigate the intricate
-              pharmaceutical landscape, unlocking potential and creating lasting
-              impact on a global scale.
+              Partner with Vivoclin Research to experience a partnership rooted
+              in expertise and innovation. Together, we’ll navigate the
+              intricate pharmaceutical landscape, unlocking potential and
+              creating lasting impact on a global scale.
             </p>
           </span>
         </div>
       </MotionDiv>
       <div className="border-t-2 text-white w-full text-sm mt-6">
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between px-6 my-4">
-          <p>copyright Novo Evidenza 2024. All rights reserved.</p>
+          <p>copyright Vivoclin Research 2024. All rights reserved.</p>
           <Link
             className={clsx(
               linkStyles({ color: "foreground" }),

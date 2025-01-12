@@ -3,9 +3,9 @@ import AboutPage from "./Index";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Novo Evidenza | LLP established in 2024",
+  title: "Vivoclin Research | LLP established in 2024",
   description:
-    "Novo Evidenza is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
+    "Vivoclin Research is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
   icons: {
     icon: "/favicon.ico",
   },

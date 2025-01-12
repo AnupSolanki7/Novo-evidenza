@@ -21,30 +21,43 @@ export const MENU_LIST = [
     title: "Home",
     slug: "/",
   },
+  // {
+  //   id: "heor",
+  //   title: "HEOR",
+  //   slug: "/heor",
+  // },
   {
-    id: "heor",
-    title: "HEOR",
-    slug: "/heor",
+    id: "smo",
+    title: "SMO",
+    slug: "/smo",
   },
+  // {
+  //   id: "pv-regulatory",
+  //   title: "PV and Regulatory",
+  //   slug: "/pv-regulatory",
+  // },
   {
-    id: "pv-regulatory",
-    title: "PV and Regulatory",
-    slug: "/pv-regulatory",
-  },
-  {
-    id: "publications",
-    title: "Publications",
-    slug: "/publications",
+    id: "medical-writing",
+    title: "Medical Writing",
+    slug: "/medical-writing",
   },
 ];
 
 export const SERVICES = [
+  // {
+  //   id: "1",
+  //   title: "Health Economics & Outcomes Research",
+  //   subtitle:
+  //     "Providing critical insights for strategic decision-making and maximizing product value.",
+  //   link: "/heor",
+  //   Icon: ServiceIcon1,
+  // },
   {
     id: "1",
-    title: "Health Economics & Outcomes Research",
+    title: "Site Management Organization (SMO)",
     subtitle:
-      "Providing critical insights for strategic decision-making and maximizing product value.",
-    link: "/heor",
+      "Vivoclin's SMO: APAC clinical research leader in site management, trial startups, and compliance.",
+    link: "/smo",
     Icon: ServiceIcon1,
   },
   {
@@ -57,17 +70,16 @@ export const SERVICES = [
   },
   {
     id: "3",
-    title: "Pharmacovigilance",
+    title: "Clinical Trial CRO",
     subtitle:
-      " Enhancing patient safety through rigorous monitoring and analysis.",
-    link: "/pv-regulatory",
+      "Expert clinical operations for Phase studies with streamlined management, regulatory compliance, and comprehensive trial.",
     Icon: HiSpeakerphone,
   },
   {
     id: "4",
-    title: "Regulatory Affairs",
+    title: "Vivocilin Partner at Every Phase",
     subtitle:
-      " Navigating complex international regulations to ensure compliance and expedite market access",
+      "Global clinical development with local expertise, advanced therapies, and cutting-edge operations.",
     link: "/pv-regulatory",
     Icon: ServiceIcon4,
   },
@@ -111,13 +123,13 @@ export const FOUNDERS = [
     image: Profile2,
     name: "Dr. Kunal Maheshwari",
     role: "Founder",
-    text: "Dr. Kunal Maheshwari, founder of Novo Evidenza, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
+    text: "Dr. Kunal Maheshwari, founder of Vivoclin Research, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
   },
   {
     image: Profile1,
     name: "Md G Khan",
     role: "Co-Founder",
-    text: "Md G Khan having 4 years experience in PV industry, he had published 68 papers in peer reviewed journals , 27+ book chapters and edited 2 books ( Clinical Research and Medical Writing) received several awards such as Young Researcher, Best Emerging Scientist through different organisations such as Biolegues , NFPS , Tech Awards . He has holding 1200+ on his name , khan is expanding and promoting healthcare through Novo Evidenza for better patient safety and better world",
+    text: "Md G Khan having 4 years experience in PV industry, he had published 68 papers in peer reviewed journals , 27+ book chapters and edited 2 books ( Clinical Research and Medical Writing) received several awards such as Young Researcher, Best Emerging Scientist through different organisations such as Biolegues , NFPS , Tech Awards . He has holding 1200+ on his name , khan is expanding and promoting healthcare through Vivoclin Research for better patient safety and better world",
   },
 ];
 
@@ -127,7 +139,7 @@ export const HEORLIST = [
     icon: HeorIcon1,
     title: "Literature Reviews",
     subTitle:
-      "Novo Evidenza specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
+      "Vivoclin Research specializes in high-quality evidence synthesis through end-to-end support for systematic literature reviews. We are experts in all stages of the SLRs, right from reconstructing SLR objectives to PICOS headings, till preparing SLR report. We hunt for evidence from all possible sources, and generate credible evidence.",
     list: [
       "PICOS, search strategy preparing and executing",
       "SLR protocol preparation and registration",
@@ -157,7 +169,7 @@ export const HEORLIST = [
     icon: HeorIcon3,
     title: "Economic Modelling",
     subTitle:
-      "Novo Evidenza assists in development of health economic models to support reimbursements, health technology assessment (HTA) submissions, and to optimize market access strategies",
+      "Vivoclin Research assists in development of health economic models to support reimbursements, health technology assessment (HTA) submissions, and to optimize market access strategies",
     list: [
       "Decision tree model, Markov model, partitioned survival model",
       "Different types of cost analysis: CEA, CUA, COI/ BOI, CBA, BMI",
@@ -224,6 +236,29 @@ Humzah I. Postwala · Mehul R. Chorawala`,
   },
 ];
 
+export const WRITINGS = [
+  {
+    title: `Regulatory Writing:`,
+    subtitle: `Clinical study protocols, investigator brochures, clinical study reports, and regulatory submissions adhering to ICH-GCP guidelines.`,
+  },
+  {
+    title: `Scientific Publications: `,
+    subtitle: `Journal articles, review papers, case studies, and conference abstracts to showcase your research in the global scientific community.`,
+  },
+  {
+    title: `Medical Communication:`,
+    subtitle: `Creating promotional materials, brochures, and presentations to engage healthcare professionals and patients.`,
+  },
+  {
+    title: `Educational Content:`,
+    subtitle: `Developing training modules and patient education materials to simplify complex medical concepts.`,
+  },
+  {
+    title: `Grant Writing:`,
+    subtitle: `Crafting compelling proposals to secure funding for your research projects.`,
+  },
+];
+
 export const PVSERVICES = [
   {
     title: "Adverse Event Reporting",
@@ -264,6 +299,56 @@ export const PVSERVICES = [
     title: "Patient Safety Communication",
     description:
       "Informing healthcare providers and the public about safety issues related to pharmaceuticals.7.  Follow Up Question/ LSO Connection etc.",
+    icon: HeorIcon4,
+    position: 75,
+  },
+];
+
+export const SMO_SERVICES = [
+  {
+    title: "Pioneering Clinical Excellence",
+    description: `Driving Innovation and Impact, 
+Novoclin SMO Division has been a trusted leader in the APAC clinical research industry, operating with innovation and precision`,
+    icon: ServiceIcon4,
+    position: 5,
+  },
+  {
+    title: "Expertise Across Core Units",
+    description: `With our APAC expertise, Vivoclin SMO Division delivers end-to-end clinical trial solutions through specialized teams, comprehensive services, and strong partnerships, ensuring quality, compliance, and impactful results.`,
+    icon: HeorIcon5,
+    position: 35,
+  },
+  {
+    title: "Comprehensive Service Portfolio",
+    description: `End-to-End Support for Clinical Trials
+From subject recruitment and schedule management to compliance reporting and 24/7 customer support, our extensive services ensure every aspect of your study runs smoothly.
+
+`,
+    icon: HeorIcon1,
+    position: 65,
+  },
+  {
+    title: "Global and Local Reach",
+    description: `Diverse Expertise for Every Study Phase
+We cater to global and local clients, specializing in all clinical trial phases with a strong focus on Phase III studies, which comprise 73% of our work.
+
+`,
+    icon: HeorIcon2,
+    position: 15,
+  },
+  {
+    title: "Therapeutic Specialization",
+    description: `Tailored Expertise Across Multiple Therapeutic Areas
+Our clinical research extends to oncology, pulmonology, infectious diseases, cardiology, neurology, and more, ensuring a customized approach for every therapeutic challenge.`,
+    icon: HeorIcon3,
+    position: 47,
+  },
+  {
+    title: `Collaborative Partnerships for Success`,
+    description: `Strengthening Research Through Strong Alliances
+Our extensive network of site partnerships enhances quality and efficiency, enabling us to set new industry standards and achieve impactful results.
+
+`,
     icon: HeorIcon4,
     position: 75,
   },

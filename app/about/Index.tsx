@@ -273,7 +273,7 @@ export default function AboutPage() {
           <p className="md:text-xl text-md text-white ">
             We are , co-founders of{" "}
             <p className={title({ className: "!text-[20px] text-[#333091]" })}>
-              Novo Evidenza
+              Vivoclin Research
             </p>{" "}
             and united by our love and passion for using business as a force for
             good

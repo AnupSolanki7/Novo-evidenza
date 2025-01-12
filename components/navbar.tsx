@@ -77,11 +77,14 @@ export const Navbar = () => {
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3 max-w-fit">
             <NextLink
-              className="flex justify-start items-center gap-1"
+              className="flex justify-start items-center"
               href="/"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Logo/>
+              <Logo />
+              <h1 className="md:text-3xl text-xl w-full text-center font-extrabold text-white">
+                VivoClin Research
+              </h1>
             </NextLink>
           </NavbarBrand>
         </NavbarContent>
@@ -175,11 +178,11 @@ export const Navbar = () => {
                 className: "text-white text-center w-full ",
               })}
             >
-              NOVO EVIDENZA
+              Vivoclin Research
             </h2>
             <div className="border-t-2 text-white w-full text-sm ">
               <div className="flex flex-col w-full justify-between my-4">
-                <p>copyright Novo Evidenza 2024. All rights reserved.</p>
+                <p>copyright Vivoclin Research 2024. All rights reserved.</p>
               </div>
             </div>
           </div>

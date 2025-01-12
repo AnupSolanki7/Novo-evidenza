@@ -6,7 +6,6 @@ import Banner from "../assets/image/banner.jpg";
 import Pharma from "../assets/image/pharma.png";
 import Pharma1 from "../assets/image/pharma2.png";
 import Pharma2 from "../assets/image/pharma3.png";
-import Pharma3 from "../assets/image/pharma4.png";
 import White from "../assets/image/white.jpg";
 
 import { subtitle, title } from "@/components/primitives";
@@ -38,13 +37,20 @@ export default function Home() {
             <h1
               className={title({
                 size: "sm",
-                className: "text-white text-left !text-3xl md:!text-5xl ",
+                className: "text-white text-left !text-2xl md:!text-4xl ",
               })}
             >
-              Welcome to Novo Evidenza: Pioneering Pharmaceutical Solutions.
+              Welcome to VivoClin Research Services LLP: Redefining Clinical
+              Excellence
             </h1>
             <p className={subtitle({ className: "text-white" })}>
-            At Novo Evidenza, we are at the forefront of pharmaceutical consultancy, delivering innovative solutions that propel your research forward. With expertise in Health Economics and Outcomes Research (HEOR), medical writing, pharmacovigilance, and regulatory affairs, we empower organizations worldwide to achieve their research and development goals.
+              At VivoClin Research Services, we specialize in delivering
+              comprehensive site support and management for clinical trials,
+              ensuring seamless execution from start to finish. Our expertise
+              also extends to exceptional medical writing services, tailored to
+              meet the highest standards of precision and clarity. Partner with
+              us to transform clinical research into groundbreaking outcomes
+              that elevate patient care globally.
             </p>
           </MotionDiv>
           <MotionDiv>
@@ -59,7 +65,7 @@ export default function Home() {
               href={"/about"}
               variant="flat"
             >
-              Let&apos;s Connect <FaArrowRight/>
+              Let&apos;s Connect <FaArrowRight />
             </Button>
           </MotionDiv>
         </div>
@@ -80,13 +86,14 @@ export default function Home() {
       {/* info */}
       <div className="relative bg-white h-max">
         {/* section1 */}
-        <section     style={{
-            backgroundImage:
-              `url(${White.src})`,
+        <section
+          style={{
+            backgroundImage: `url(${White.src})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-          }} className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
-          
+          }}
+          className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
+        >
           {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
             <Image
               src={BannerItem}
@@ -98,16 +105,39 @@ export default function Home() {
           </MotionCard> */}
           <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
             <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
-            Our Vision
+              Our Vision
             </p>
-            <h2
-              className={subtitle({
-                className:
-                  "text-gray-600 font-[500] text-center !leading-[14px] !text-[18px] ",
-              })}
-            >
-              We envision a world where pharmaceutical innovation thrives, driven by seamless and effective research processes. Our mission is to simplify complexities, enabling your organization to focus on developing transformative therapies that improve lives globally.
-            </h2>
+            <ul className="flex flex-col gap-2 justify-start items-start list-decimal">
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600 font-[500] text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To be a global leader in clinical research services, setting
+                benchmarks for innovation, precision, and ethical excellence.
+              </li>
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600 font-[500] text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To revolutionize clinical research by delivering seamless trial
+                management and impactful medical writing, driving advancements
+                in patient care worldwide.
+              </li>
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600 font-[500] text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To empower healthcare through flawless execution of clinical
+                trials and transformative scientific solutions, ensuring a
+                healthier future for all.
+              </li>
+            </ul>
             <div>
               <Button
                 as={Link}
@@ -139,48 +169,47 @@ export default function Home() {
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8 px-6  w-full">
             <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">
-              Health Economic and Outcome Research
+              Site Management Organization (SMO)
             </p>
-            <h2
-              className={title({
-                size: "sm",
-                className:
-                  "text-white text-left block  !font-normal  text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-              })}
-            >
-              <p className={title({ className: "!text-xl text-[#333091]" })}>
-                Novo Evidenza &nbsp;
-              </p>
-              is providing end to end support for health economics and outcomes
-              services.
-            </h2>
             <ul className="flex flex-col gap-2 justify-start items-start ">
               <li
                 className={title({
                   size: "sm",
                   className:
-                    "text-white  !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                    "text-white text-left flex flex-col !font-normal  text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
                 })}
               >
-                <p className={title({ className: "!text-xl text-[#333091]" })}>
-                  Value :- &nbsp;
+                <p className={title({ className: "!text-xl text-white" })}>
+                  Site Management Unit (SMU): &nbsp;
                 </p>
-                We are committed to creating the high quality scientific
-                evidence to improve the value of medications and health
-                technology.
+                Streamlines clinical trials with subject enrollment, Clinical
+                Research Coordinator services, and data entry.
               </li>
               <li
                 className={title({
                   size: "sm",
                   className:
-                    "text-white  !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                    "text-white flex flex-col !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
                 })}
               >
-                <p className={title({ className: "!text-xl text-[#333091]" })}>
-                  Motive :- &nbsp;
+                <p className={title({ className: "!text-xl text-white" })}>
+                  Clinical Pharmacology Unit (CPU):&nbsp;
                 </p>
-                To generate high quality evidence based products with cost
-                effective and budget effective as per client demands .
+                Rapid startup process, achieving first dosing milestones within
+                five weeks.
+              </li>
+              <li
+                className={title({
+                  size: "sm",
+                  className:
+                    "text-white flex flex-col !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
+                })}
+              >
+                <p className={title({ className: "!text-xl text-white" })}>
+                  SMO Operations:&nbsp;
+                </p>
+                Ensures study compliance with quality management, IRB
+                assistance, and AE/SAE reporting.
               </li>
               <li
                 className={title({
@@ -191,10 +220,10 @@ export default function Home() {
               >
                 Our
                 <p className={title({ className: "!text-xl text-white" })}>
-                  &nbsp; HEOR &nbsp;
+                  &nbsp; SMO &nbsp;
                 </p>
-                team is globally working and we are providing below services
-                under the roof of solutions.
+                team is globally working and we are providing services under the
+                roof of solutions.
               </li>
             </ul>
             <div>
@@ -206,10 +235,10 @@ export default function Home() {
                   className:
                     "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
                 })}
-                href={"/heor"}
+                href={"/smo"}
                 variant="flat"
               >
-                HEOR Services
+                SMO Services
               </Button>
             </div>
           </MotionDiv>
@@ -217,13 +246,14 @@ export default function Home() {
         {/* section3 */}
         <OurServices />
         {/* section4 */}
-        <section     style={{
-            backgroundImage:
-              `url(${White.src})`,
+        <section
+          style={{
+            backgroundImage: `url(${White.src})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-          }} className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4">
-          
+          }}
+          className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
+        >
           {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
             <Image
               src={BannerItem}
@@ -235,16 +265,50 @@ export default function Home() {
           </MotionCard> */}
           <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
             <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
-            Who We Are
+              Our Mission
             </p>
-            <h2
-              className={subtitle({
-                className:
-                  "text-gray-600  font-[500]  text-center !leading-[14px] !text-[18px] ",
-              })}
-            >
-              Novo Evidenza is a leading international consultancy led by a team of seasoned pharmaceutical professionals. Our experts combine deep industry knowledge with practical experience, ensuring that every project is handled with precision and care.
-            </h2>
+            <ul className="flex flex-col gap-2 justify-start items-start list-decimal ">
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To provide end-to-end support for clinical trials with an
+                unwavering commitment to quality, compliance, and
+                patient-centricity.
+              </li>
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To bridge the gap between scientific discovery and patient
+                outcomes through exceptional site management and impactful
+                medical writing.
+              </li>
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To empower our partners with reliable, innovative, and ethical
+                solutions that transform clinical research into meaningful
+                advancements in healthcare.
+              </li>
+              <li
+                className={subtitle({
+                  className:
+                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
+                })}
+              >
+                To ensure excellence in clinical trial support and deliver
+                scientific narratives that resonate with clarity, precision, and
+                impact.
+              </li>
+            </ul>
             <div>
               <Button
                 as={Link}
@@ -283,7 +347,7 @@ export default function Home() {
           </MotionCard>
           <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
             <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">
-              Pharmacovigilance
+              Medical Writing
             </p>
             <h2
               className={title({
@@ -293,16 +357,26 @@ export default function Home() {
               })}
             >
               <p className={title({ className: "!text-xl text-[#333091]" })}>
-                Novo Evidenza &nbsp;
+                At Vivoclin Research &nbsp;
               </p>
-              is helping pharmacovigilance activities our team is well trained
-              in all prospective and we understand the industry demand as per
-              TAT MET we will deliver our services to clients
+              we provide expert medical writing services designed to communicate
+              complex medical and scientific information clearly and
+              effectively. Our team of skilled professionals ensures the
+              delivery of high-quality, accurate, and compliant documents
+              tailored to your specific needs.
             </h2>
-            <ul className="list-disc pl-4 flex text-left flex-col gap-4 text-white font-semibold">
-              {PVSERVICES.map((item) => (
-                <li key={item.title}>{item?.title}</li>
-              ))}
+            <ul className="list-disc pl-4 mt-4 flex text-left flex-col gap-4 text-white font-semibold">
+              <li>
+                Regulatory documents for clinical trials and drug development.
+              </li>
+              <li>
+                Educational and training materials for healthcare professionals
+                and patients.
+              </li>
+              <li>
+                Publication support, including manuscript preparation and
+                journal submissions.
+              </li>
             </ul>
             <div>
               <Button
@@ -324,7 +398,7 @@ export default function Home() {
         {/* Accomplishment */}
         <Accomplishment />
         {/* section5 */}
-        <section className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
+        {/* <section className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
           <MotionCard bounce className="w-[80%] md:w-[30%]">
             <Image
               src={Pharma3}
@@ -357,6 +431,58 @@ export default function Home() {
                 variant="flat"
               >
                 Regulatory Services
+              </Button>
+            </div>
+          </MotionDiv>
+        </section> */}
+        <section
+          style={{
+            backgroundImage: `url(${White.src})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
+        >
+          {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
+            <Image
+              src={BannerItem}
+              className="w-[70%] object-contain"
+              width={500}
+              height={500}
+              alt="image"
+            />
+          </MotionCard> */}
+          <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
+            <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
+              Partner with Us
+            </p>
+
+            <h3
+              className={subtitle({
+                className:
+                  "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
+              })}
+            >
+              With Vivoclin Research, you gain a trusted partner committed to
+              delivering excellence in medical writing, scientific
+              documentation, and data analysis. Let us help you present your
+              research and clinical data in the best light, ensuring impactful
+              communication and successful outcomes.
+            </h3>
+
+            <div>
+              <Button
+                as={Link}
+                className={buttonStyles({
+                  color: "danger",
+                  radius: "full",
+                  variant: "shadow",
+                  className: "font-bold shadow-none p-6 mt-6 w-max ",
+                })}
+                href={"/about"}
+                variant="flat"
+              >
+                Contact us today to learn more!
               </Button>
             </div>
           </MotionDiv>
