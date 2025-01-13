@@ -16,7 +16,6 @@ import OurServices from "@/components/OurServices";
 import MotionDiv from "@/components/MotionDiv";
 import Accomplishment from "@/components/Accomplishment";
 import MotionCard from "@/components/MotionCard";
-import { PVSERVICES, REGULATORY } from "@/utils/Constant";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
@@ -359,11 +358,11 @@ export default function Home() {
               <p className={title({ className: "!text-xl text-[#333091]" })}>
                 At Vivoclin Research &nbsp;
               </p>
-              we provide expert medical writing services designed to communicate
-              complex medical and scientific information clearly and
-              effectively. Our team of skilled professionals ensures the
-              delivery of high-quality, accurate, and compliant documents
-              tailored to your specific needs.
+               Services, we specialize in providing
+              professional medical writing solutions tailored to the unique
+              needs of healthcare, pharmaceutical, and life sciences
+              organizations. Our team of experienced medical writers delivers
+              precise, engaging, and compliant content designed
             </h2>
             <ul className="list-disc pl-4 mt-4 flex text-left flex-col gap-4 text-white font-semibold">
               <li>
@@ -387,10 +386,10 @@ export default function Home() {
                   className:
                     "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
                 })}
-                href={"/pv-regulatory"}
+                href={"/medical-writing"}
                 variant="flat"
               >
-                PV Services
+                Medical Writing Services
               </Button>
             </div>
           </MotionDiv>

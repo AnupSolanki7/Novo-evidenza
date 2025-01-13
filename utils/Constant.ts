@@ -243,24 +243,54 @@ Humzah I. Postwala · Mehul R. Chorawala`,
 
 export const WRITINGS = [
   {
-    title: `Regulatory Writing:`,
-    subtitle: `Clinical study protocols, investigator brochures, clinical study reports, and regulatory submissions adhering to ICH-GCP guidelines.`,
+    title: `Clinical Writing`,
+    subtitle: `We create precise and compliant documents for regulatory submissions to streamline your drug development process.`,
+    list: [
+      "Clinical study protocols",
+      "nvestigator brochures (IB)",
+      "Clinical study reports (CSR)",
+      "Informed consent forms (ICF)",
+      "Drug safety narratives"
+    ]
   },
   {
-    title: `Scientific Publications: `,
-    subtitle: `Journal articles, review papers, case studies, and conference abstracts to showcase your research in the global scientific community.`,
+    title: `Scientific Publications and Manuscripts`,
+    subtitle: `Our team supports you in sharing your research with the scientific community through well-crafted manuscripts.`,
+    list: [
+      "Journal articles (original research, reviews, and case reports)",
+      "Systematic reviews and meta-analyses",
+      "Abstracts and posters for conferences",
+      "Book chapters"
+    ]
   },
   {
-    title: `Medical Communication:`,
-    subtitle: `Creating promotional materials, brochures, and presentations to engage healthcare professionals and patients.`,
+    title: `3. Medical Communication and Education`,
+    subtitle: `We develop educational and promotional content to inform and engage your target audience.`,
+    list:[
+      "Continuing Medical Education (CME) materials",
+      "Patient education materials",
+      "Disease awareness campaigns",
+      "Training materials for healthcare professionals"
+    ]
   },
   {
-    title: `Educational Content:`,
-    subtitle: `Developing training modules and patient education materials to simplify complex medical concepts.`,
+    title: `Health Technology Assessment (HTA) and Market Access Documents`,
+    subtitle: `We help support your product’s value proposition with robust evidence.`,
+    list:[
+      "Health economics and outcomes research (HEOR) content",
+      "Value dossiers (AMCP, G-BA, etc.)",
+      "Payer communication tools",
+      "Budget impact models and cost-effectiveness analyses"
+    ]
   },
   {
-    title: `Grant Writing:`,
-    subtitle: `Crafting compelling proposals to secure funding for your research projects.`,
+    title: `Editorial Support and Quality Control`,
+    subtitle: `Our editorial team ensures your documents are polished and publication-ready.`,
+    list:[
+      "Medical editing and proofreading",
+      "Formatting and styling to meet guidelines",
+      "Peer review assistance"
+    ]
   },
 ];
 
