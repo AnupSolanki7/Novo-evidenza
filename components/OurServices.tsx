@@ -15,7 +15,7 @@ const OurServices = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="flex h-max min-h-[95vh] text-center md:text-left flex-col  my-auto mx-auto items-center justify-start gap-4"
+      className="flex h-max min-h-[95vh] text-center md:text-left flex-col  my-auto mx-auto items-center justify-center gap-4"
     >
       <div className=" my-8  px-6  w-full">
         <MotionDiv className="w-full mt-4 flex flex-col text-center justify-center items-center">

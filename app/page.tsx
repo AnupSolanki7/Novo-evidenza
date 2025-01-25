@@ -19,380 +19,332 @@ import MotionCard from "@/components/MotionCard";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
+  const visionPoints = [
+    "To be a global leader in clinical research services, setting benchmarks for innovation, precision, and ethical excellence.",
+    "To revolutionize clinical research by delivering seamless trial management and impactful medical writing, driving advancements in patient care worldwide.",
+    "To empower healthcare through flawless execution of clinical trials and transformative scientific solutions, ensuring a healthier future for all.",
+  ];
+  const smoServices = [
+    {
+      title: "Site Management Unit (SMU)",
+      description:
+        "Streamlines clinical trials with subject enrollment, Clinical Research Coordinator services, and data entry.",
+    },
+    {
+      title: "Clinical Pharmacology Unit (CPU)",
+      description:
+        "Rapid startup process, achieving first dosing milestones within five weeks.",
+    },
+    {
+      title: "SMO Operations",
+      description:
+        "Ensures study compliance with quality management, IRB assistance, and AE/SAE reporting.",
+    },
+  ];
+
   return (
-    <Page className="relative h-max bg-[#333091]">
+    <Page className="relative h-max bg-gradient-to-r from-blue-50 to-white">
       {/* banner */}
-      <section className="flex relative flex-col pt-[140px] md:flex-row w-full my-auto h-max md:h-[100vh] px-6 max-w-[1220px] mx-auto items-center justify-center gap-[40px] md:gap-4 py-8 md:py-10">
-        <Image
-          alt="banner"
-          width={1000}
-          height={1000}
-          className="w-full h-full md:h-screen absolute top-0 left-0 "
-          quality={100}
-          src={Banner}
-        />
-        <div className="flex z-10 flex-col text-center md:text-left justify-center items-center md:items-start w-full md:w-1/2">
-          <MotionDiv>
-            <h1
-              className={title({
-                size: "sm",
-                className: "text-white text-left !text-2xl md:!text-4xl ",
-              })}
-            >
-              Welcome to VivoClin Research Services LLP: Redefining Clinical
-              Excellence
+      <section className="flex relative flex-col pt-20 md:flex-row w-full min-h-screen px-6 max-w-7xl mx-auto items-center justify-center gap-12 bg-gradient-to-r from-blue-50 to-white">
+        <div className="flex z-10 flex-col text-center md:text-left justify-center items-center md:items-start w-full md:w-1/2 space-y-6">
+          <div className="text-slate-800">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
+              Advancing Clinical Research with Precision
             </h1>
-            <p className={subtitle({ className: "text-white" })}>
-              At VivoClin Research Services, we specialize in delivering
-              comprehensive site support and management for clinical trials,
-              ensuring seamless execution from start to finish. Our expertise
-              also extends to exceptional medical writing services, tailored to
-              meet the highest standards of precision and clarity. Partner with
-              us to transform clinical research into groundbreaking outcomes
-              that elevate patient care globally.
+            <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
+              VivoClin Research Services specializes in comprehensive clinical
+              trial site support and medical writing. Our expert team ensures
+              meticulous execution and delivers high-quality research that
+              drives medical innovation.
             </p>
-          </MotionDiv>
-          <MotionDiv>
+          </div>
+          <div className="flex items-center space-x-4">
             <Button
               as={Link}
-              className={buttonStyles({
-                color: "danger",
-                radius: "full",
-                variant: "shadow",
-                className: "font-bold shadow-none mt-6 p-6 w-max ",
-              })}
-              href={"/about"}
-              variant="flat"
+              href="/about"
+              color="primary"
+              variant="solid"
+              className="px-8 py-4 rounded-full font-semibold transition-transform hover:scale-105"
+              endContent={<FaArrowRight />}
             >
-              Let&apos;s Connect <FaArrowRight />
+              Learn More
             </Button>
-          </MotionDiv>
+            <Button
+              variant="bordered"
+              color="primary"
+              className="px-8 py-4 rounded-full"
+            >
+              Contact Us
+            </Button>
+          </div>
         </div>
-        <MotionCard
-          bounce
-          className="w-full md:w-1/2 flex justify-center items-center z-10"
-        >
-          <Image
-            src={Pharma}
-            alt="banner-item"
-            width={1000}
-            height={1000}
-            quality={100}
-            className="w-[90%]"
-          />
-        </MotionCard>
+        <div className="w-full md:w-1/2 flex justify-center items-center">
+          <MotionCard
+            bounce
+            className="w-full max-w-md rounded-2xl overflow-hidden transform transition-transform hover:scale-105"
+          >
+            <Image
+              src={Pharma}
+              alt="Clinical Research"
+              layout="responsive"
+              quality={90}
+              placeholder="blur"
+              className="object-cover"
+            />
+          </MotionCard>
+        </div>
       </section>
       {/* info */}
-      <div className="relative bg-white h-max">
+      <div className="relative container mx-auto bg-gradient-to-br from-sky-50 to-white h-max">
         {/* section1 */}
-        <section
-          style={{
-            backgroundImage: `url(${White.src})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-          className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
-        >
-          {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
-            <Image
-              src={BannerItem}
-              className="w-[70%] object-contain"
-              width={500}
-              height={500}
-              alt="image"
-            />
-          </MotionCard> */}
-          <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
-            <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
-              Our Vision
-            </p>
-            <ul className="flex flex-col gap-2 justify-start items-start list-decimal">
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600 font-[500] text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To be a global leader in clinical research services, setting
-                benchmarks for innovation, precision, and ethical excellence.
-              </li>
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600 font-[500] text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To revolutionize clinical research by delivering seamless trial
-                management and impactful medical writing, driving advancements
-                in patient care worldwide.
-              </li>
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600 font-[500] text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To empower healthcare through flawless execution of clinical
-                trials and transformative scientific solutions, ensuring a
-                healthier future for all.
-              </li>
-            </ul>
-            <div>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "danger",
-                  radius: "full",
-                  variant: "shadow",
-                  className: "font-bold shadow-none p-6 mt-6 w-max ",
-                })}
-                href={"/about"}
-                variant="flat"
-              >
-                Know More
-              </Button>
+        <section className="relative py-24 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-primary-800/95"
+            style={{
+              backgroundImage:
+                "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6066a36d593d3ecd83e3efe1_2-layers.jpg)",
+              backgroundBlendMode: "overlay",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+
+          <MotionDiv className="container relative z-10 mx-auto px-6 md:px-12">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                  Our Vision
+                </h2>
+                <div className="w-24 h-1 bg-secondary-400 mx-auto rounded-full" />
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {visionPoints.map((point, index) => (
+                  <MotionCard
+                    key={index}
+                    className="bg-slate-500/30 backdrop-blur-xl  rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
+                    // whileHover={{ scale: 1.02 }}
+                  >
+                    <div className="flex flex-col items-center text-center space-y-4">
+                      <div className="w-12 h-12 bg-secondary-400 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-xl">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <p className="text-white/90 text-lg leading-relaxed font-medium">
+                        {point}
+                      </p>
+                    </div>
+                  </MotionCard>
+                ))}
+              </div>
+
+              <div className="flex justify-center mt-12">
+                <Button
+                  as={Link}
+                  href="/about"
+                  className="bg-white text-primary-800 text-sm hover:bg-white/90 rounded-full px-8 py-4 font-semibold transition-transform hover:scale-105"
+                  endContent={<FaArrowRight />}
+                >
+                  Discover More About Us
+                </Button>
+              </div>
             </div>
           </MotionDiv>
         </section>
         {/* section2 */}
-        <section className="flex bg-danger-500 min-h-screen h-max text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4">
-          <MotionCard bounce className="w-[80%] md:w-[30%]">
-            <Image
-              src={Pharma1}
-              alt="banner-item"
-              width={1000}
-              height={1000}
-              quality={100}
-              className="w-full"
-            />
-          </MotionCard>
-          <MotionDiv className="md:w-1/2 my-8 px-6  w-full">
-            <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">
-              Site Management Organization (SMO)
-            </p>
-            <ul className="flex flex-col gap-2 justify-start items-start ">
-              <li
-                className={title({
-                  size: "sm",
-                  className:
-                    "text-white text-left flex flex-col !font-normal  text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-                })}
-              >
-                <p className={title({ className: "!text-xl text-white" })}>
-                  Site Management Unit (SMU): &nbsp;
-                </p>
-                Streamlines clinical trials with subject enrollment, Clinical
-                Research Coordinator services, and data entry.
-              </li>
-              <li
-                className={title({
-                  size: "sm",
-                  className:
-                    "text-white flex flex-col !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-                })}
-              >
-                <p className={title({ className: "!text-xl text-white" })}>
-                  Clinical Pharmacology Unit (CPU):&nbsp;
-                </p>
-                Rapid startup process, achieving first dosing milestones within
-                five weeks.
-              </li>
-              <li
-                className={title({
-                  size: "sm",
-                  className:
-                    "text-white flex flex-col !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-                })}
-              >
-                <p className={title({ className: "!text-xl text-white" })}>
-                  SMO Operations:&nbsp;
-                </p>
-                Ensures study compliance with quality management, IRB
-                assistance, and AE/SAE reporting.
-              </li>
-              <li
-                className={title({
-                  size: "sm",
-                  className:
-                    "text-white  !font-normal text-left text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-                })}
-              >
-                Our
-                <p className={title({ className: "!text-xl text-white" })}>
-                  &nbsp; SMO &nbsp;
-                </p>
-                team is globally working and we are providing services under the
-                roof of solutions.
-              </li>
-            </ul>
-            <div>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  radius: "full",
-                  variant: "shadow",
-                  className:
-                    "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
-                })}
-                href={"/smo"}
-                variant="flat"
-              >
-                SMO Services
-              </Button>
+        <section className="relative py-32 overflow-hidden">
+          {/* Light gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white">
+            <div className="absolute inset-0 opacity-5" />
+          </div>
+
+          <div className="container relative z-10 mx-auto px-8 md:px-16">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-20">
+              {/* Content Section */}
+              <div className="w-full md:w-1/2 text-gray-800 space-y-10">
+                <MotionDiv>
+                  <h2 className="text-2xl md:text-4xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-blue-600">
+                    Site Management Organization (SMO)
+                  </h2>
+
+                  <div className="space-y-10">
+                    {smoServices.map((service, index) => (
+                      <MotionCard
+                        key={index}
+                        className="bg-white shadow-lg rounded-xl p-4 hover:shadow-xl transition-all duration-300"
+                      >
+                        <h3 className="text-2xl font-semibold text-primary-600 mb-4">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 text-lg leading-relaxed">
+                          {service.description}
+                        </p>
+                      </MotionCard>
+                    ))}
+                  </div>
+                </MotionDiv>
+              </div>
+
+              {/* Image Section */}
+              <div className="w-full md:w-1/2 flex justify-center items-center">
+                <MotionCard
+                  bounce
+                  className="rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-500"
+                >
+                  <div className="relative">
+                    <Image
+                      src={Pharma1}
+                      alt="SMO Services"
+                      width={900}
+                      height={900}
+                      className="object-cover w-full"
+                      quality={100}
+                    />
+                  </div>
+                </MotionCard>
+              </div>
             </div>
-          </MotionDiv>
+          </div>
+          <div className="mt-14 w-full flex justify-center ">
+            <Button
+              as={Link}
+              href="/smo"
+              className="bg-primary-600 text-white hover:bg-primary-700 rounded-full px-10 py-6 font-semibold transition-transform hover:scale-105"
+              endContent={<FaArrowRight />}
+            >
+              Explore SMO Services
+            </Button>
+          </div>
         </section>
         {/* section3 */}
         <OurServices />
         {/* section4 */}
-        <section
-          style={{
-            backgroundImage: `url(${White.src})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-          className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
-        >
-          {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
-            <Image
-              src={BannerItem}
-              className="w-[70%] object-contain"
-              width={500}
-              height={500}
-              alt="image"
-            />
-          </MotionCard> */}
-          <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
-            <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
-              Our Mission
-            </p>
-            <ul className="flex flex-col gap-2 justify-start items-start list-decimal ">
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To provide end-to-end support for clinical trials with an
-                unwavering commitment to quality, compliance, and
-                patient-centricity.
-              </li>
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To bridge the gap between scientific discovery and patient
-                outcomes through exceptional site management and impactful
-                medical writing.
-              </li>
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To empower our partners with reliable, innovative, and ethical
-                solutions that transform clinical research into meaningful
-                advancements in healthcare.
-              </li>
-              <li
-                className={subtitle({
-                  className:
-                    "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
-                })}
-              >
-                To ensure excellence in clinical trial support and deliver
-                scientific narratives that resonate with clarity, precision, and
-                impact.
-              </li>
-            </ul>
-            <div>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "danger",
-                  radius: "full",
-                  variant: "shadow",
-                  className: "font-bold shadow-none p-6 mt-6 w-max ",
-                })}
-                href={"/about"}
-                variant="flat"
-              >
-                Know More
-              </Button>
-            </div>
-          </MotionDiv>
-        </section>
-        <section
-          style={{
-            backgroundImage:
-              "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6068015a9c3b85556078f629_bom_kind_words_bg.jpg)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-          className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row-reverse my-auto mx-auto items-center justify-around gap-4"
-        >
-          <MotionCard bounce className="w-[80%] md:w-[30%]">
-            <Image
-              src={Pharma2}
-              alt="banner-item"
-              width={1000}
-              height={1000}
-              quality={100}
-              className="w-full"
-            />
-          </MotionCard>
-          <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
-            <p className="font-bold text-3xl lg:text-5xl mb-8 text-white">
-              Medical Writing
-            </p>
-            <h2
-              className={title({
-                size: "sm",
-                className:
-                  "text-white  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-              })}
+        <section className="relative py-24 bg-gradient-to-br from-primary-50 via-blue-200 to-indigo-100">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <MotionDiv className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
+          Our Mission
+              </h2>
+              <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-12" />
+            </MotionDiv>
+
+            <div className="grid md:grid-cols-1 gap-8 items-center">
+              <div className="space-y-6">
+          {[
+            "To provide end-to-end support for clinical trials with an unwavering commitment to quality, compliance, and patient-centricity.",
+            "To bridge the gap between scientific discovery and patient outcomes through exceptional site management and impactful medical writing.",
+            "To empower our partners with reliable, innovative, and ethical solutions that transform clinical research into meaningful advancements in healthcare.",
+            "To ensure excellence in clinical trial support and deliver scientific narratives that resonate with clarity, precision, and impact.",
+          ].map((mission, index) => (
+            <MotionCard
+              key={index}
+              className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <p className={title({ className: "!text-xl text-[#333091]" })}>
-                At Vivoclin Research &nbsp;
-              </p>
-               Services, we specialize in providing
-              professional medical writing solutions tailored to the unique
-              needs of healthcare, pharmaceutical, and life sciences
-              organizations. Our team of experienced medical writers delivers
-              precise, engaging, and compliant content designed
-            </h2>
-            <ul className="list-disc pl-4 mt-4 flex text-left flex-col gap-4 text-white font-semibold">
-              <li>
-                Regulatory documents for clinical trials and drug development.
-              </li>
-              <li>
-                Educational and training materials for healthcare professionals
-                and patients.
-              </li>
-              <li>
-                Publication support, including manuscript preparation and
-                journal submissions.
-              </li>
-            </ul>
-            <div>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+            <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
+              <span className="text-white font-bold">
+                {index + 1}
+              </span>
+            </div>
+                </div>
+                <p className="text-gray-700 text-lg leading-relaxed">
+            {mission}
+                </p>
+              </div>
+            </MotionCard>
+          ))}
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
               <Button
-                as={Link}
-                className={buttonStyles({
-                  radius: "full",
-                  variant: "shadow",
-                  className:
-                    "font-bold bg-[#333091] text-white p-6 shadow-none mt-6 w-max ",
-                })}
-                href={"/medical-writing"}
-                variant="flat"
+          as={Link}
+          href="/about"
+          className="bg-gradient-to-r from-primary-600 to-blue-600 text-white hover:opacity-90 rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105"
+          endContent={<FaArrowRight />}
               >
-                Medical Writing Services
+          Learn More About Our Mission
               </Button>
             </div>
-          </MotionDiv>
+          </div>
+        </section>
+        <section className="relative py-24 overflow-hidden bg-gradient-to-br from-white to-blue-50">
+          <div className="container relative z-10 mx-auto px-8 lg:px-16">
+            <div className="flex flex-col md:flex-row-reverse items-center gap-16">
+              {/* Image Column */}
+              <div className="w-full md:w-2/5">
+                <MotionCard
+                  bounce
+                  className="rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-500"
+                >
+                  <Image
+                    src={Pharma2}
+                    alt="Medical Writing Services"
+                    width={1000}
+                    height={1000}
+                    quality={100}
+                    className="w-full object-cover"
+                  />
+                </MotionCard>
+              </div>
+
+              {/* Content Column */}
+              <div className="w-full md:w-3/5 space-y-8">
+                <MotionDiv>
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
+                    Medical Writing
+                  </h2>
+
+                  <div className="prose prose-lg text-gray-700 mb-8">
+                    <p className="text-lg md:text-xl leading-relaxed">
+                      At{" "}
+                      <span className="text-primary-600 font-semibold">
+                        Vivoclin Research Services
+                      </span>
+                      , we deliver exceptional medical writing solutions
+                      tailored for healthcare, pharmaceutical, and life sciences
+                      organizations. Our expert team ensures precise, engaging,
+                      and compliant content that meets industry standards.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      "Regulatory documents for clinical trials and drug development",
+                      "Educational and training materials for healthcare professionals and patients",
+                      "Publication support, including manuscript preparation and journal submissions",
+                    ].map((item, index) => (
+                      <MotionCard
+                        key={index}
+                        className="bg-white shadow-md rounded-lg p-4 hover:shadow-xl transition-all duration-300"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-bold">
+                              {index + 1}
+                            </span>
+                          </div>
+                          <p className="text-gray-700 font-medium">{item}</p>
+                        </div>
+                      </MotionCard>
+                    ))}
+                  </div>
+                </MotionDiv>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 w-full flex justify-center">
+            <Button
+              as={Link}
+              href="/medical-writing"
+              className="bg-primary-600 text-white hover:bg-primary-700 rounded-full px-8 py-4 font-semibold transition-transform hover:scale-105"
+              endContent={<FaArrowRight />}
+            >
+              Explore Medical Writing Services
+            </Button>
+          </div>
         </section>
         {/* Accomplishment */}
         <Accomplishment />
@@ -434,57 +386,46 @@ export default function Home() {
             </div>
           </MotionDiv>
         </section> */}
-        <section
-          style={{
-            backgroundImage: `url(${White.src})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-          className="flex py-10 text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
-        >
-          {/* <MotionCard  className="w-full flex justify-center md:w-1/2">
-            <Image
-              src={BannerItem}
-              className="w-[70%] object-contain"
-              width={500}
-              height={500}
-              alt="image"
-            />
-          </MotionCard> */}
-          <MotionDiv className="md:w-[80%] my-8 px-[7%] w-full flex flex-col justify-center items-center">
-            <p className="font-bold !text-2xl md:!text-5xl text-[#333091] mb-4">
-              Partner with Us
-            </p>
+        <section className="relative py-24 bg-gradient-to-br from-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <MotionDiv className="w-full flex flex-col items-center space-y-8">
+              {/* Heading */}
+              <div className="text-center space-y-4 max-w-3xl">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-blue-600">
+                  Partner with Us
+                </h2>
+                <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full" />
+              </div>
 
-            <h3
-              className={subtitle({
-                className:
-                  "text-gray-600  font-[500]  text-left !leading-[14px] !text-[18px] ",
-              })}
-            >
-              With Vivoclin Research, you gain a trusted partner committed to
-              delivering excellence in medical writing, scientific
-              documentation, and data analysis. Let us help you present your
-              research and clinical data in the best light, ensuring impactful
-              communication and successful outcomes.
-            </h3>
+              {/* Content */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl">
+                <MotionCard className="prose prose-lg text-center">
+                  <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+                    With{" "}
+                    <span className="font-semibold text-primary-600">
+                      Vivoclin Research
+                    </span>
+                    , you gain a trusted partner committed to delivering
+                    excellence in medical writing, scientific documentation, and
+                    data analysis. Let us help you present your research and
+                    clinical data in the best light, ensuring impactful
+                    communication and successful outcomes.
+                  </p>
+                </MotionCard>
 
-            <div>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "danger",
-                  radius: "full",
-                  variant: "shadow",
-                  className: "font-bold shadow-none p-6 mt-6 w-max ",
-                })}
-                href={"/about"}
-                variant="flat"
-              >
-                Contact us today to learn more!
-              </Button>
-            </div>
-          </MotionDiv>
+                <div className="mt-10 flex justify-center">
+                  <Button
+                    as={Link}
+                    href="/about"
+                    className="bg-primary-600 text-white hover:bg-primary-700 rounded-full px-8 py-6 font-semibold transition-all duration-300 hover:scale-105"
+                    endContent={<FaArrowRight />}
+                  >
+                    Contact us today to learn more!
+                  </Button>
+                </div>
+              </div>
+            </MotionDiv>
+          </div>
         </section>
       </div>
     </Page>

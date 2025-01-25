@@ -65,11 +65,9 @@ export const Navbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
-        "py-2 fixed transition-all h-[100px] ease-in-out bg-[#333091]",
-        isNavActive
-          ? "transition-all ease-in-out bg-transparent"
-          : "shadow-lg ",
-        isMenuOpen && "bg-[#333091]"
+        "py-2 fixed  transition-all container mx-auto h-[100px] ease-in-out bg-slate-700",
+        "shadow-lg ",
+        isMenuOpen && "bg-slate-700"
       )}
       position="sticky"
     >
@@ -120,7 +118,7 @@ export const Navbar = () => {
                 color: "danger",
                 radius: "full",
                 variant: "shadow",
-                className: "font-bold p-6 shadow-none",
+                className: "font-bold bg-primary-500 p-6 shadow-none",
               })}
               href={"about"}
               variant="flat"
