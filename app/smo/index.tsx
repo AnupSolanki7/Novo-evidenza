@@ -19,72 +19,71 @@ import clsx from "clsx";
 
 const Page = () => {
   return (
-    <Pages className="mt-[100px] h-max min-h-screen">
-      <div className="w-full bg-danger-500 py-8 ">
-        <h1 className="md:text-5xl text-2xl w-full text-center font-extrabold text-white">
-          Site Management Organization (SMO)
-        </h1>
-      </div>
-      <section
-        style={{
-          backgroundImage:
-            "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
-      >
-        {" "}
-        <MotionCard bounce className="w-full flex justify-center md:w-1/2">
-          <Image
-            src={BannerItem}
-            className="w-[70%] object-contain"
-            width={500}
-            height={500}
-            alt="image"
-          />
-        </MotionCard>
-        <MotionDiv className="md:w-1/2 px-[7%] py-[7%] w-full">
-          <p className="font-bold text-4xl text-[#333091] mb-4">
-            Discover the Power of Clinical Excellence
+    <Pages className="mt-[100px]  max-w-[1990px] mx-auto h-max min-h-screen">
+      <div className="w-full bg-gradient-to-r from-blue-400 to-blue-500 py-12 px-8 md:px-16  relative overflow-hidden">
+        {/* <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div> */}
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="md:text-6xl text-3xl w-full text-center font-extrabold text-white leading-tight">
+            Site Management <span className="text-white/90">Organization</span>
+          </h1>
+          <p className="text-white/80 text-center mt-4 max-w-2xl mx-auto text-lg">
+            Empowering Clinical Research Excellence
           </p>
-          <h2
-            className={title({
-              size: "sm",
-              className:
-                "text-gray-600  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-            })}
+        </div>
+      </div>
+      <section className="bg-gradient-to-br from-blue-50 to-white py-16 px-8 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+          <MotionCard
+            bounce
+            className="w-full md:w-1/2 flex justify-center p-0 md:p-6"
           >
-            At Vivoclin Research SMO Division, a dedicated entity under
-            Novotech, we have been shaping the future of clinical research
-            across the APAC region since 2013. With a strong presence in South
-            Korea, Taiwan, and Mainland China, and a team of over 300 skilled
-            professionals, we bring innovation, precision, and impactful
-            research to life.
-          </h2>
-          <div>
+            <Image
+              src={BannerItem}
+              className="w-full max-w-[500px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+              width={500}
+              height={500}
+              alt="Clinical Excellence Banner"
+              priority
+            />
+          </MotionCard>
+          <MotionDiv className="w-full md:w-1/2 space-y-6">
+            <div className="space-y-4">
+              <p className="font-bold text-4xl md:text-5xl bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                Discover the Power of Clinical Excellence
+              </p>
+              <div className="w-20 h-1 bg-blue-600"></div>
+            </div>
+            <h2 className="text-gray-700 text-lg md:text-xl leading-relaxed">
+              At Vivoclin Research SMO Division, a dedicated entity under
+              Novotech, we have been pioneering clinical research across the
+              APAC region since 2013. With our strategic presence in South
+              Korea, Taiwan, and Mainland China, supported by over 300 skilled
+              professionals, we&apos;re committed to delivering innovative and
+              precise research solutions that make a real difference.
+            </h2>
             <Button
               as={Link}
               className={buttonStyles({
                 color: "danger",
                 radius: "full",
-                variant: "shadow",
-                className: "font-bold shadow-none p-6 mt-6 w-max ",
+                // variant: "shadow",
+                className:
+                  "font-bold shadow-lg bg-slate-700 p-6 hover:transform hover:scale-105 transition-all duration-300",
               })}
               href={"/about"}
               variant="flat"
             >
               Let&apos;s Connect
             </Button>
-          </div>
-        </MotionDiv>
+          </MotionDiv>
+        </div>
       </section>
-      <section className="pt-8 md:pt-[100px] px-4 bg-white ">
+      <section className="pt-8 md:pt-[100px] px-8 md:px-16 bg-white ">
         <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
-          <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
+          <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-slate-700">
             Redefining Clinical Research Excellence
           </h1>
-          <p className="mt-4 text-sm md:text-md font-semibold text-[#333091] text-center">
+          <p className="mt-4 text-sm md:text-md font-semibold text-blue-600 text-center">
             At Vivoclin Research, we bring over a decade of expertise in
             advancing clinical research across APAC. With specialized teams, a
             comprehensive service portfolio, and a strong focus on quality and
@@ -107,10 +106,10 @@ const Page = () => {
                 <span className="w-12 h-12 [&>*]:fill-[#333091] [&>*]:w-12 [&>*]:h-12">
                   <item.icon />
                 </span>
-                <h1 className="text-2xl w-full text-center font-extrabold text-[#333091]">
+                <h1 className="text-2xl w-full text-center font-extrabold text-slate-700">
                   {item?.title}
                 </h1>
-                <p className="mt-4 text-sm font-semibold text-[#333091] text-center">
+                <p className="mt-4 text-sm font-semibold text-blue-600 text-center">
                   {item?.description}
                 </p>
               </MotionCard>
@@ -131,10 +130,10 @@ const Page = () => {
                 <span className="w-12 h-12 [&>*]:fill-[#333091] [&>*]:w-12 [&>*]:h-12">
                   <item.icon />
                 </span>
-                <h1 className="text-2xl w-full text-center font-extrabold text-[#333091]">
+                <h1 className="text-2xl w-full text-center font-extrabold text-slate-700">
                   {item?.title}
                 </h1>
-                <p className="mt-4 text-sm font-semibold text-[#333091] text-center">
+                <p className="mt-4 text-sm font-semibold text-blue-600 text-center">
                   {item?.description}
                 </p>
               </MotionCard>
@@ -142,102 +141,147 @@ const Page = () => {
           </div>
         </section>
       </section>
-      <section
-        style={{
-          backgroundImage:
-            "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        className="flex text-center md:text-left flex-col md:flex-row-reverse my-auto h-max mx-auto items-center justify-around gap-4"
-      >
-        {" "}
-        <MotionCard bounce className="w-full flex justify-center md:w-1/2">
-          <Image
-            src={Pv2}
-            className="w-[70%] object-contain"
-            width={500}
-            height={500}
-            alt="image"
-          />
-        </MotionCard>
-        <MotionDiv className="md:w-1/2 px-[7%] py-[7%] w-full">
-          <p className="font-bold text-4xl text-[#333091] mb-4">
-            Our Expertise
-          </p>
-          <h2
-            className={title({
-              size: "sm",
-              className:
-                "text-gray-600  !font-normal text-center text-md leading-[28px] md:!text-xl md:!leading-[35px] ",
-            })}
-          >
-            We are driven by a commitment to advancing medical knowledge,
-            operating through three distinct units that form the pillars of our
-            success:
-          </h2>
-          <ul className="list-disc pl-4 mt-4 flex text-left flex-col gap-4 text-gray-600 font-semibold">
-            <li>
-              Site Management Unit (SMU): Seamlessly optimizing clinical trial
-              operations with services such as subject enrollment support,
-              Clinical Research Coordinator expertise, and meticulous data
-              entry.
-            </li>
-            <li>
-              Clinical Pharmacology Unit (CPU): Achieving rapid trial initiation
-              by eliminating hospital contracts, with first dosing milestones
-              reached within just five weeks.
-            </li>
-            <li>
-              SMO Operations: Comprehensive oversight, including quality
-              management, IRB assistance, and AE/SAE reporting, ensuring
-              compliance and success for every study.
-            </li>
-          </ul>
-          <div>
+      <section className="relative py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#333091] mb-4">
+              Our Core Expertise
+            </h2>
+            <div className="w-32 h-1 bg-[#333091] mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <MotionDiv className="space-y-8">
+              {[
+                {
+                  title: "Site Management Unit (SMU)",
+                  description:
+                    "Seamlessly optimizing clinical trial operations with services such as subject enrollment support, Clinical Research Coordinator expertise, and meticulous data entry.",
+                  icon: "🏥",
+                },
+                {
+                  title: "Clinical Pharmacology Unit (CPU)",
+                  description:
+                    "Achieving rapid trial initiation by eliminating hospital contracts, with first dosing milestones reached within just five weeks.",
+                  icon: "⚕️",
+                },
+                {
+                  title: "SMO Operations",
+                  description:
+                    "Comprehensive oversight, including quality management, IRB assistance, and AE/SAE reporting, ensuring compliance and success for every study.",
+                  icon: "📊",
+                },
+              ].map((item, index) => (
+                <MotionCard
+                  key={index}
+                  className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex gap-4">
+                    <span className="text-3xl">{item.icon}</span>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-bold text-[#333091]">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </MotionCard>
+              ))}
+            </MotionDiv>
+
+            <MotionCard bounce className="relative">
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src={Pv2}
+                  className="object-contain w-full h-full hover:scale-105 transition-transform duration-500"
+                  width={600}
+                  height={600}
+                  alt="Expertise Illustration"
+                  priority
+                />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#333091]/20 to-transparent"></div> */}
+              </div>
+            </MotionCard>
+          </div>
+
+          <div className="mt-12 text-center">
             <Button
               as={Link}
               className={buttonStyles({
-                color: "danger",
+                color: "primary",
                 radius: "full",
-                variant: "shadow",
-                className: "font-bold shadow-none p-6 mt-6 w-max ",
+                className:
+                  "font-bold shadow-lg bg-[#333091] hover:bg-[#252269] text-white px-8 py-6",
               })}
               href={"/about"}
-              variant="flat"
             >
-              Let&apos;s Connect
+              Explore Our Services
             </Button>
           </div>
-        </MotionDiv>
-      </section>
-      <section className="pt-8 md:py-[100px] px-4 bg-white ">
-        <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
-          <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
-            Our Services
-          </h1>
-          <p className="mt-4 text-sm md:text-md font-semibold text-[#333091] text-center">
-            We offer a comprehensive portfolio designed to optimize your
-            clinical research journey
-          </p>
         </div>
-        <div className="py-8 h-max w-[70%] mx-auto gap-8  flex-wrap flex justify-between">
-          <span className="px-4 flex justify-center h-[70px] w-full hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full ">
-            Site Coordination: Schedule management, subject recruitment, AE/SAE
-            reporting, and more.
-          </span>
-          <span className="px-4 flex justify-center h-[70px] w-full hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full ">
-            Site Management: Ensuring operational efficiency with services such
-            as data entry and equipment management.
-          </span>
-          <span className="px-4 flex justify-center h-[70px] w-full hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full ">
-            Reporting: IRB submissions, protocol deviation reporting, and full
-            regulatory compliance.
-          </span>
-          <span className="px-4 flex justify-center h-[70px] w-full hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full ">
-            Contact Center: A 24-hour call center (coming soon) for real-time
-            responses, privacy consultations, and query handling.
-          </span>
+      </section>
+      <section className="py-16 md:py-24 px-8 md:px-16 bg-gradient-to-br from-white to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-700 mb-4">
+              Our Services
+            </h2>
+            <div className="w-32 h-1 bg-slate-700 mx-auto mb-6"></div>
+            <p className="text-lg md:text-xl font-medium text-[#333091]/80 max-w-2xl mx-auto">
+              We offer a comprehensive portfolio designed to optimize your
+              clinical research journey
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Site Coordination",
+                description:
+                  "Schedule management, subject recruitment, AE/SAE reporting, and more.",
+                icon: "📋",
+              },
+              {
+                title: "Site Management",
+                description:
+                  "Ensuring operational efficiency with services such as data entry and equipment management.",
+                icon: "🏥",
+              },
+              {
+                title: "Reporting",
+                description:
+                  "IRB submissions, protocol deviation reporting, and full regulatory compliance.",
+                icon: "📊",
+              },
+              {
+                title: "Contact Center",
+                description:
+                  "A 24-hour call center (coming soon) for real-time responses, privacy consultations, and query handling.",
+                icon: "☎️",
+              },
+            ].map((service, index) => (
+              <MotionCard
+                key={index}
+                className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-[#333091]/10"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </span>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-[#333091]">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </MotionCard>
+            ))}
+          </div>
         </div>
       </section>
     </Pages>

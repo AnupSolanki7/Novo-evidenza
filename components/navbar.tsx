@@ -65,7 +65,7 @@ export const Navbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
-        "py-2 fixed  transition-all container mx-auto h-[100px] ease-in-out bg-slate-700",
+        "py-2  max-w-[1990px] mx-auto fixed transition-all h-[100px] px-2 md:px-16 ease-in-out bg-slate-700",
         "shadow-lg ",
         isMenuOpen && "bg-slate-700"
       )}
@@ -80,7 +80,7 @@ export const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <Logo />
-              <h1 className="md:text-3xl text-xl w-full text-center font-extrabold text-white">
+              <h1 className="md:text-3xl text-xl hidden md:block w-full text-center font-extrabold text-white">
                 VivoClin Research
               </h1>
             </NextLink>

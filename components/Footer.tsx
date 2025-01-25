@@ -14,7 +14,7 @@ import Logo from "@/assets/icons/Logo";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex-col bg-[#333091] flex items-center justify-center py-3">
+    <footer className="w-full max-w-[1990px] mx-auto px-2 md:px-16 flex-col bg-slate-700 flex items-center justify-center py-3">
       <MotionDiv className="px-6 mx-auto  flex justify-start w-full mt-6 ">
         <span className="flex items-center" >
           <Logo />{" "}

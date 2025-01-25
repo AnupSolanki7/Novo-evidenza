@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Page className="relative h-max bg-gradient-to-r from-blue-50 to-white">
       {/* banner */}
-      <section className="flex relative flex-col pt-20 md:flex-row w-full min-h-screen px-6 max-w-7xl mx-auto items-center justify-center gap-12 bg-gradient-to-r from-blue-50 to-white">
+      <section className="flex relative flex-col pt-40 md:flex-row w-full min-h-screen container mx-auto px-16 items-center justify-center gap-12 bg-gradient-to-r from-blue-50 to-white">
         <div className="flex z-10 flex-col text-center md:text-left justify-center items-center md:items-start w-full md:w-1/2 space-y-6">
           <div className="text-slate-800">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
@@ -95,19 +95,10 @@ export default function Home() {
         </div>
       </section>
       {/* info */}
-      <div className="relative container mx-auto bg-gradient-to-br from-sky-50 to-white h-max">
+      <div className="relative max-w-[1990px] mx-auto bg-gradient-to-br from-sky-50 to-white h-max">
         {/* section1 */}
         <section className="relative py-24 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-primary-800/95"
-            style={{
-              backgroundImage:
-                "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/6066a36d593d3ecd83e3efe1_2-layers.jpg)",
-              backgroundBlendMode: "overlay",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-primary-800/95" />
 
           <MotionDiv className="container relative z-10 mx-auto px-6 md:px-12">
             <div className="max-w-5xl mx-auto">
@@ -122,7 +113,7 @@ export default function Home() {
                 {visionPoints.map((point, index) => (
                   <MotionCard
                     key={index}
-                    className="bg-slate-500/30 backdrop-blur-xl  rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
+                    className="bg-gray-100/30 backdrop-blur-xl  rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
                     // whileHover={{ scale: 1.02 }}
                   >
                     <div className="flex flex-col items-center text-center space-y-4">
@@ -164,7 +155,7 @@ export default function Home() {
               {/* Content Section */}
               <div className="w-full md:w-1/2 text-gray-800 space-y-10">
                 <MotionDiv>
-                  <h2 className="text-2xl md:text-4xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-blue-600">
+                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-slate-600">
                     Site Management Organization (SMO)
                   </h2>
 
@@ -221,51 +212,51 @@ export default function Home() {
         <OurServices />
         {/* section4 */}
         <section className="relative py-24 bg-gradient-to-br from-primary-50 via-blue-200 to-indigo-100">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="container mx-auto px-8 lg:px-16">
             <MotionDiv className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
-          Our Mission
+                Our Mission
               </h2>
               <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-12" />
             </MotionDiv>
 
             <div className="grid md:grid-cols-1 gap-8 items-center">
               <div className="space-y-6">
-          {[
-            "To provide end-to-end support for clinical trials with an unwavering commitment to quality, compliance, and patient-centricity.",
-            "To bridge the gap between scientific discovery and patient outcomes through exceptional site management and impactful medical writing.",
-            "To empower our partners with reliable, innovative, and ethical solutions that transform clinical research into meaningful advancements in healthcare.",
-            "To ensure excellence in clinical trial support and deliver scientific narratives that resonate with clarity, precision, and impact.",
-          ].map((mission, index) => (
-            <MotionCard
-              key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">
-                {index + 1}
-              </span>
-            </div>
-                </div>
-                <p className="text-gray-700 text-lg leading-relaxed">
-            {mission}
-                </p>
-              </div>
-            </MotionCard>
-          ))}
+                {[
+                  "To provide end-to-end support for clinical trials with an unwavering commitment to quality, compliance, and patient-centricity.",
+                  "To bridge the gap between scientific discovery and patient outcomes through exceptional site management and impactful medical writing.",
+                  "To empower our partners with reliable, innovative, and ethical solutions that transform clinical research into meaningful advancements in healthcare.",
+                  "To ensure excellence in clinical trial support and deliver scientific narratives that resonate with clarity, precision, and impact.",
+                ].map((mission, index) => (
+                  <MotionCard
+                    key={index}
+                    className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold">
+                            {index + 1}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-lg leading-relaxed">
+                        {mission}
+                      </p>
+                    </div>
+                  </MotionCard>
+                ))}
               </div>
             </div>
 
             <div className="text-center mt-12">
               <Button
-          as={Link}
-          href="/about"
-          className="bg-gradient-to-r from-primary-600 to-blue-600 text-white hover:opacity-90 rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105"
-          endContent={<FaArrowRight />}
+                as={Link}
+                href="/about"
+                className="bg-gradient-to-r from-primary-600 to-blue-600 text-white hover:opacity-90 rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105"
+                endContent={<FaArrowRight />}
               >
-          Learn More About Our Mission
+                Learn More About Our Mission
               </Button>
             </div>
           </div>

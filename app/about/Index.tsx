@@ -4,7 +4,7 @@ import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { useRef, useState } from "react";
@@ -90,42 +90,38 @@ export default function AboutPage() {
       <section className="flex flex-col md:flex-row mt-[100px] h-full mx-auto items-center justify-around gap-4">
         <div className="w-full md:w-1/2 flex flex-col pt-[20px] md:pt-0 px-[7%] justify-start items-center h-full">
           <MotionDiv initialTranslateY={50} className="w-full flex flex-col">
-            <p className="font-bold text-3xl text-[#333091] mb-4 md:mb-8 ">
+            <p className="font-bold text-3xl text-blue-600 mb-4 md:mb-8 ">
               Send Us Your Enquiry
             </p>
-            <p className="font-bold text-left w-full whitespace-pre-wrap text-sm text-[#333091] mb-4 md:mb-8 ">
+            <p className="font-bold text-left w-full whitespace-pre-wrap text-sm text-slate-700 mb-4 md:mb-8 ">
               {" "}
               Ready for a non-obligatory chat, got a quick question or comment?
             </p>
             <div className="w-full flex-col lg:flex-row gap-8 lg:gap-0 flex justify-between items-start mb-4 md:mb-8">
               <span className="w-1/2  md:w-1/3">
-                <p className="font-bold text-xl text-[#333091] mb-4 ">
-                  Address
-                </p>
-                <p className="text-sm text-[#333091] ">
+                <p className="font-bold text-xl text-blue-600 mb-4 ">Address</p>
+                <p className="text-sm text-slate-700 ">
                   Near AEC Cross Road , Memnagar, Ahmedabad 380052 India
                 </p>
               </span>
               <span className="w-1/2 md:w-1/3 ">
-                <p className="font-bold text-xl text-[#333091] mb-4 ">
-                  Contact
-                </p>
+                <p className="font-bold text-xl text-blue-600 mb-4 ">Contact</p>
                 {/* <span className="flex gap-2">
                   <Link
-                  className="text-sm whitespace-nowrap text-[#333091] "
+                  className="text-sm whitespace-nowrap text-blue-600 "
                   href={"tel:9617330774"}
                 >
                   +91 9617330774
                 </Link>
                   <Link
-                    className="text-sm whitespace-nowrap text-[#333091] "
+                    className="text-sm whitespace-nowrap text-blue-600 "
                     href={"tel:9974525632"}
                   >
                     +91 9974525632
                   </Link>
                 </span> */}
                 <Link
-                  className="text-sm text-[#333091] "
+                  className="text-sm text-slate-700 "
                   href={"mailto:Info.novoevidenza@gmail.com"}
                 >
                   Info.novoevidenza@gmail.com
@@ -136,7 +132,7 @@ export default function AboutPage() {
               <Link
                 target="_blank"
                 href="https://www.linkedin.com/company/novo-evidenza/"
-                className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-[#333091] "
+                className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-blue-600 "
               >
                 <FaLinkedin className="text-lg text-white" />
               </Link>
@@ -247,7 +243,7 @@ export default function AboutPage() {
                     radius: "full",
                     variant: "shadow",
                     className:
-                      "font-bold bg-[#333091] p-6 text-white shadow-none w-max ",
+                      "font-bold bg-slate-700 p-6 text-white shadow-none w-max ",
                   })}
                   variant="flat"
                   type="submit"
@@ -259,32 +255,39 @@ export default function AboutPage() {
           </form>
         </div>
       </section>
-      <section className="w-full about h-max relative text-white">
-        <MotionDiv className="w-full sticky px-6 py-[50px] z-10 flex flex-col text-center justify-center items-center">
-          <h2
-            className={title({
-              size: "sm",
-              className:
-                "text-white mb-4 font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
-            })}
-          >
-            Meet your business partners
-          </h2>
-          <p className="md:text-xl text-md text-white ">
-            We are , co-founders of{" "}
-            <p className={title({ className: "!text-[20px] text-[#333091]" })}>
-              Vivoclin Research
-            </p>{" "}
-            and united by our love and passion for using business as a force for
-            good
-          </p>
+      <section className="w-full bg-gradient-to-b from-blue-900 to-blue-800 py-20">
+        <MotionDiv className="w-full max-w-7xl mx-auto px-6 mb-16">
+          <div className="text-center">
+            <h2
+              className={title({
+                size: "lg",
+                className: "text-white mb-6 font-bold tracking-tight",
+              })}
+            >
+              Meet Our Leadership Team
+            </h2>
+            <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
+              We are the co-founders of{" "}
+              <span className="font-semibold text-blue-300">
+                Vivoclin Research
+              </span>
+              , driven by our shared vision of transforming healthcare through
+              innovation and excellence.
+            </p>
+          </div>
         </MotionDiv>
-        <div className="px-6 grid sticky pt-6 py-12 grid-cols-1 sm:grid-cols-2  lg:grid-cols-2 gap-12 md:gap-4 justify-between h-max items-start max-w-[1220px] mx-auto">
-          {FOUNDERS.map((item, index) => (
-            <MotionCard key={index}>
-              <FounderCard item={item} />
-            </MotionCard>
-          ))}
+
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {FOUNDERS.map((item, index) => (
+              <MotionCard
+                key={index}
+                className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
+              >
+                <FounderCard item={item} />
+              </MotionCard>
+            ))}
+          </div>
         </div>
       </section>
     </Page>
