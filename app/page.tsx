@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Page className="relative h-max bg-gradient-to-r from-blue-50 to-white">
       {/* banner */}
-      <section className="flex relative flex-col pt-40 md:flex-row w-full min-h-screen container mx-auto px-16 items-center justify-center gap-12 bg-gradient-to-r from-blue-50 to-white">
+      <section className="flex relative flex-col pt-40 md:flex-row w-full min-h-[900px] container mx-auto px-16 items-center justify-center gap-12 ">
         <div className="flex z-10 flex-col text-center md:text-left justify-center items-center md:items-start w-full md:w-1/2 space-y-6">
           <div className="text-slate-800">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
@@ -69,13 +69,13 @@ export default function Home() {
             >
               Learn More
             </Button>
-            <Button
+            {/* <Button
               variant="bordered"
               color="primary"
               className="px-8 py-4 rounded-full"
             >
               Contact Us
-            </Button>
+            </Button> */}
           </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-center items-center">
@@ -134,7 +134,7 @@ export default function Home() {
                 <Button
                   as={Link}
                   href="/about"
-                  className="bg-white text-primary-800 text-sm hover:bg-white/90 rounded-full px-8 py-4 font-semibold transition-transform hover:scale-105"
+                  className="bg-white text-primary-600 text-sm hover:bg-white/90 rounded-full px-8 py-4 font-semibold transition-transform hover:scale-105"
                   endContent={<FaArrowRight />}
                 >
                   Discover More About Us
@@ -211,7 +211,7 @@ export default function Home() {
         {/* section3 */}
         <OurServices />
         {/* section4 */}
-        <section className="relative py-24 bg-gradient-to-br from-primary-50 via-blue-200 to-indigo-100">
+        <section className="relative py-24 bg-gradient-to-br from-blue-50 via-blue-200 to-sky-100">
           <div className="container mx-auto px-8 lg:px-16">
             <MotionDiv className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
@@ -284,7 +284,7 @@ export default function Home() {
               {/* Content Column */}
               <div className="w-full md:w-3/5 space-y-8">
                 <MotionDiv>
-                  <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6">
                     Medical Writing
                   </h2>
 

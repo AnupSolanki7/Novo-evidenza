@@ -65,9 +65,10 @@ export const Navbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
-        "py-2  max-w-[1990px] mx-auto fixed transition-all h-[100px] px-2 md:px-16 ease-in-out bg-slate-700",
-        "shadow-lg ",
-        isMenuOpen && "bg-slate-700"
+        "py-2 max-w-[1990px] mx-auto fixed transition-all h-[110px] px-2 md:px-16 ease-in-out",
+        "bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50 shadow-md",
+        isMenuOpen &&
+          "bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50"
       )}
       position="sticky"
     >
@@ -80,7 +81,7 @@ export const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <Logo />
-              <h1 className="md:text-3xl text-xl hidden md:block w-full text-center font-extrabold text-white">
+              <h1 className="md:text-3xl text-xl hidden md:block w-full text-center font-extrabold text-slate-700">
                 VivoClin Research
               </h1>
             </NextLink>
@@ -99,8 +100,8 @@ export const Navbar = () => {
                 <NextLink
                   className={clsx(
                     linkStyles({ color: "foreground" }),
-                    " text-white  ",
-                    path === item.slug && "text-primary border-b-1"
+                    " text-slate-700 font-semibold ",
+                    path === item.slug && "text-primary border-b-2"
                   )}
                   color="foreground"
                   href={item.slug}
@@ -118,7 +119,7 @@ export const Navbar = () => {
                 color: "danger",
                 radius: "full",
                 variant: "shadow",
-                className: "font-bold bg-primary-500 p-6 shadow-none",
+                className: "font-bold bg-slate-700 p-6 shadow-none",
               })}
               href={"about"}
               variant="flat"
@@ -130,16 +131,16 @@ export const Navbar = () => {
       </MotionDiv>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle className=" [&>span]:before:bg-white [&>span]:before:h-[2px] [&>span]:after:h-[1.5px] [&>span]:after:bg-white " />
+        <NavbarMenuToggle className=" [&>span]:before:bg-slate-700 [&>span]:before:h-[2px] [&>span]:after:h-[1.5px] [&>span]:after:bg-slate-700 " />
       </NavbarContent>
 
-      <NavbarMenu className="bg-[#333091]">
+      <NavbarMenu className="bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50">
         <div className="mx-4 justify-between pb-8 mt-[70px] h-[80vh]  flex flex-col gap-2">
           <div className="flex flex-col gap-3">
             {MENU_LIST.map((item, index) => (
               <NavbarMenuItem key={item.id}>
                 <Link
-                  className="text-white underline"
+                  className="text-slate-700 underline"
                   href={item.slug}
                   size="lg"
                   onClick={() => setIsMenuOpen(false)}
@@ -154,7 +155,8 @@ export const Navbar = () => {
                 radius: "full",
                 variant: "shadow",
                 color: "danger",
-                className: "font-bold text-white p-6 shadow-none mt-6 w-max ",
+                className:
+                  "font-bold bg-slate-700 text-white p-6 shadow-none mt-6 w-max ",
               })}
               href={"/about"}
               variant="flat"
@@ -173,12 +175,12 @@ export const Navbar = () => {
             /> */}
             <h2
               className={title({
-                className: "text-white text-center w-full ",
+                className: "text-slate-700 text-center w-full ",
               })}
             >
               Vivoclin Research
             </h2>
-            <div className="border-t-2 text-white w-full text-sm ">
+            <div className="border-t-2 text-slate-700 w-full text-sm ">
               <div className="flex flex-col w-full justify-between my-4">
                 <p>copyright Vivoclin Research 2024. All rights reserved.</p>
               </div>

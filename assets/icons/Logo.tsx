@@ -6,19 +6,12 @@ const Logo = ({ color = "white" }: { color?: string }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
-      width="80"
-      height="80"
+      width="150"
+      height="150"
       viewBox="0 0 1440 1440"
       
     >
       <g>
-        <path
-          transform="matrix(1,0,0,-1,0,1440)"
-          d="M0 1440H1440V0H0Z"
-          fill="white"
-          fillRule="evenodd"
-          clipPath="circle(50%)"
-        />
         <path
           transform="matrix(3.34996,0,0,-3.36385,0,1440)"
           strokeWidth="4.0853"
@@ -58,7 +51,7 @@ const Logo = ({ color = "white" }: { color?: string }) => {
         <path
           transform="matrix(1,0,0,-1,0,1440)"
           d="M239.29 730.0434H1200.7254V543.6488H239.29Z"
-          fill="#ffffff"
+          fill="#e0e7ef"
           fillRule="evenodd"
         />
         <path

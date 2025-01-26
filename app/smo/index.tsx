@@ -222,7 +222,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 px-8 md:px-16 bg-gradient-to-br from-white to-blue-50">
+      <section className="py-16 md:py-24 px-8 md:px-16 bg-gradient-to-br from-slate to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-700 mb-4">
