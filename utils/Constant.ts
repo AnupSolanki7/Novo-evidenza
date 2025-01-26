@@ -264,7 +264,7 @@ export const WRITINGS = [
     ]
   },
   {
-    title: `3. Medical Communication and Education`,
+    title: `Medical Communication and Education`,
     subtitle: `We develop educational and promotional content to inform and engage your target audience.`,
     list:[
       "Continuing Medical Education (CME) materials",
@@ -275,7 +275,7 @@ export const WRITINGS = [
   },
   {
     title: `Health Technology Assessment (HTA) and Market Access Documents`,
-    subtitle: `We help support your product’s value proposition with robust evidence.`,
+    subtitle: `We help support your product's value proposition with robust evidence.`,
     list:[
       "Health economics and outcomes research (HEOR) content",
       "Value dossiers (AMCP, G-BA, etc.)",
@@ -292,6 +292,16 @@ export const WRITINGS = [
       "Peer review assistance"
     ]
   },
+  {
+    title: `Regulatory Documentation`,
+    subtitle: `We assist in preparing comprehensive regulatory documentation for submissions and compliance.`,
+    list:[
+      "New Drug Applications (NDA)",
+      "Investigational New Drug (IND) applications",
+      "Safety update reports",
+      "Product labeling documentation"
+    ]
+  }
 ];
 
 export const PVSERVICES = [

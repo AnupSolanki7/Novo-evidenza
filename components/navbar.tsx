@@ -23,7 +23,6 @@ import { Button } from "@nextui-org/button";
 import { useCallback, useEffect, useState } from "react";
 import { title } from "./primitives";
 import MotionDiv from "./MotionDiv";
-import Image from "next/image";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

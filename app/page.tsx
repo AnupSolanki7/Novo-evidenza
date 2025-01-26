@@ -1,14 +1,9 @@
 "use client";
 
 import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
-import Banner from "../assets/image/banner.jpg";
 import Pharma from "../assets/image/pharma.png";
 import Pharma1 from "../assets/image/pharma2.png";
 import Pharma2 from "../assets/image/pharma3.png";
-import White from "../assets/image/white.jpg";
-
-import { subtitle, title } from "@/components/primitives";
 import Page from "@/components/page";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
@@ -45,7 +40,7 @@ export default function Home() {
   return (
     <Page className="relative h-max bg-gradient-to-r from-blue-50 to-white">
       {/* banner */}
-      <section className="flex relative flex-col pt-40 md:flex-row w-full min-h-[900px] container mx-auto px-16 items-center justify-center gap-12 ">
+      <section className="flex relative flex-col pt-[130px] md:pt-0 md:flex-row w-full min-h-[900px] container mx-auto px-16 items-center justify-center gap-12 ">
         <div className="flex z-10 flex-col text-center md:text-left justify-center items-center md:items-start w-full md:w-1/2 space-y-6">
           <div className="text-slate-800">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
@@ -214,7 +209,7 @@ export default function Home() {
         <section className="relative py-24 bg-gradient-to-br from-blue-50 via-blue-200 to-sky-100">
           <div className="container mx-auto px-8 lg:px-16">
             <MotionDiv className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6">
                 Our Mission
               </h2>
               <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-12" />

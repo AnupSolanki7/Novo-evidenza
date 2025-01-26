@@ -9,7 +9,7 @@ const Logo = ({ color = "white" }: { color?: string }) => {
       width="150"
       height="150"
       viewBox="0 0 1440 1440"
-      
+      className="w-[80px] h-[80px] md:w-[150px] md:h-[150px]"
     >
       <g>
         <path
