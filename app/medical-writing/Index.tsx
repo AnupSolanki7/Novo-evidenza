@@ -108,7 +108,7 @@ const Page = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-slate-700 mb-2">
-                  Expertise in clinical pharmacy and life sciences
+                  Expertise in Clinical Pharmacy and life sciences
                 </h3>
               </div>
             </MotionCard>

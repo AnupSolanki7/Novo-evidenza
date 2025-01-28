@@ -64,9 +64,9 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-slate-700 data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"/heor"}
+              href={"/smo"}
             >
-              HEOR
+              SMO
             </Link>
             <Link
               className={clsx(
@@ -74,11 +74,11 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-slate-700 data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"/pv-regulatory"}
+              href={"/medical-writing"}
             >
-              PV & Regulatory
+              Medical Writing
             </Link>
-            <Link
+            {/* <Link
               className={clsx(
                 linkStyles({ color: "foreground" }),
                 "data-[active=true]:text-primary text-slate-700 data-[active=true]:font-extrabold"
@@ -87,7 +87,7 @@ const Footer = () => {
               href={"/publications"}
             >
               Publications
-            </Link>
+            </Link> */}
             <Link
               className={clsx(
                 linkStyles({ color: "foreground" }),

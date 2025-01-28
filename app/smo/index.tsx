@@ -4,16 +4,11 @@ import BannerItem from "../../assets/image/homeBg.png";
 import Footprint from "../../assets/image/footprints.gif";
 import { button as buttonStyles } from "@nextui-org/theme";
 import MotionDiv from "@/components/MotionDiv";
-import { title } from "@/components/primitives";
 import Image from "next/image";
 import MotionCard from "@/components/MotionCard";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import {
-  PVSERVICES,
-  REGULATORY_SERVICES,
-  SMO_SERVICES,
-} from "@/utils/Constant";
+import { SMO_SERVICES } from "@/utils/Constant";
 import Pv2 from "../../assets/image/pv2.png";
 import clsx from "clsx";
 
@@ -24,10 +19,10 @@ const Page = () => {
         {/* <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div> */}
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="md:text-6xl text-3xl w-full text-center font-extrabold text-white leading-tight">
-            Site Management <span className="text-white/90">Organization</span>
+            Clinical Trial SMO Services
           </h1>
           <p className="text-white/80 text-center mt-4 max-w-2xl mx-auto text-lg">
-            Empowering Clinical Research Excellence
+          Comprehensive Site Management Solutions for Clinical Trials
           </p>
         </div>
       </div>
@@ -54,12 +49,12 @@ const Page = () => {
               <div className="w-20 h-1 bg-blue-600"></div>
             </div>
             <h2 className="text-gray-700 text-lg md:text-xl leading-relaxed">
-              At Vivoclin Research SMO Division, a dedicated entity under
-              Novotech, we have been pioneering clinical research across the
-              APAC region since 2013. With our strategic presence in South
-              Korea, Taiwan, and Mainland China, supported by over 300 skilled
-              professionals, we&apos;re committed to delivering innovative and
-              precise research solutions that make a real difference.
+              At Vivoclin Research SMO Division, we provide end-to-end Site
+              Management Organization (SMO) services to streamline your clinical
+              trials. From site selection and patient recruitment to regulatory
+              compliance and quality assurance, our services are designed to
+              ensure the success of your studies while reducing operational
+              burdens for sponsors and CROs.
             </h2>
             <Button
               as={Link}

@@ -27,14 +27,17 @@ const Accomplishment = () => {
               "text-white  font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
           })}
         >
-          Adding Value to HEOR Evidence Generation
+          Enhancing Healthcare Outcomes Through Evidence-Based Research
         </h2>
       </MotionDiv>
       <div className="px-6 grid sticky pt-6 py-12 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-12 md:gap-4 justify-between h-max items-center max-w-[1220px] mx-auto">
         {ACHEIVEMENTS.map((item, index) => (
           <MotionCard
             key={item.title}
-            className={clsx(index < 3 && "border-r-none md:border-r-1", "h-max md:h-[80px]")}
+            className={clsx(
+              index < 3 && "border-r-none md:border-r-1",
+              "h-max md:h-[80px]"
+            )}
           >
             <CardItem item={item} />
           </MotionCard>

@@ -87,7 +87,93 @@ export default function AboutPage() {
 
   return (
     <Page className="relative h-max bg-white ">
-      <section className="flex flex-col md:flex-row mt-[100px] h-full mx-auto items-center justify-around gap-4">
+      {/* Who We Are Section */}
+      <section className="w-full bg-gradient-to-b mt-[100px] from-slate-100 to-white py-32">
+        <MotionDiv className="w-full max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        {/* Left Content */}
+        <div className="w-full text-left">
+          <h2
+            className={title({
+          size: "lg",
+          className:
+            "text-blue-900 mb-6 font-bold tracking-tight relative",
+            })}
+          >
+            <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-12 bg-blue-600" />
+            Who We Are
+          </h2>
+          <p className="text-blue-800 text-lg leading-relaxed mb-8">
+            At Vivoclin Research, we are dedicated to transforming
+            healthcare through innovation and excellence. Our team of
+            experts is committed to delivering cutting-edge solutions that
+            improve patient outcomes and drive the future of medicine.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-blue-50 backdrop-blur-sm p-6 rounded-lg">
+          <h3 className="text-blue-700 font-semibold text-xl mb-2">
+            Innovation
+          </h3>
+          <p className="text-blue-600">
+            Pioneering advanced healthcare solutions through
+            cutting-edge research
+          </p>
+            </div>
+            <div className="bg-blue-50 backdrop-blur-sm p-6 rounded-lg">
+          <h3 className="text-blue-700 font-semibold text-xl mb-2">
+            Excellence
+          </h3>
+          <p className="text-blue-600">
+            Maintaining the highest standards in healthcare research and
+            delivery
+          </p>
+            </div>
+          </div>
+        </div>
+        {/* Right Image/Illustration */}
+          </div>
+        </MotionDiv>
+      </section>
+
+      {/* Team Members Section */}
+      <section className="w-full bg-gradient-to-b from-blue-900 to-blue-800 py-20">
+        <MotionDiv className="w-full max-w-7xl mx-auto px-6 mb-16">
+          <div className="text-center">
+            <h2
+              className={title({
+                size: "lg",
+                className: "text-white mb-6 font-bold tracking-tight",
+              })}
+            >
+              Meet Our Leadership Team
+            </h2>
+            <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
+              We are the co-founders of{" "}
+              <span className="font-semibold text-blue-300">
+                Vivoclin Research
+              </span>
+              , driven by our shared vision of transforming healthcare through
+              innovation and excellence.
+            </p>
+          </div>
+        </MotionDiv>
+
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {FOUNDERS.map((item, index) => (
+              <MotionCard
+                key={index}
+                className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
+              >
+                <FounderCard item={item} />
+              </MotionCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="flex flex-col md:flex-row h-full mx-auto items-center justify-around gap-4">
         <div className="w-full md:w-1/2 flex flex-col pt-[20px] md:pt-0 px-[7%] justify-start items-center h-full">
           <MotionDiv initialTranslateY={50} className="w-full flex flex-col">
             <p className="font-bold text-3xl text-blue-600 mb-4 md:mb-8 ">
@@ -106,20 +192,6 @@ export default function AboutPage() {
               </span>
               <span className="w-1/2 md:w-1/3 ">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Contact</p>
-                {/* <span className="flex gap-2">
-                  <Link
-                  className="text-sm whitespace-nowrap text-blue-600 "
-                  href={"tel:9617330774"}
-                >
-                  +91 9617330774
-                </Link>
-                  <Link
-                    className="text-sm whitespace-nowrap text-blue-600 "
-                    href={"tel:9974525632"}
-                  >
-                    +91 9974525632
-                  </Link>
-                </span> */}
                 <Link
                   className="text-sm text-slate-700 "
                   href={"mailto:Info.novoevidenza@gmail.com"}
@@ -136,9 +208,6 @@ export default function AboutPage() {
               >
                 <FaLinkedin className="text-lg text-white" />
               </Link>
-              {/* <Link className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-[#333091] ">
-                <FaInstagram className="text-lg text-white" />
-              </Link> */}
             </span>
           </MotionDiv>
           <iframe
@@ -253,41 +322,6 @@ export default function AboutPage() {
               </div>
             </MotionDiv>
           </form>
-        </div>
-      </section>
-      <section className="w-full bg-gradient-to-b from-blue-900 to-blue-800 py-20">
-        <MotionDiv className="w-full max-w-7xl mx-auto px-6 mb-16">
-          <div className="text-center">
-            <h2
-              className={title({
-                size: "lg",
-                className: "text-white mb-6 font-bold tracking-tight",
-              })}
-            >
-              Meet Our Leadership Team
-            </h2>
-            <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
-              We are the co-founders of{" "}
-              <span className="font-semibold text-blue-300">
-                Vivoclin Research
-              </span>
-              , driven by our shared vision of transforming healthcare through
-              innovation and excellence.
-            </p>
-          </div>
-        </MotionDiv>
-
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {FOUNDERS.map((item, index) => (
-              <MotionCard
-                key={index}
-                className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
-              >
-                <FounderCard item={item} />
-              </MotionCard>
-            ))}
-          </div>
         </div>
       </section>
     </Page>

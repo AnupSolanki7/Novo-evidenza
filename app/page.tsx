@@ -392,10 +392,13 @@ export default function Home() {
                       Vivoclin Research
                     </span>
                     , you gain a trusted partner committed to delivering
-                    excellence in medical writing, scientific documentation, and
-                    data analysis. Let us help you present your research and
-                    clinical data in the best light, ensuring impactful
-                    communication and successful outcomes.
+                    excellence in medical writing, clinical trial management,
+                    scientific documentation, and comprehensive research
+                    solutions. Our expertise spans from crafting impactful
+                    medical content to managing complex clinical trials with
+                    precision. Let us help you elevate your research projects
+                    through expert documentation, efficient trial management,
+                    and successful outcomes.
                   </p>
                 </MotionCard>
 

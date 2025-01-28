@@ -247,7 +247,7 @@ export const WRITINGS = [
     subtitle: `We create precise and compliant documents for regulatory submissions to streamline your drug development process.`,
     list: [
       "Clinical study protocols",
-      "nvestigator brochures (IB)",
+      "Investigator brochures (IB)",
       "Clinical study reports (CSR)",
       "Informed consent forms (ICF)",
       "Drug safety narratives"
