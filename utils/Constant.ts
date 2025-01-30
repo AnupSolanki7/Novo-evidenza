@@ -31,6 +31,11 @@ export const MENU_LIST = [
     title: "SMO",
     slug: "/smo",
   },
+  {
+    id: "ctm",
+    title: "Clinical Trial Monitoring",
+    slug: "/ctm",
+  },
   // {
   //   id: "pv-regulatory",
   //   title: "PV and Regulatory",

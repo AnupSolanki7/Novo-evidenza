@@ -3,8 +3,6 @@
 import React from "react";
 import Pages from "@/components/page";
 import MotionDiv from "@/components/MotionDiv";
-import { title, subtitle } from "@/components/primitives";
-import clsx from "clsx";
 import MotionCard from "@/components/MotionCard";
 import { WRITINGS } from "@/utils/Constant";
 import { Link } from "@nextui-org/link";
@@ -28,54 +26,6 @@ const Page = () => {
           </p>
         </div>
       </div>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden px-8 md:px-16 bg-gradient-to-br from-blue-50 to-white py-20">
-        <div className="absolute right-0 top-0 -z-10 h-full w-1/2 bg-blue-100/30" />
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
-            <MotionDiv className="w-full md:w-1/2">
-              <h2 className="mb-6 text-4xl font-bold leading-tight text-blue-600 md:text-5xl">
-                Professional Medical Writing Services
-              </h2>
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
-                At Vivoclin Research, we provide expert medical writing services
-                tailored to meet the needs of healthcare, pharmaceutical, and
-                life sciences organizations. Our goal is to deliver accurate,
-                engaging, and compliant content that supports your business
-                objectives and ensures effective communication with your target
-                audience.
-              </p>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "primary",
-                  radius: "full",
-                  variant: "shadow",
-                  className:
-                    "font-semibold text-lg px-8 py-6 bg-blue-600 hover:bg-blue-800 transition-colors",
-                })}
-                href="/about"
-              >
-                Let&apos;s Connect
-              </Button>
-            </MotionDiv>
-
-            <MotionDiv className="w-full md:w-1/2">
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-full bg-blue-100/50 blur-2xl" />
-                <Image
-                  src={BannerItem}
-                  className="relative w-full object-contain"
-                  width={600}
-                  height={600}
-                  alt="Medical Writing Services"
-                  priority
-                />
-              </div>
-            </MotionDiv>
-          </div>
-        </div>
-      </section>
       <section className="py-16 bg-gradient-to-b from-blue-50 to-white px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <MotionDiv className="text-center mb-12">
@@ -163,6 +113,55 @@ const Page = () => {
           </div>
         </div>
       </section>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden px-8 md:px-16 bg-gradient-to-br from-blue-50 to-white py-20">
+        <div className="absolute right-0 top-0 -z-10 h-full w-1/2 bg-blue-100/30" />
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
+            <MotionDiv className="w-full md:w-1/2">
+              <h2 className="mb-6 text-4xl font-bold leading-tight text-blue-600 md:text-5xl">
+                Professional Medical Writing Services
+              </h2>
+              <p className="mb-8 text-lg leading-relaxed text-gray-700">
+                At Vivoclin Research, we provide expert medical writing services
+                tailored to meet the needs of healthcare, pharmaceutical, and
+                life sciences organizations. Our goal is to deliver accurate,
+                engaging, and compliant content that supports your business
+                objectives and ensures effective communication with your target
+                audience.
+              </p>
+              <Button
+                as={Link}
+                className={buttonStyles({
+                  color: "primary",
+                  radius: "full",
+                  variant: "shadow",
+                  className:
+                    "font-semibold text-lg px-8 py-6 bg-blue-600 hover:bg-blue-800 transition-colors",
+                })}
+                href="/about"
+              >
+                Let&apos;s Connect
+              </Button>
+            </MotionDiv>
+
+            <MotionDiv className="w-full md:w-1/2">
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-full bg-blue-100/50 blur-2xl" />
+                <Image
+                  src={BannerItem}
+                  className="relative w-full object-contain"
+                  width={600}
+                  height={600}
+                  alt="Medical Writing Services"
+                  priority
+                />
+              </div>
+            </MotionDiv>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-gradient-to-b from-white to-blue-50">
         {/* Scientific Writing & Data Analysis Section */}
         <MotionDiv className="w-full px-6 mb-16 z-10">
@@ -285,58 +284,6 @@ const Page = () => {
         </div>
       </section>
       {/* Contact Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-12 relative overflow-hidden">
-            {/* Background decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-50 rounded-full -ml-20 -mb-20" />
-
-            {/* Content */}
-            <MotionDiv className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
-                Let's Work Together
-              </h2>
-
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Whether you need assistance with regulatory documents,
-                publication writing, or educational content, we're here to help.
-                Reach out to us today to discuss your medical writing needs, and
-                let us deliver the exceptional results you deserve.
-              </p>
-
-              <Button
-                as={Link}
-                href="/about"
-                className={buttonStyles({
-                  color: "primary",
-                  radius: "full",
-                  variant: "shadow",
-                  className:
-                    "font-semibold text-lg px-10 py-7 bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105",
-                })}
-              >
-                <span className="flex items-center gap-2">
-                  Contact us today
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </span>
-              </Button>
-            </MotionDiv>
-          </div>
-        </div>
-      </section>
     </Pages>
   );
 };

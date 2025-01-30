@@ -74,6 +74,16 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-slate-700 data-[active=true]:font-extrabold"
               )}
               color="foreground"
+              href={"/ctm"}
+            >
+              Clinical Trial Monitoring
+            </Link>
+            <Link
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary text-slate-700 data-[active=true]:font-extrabold"
+              )}
+              color="foreground"
               href={"/medical-writing"}
             >
               Medical Writing

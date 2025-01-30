@@ -4,7 +4,14 @@ import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { FaLinkedin } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaHospital,
+  FaPencilAlt,
+  FaClipboardCheck,
+  FaFileAlt,
+  FaLinkedin,
+} from "react-icons/fa";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { useRef, useState } from "react";
@@ -85,58 +92,72 @@ export default function AboutPage() {
     }
   };
 
+  const services = [
+    {
+      title: "Expert SMO Services",
+      description: "Comprehensive site management for clinical trials",
+      icon: FaHospital,
+    },
+    {
+      title: "Medical Writing",
+      description: "High-quality scientific and regulatory documentation",
+      icon: FaPencilAlt,
+    },
+    {
+      title: "Clinical Trial Support",
+      description: "End-to-end assistance for research projects",
+      icon: FaClipboardCheck,
+    },
+    {
+      title: "Regulatory Affairs",
+      description: "Expert guidance in regulatory document preparation",
+      icon: FaFileAlt,
+    },
+  ];
+
   return (
     <Page className="relative h-max bg-white ">
       {/* Who We Are Section */}
-      <section className="w-full bg-gradient-to-b mt-[100px] from-slate-100 to-white py-32">
-        <MotionDiv className="w-full max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Left Content */}
-        <div className="w-full text-left">
-          <h2
-            className={title({
-          size: "lg",
-          className:
-            "text-blue-900 mb-6 font-bold tracking-tight relative",
-            })}
-          >
-            <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-12 bg-blue-600" />
-            Who We Are
-          </h2>
-          <p className="text-blue-800 text-lg leading-relaxed mb-8">
-            At Vivoclin Research, we are dedicated to transforming
-            healthcare through innovation and excellence. Our team of
-            experts is committed to delivering cutting-edge solutions that
-            improve patient outcomes and drive the future of medicine.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-blue-50 backdrop-blur-sm p-6 rounded-lg">
-          <h3 className="text-blue-700 font-semibold text-xl mb-2">
-            Innovation
-          </h3>
-          <p className="text-blue-600">
-            Pioneering advanced healthcare solutions through
-            cutting-edge research
-          </p>
-            </div>
-            <div className="bg-blue-50 backdrop-blur-sm p-6 rounded-lg">
-          <h3 className="text-blue-700 font-semibold text-xl mb-2">
-            Excellence
-          </h3>
-          <p className="text-blue-600">
-            Maintaining the highest standards in healthcare research and
-            delivery
-          </p>
-            </div>
+
+      <section className="bg-gradient-to-r mt-[100px] from-blue-50 to-white py-20">
+        <div className="container mx-auto px-8 md:px-16">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              About VivoClin Research Services
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              VivoClin Research Services is at the forefront of advancing
+              clinical research with precision and expertise. We specialize in
+              comprehensive clinical trial site support and medical writing,
+              ensuring meticulous execution and high-quality research that
+              drives medical innovation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="p-6 flex items-start space-x-4">
+                  <div className="bg-primary-100 rounded-full p-3 flex-shrink-0">
+                    <service.icon className="text-2xl text-primary-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        {/* Right Image/Illustration */}
-          </div>
-        </MotionDiv>
       </section>
-
       {/* Team Members Section */}
-      <section className="w-full bg-gradient-to-b from-blue-900 to-blue-800 py-20">
+      <section className="w-full bg-gradient-to-b from-blue-600 to-blue-700 py-20">
         <MotionDiv className="w-full max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center">
             <h2
@@ -173,7 +194,10 @@ export default function AboutPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="flex flex-col md:flex-row h-full mx-auto items-center justify-around gap-4">
+      <section
+        id="contact"
+        className="flex flex-col md:flex-row h-full mx-auto items-center justify-around gap-4"
+      >
         <div className="w-full md:w-1/2 flex flex-col pt-[20px] md:pt-0 px-[7%] justify-start items-center h-full">
           <MotionDiv initialTranslateY={50} className="w-full flex flex-col">
             <p className="font-bold text-3xl text-blue-600 mb-4 md:mb-8 ">
