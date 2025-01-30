@@ -112,7 +112,7 @@ const index = () => {
       </section>
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-8 md:px-16">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-black text-center mb-12">
             Comprehensive Monitoring Solutions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -128,7 +128,7 @@ const index = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-2 ${
-                    index < 2 ? "text-2xl text-blue-600" : ""
+                    index < 2 ? "text-2xl text-blue-600" : "text-2xl text-blue-600"
                   }`}
                 >
                   {service.title}
@@ -141,10 +141,10 @@ const index = () => {
       </section>
       <section id="specialties" className="py-20 bg-gray-50 px-8 md:px-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6">
+          <h2 className="text-3xl font-bold text-center mb-6 text-black">
             Therapeutic Expertise Across Diverse Areas
           </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-center mb-12 max-w-3xl mx-auto text-black">
             Our investigational sites specialize in a wide range of therapeutic
             areas, providing comprehensive support for clinical trials. Each
             specialty is backed by a team of experienced researchers and
@@ -156,10 +156,10 @@ const index = () => {
               <div key={index} className="bg-white shadow-md p-4 rounded-xl">
                 <div className="flex gap-3 justify-start items-center">
                   {specialty.icon}
-                  <h3 className="text-xl font-semibold">{specialty.name}</h3>
+                  <h3 className="text-xl text-black font-semibold">{specialty.name}</h3>
                 </div>
                 <div className="mt-4" >
-                  <p className="text-gray-600 text-sm">{specialty.description}</p>
+                  <p className="text-sm text-black">{specialty.description}</p>
                 </div>
               </div>
             ))}
