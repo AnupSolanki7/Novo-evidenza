@@ -141,7 +141,7 @@ export default function AboutPage() {
                 className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="p-6 flex items-start space-x-4">
-                  <div className="bg-primary-100 rounded-full p-3 flex-shrink-0">
+                  <div className=" bg-blue-100 rounded-full p-3 flex-shrink-0">
                     <service.icon className="text-2xl text-primary-600" />
                   </div>
                   <div>
