@@ -13,7 +13,7 @@ import Accomplishment from "@/components/Accomplishment";
 import MotionCard from "@/components/MotionCard";
 import { FaArrowRight } from "react-icons/fa";
 
-export const smoServices = [
+const smoServices = [
   {
     title: "Site Identification & Feasibility",
     description:

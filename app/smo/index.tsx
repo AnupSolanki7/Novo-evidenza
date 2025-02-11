@@ -1,5 +1,3 @@
-'use client'
-
 import React from "react";
 import Pages from "@/components/page";
 import BannerItem from "../../assets/image/homeBg.png";
@@ -13,7 +11,29 @@ import { Link } from "@nextui-org/link";
 import { SMO_SERVICES } from "@/utils/Constant";
 import Pv2 from "../../assets/image/pv2.png";
 import clsx from "clsx";
-import { smoServices } from "../page";
+
+const smoServices = [
+  {
+    title: "Site Identification & Feasibility",
+    description:
+      "Selecting optimal sites based on protocol needs, infrastructure, and investigator expertise.",
+  },
+  {
+    title: "Site Setup & Initiation",
+    description:
+      "Managing regulatory approvals, site activation, and investigator training for compliance.",
+  },
+  {
+    title: "Patient Recruitment & Retention",
+    description:
+      "Implementing digital strategies and outreach programs to enhance enrollment and retention.",
+  },
+  {
+    title: "Regulatory Compliance & Ethics",
+    description:
+      "Ensuring adherence to ICH-GCP, FDA, and local guidelines with complete documentation.",
+  },
+];
 
 const Page = () => {
   return (
