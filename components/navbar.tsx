@@ -23,6 +23,7 @@ import { Button } from "@nextui-org/button";
 import { useCallback, useEffect, useState } from "react";
 import { title } from "./primitives";
 import MotionDiv from "./MotionDiv";
+import { useWindowWidth } from "@/utils/hooks/useWindoSize";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ export const Navbar = () => {
   const [y, setY] = useState(
     typeof window !== "undefined" ? window?.scrollY : 0
   );
-
+  const width = useWindowWidth();
   const handleNavigation = useCallback(
     (e: { currentTarget: any }) => {
       const window = e.currentTarget;
@@ -57,6 +58,7 @@ export const Navbar = () => {
     }
   }, [y, path]);
 
+
   return (
     <NextUINavbar
       maxWidth="full"
@@ -64,7 +66,7 @@ export const Navbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
-        "py-2 max-w-[1990px] mx-auto fixed transition-all h-[110px] px-2 md:px-16 ease-in-out",
+        "py-2 max-w-[1990px] mx-auto fixed transition-all h-[90px] md:h-[110px] px-2 md:px-16 ease-in-out",
         "bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50 shadow-md",
         isMenuOpen &&
           "bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50"
@@ -79,7 +81,7 @@ export const Navbar = () => {
               href="/"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Logo />
+              <Logo size={width > 600 ? "140" : "80"} />
               <h1 className="md:text-3xl text-xl hidden md:block w-full text-center font-extrabold text-slate-700">
                 VivoClin Research
               </h1>

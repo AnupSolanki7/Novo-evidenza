@@ -108,11 +108,6 @@ export default function AboutPage() {
       description: "End-to-end assistance for research projects",
       icon: FaClipboardCheck,
     },
-    {
-      title: "Regulatory Affairs",
-      description: "Expert guidance in regulatory document preparation",
-      icon: FaFileAlt,
-    },
   ];
 
   return (
@@ -134,22 +129,22 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-blue-100"
               >
-                <div className="p-6 flex items-start space-x-4">
-                  <div className=" bg-blue-100 rounded-full p-3 flex-shrink-0">
-                    <service.icon className="text-2xl text-primary-600" />
+                <div className="p-8 flex flex-col items-center text-center">
+                  <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
+                    <service.icon className="text-3xl text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600">{service.description}</p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -211,7 +206,7 @@ export default function AboutPage() {
               <span className="w-1/2  md:w-1/3">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Address</p>
                 <p className="text-sm text-slate-700 ">
-                  Near AEC Cross Road , Memnagar, Ahmedabad 380052 India
+                  Ahmedabad 380052 India
                 </p>
               </span>
               <span className="w-1/2 md:w-1/3 ">
@@ -235,12 +230,9 @@ export default function AboutPage() {
             </span>
           </MotionDiv>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.142446574321!2d72.54400357509287!3d23.05523867915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e849f1da34b99%3A0x4fa0ffc47a78afa9!2sAEC%20Cross%20Rd%2C%20Naranpura%2C%20Ahmedabad%2C%20Gujarat%20380063!5e0!3m2!1sen!2sin!4v1725298358308!5m2!1sen!2sin"
-            allowFullScreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.15049961975!2d72.5797426!3d23.0202434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1739299209422!5m2!1sen!2sin"
+           className="border-0 h-[200px] w-full mb-8"
             loading="lazy"
-            className="border-0 h-[200px] w-full mb-8"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="address"
           ></iframe>
         </div>
 

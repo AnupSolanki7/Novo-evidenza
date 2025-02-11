@@ -26,7 +26,7 @@ const CardItem = ({ item }: { item: any }) => {
         <p className="text-4xl font-bold">
           {visible && <CountUp end={item.number} />}+
         </p>
-        <p >{item.title}</p>
+        <p className="whitespace-normal break-words">{item.title}</p>
       </div>
     </div>
   );

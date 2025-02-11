@@ -70,14 +70,15 @@ export const SERVICES = [
     title: "Medical Writing",
     subtitle:
       "Delivering clear, impactful scientific communication that resonates with global audiences.",
-    link: "/about",
+    link: "/medical-writing",
     Icon: ServiceIcon2,
   },
   {
     id: "3",
-    title: "Clinical Trial CRO",
+    title: "Clinical Trial Monitoring",
     subtitle:
-      "Expert clinical operations for Phase studies with streamlined management, regulatory compliance, and comprehensive trial.",
+      "Advanced monitoring solutions and specialized expertise in diverse therapeutic areas to support your clinical trials.",
+      link: "/ctm",
     Icon: HiSpeakerphone,
   },
   {
@@ -85,7 +86,7 @@ export const SERVICES = [
     title: "Vivocilin Partner at Every Phase",
     subtitle:
       "Global clinical development with local expertise, advanced therapies, and cutting-edge operations.",
-    link: "/pv-regulatory",
+    link: "/about",
     Icon: ServiceIcon4,
   },
 ];
@@ -102,14 +103,14 @@ export const ACHEIVEMENTS = [
     title: "HTA Submissions",
   },
   {
-    icon: Achieve1,
-    number: 3,
-    title: "Pharmacovigilance Project",
+    icon: Achieve4,
+    number: 15,
+    title: "Meta Analysis",
   },
   {
-    icon: Achieve4,
-    number: 58,
-    title: "CER for clients",
+    icon: Achieve1,
+    number: 60,
+    title: "Manuscripts Delivered",
   },
   // {
   //   icon: HiSpeakerphone,

@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Pages from "@/components/page";
 import BannerItem from "../../assets/image/homeBg.png";
@@ -11,6 +13,7 @@ import { Link } from "@nextui-org/link";
 import { SMO_SERVICES } from "@/utils/Constant";
 import Pv2 from "../../assets/image/pv2.png";
 import clsx from "clsx";
+import { smoServices } from "../page";
 
 const Page = () => {
   return (
@@ -22,7 +25,7 @@ const Page = () => {
             Clinical Trial SMO Services
           </h1>
           <p className="text-white/80 text-center mt-4 max-w-2xl mx-auto text-lg">
-          Comprehensive Site Management Solutions for Clinical Trials
+            Comprehensive Site Management Solutions for Clinical Trials
           </p>
         </div>
       </div>
@@ -145,46 +148,31 @@ const Page = () => {
             <div className="w-32 h-1 bg-[#333091] mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <MotionDiv className="space-y-8">
-              {[
-                {
-                  title: "Site Management Unit (SMU)",
-                  description:
-                    "Seamlessly optimizing clinical trial operations with services such as subject enrollment support, Clinical Research Coordinator expertise, and meticulous data entry.",
-                  icon: "🏥",
-                },
-                {
-                  title: "Clinical Pharmacology Unit (CPU)",
-                  description:
-                    "Achieving rapid trial initiation by eliminating hospital contracts, with first dosing milestones reached within just five weeks.",
-                  icon: "⚕️",
-                },
-                {
-                  title: "SMO Operations",
-                  description:
-                    "Comprehensive oversight, including quality management, IRB assistance, and AE/SAE reporting, ensuring compliance and success for every study.",
-                  icon: "📊",
-                },
-              ].map((item, index) => (
-                <MotionCard
-                  key={index}
-                  className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex gap-4">
-                    <span className="text-3xl">{item.icon}</span>
-                    <div className="space-y-2">
-                      <h3 className="text-xl font-bold text-[#333091]">
-                        {item.title}
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-3/5">
+              <div className="grid md:grid-cols-2 gap-6">
+                {smoServices?.map((service, index) => (
+                  <MotionCard
+                    key={index}
+                    className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                  >
+                    <div className="flex flex-col h-full">
+                      <div className="w-12 h-12 bg-primary-600/10 rounded-lg flex items-center justify-center mb-4">
+                        <span className="text-primary-600 font-bold text-xl">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                        {service.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
-                        {item.description}
+                        {service.description}
                       </p>
                     </div>
-                  </div>
-                </MotionCard>
-              ))}
-            </MotionDiv>
+                  </MotionCard>
+                ))}
+              </div>
+            </div>
 
             <MotionCard bounce className="relative">
               <div className="relative aspect-square rounded-2xl overflow-hidden">
