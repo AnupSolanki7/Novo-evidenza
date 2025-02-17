@@ -67,9 +67,9 @@ export const Navbar = () => {
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
         "py-2 max-w-[1990px] mx-auto fixed transition-all h-[90px] md:h-[110px] px-2 md:px-16 ease-in-out",
-        "bg-primary-700 shadow-md",
+        "bg-[#004493] shadow-md",
         isMenuOpen &&
-          "bg-primary-700"
+          "bg-[#004493]"
       )}
       position="sticky"
     >

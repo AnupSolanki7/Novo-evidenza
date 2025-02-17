@@ -99,7 +99,7 @@ export default function Home() {
       <div className="relative max-w-[1990px] mx-auto bg-gradient-to-br from-sky-50 to-white h-max">
         {/* section1 */}
         <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-primary-800/95" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-[#004493]" />
 
           <MotionDiv className="container relative z-10 mx-auto px-6 md:px-12">
             <div className="max-w-5xl mx-auto">
@@ -253,7 +253,7 @@ export default function Home() {
                         {smoServices.map((service, index) => (
                           <MotionCard
                             key={index}
-                            className="group p-4 bg-gradient-to-r from-primary-50 to-blue-50 rounded-lg hover:shadow-md transition-all duration-300"
+                            className="group p-4 bg-blue-50 rounded-lg hover:shadow-md transition-all duration-300"
                           >
                             <h3 className="text-primary-600 font-semibold mb-2">{service.title}</h3>
                             <p className="text-gray-600 text-sm">{service.description}</p>

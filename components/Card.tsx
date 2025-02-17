@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <Link href={item?.link}>
-      <div className="min-h-[400px] h-[80%] hover:bg-blue-500 [&>h3]:hover:text-white  [&>button]:hover:bg-white   transition-all ease-in-out rounded-[30px] [&>*]:[&>*]:hover:fill-white [&>p]:hover:text-gray-200 bg-white flex justify-between items-center md:items-start flex-col gap-2 p-8">
+      <div className="min-h-[400px] h-[80%] hover:bg-blue-500 [&>h3]:hover:text-white  [&>button]:hover:bg-white  [&>button]:hover:text-blue-500 transition-all ease-in-out rounded-[30px] [&>*]:[&>*]:hover:fill-white [&>p]:hover:text-gray-200 bg-white flex justify-between items-center md:items-start flex-col gap-2 p-8">
         <span className="text-6xl w-[60px] h-[60px] [&>*]:fill-blue-500">
           {<item.Icon />}
         </span>
@@ -29,7 +29,7 @@ const Card = ({
         </h3>
         <p className="text-gray-500 h-max min-h-[100px]">{item.subtitle}</p>
         <Button
-          className="font-bold shadow-none p-6 mt-6 w-max "
+          className="font-bold bg-blue-500 shadow-none text-white p-6 mt-6 w-max "
           href={"/about"}
           variant="flat"
         >
