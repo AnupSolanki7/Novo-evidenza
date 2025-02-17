@@ -175,15 +175,30 @@ export default function AboutPage() {
         </MotionDiv>
 
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {FOUNDERS.map((item, index) => (
-              <MotionCard
-                key={index}
-                className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
-              >
-                <FounderCard item={item} />
-              </MotionCard>
-            ))}
+          <div className="flex flex-col gap-12">
+            {/* First row: 2 elements */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+              {FOUNDERS.slice(0, 2).map((item, index) => (
+                <MotionCard
+                  key={index}
+                  className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
+                >
+                  <FounderCard item={item} />
+                </MotionCard>
+              ))}
+            </div>
+
+            {/* Second row: 3 elements */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+              {FOUNDERS.slice(2, 5).map((item, index) => (
+                <MotionCard
+                  key={index + 2}
+                  className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
+                >
+                  <FounderCard item={item} />
+                </MotionCard>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -231,7 +246,7 @@ export default function AboutPage() {
           </MotionDiv>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.15049961975!2d72.5797426!3d23.0202434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1739299209422!5m2!1sen!2sin"
-           className="border-0 h-[200px] w-full mb-8"
+            className="border-0 h-[200px] w-full mb-8"
             loading="lazy"
           ></iframe>
         </div>

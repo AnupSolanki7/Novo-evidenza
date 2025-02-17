@@ -4,6 +4,9 @@ import { HiSpeakerphone } from "react-icons/hi";
 import ServiceIcon4 from "@/assets/icons/ServiceIcon4";
 import Profile1 from "../assets/image/profile1.png";
 import Profile2 from "../assets/image/profile2.png";
+import Profile3 from "../assets/image/profile3.png";
+import Profile4 from "../assets/image/profile4.png";
+import Profile5 from "../assets/image/profile5.png";
 import Achieve1 from "@/assets/icons/Achieve1";
 import Achieve2 from "@/assets/icons/Achieve2";
 import Achieve3 from "@/assets/icons/Achieve3";
@@ -78,7 +81,7 @@ export const SERVICES = [
     title: "Clinical Trial Monitoring",
     subtitle:
       "Advanced monitoring solutions and specialized expertise in diverse therapeutic areas to support your clinical trials.",
-      link: "/ctm",
+    link: "/ctm",
     Icon: HiSpeakerphone,
   },
   {
@@ -94,12 +97,12 @@ export const SERVICES = [
 export const ACHEIVEMENTS = [
   {
     icon: Achieve3,
-    number: 64,
+    number: 134,
     title: "Project Delivery",
   },
   {
     icon: Achieve2,
-    number: 12,
+    number: 102,
     title: "HTA Submissions",
   },
   {
@@ -109,7 +112,7 @@ export const ACHEIVEMENTS = [
   },
   {
     icon: Achieve1,
-    number: 60,
+    number: 130,
     title: "Manuscripts Delivered",
   },
   // {
@@ -127,15 +130,33 @@ export const ACHEIVEMENTS = [
 export const FOUNDERS = [
   {
     image: Profile2,
-    name: "Dr. K. G. Maheshwari",
-    role: "Founder",
-    text: "Dr. Kunal Maheshwari, founder of Vivoclin Research, is a visionary leader in pharmaceutical research and medical writing. With an impressive portfolio of publications in international journals, he excels in Health Economics and Outcomes Research (HEOR). Overseeing more than 50 manuscripts, Dr. Maheshwari is dedicated to empowering researchers and advancing healthcare for a better, healthier world.",
+    name: "Dr. Kunal Maheshwari",
+    role: "Operation team",
+    text: "Dr. Kunal Maheshwari is an experienced medical writer and clinical research professional with expertise in scientific writing, regulatory documentation, and medical communications. His proficiency in crafting high-quality manuscripts, clinical study reports, and regulatory submissions ensures clarity, accuracy, and compliance with industry standards. With a strong background in clinical research, he bridges the gap between scientific data and effective communication, contributing to impactful medical literature and research excellence.",
   },
   {
     image: Profile1,
-    name: "Md G Khan",
-    role: "Co-Founder",
-    text: "Md G Khan having 4 years experience in PV industry, he had published 68 papers in peer reviewed journals , 27+ book chapters and edited 2 books ( Clinical Research and Medical Writing) received several awards such as Young Researcher, Best Emerging Scientist through different organisations such as Biolegues , NFPS , Tech Awards . He has holding 1200+ on his name , khan is expanding and promoting healthcare through Vivoclin Research for better patient safety and better world",
+    name: "Dr. Mohammad Kaif",
+    role: "Operation team",
+    text: "Dr. Mohammad Kaif is an experienced clinical research professional with expertise in study coordination and quality assurance. As a scientific writing expert, he has contributed to impactful research through numerous authored manuscripts. His multidisciplinary experience strengthens clinical trial execution and regulatory compliance.",
+  },
+  {
+    image: Profile3,
+    name: "Dr. Dhaiwat Shukla",
+    role: "Advisor",
+    text: "Dr. Dhaiwat Shukla is a highly experienced rheumatologist with expertise in clinical research, immunology, and internal medicine. As a principal investigator in multiple clinical trials, he has contributed to advancements in rheumatology and related fields. With a strong foundation in academic research, he has authored numerous publications and actively collaborates with pharmaceutical companies in advisory roles. His expertise enhances our commitment to excellence in clinical trial management and site operations.",
+  },
+  {
+    image: Profile4,
+    name: "Dr. Hardik Pitroda",
+    role: "Advisor",
+    text: "Dr. Hardik Pitroda is an experienced dermatologist with over a decade of expertise in patient care. As a principal investigator in numerous clinical trials, he has contributed to advancements in medical science and therapeutic innovations. His deep understanding of clinical trial methodologies, regulatory compliance, and investigational treatments strengthens our research capabilities. With a strong commitment to evidence-based medicine, Dr. Pitroda plays a key role in ensuring the success and integrity of clinical trials.",
+  },
+  {
+    image: Profile5,
+    name: "Dr. Gopal Natesan",
+    role: "Advisor",
+    text: "Dr. Gopal Natesan is a distinguished pharmaceutical scientist with expertise in clinical research, medical writing, and regulatory sciences. With over two decades of experience, he has contributed to scientific communication, quality assurance, and research excellence. As the Director at Nirma University, Ahmedabad, he plays a key role in fostering industry collaborations and academic advancements. His expertise strengthens our commitment to high-quality research and regulatory support.",
   },
 ];
 
@@ -256,8 +277,8 @@ export const WRITINGS = [
       "Investigator brochures (IB)",
       "Clinical study reports (CSR)",
       "Informed consent forms (ICF)",
-      "Drug safety narratives"
-    ]
+      "Drug safety narratives",
+    ],
   },
   {
     title: `Scientific Publications and Manuscripts`,
@@ -266,48 +287,48 @@ export const WRITINGS = [
       "Journal articles (original research, reviews, and case reports)",
       "Systematic reviews and meta-analyses",
       "Abstracts and posters for conferences",
-      "Book chapters"
-    ]
+      "Book chapters",
+    ],
   },
   {
     title: `Medical Communication and Education`,
     subtitle: `We develop educational and promotional content to inform and engage your target audience.`,
-    list:[
+    list: [
       "Continuing Medical Education (CME) materials",
       "Patient education materials",
       "Disease awareness campaigns",
-      "Training materials for healthcare professionals"
-    ]
+      "Training materials for healthcare professionals",
+    ],
   },
   {
     title: `Health Technology Assessment (HTA) and Market Access Documents`,
     subtitle: `We help support your product's value proposition with robust evidence.`,
-    list:[
+    list: [
       "Health economics and outcomes research (HEOR) content",
       "Value dossiers (AMCP, G-BA, etc.)",
       "Payer communication tools",
-      "Budget impact models and cost-effectiveness analyses"
-    ]
+      "Budget impact models and cost-effectiveness analyses",
+    ],
   },
   {
     title: `Editorial Support and Quality Control`,
     subtitle: `Our editorial team ensures your documents are polished and publication-ready.`,
-    list:[
+    list: [
       "Medical editing and proofreading",
       "Formatting and styling to meet guidelines",
-      "Peer review assistance"
-    ]
+      "Peer review assistance",
+    ],
   },
   {
     title: `Regulatory Documentation`,
     subtitle: `We assist in preparing comprehensive regulatory documentation for submissions and compliance.`,
-    list:[
+    list: [
       "New Drug Applications (NDA)",
       "Investigational New Drug (IND) applications",
       "Safety update reports",
-      "Product labeling documentation"
-    ]
-  }
+      "Product labeling documentation",
+    ],
+  },
 ];
 
 export const PVSERVICES = [

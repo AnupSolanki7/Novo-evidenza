@@ -15,7 +15,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { button as buttonStyles } from "@nextui-org/theme";
 
-import Logo from "../assets/icons/Logo";
+import Logo from "../assets/icons/VivoLogo";
 import { MENU_LIST } from "@/utils/Constant";
 import { usePathname } from "next/navigation";
 import { Button } from "@nextui-org/button";
@@ -67,9 +67,9 @@ export const Navbar = () => {
       onMenuOpenChange={setIsMenuOpen}
       className={clsx(
         "py-2 max-w-[1990px] mx-auto fixed transition-all h-[90px] md:h-[110px] px-2 md:px-16 ease-in-out",
-        "bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50 shadow-md",
+        "bg-primary-700 shadow-md",
         isMenuOpen &&
-          "bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50"
+          "bg-primary-700"
       )}
       position="sticky"
     >
@@ -81,10 +81,10 @@ export const Navbar = () => {
               href="/"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Logo size={width > 600 ? "140" : "80"} />
-              <h1 className="md:text-3xl text-xl hidden md:block w-full text-center font-extrabold text-slate-700">
+              <Logo />
+              {/* <h1 className="md:text-3xl text-xl hidden md:block w-full text-center font-extrabold text-slate-700">
                 VivoClin Research
-              </h1>
+              </h1> */}
             </NextLink>
           </NavbarBrand>
         </NavbarContent>
@@ -101,7 +101,7 @@ export const Navbar = () => {
                 <NextLink
                   className={clsx(
                     linkStyles({ color: "foreground" }),
-                    " text-slate-700 font-semibold ",
+                    " text-white font-semibold ",
                     path === item.slug && "text-primary border-b-2"
                   )}
                   color="foreground"
@@ -120,7 +120,7 @@ export const Navbar = () => {
                 color: "danger",
                 radius: "full",
                 variant: "shadow",
-                className: "font-bold bg-slate-700 p-6 shadow-none",
+                className: "font-bold bg-blue-500 p-6 shadow-none",
               })}
               href={"about"}
               variant="flat"
@@ -132,7 +132,7 @@ export const Navbar = () => {
       </MotionDiv>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle className=" [&>span]:before:bg-slate-700 [&>span]:before:h-[2px] [&>span]:after:h-[1.5px] [&>span]:after:bg-slate-700 " />
+        <NavbarMenuToggle className=" [&>span]:before:bg-white [&>span]:before:h-[2px] [&>span]:after:h-[1.5px] [&>span]:after:bg-white " />
       </NavbarContent>
 
       <NavbarMenu className="bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50">
@@ -141,7 +141,7 @@ export const Navbar = () => {
             {MENU_LIST.map((item, index) => (
               <NavbarMenuItem key={item.id}>
                 <Link
-                  className="text-slate-700 underline"
+                  className="text-white underline"
                   href={item.slug}
                   size="lg"
                   onClick={() => setIsMenuOpen(false)}
@@ -157,7 +157,7 @@ export const Navbar = () => {
                 variant: "shadow",
                 color: "danger",
                 className:
-                  "font-bold bg-slate-700 text-white p-6 shadow-none mt-6 w-max ",
+                  "font-bold bg-blue-500 text-white p-6 shadow-none mt-6 w-max ",
               })}
               href={"/about"}
               variant="flat"
@@ -176,12 +176,12 @@ export const Navbar = () => {
             /> */}
             <h2
               className={title({
-                className: "text-slate-700 text-center w-full ",
+                className: "text-white text-center w-full ",
               })}
             >
               Vivoclin Research
             </h2>
-            <div className="border-t-2 text-slate-700 w-full text-sm ">
+            <div className="border-t-2 text-white w-full text-sm ">
               <div className="flex flex-col w-full justify-between my-4">
                 <p>copyright Vivoclin Research 2024. All rights reserved.</p>
               </div>

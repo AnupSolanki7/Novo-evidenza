@@ -144,87 +144,6 @@ export default function Home() {
             </div>
           </MotionDiv>
         </section>
-        {/* section2 */}
-        <section className="relative py-32 overflow-hidden">
-          {/* Enhanced gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-sky-50">
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-          </div>
-
-          <div className="container relative z-10 mx-auto px-8 md:px-16">
-            {/* Section Header */}
-            <MotionDiv className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                Site Management Organization
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive clinical trial management solutions ensuring
-                quality, compliance, and efficiency
-              </p>
-              <div className="w-24 h-1 bg-primary-600 mx-auto mt-6 rounded-full" />
-            </MotionDiv>
-
-            <div className="flex flex-col lg:flex-row items-center gap-16">
-              {/* Left: Services Grid */}
-              <div className="w-full lg:w-3/5">
-                <div className="grid md:grid-cols-2 gap-6">
-                  {smoServices.map((service, index) => (
-                    <MotionCard
-                      key={index}
-                      className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-                    >
-                      <div className="flex flex-col h-full">
-                        <div className="w-12 h-12 bg-primary-600/10 rounded-lg flex items-center justify-center mb-4">
-                          <span className="text-primary-600 font-bold text-xl">
-                            {index + 1}
-                          </span>
-                        </div>
-                        <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                          {service.description}
-                        </p>
-                      </div>
-                    </MotionCard>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right: Image */}
-              <div className="w-full lg:w-2/5">
-                <MotionCard bounce className="rounded-3xl overflow-hidden ">
-                  <div className="relative group">
-                    <Image
-                      src={Pharma1}
-                      alt="SMO Services"
-                      width={900}
-                      height={900}
-                      className="object-cover w-full transform transition-transform group-hover:scale-105 duration-700"
-                      quality={100}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </MotionCard>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="mt-16 text-center">
-              <Button
-                as={Link}
-                href="/smo"
-                className="bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:opacity-90 rounded-full px-10 py-6 font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                endContent={<FaArrowRight className="ml-2" />}
-              >
-                Discover Our SMO Services
-              </Button>
-            </div>
-          </div>
-        </section>
-        {/* section3 */}
-        <OurServices />
-        {/* section4 */}
         <section className="relative py-24 bg-gradient-to-br from-blue-50 via-blue-200 to-sky-100">
           <div className="container mx-auto px-8 lg:px-16">
             <MotionDiv className="text-center mb-16">
@@ -296,6 +215,89 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* section3 */}
+        <OurServices />
+        {/* section2 */}
+        <section className="relative py-32 overflow-hidden">
+          {/* Enhanced gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-sky-50">
+            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+          </div>
+
+          <div className="container relative z-10 mx-auto px-8 md:px-16">
+            {/* Section Header */}
+            <MotionDiv className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Site Management Organization
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Comprehensive clinical trial management solutions ensuring
+                quality, compliance, and efficiency
+              </p>
+              <div className="w-24 h-1 bg-primary-600 mx-auto mt-6 rounded-full" />
+            </MotionDiv>
+
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              {/* Left: Services Grid */}
+              <div className="w-full lg:w-3/5">
+                <div className="grid gap-8">
+                  <MotionCard className=" rounded-xl p-8  transition-all duration-300">
+                    <div className="space-y-8">
+                      <div className="border-l-4 border-primary-600 pl-6">
+                        <p className="text-gray-700 text-lg leading-relaxed">
+                          Our comprehensive SMO services deliver excellence in clinical trial management through strategic site selection, seamless operational setup, and robust patient engagement programs. We optimize trial execution by combining industry expertise with innovative methodologies.
+                        </p>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {smoServices.map((service, index) => (
+                          <MotionCard
+                            key={index}
+                            className="group p-4 bg-gradient-to-r from-primary-50 to-blue-50 rounded-lg hover:shadow-md transition-all duration-300"
+                          >
+                            <h3 className="text-primary-600 font-semibold mb-2">{service.title}</h3>
+                            <p className="text-gray-600 text-sm">{service.description}</p>
+                          </MotionCard>
+                        ))}
+                      </div>
+                    </div>
+                  </MotionCard>
+                </div>
+              </div>
+
+              {/* Right: Image */}
+              <div className="w-full lg:w-2/5">
+                <MotionCard bounce className="rounded-3xl overflow-hidden ">
+                  <div className="relative group">
+                    <Image
+                      src={Pharma1}
+                      alt="SMO Services"
+                      width={900}
+                      height={900}
+                      className="object-cover w-full transform transition-transform group-hover:scale-105 duration-700"
+                      quality={100}
+                    />
+                  </div>
+                </MotionCard>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="mt-16 text-center">
+              <Button
+                as={Link}
+                href="/smo"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:opacity-90 rounded-full px-10 py-6 font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                endContent={<FaArrowRight className="ml-2" />}
+              >
+                Discover Our SMO Services
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* section4 */}
+        <Accomplishment />
         <section className="relative py-24 overflow-hidden bg-gradient-to-br from-white to-blue-50">
           <div className="container relative z-10 mx-auto px-8 lg:px-16">
             <div className="flex flex-col md:flex-row-reverse items-center gap-16">
@@ -373,45 +375,8 @@ export default function Home() {
           </div>
         </section>
         {/* Accomplishment */}
-        <Accomplishment />
+
         {/* section5 */}
-        {/* <section className="flex min-h-screen h-max text-center md:text-left flex-col md:flex-row my-auto mx-auto items-center justify-around gap-4">
-          <MotionCard bounce className="w-[80%] md:w-[30%]">
-            <Image
-              src={Pharma3}
-              alt="banner-item"
-              width={1000}
-              height={1000}
-              quality={100}
-              className="w-full"
-            />
-          </MotionCard>
-          <MotionDiv className="md:w-1/2 my-8  px-6  w-full">
-            <p className="font-bold text-3xl lg:text-5xl mb-8 text-[#333091]">
-              Regulatory Affairs
-            </p>
-            <ul className="list-disc pl-4 flex text-left flex-col gap-4 text-[#333091] font-semibold">
-              {REGULATORY.map((item) => (
-                <li key={item.title}>{item?.title}</li>
-              ))}
-            </ul>
-            <div>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "danger",
-                  radius: "full",
-                  variant: "shadow",
-                  className: "font-bold shadow-none p-6 mt-6 w-max ",
-                })}
-                href={"/pv-regulatory"}
-                variant="flat"
-              >
-                Regulatory Services
-              </Button>
-            </div>
-          </MotionDiv>
-        </section> */}
         <section className="relative py-32 overflow-hidden">
           {/* Background with subtle pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50">
@@ -423,10 +388,12 @@ export default function Home() {
               {/* Enhanced Heading */}
               <div className="text-center space-y-6 max-w-3xl">
                 <h2 className="text-4xl md:text-6xl font-bold text-gray-800">
-                  Partner with <span className="text-primary-600">Excellence</span>
+                  Partner with{" "}
+                  <span className="text-primary-600">Excellence</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                  Transform your clinical research journey with industry-leading expertise and innovative solutions
+                  Transform your clinical research journey with industry-leading
+                  expertise and innovative solutions
                 </p>
                 <div className="w-32 h-1.5 bg-gradient-to-r from-primary-600 to-blue-600 mx-auto rounded-full" />
               </div>
@@ -434,10 +401,14 @@ export default function Home() {
               {/* Enhanced Content Card */}
               <div className="grid gap-8 w-full max-w-6xl">
                 <MotionCard className="bg-gradient-to-br from-primary-600 to-blue-700 text-white rounded-2xl shadow-xl p-8">
-                  <h3 className="text-2xl font-bold text-center mb-4">Why Choose Vivoclin?</h3>
+                  <h3 className="text-2xl font-bold text-center mb-4">
+                    Why Choose Vivoclin?
+                  </h3>
                   <p className="text-lg text-center leading-relaxed mb-8">
-                    Join forces with a partner that combines scientific excellence with operational precision. 
-                    Our dedicated team ensures your research goals are met with the highest standards of quality and compliance.
+                    Join forces with a partner that combines scientific
+                    excellence with operational precision. Our dedicated team
+                    ensures your research goals are met with the highest
+                    standards of quality and compliance.
                   </p>
                   <div className="flex justify-center">
                     <Button
