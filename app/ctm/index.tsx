@@ -151,7 +151,7 @@ const index = () => {
             state-of-the-art facilities, ensuring high-quality, reliable
             results.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {specialties.map((specialty, index) => (
               <div key={index} className="bg-white shadow-md p-4 rounded-xl">
                 <div className="flex gap-3 justify-start items-center">

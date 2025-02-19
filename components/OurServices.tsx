@@ -31,7 +31,7 @@ const OurServices = () => {
           </h2>
           
         </MotionDiv>
-        <div className="px-6 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 justify-between mt-8 h-full items-center max-w-[1220px] mx-auto">
+        <div className="px-6 grid grid-cols-1  lg:grid-cols-3 gap-4 justify-between mt-8 h-full items-center max-w-[1220px] mx-auto">
           {SERVICES.map((item) => (
             <MotionCard key={item.id}>
               <Card item={item} />

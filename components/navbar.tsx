@@ -135,7 +135,7 @@ export const Navbar = () => {
         <NavbarMenuToggle className=" [&>span]:before:bg-white [&>span]:before:h-[2px] [&>span]:after:h-[1.5px] [&>span]:after:bg-white " />
       </NavbarContent>
 
-      <NavbarMenu className="bg-gradient-to-t from-slate-200 via-slate-100 to-slate-50">
+      <NavbarMenu className="bg-[#004493] to-slate-50">
         <div className="mx-4 justify-between pb-8 mt-[70px] h-[80vh]  flex flex-col gap-2">
           <div className="flex flex-col gap-3">
             {MENU_LIST.map((item, index) => (

@@ -164,12 +164,8 @@ export default function AboutPage() {
               Meet Our Leadership Team
             </h2>
             <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
-              We are the co-founders of{" "}
-              <span className="font-semibold text-blue-300">
-                Vivoclin Research
-              </span>
-              , driven by our shared vision of transforming healthcare through
-              innovation and excellence.
+              A team committed to driving innovation and excellence in
+              healthcare.
             </p>
           </div>
         </MotionDiv>
@@ -178,21 +174,9 @@ export default function AboutPage() {
           <div className="flex flex-col gap-12">
             {/* First row: 2 elements */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-              {FOUNDERS.slice(0, 2).map((item, index) => (
+              {FOUNDERS.map((item, index) => (
                 <MotionCard
                   key={index}
-                  className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
-                >
-                  <FounderCard item={item} />
-                </MotionCard>
-              ))}
-            </div>
-
-            {/* Second row: 3 elements */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-              {FOUNDERS.slice(2, 5).map((item, index) => (
-                <MotionCard
-                  key={index + 2}
                   className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
                 >
                   <FounderCard item={item} />
@@ -221,7 +205,7 @@ export default function AboutPage() {
               <span className="w-1/2  md:w-1/3">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Address</p>
                 <p className="text-sm text-slate-700 ">
-                  Ahmedabad 380052 India
+                  iHub Ahmedabad Gujarat 380052 India
                 </p>
               </span>
               <span className="w-1/2 md:w-1/3 ">
@@ -237,7 +221,7 @@ export default function AboutPage() {
             <span className="w-full flex gap-4 justify-start items-center mb-8">
               <Link
                 target="_blank"
-                href="https://www.linkedin.com/company/novo-evidenza/"
+                href="https://www.linkedin.com/company/vivoclin-research-services/"
                 className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-blue-600 "
               >
                 <FaLinkedin className="text-lg text-white" />
@@ -245,7 +229,7 @@ export default function AboutPage() {
             </span>
           </MotionDiv>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.15049961975!2d72.5797426!3d23.0202434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1739299209422!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.7773937822594!2d72.54143817509214!3d23.03194427916724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8521db921fad%3A0x8f192b2f852e333c!2siHub%20Gujarat!5e0!3m2!1sen!2sin!4v1739982132152!5m2!1sen!2sin"
             className="border-0 h-[200px] w-full mb-8"
             loading="lazy"
           ></iframe>

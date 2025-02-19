@@ -13,27 +13,6 @@ const VivoLogo = () => {
       color-interpolation-filters="sRGB"
       style={{ margin: "auto" }}
     >
-      {" "}
-      {/* <rect
-        data-v-0dd9719b=""
-        x="0"
-        y="0"
-        width="100%"
-        height="100%"
-        fill="#ffffff"
-        fill-opacity="1"
-        className="background"
-      ></rect>{" "} */}
-      {/* <rect
-     </g>   data-v-0dd9719b=""
-        x="0"
-        y="0"
-        width="100%"
-        height="100%"
-        fill="url(#watermark)"
-        fill-opacity="1"
-        className="watermarklayer"
-      ></rect>{" "} */}
       <g
         data-v-0dd9719b=""
         fill="white"

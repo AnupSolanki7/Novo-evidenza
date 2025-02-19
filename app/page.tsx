@@ -153,7 +153,7 @@ export default function Home() {
               <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-12" />
             </MotionDiv>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               {[
                 {
                   title: "Quality & Compliance",
@@ -161,12 +161,12 @@ export default function Home() {
                     "To provide end-to-end support for clinical trials with an unwavering commitment to quality, compliance, and patient-centricity.",
                   icon: "🎯",
                 },
-                {
-                  title: "Innovation & Impact",
-                  description:
-                    "To bridge the gap between scientific discovery and patient outcomes through exceptional site management and impactful medical writing.",
-                  icon: "💡",
-                },
+                // {
+                //   title: "Innovation & Impact",
+                //   description:
+                //     "To bridge the gap between scientific discovery and patient outcomes through exceptional site management and impactful medical writing.",
+                //   icon: "💡",
+                // },
                 {
                   title: "Ethical Solutions",
                   description:
@@ -377,54 +377,8 @@ export default function Home() {
         {/* Accomplishment */}
 
         {/* section5 */}
-        <section className="relative py-32 overflow-hidden">
-          {/* Background with subtle pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50">
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-          </div>
+        
 
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <MotionDiv className="w-full flex flex-col items-center space-y-12">
-              {/* Enhanced Heading */}
-              <div className="text-center space-y-6 max-w-3xl">
-                <h2 className="text-4xl md:text-6xl font-bold text-gray-800">
-                  Partner with{" "}
-                  <span className="text-primary-600">Excellence</span>
-                </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                  Transform your clinical research journey with industry-leading
-                  expertise and innovative solutions
-                </p>
-                <div className="w-32 h-1.5 bg-gradient-to-r from-primary-600 to-blue-600 mx-auto rounded-full" />
-              </div>
-
-              {/* Enhanced Content Card */}
-              <div className="grid gap-8 w-full max-w-6xl">
-                <MotionCard className="bg-gradient-to-br from-primary-600 to-blue-700 text-white rounded-2xl shadow-xl p-8">
-                  <h3 className="text-2xl font-bold text-center mb-4">
-                    Why Choose Vivoclin?
-                  </h3>
-                  <p className="text-lg text-center leading-relaxed mb-8">
-                    Join forces with a partner that combines scientific
-                    excellence with operational precision. Our dedicated team
-                    ensures your research goals are met with the highest
-                    standards of quality and compliance.
-                  </p>
-                  <div className="flex justify-center">
-                    <Button
-                      as={Link}
-                      href="/about"
-                      className="bg-white text-primary-600 hover:bg-gray-100 rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105"
-                      endContent={<FaArrowRight />}
-                    >
-                      contact us
-                    </Button>
-                  </div>
-                </MotionCard>
-              </div>
-            </MotionDiv>
-          </div>
-        </section>
       </div>
     </Page>
   );
