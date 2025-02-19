@@ -212,9 +212,9 @@ export default function AboutPage() {
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Contact</p>
                 <Link
                   className="text-sm text-slate-700 "
-                  href={"mailto:Info.novoevidenza@gmail.com"}
+                  href={"mailto:Vivoclinresearch@gmail.com"}
                 >
-                  Info.novoevidenza@gmail.com
+                  Vivoclinresearch@gmail.com
                 </Link>
               </span>
             </div>
