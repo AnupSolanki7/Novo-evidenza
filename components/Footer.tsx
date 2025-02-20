@@ -23,10 +23,10 @@ const Footer = () => {
       </MotionDiv>
       <MotionDiv className="px-6 mx-auto flex overflow-hidden flex-col md:flex-row justify-start w-full mt-6 gap-12 md:gap-0 ">
         <div className=" w-full md:w-1/3 justify-start items-start flex flex-col gap-4 ">
-          <span className="flex justify-start gap-1 text-white font-semibold items-start">
+          <Link href="https://maps.app.goo.gl/JkRRAP1Vo663W7GN6" target="_blank" className="flex justify-start gap-1 text-white font-semibold items-start">
             <IoLocationSharp className="text-xl w-6 flex-shrink-0" />
             <p> iHub Ahmedabad Gujarat 380052 India</p>
-          </span>
+          </Link>
           {/* <span className="flex justify-start gap-1 text-white font-semibold items-center">
             <FaPhoneAlt className="text-xl w-6 flex-shrink-0" />
             <span className="text-white flex justify-start items-center gap-2">
@@ -56,7 +56,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/vivoclin-research-services/"
               className="flex cursor-pointer justify-center items-center text-white rounded-full "
             >
-              <FaLinkedin className="text-lg text-white" />&nbsp;linkedin
+              <FaLinkedin className="text-xl w-6 flex-shrink-0" />&nbsp;linkedin
             </Link>
           </span>
         </div>

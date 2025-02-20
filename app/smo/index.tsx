@@ -102,13 +102,10 @@ const Page = () => {
             Redefining Clinical Research Excellence
           </h1>
           <p className="mt-4 text-sm md:text-md font-semibold text-blue-600 text-center">
-            At Vivoclin Research, we bring over a decade of expertise in
-            advancing clinical research across APAC. With specialized teams, a
-            comprehensive service portfolio, and a strong focus on quality and
-            compliance, we streamline clinical trial operations from start to
-            finish. Our global and local reach, deep therapeutic expertise, and
-            collaborative site partnerships empower us to deliver impactful
-            results and set new benchmarks in the industry.
+            We specialize in optimizing clinical trial operations through expert
+            site management, quality compliance, and efficient processes. Our
+            experienced teams work collaboratively to ensure successful trial
+            outcomes while maintaining the highest industry standards.
           </p>
         </div>
         <section className="flex flex-col relative w-full md:flex-row h-max ">

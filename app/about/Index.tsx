@@ -204,9 +204,11 @@ export default function AboutPage() {
             <div className="w-full flex-col lg:flex-row gap-8 lg:gap-0 flex justify-between items-start mb-4 md:mb-8">
               <span className="w-1/2  md:w-1/3">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Address</p>
-                <p className="text-sm text-slate-700 ">
-                  iHub Ahmedabad Gujarat 380052 India
-                </p>
+                <Link href="https://maps.app.goo.gl/JkRRAP1Vo663W7GN6" target="_blank">
+                  <p className="text-sm text-slate-700 ">
+                    iHub Ahmedabad Gujarat 380052 India
+                  </p>
+                </Link>
               </span>
               <span className="w-1/2 md:w-1/3 ">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Contact</p>

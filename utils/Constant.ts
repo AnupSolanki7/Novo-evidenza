@@ -39,6 +39,11 @@ export const MENU_LIST = [
     slug: "/smo",
   },
   {
+    id: "medical-writing",
+    title: "Medical Writing",
+    slug: "/medical-writing",
+  },
+  {
     id: "ctm",
     title: "Clinical Trial Monitoring",
     slug: "/ctm",
@@ -48,11 +53,7 @@ export const MENU_LIST = [
   //   title: "PV and Regulatory",
   //   slug: "/pv-regulatory",
   // },
-  {
-    id: "medical-writing",
-    title: "Medical Writing",
-    slug: "/medical-writing",
-  },
+
 ];
 
 export const SERVICES = [
@@ -383,7 +384,7 @@ export const PVSERVICES = [
 export const SMO_SERVICES = [
   {
     title: "Pioneering Clinical Excellence",
-    description: "We are a trusted leader in clinical research across Asia Pacific, working with dedication and precision to advance healthcare",
+    description: "We are a trusted leader in clinical research across India, working with dedication and precision to advance healthcare",
     icon: ServiceIcon4,
     position: 5,
   },
