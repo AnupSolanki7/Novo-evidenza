@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import Script from "next/script";
 
 import { Providers } from "./providers";
-
 import { Toaster } from "react-hot-toast";
 import { fontPoppins } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
@@ -39,7 +39,22 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-JSJTN6N91K"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-JSJTN6N91K');
+          `}
+        </Script>
+      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
