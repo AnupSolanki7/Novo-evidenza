@@ -173,8 +173,19 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col gap-12">
             {/* First row: 2 elements */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-              {FOUNDERS.map((item, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {FOUNDERS.slice(0,2).map((item, index) => (
+                <MotionCard
+                  key={index}
+                  className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
+                >
+                  <FounderCard item={item} />
+                </MotionCard>
+              ))}
+            </div>
+             {/* Second row: 3 elements */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {FOUNDERS.slice(2,5).map((item, index) => (
                 <MotionCard
                   key={index}
                   className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"

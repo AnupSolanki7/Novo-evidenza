@@ -2,15 +2,11 @@ import ServiceIcon1 from "@/assets/icons/ServiceIcon1";
 import ServiceIcon2 from "@/assets/icons/ServiceIcon2";
 import { HiSpeakerphone } from "react-icons/hi";
 import ServiceIcon4 from "@/assets/icons/ServiceIcon4";
-import Profile1 from "../assets/image/profile1.png";
 import Hardik from "../assets/image/Hardik.jpeg";
 import Kunal from "../assets/image/Kunal.jpeg";
 import Kaif from "../assets/image/Kaif.jpeg";
 import Gopal from "../assets/image/Gopal.jpeg";
-import Profile2 from "../assets/image/profile2.png";
-import Profile3 from "../assets/image/profile3.png";
-import Profile4 from "../assets/image/profile4.png";
-import Profile5 from "../assets/image/profile5.png";
+import Gaurang from "../assets/image/gaurang.jpg";
 import Achieve1 from "@/assets/icons/Achieve1";
 import Achieve2 from "@/assets/icons/Achieve2";
 import Achieve3 from "@/assets/icons/Achieve3";
@@ -20,7 +16,7 @@ import HeorIcon2 from "@/assets/icons/HeorIcon2";
 import HeorIcon3 from "@/assets/icons/HeorIcon3";
 import HeorIcon4 from "@/assets/icons/HeorIcon4";
 import HeorIcon5 from "@/assets/icons/HeorIcon5";
-import ServiceIcon3 from "@/assets/icons/ServiceIcon3";
+
 
 export const MENU_LIST = [
   {
@@ -53,7 +49,6 @@ export const MENU_LIST = [
   //   title: "PV and Regulatory",
   //   slug: "/pv-regulatory",
   // },
-
 ];
 
 export const SERVICES = [
@@ -157,12 +152,13 @@ export const FOUNDERS = [
     role: "Advisor",
     text: "Dr. Hardik Pitroda is an experienced dermatologist with over a decade of expertise in patient care. As a principal investigator in numerous clinical trials, he has contributed to advancements in medical science and therapeutic innovations. His deep understanding of clinical trial methodologies, regulatory compliance, and investigational treatments strengthens our research capabilities. With a strong commitment to evidence-based medicine, Dr. Pitroda plays a key role in ensuring the success and integrity of clinical trials.",
   },
-  // {
-  //   image: Profile3,
-  //   name: "Dr. Dhaiwat Shukla",
-  //   role: "Advisor",
-  //   text: "Dr. Dhaiwat Shukla is a highly experienced rheumatologist with expertise in clinical research, immunology, and internal medicine. As a principal investigator in multiple clinical trials, he has contributed to advancements in rheumatology and related fields. With a strong foundation in academic research, he has authored numerous publications and actively collaborates with pharmaceutical companies in advisory roles. His expertise enhances our commitment to excellence in clinical trial management and site operations.",
-  // },
+  {
+    image: Gaurang,
+    name: "Dr. Gaurang B. Shah",
+    role: "Advisor",
+    text: `Dr. Gaurang B. Shah brings over 25 years of expertise in drug discovery, preclinical research, and regulatory sciences. Having led 50+ preclinical studies for global regulatory submissions, his deep knowledge in pharmacodynamics, GCP, animal handling, and in vitro cell culture strengthens VivoClin’s capabilities in clinical trial monitoring, medical writing, and real-world evidence generation.
+A former Principal at KBIPER and H.O.D. at L.M. College of Pharmacy, Dr. Shah has mentored numerous researchers and advised pharmaceutical industries, making him a strategic asset in advancing our research and regulatory excellence.`,
+  },
 ];
 
 export const HEORLIST = [
@@ -384,37 +380,43 @@ export const PVSERVICES = [
 export const SMO_SERVICES = [
   {
     title: "Pioneering Clinical Excellence",
-    description: "We are a trusted leader in clinical research across India, working with dedication and precision to advance healthcare",
+    description:
+      "We are a trusted leader in clinical research across India, working with dedication and precision to advance healthcare",
     icon: ServiceIcon4,
     position: 5,
   },
   {
     title: "Expertise Across Core Units",
-    description: "Our experienced teams provide complete research solutions through strong partnerships, ensuring high quality and reliable results",
+    description:
+      "Our experienced teams provide complete research solutions through strong partnerships, ensuring high quality and reliable results",
     icon: HeorIcon5,
     position: 35,
   },
   {
     title: "Comprehensive Service Portfolio",
-    description: "We offer complete support from start to finish, helping manage participants, schedules, and providing round-the-clock assistance to ensure smooth operations",
+    description:
+      "We offer complete support from start to finish, helping manage participants, schedules, and providing round-the-clock assistance to ensure smooth operations",
     icon: HeorIcon1,
     position: 65,
   },
   {
     title: "Global and Local Reach",
-    description: "We work with clients worldwide while maintaining strong local connections, helping advance medical research at all stages",
+    description:
+      "We work with clients worldwide while maintaining strong local connections, helping advance medical research at all stages",
     icon: HeorIcon2,
     position: 15,
   },
   {
     title: "Therapeutic Specialization",
-    description: "Our research covers many medical areas including cancer, lung health, heart conditions, and brain disorders, with a personalized approach for each study",
+    description:
+      "Our research covers many medical areas including cancer, lung health, heart conditions, and brain disorders, with a personalized approach for each study",
     icon: HeorIcon3,
     position: 47,
   },
   {
     title: "Collaborative Partnerships for Success",
-    description: "We work closely with many healthcare partners to improve research quality and achieve better results for patients",
+    description:
+      "We work closely with many healthcare partners to improve research quality and achieve better results for patients",
     icon: HeorIcon4,
     position: 75,
   },
