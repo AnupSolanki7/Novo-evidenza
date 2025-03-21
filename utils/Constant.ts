@@ -140,13 +140,13 @@ export const FOUNDERS = [
     role: "Operation team",
     text: "Dr. Mohammad Kaif is an experienced clinical research professional with expertise in study coordination and quality assurance. As a scientific writing expert, he has contributed to impactful research through numerous authored manuscripts. His multidisciplinary experience strengthens clinical trial execution and regulatory compliance.",
   },
-  {
-    image: Gaurang,
-    name: "Dr. Gaurang B. Shah",
-    role: "Advisor",
-    text: `Dr. Gaurang B. Shah brings over 25 years of expertise in drug discovery, preclinical research, and regulatory sciences. Having led 50+ preclinical studies for global regulatory submissions, his deep knowledge in pharmacodynamics, GCP, animal handling, and in vitro cell culture strengthens VivoClin’s capabilities in clinical trial monitoring, medical writing, and real-world evidence generation.
-A former Principal at KBIPER and H.O.D. at L.M. College of Pharmacy, Dr. Shah has mentored numerous researchers and advised pharmaceutical industries, making him a strategic asset in advancing our research and regulatory excellence.`,
-  },
+//   {
+//     image: Gaurang,
+//     name: "Dr. Gaurang B. Shah",
+//     role: "Advisor",
+//     text: `Dr. Gaurang B. Shah brings over 25 years of expertise in drug discovery, preclinical research, and regulatory sciences. Having led 50+ preclinical studies for global regulatory submissions, his deep knowledge in pharmacodynamics, GCP, animal handling, and in vitro cell culture strengthens VivoClin’s capabilities in clinical trial monitoring, medical writing, and real-world evidence generation.
+// A former Principal at KBIPER and H.O.D. at L.M. College of Pharmacy, Dr. Shah has mentored numerous researchers and advised pharmaceutical industries, making him a strategic asset in advancing our research and regulatory excellence.`,
+//   },
   {
     image: Gopal,
     name: "Dr. Gopal Natesan",
