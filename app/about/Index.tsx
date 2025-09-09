@@ -4,6 +4,7 @@ import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
+import { IconType } from "react-icons"; 
 import {
   FaHospital,
   FaPencilAlt,
@@ -22,8 +23,9 @@ import FounderCard from "@/components/FounderCard";
 interface Service {
   title: string;
   description: string;
-  icon: ReactNode; // or LucideIcon
+  icon: IconType; // or LucideIcon
 }
+
 
 export default function AboutPage() {
   const formRef: any = useRef(null);
@@ -100,17 +102,17 @@ export default function AboutPage() {
     {
       title: "Expert SMO Services",
       description: "Comprehensive site management for clinical trials",
-      icon: <FaHospital className="text-3xl text-white" />,
+      icon: FaHospital ,
     },
     {
       title: "Medical Writing",
       description: "High-quality scientific and regulatory documentation",
-      icon: <FaPencilAlt className="text-3xl text-white" />,
+      icon: FaPencilAlt ,
     },
     {
       title: "Clinical Trial Support",
       description: "End-to-end assistance for research projects",
-      icon: <FaClipboardCheck className="text-3xl text-white" />,
+      icon: FaClipboardCheck ,
     },
   ];
 
@@ -142,9 +144,9 @@ export default function AboutPage() {
                 className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-blue-100"
               >
                 <div className="p-8 flex flex-col items-center text-center">
-                    {/* eslint-disable-next-line */}
                     <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
-                      {service.icon}
+                    {/* eslint-disable-next-line */}
+                      <service.icon className="text-3xl text-white" />
                     </div>
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">
                     {service.title}
