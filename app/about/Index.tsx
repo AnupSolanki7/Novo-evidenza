@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable */
 import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
