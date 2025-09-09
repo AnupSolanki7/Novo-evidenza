@@ -121,11 +121,13 @@ export default function AboutPage() {
               About VivoClin Research Services
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              VivoClin Research Services is at the forefront of advancing
+              <b>VivoClin</b> Research Services is at the forefront of advancing
               clinical research with precision and expertise. We specialize in
               comprehensive clinical trial site support and medical writing,
               ensuring meticulous execution and high-quality research that
-              drives medical innovation.
+              drives medical innovation. With dedicated operations across
+              regions, including our <b>Australia</b> division, we continue to
+              expand our global impact in pharmaceutical and clinical research.
             </p>
           </div>
 
@@ -174,7 +176,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-12">
             {/* First row: 2 elements */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {FOUNDERS.slice(0,2).map((item, index) => (
+              {FOUNDERS.slice(0, 2).map((item, index) => (
                 <MotionCard
                   key={index}
                   className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
@@ -183,9 +185,9 @@ export default function AboutPage() {
                 </MotionCard>
               ))}
             </div>
-             {/* Second row: 3 elements */}
+            {/* Second row: 3 elements */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {FOUNDERS.slice(2,5).map((item, index) => (
+              {FOUNDERS.slice(2, 5).map((item, index) => (
                 <MotionCard
                   key={index}
                   className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
@@ -213,22 +215,45 @@ export default function AboutPage() {
               Ready for a non-obligatory chat, got a quick question or comment?
             </p>
             <div className="w-full flex-col lg:flex-row gap-8 lg:gap-0 flex justify-between items-start mb-4 md:mb-8">
-              <span className="w-1/2  md:w-1/3">
+              <span className="w-full  md:w-1/3">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Address</p>
-                <Link href="https://maps.app.goo.gl/JkRRAP1Vo663W7GN6" target="_blank">
-                  <p className="text-sm text-slate-700 ">
-                    iHub Ahmedabad Gujarat 380052 India
-                  </p>
-                </Link>
+                <div className="space-y-4">
+                  <Link
+                    href="https://maps.app.goo.gl/JkRRAP1Vo663W7GN6"
+                    target="_blank"
+                    className="block p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                  >
+                    <p className="text-sm text-slate-700 font-medium">
+                      iHub, Ahmedabad <br /> Gujarat 380052, India
+                    </p>
+                  </Link>
+                  <Link
+                    href="https://maps.app.goo.gl/xoXuZhZrZZa4Y41u9"
+                    target="_blank"
+                    className="block p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                  >
+                    <p className="text-sm text-slate-700 font-medium">
+                      U-41, 27-29 Mary St <br /> Auburn, NSW 2144, Australia
+                    </p>
+                  </Link>
+                </div>
               </span>
-              <span className="w-1/2 md:w-1/3 ">
+              <span className="w-full md:w-1/3 ">
                 <p className="font-bold text-xl text-blue-600 mb-4 ">Contact</p>
-                <Link
-                  className="text-sm text-slate-700 "
-                  href={"mailto:Vivoclinresearch@gmail.com"}
-                >
-                  Vivoclinresearch@gmail.com
-                </Link>
+                <div className="space-y-4">
+                  <Link
+                    className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                    href={"mailto:Vivoclinresearch@gmail.com"}
+                  >
+                    Vivoclinresearch@gmail.com
+                  </Link>
+                  <Link
+                    className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                    href="tel:+61425342368"
+                  >
+                  Ph :  +61 425 342 368
+                  </Link>
+                </div>
               </span>
             </div>
             <span className="w-full flex gap-4 justify-start items-center mb-8">

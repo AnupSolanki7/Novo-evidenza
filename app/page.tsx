@@ -53,10 +53,11 @@ export default function Home() {
               Advancing Clinical Research with Precision
             </h1>
             <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
-              VivoClin Research Services specializes in comprehensive clinical
-              trial site support and medical writing. Our expert team ensures
-              meticulous execution and delivers high-quality research that
-              drives medical innovation.
+              <b>VivoClin</b> Research Services specializes in comprehensive clinical
+              trial site support and medical writing. With dedicated divisions,
+              including our <b>Australia</b> branch, our expert team ensures meticulous
+              execution and delivers high-quality research that drives medical
+              innovation.
             </p>
           </div>
           <div className="flex items-center space-x-4">
@@ -245,18 +246,27 @@ export default function Home() {
                     <div className="space-y-8">
                       <div className="border-l-4 border-primary-600 pl-6">
                         <p className="text-gray-700 text-lg leading-relaxed">
-                          Our comprehensive SMO services deliver excellence in clinical trial management through strategic site selection, seamless operational setup, and robust patient engagement programs. We optimize trial execution by combining industry expertise with innovative methodologies.
+                          Our comprehensive SMO services deliver excellence in
+                          clinical trial management through strategic site
+                          selection, seamless operational setup, and robust
+                          patient engagement programs. We optimize trial
+                          execution by combining industry expertise with
+                          innovative methodologies.
                         </p>
                       </div>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {smoServices.map((service, index) => (
                           <MotionCard
                             key={index}
                             className="group p-4 bg-blue-50 rounded-lg hover:shadow-md transition-all duration-300"
                           >
-                            <h3 className="text-primary-600 font-semibold mb-2">{service.title}</h3>
-                            <p className="text-gray-600 text-sm">{service.description}</p>
+                            <h3 className="text-primary-600 font-semibold mb-2">
+                              {service.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm">
+                              {service.description}
+                            </p>
                           </MotionCard>
                         ))}
                       </div>
@@ -377,8 +387,6 @@ export default function Home() {
         {/* Accomplishment */}
 
         {/* section5 */}
-        
-
       </div>
     </Page>
   );

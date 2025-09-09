@@ -8,7 +8,7 @@ const FounderCard = ({ item }: { item: any }) => {
         <Image fill src={item.image} alt={item.name} className="object-cover object-top" quality={100} />
       </div>
       <h3 className="text-2xl font-bold text-gray-800 mb-2">{item.name}</h3>
-      <h5 className="text-[#333091] font-semibold text-lg mb-3">{item.role}</h5>
+      <h5 className="text-[#333091] text-center font-semibold text-lg mb-3">{item.role}</h5>
       <p className="text-center text-gray-600 leading-relaxed">{item.text}</p>
     </div>
   );

@@ -6,7 +6,7 @@ import Hardik from "../assets/image/Hardik.jpeg";
 import Kunal from "../assets/image/Kunal.jpeg";
 import Kaif from "../assets/image/Kaif.jpeg";
 import Gopal from "../assets/image/Gopal.jpeg";
-import Gaurang from "../assets/image/gaurang.jpg";
+import Hamza from "../assets/image/hamza.jpeg";
 import Achieve1 from "@/assets/icons/Achieve1";
 import Achieve2 from "@/assets/icons/Achieve2";
 import Achieve3 from "@/assets/icons/Achieve3";
@@ -152,6 +152,13 @@ export const FOUNDERS = [
     name: "Dr. Gopal Natesan",
     role: "Advisor",
     text: "Dr. Gopal Natesan is a distinguished pharmaceutical scientist with expertise in clinical research, medical writing, and regulatory sciences. With over two decades of experience, he has contributed to scientific communication, quality assurance, and research excellence. As the Director at Nirma University, Ahmedabad, he plays a key role in fostering industry collaborations and academic advancements. His expertise strengthens our commitment to high-quality research and regulatory support.",
+  }, {
+    image: Hamza,
+    name: "Dr. Humzah Postwala",
+    role: "Head – Australia Division, Vivoclin Research Services",
+    text: `Dr. Humzah Postwala, Pharm.D, is an expert in medical writing, clinical research, and the pharmaceutical industry. Having cleared OPRA in Australia, he combines academic excellence with industry experience to advance evidence-based practices and scientific communication.
+
+As Head of the Australia Division at Vivoclin Research Services, he leads strategic operations, fosters partnerships, and drives the organization’s growth in the Australian pharmaceutical and clinical research sector.`,
   },
   {
     image: Hardik,
@@ -159,6 +166,7 @@ export const FOUNDERS = [
     role: "Advisor",
     text: "Dr. Hardik Pitroda is an experienced dermatologist with over a decade of expertise in patient care. As a principal investigator in numerous clinical trials, he has contributed to advancements in medical science and therapeutic innovations. His deep understanding of clinical trial methodologies, regulatory compliance, and investigational treatments strengthens our research capabilities. With a strong commitment to evidence-based medicine, Dr. Pitroda plays a key role in ensuring the success and integrity of clinical trials.",
   },
+ 
  
 ];
 
