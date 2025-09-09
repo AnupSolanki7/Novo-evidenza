@@ -5,21 +5,25 @@ import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import {
-  FaArrowRight,
   FaHospital,
   FaPencilAlt,
   FaClipboardCheck,
-  FaFileAlt,
   FaLinkedin,
 } from "react-icons/fa";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { useRef, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import MotionDiv from "@/components/MotionDiv";
 import MotionCard from "@/components/MotionCard";
 import { FOUNDERS } from "@/utils/Constant";
 import FounderCard from "@/components/FounderCard";
+
+interface Service {
+  title: string;
+  description: string;
+  icon: ReactNode; // or LucideIcon
+}
 
 export default function AboutPage() {
   const formRef: any = useRef(null);
@@ -92,7 +96,7 @@ export default function AboutPage() {
     }
   };
 
-  const services = [
+  const services: Service[] = [
     {
       title: "Expert SMO Services",
       description: "Comprehensive site management for clinical trials",
