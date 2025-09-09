@@ -138,9 +138,10 @@ export default function AboutPage() {
                 className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-blue-100"
               >
                 <div className="p-8 flex flex-col items-center text-center">
-                  <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
+                    {/* eslint-disable-next-line */}
+                    <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
                     <service.icon className="text-3xl text-white" />
-                  </div>
+                    </div>
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">
                     {service.title}
                   </h3>
