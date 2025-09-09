@@ -26,6 +26,9 @@ interface Service {
   icon: IconType; // or LucideIcon
 }
 
+const ServiceIcon = ({ icon: Icon }: { icon: IconType }) => (
+  <Icon className="text-3xl text-white" />
+);
 
 export default function AboutPage() {
   const formRef: any = useRef(null);
@@ -146,7 +149,7 @@ export default function AboutPage() {
                 <div className="p-8 flex flex-col items-center text-center">
                     <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
                     {/* eslint-disable-next-line */}
-                      <service.icon className="text-3xl text-white" />
+                       <ServiceIcon icon={service.icon} />
                     </div>
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">
                     {service.title}
