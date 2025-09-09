@@ -96,17 +96,17 @@ export default function AboutPage() {
     {
       title: "Expert SMO Services",
       description: "Comprehensive site management for clinical trials",
-      icon: FaHospital,
+      icon: <FaHospital className="text-3xl text-white" />,
     },
     {
       title: "Medical Writing",
       description: "High-quality scientific and regulatory documentation",
-      icon: FaPencilAlt,
+      icon: <FaPencilAlt className="text-3xl text-white" />,
     },
     {
       title: "Clinical Trial Support",
       description: "End-to-end assistance for research projects",
-      icon: FaClipboardCheck,
+      icon: <FaClipboardCheck className="text-3xl text-white" />,
     },
   ];
 
@@ -140,7 +140,7 @@ export default function AboutPage() {
                 <div className="p-8 flex flex-col items-center text-center">
                     {/* eslint-disable-next-line */}
                     <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
-                    <service.icon className="text-3xl text-white" />
+                      {service.icon}
                     </div>
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">
                     {service.title}
