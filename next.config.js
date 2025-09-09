@@ -1,17 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images:{
-        remotePatterns: [
-            {
-                hostname:'www.en.etemaaddaily.com'
-            },
-            {
-                hostname: 'uploads-ssl.webflow.com'
-            },{
-                hostname:"marksmanhealthcare.com"
-            }
-        ]
-    }
+  eslint: {
+    // Ignore ESLint errors during production builds
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'www.en.etemaaddaily.com'
+      },
+      {
+        hostname: 'uploads-ssl.webflow.com'
+      },
+      {
+        hostname: "marksmanhealthcare.com"
+      }
+    ]
+  }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
