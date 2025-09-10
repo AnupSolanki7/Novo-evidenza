@@ -155,10 +155,10 @@ export const FOUNDERS = [
   }, {
     image: Hamza,
     name: "Dr. Humzah Postwala",
-    role: "Head – Australia Division, Vivoclin Research Services",
+    role: "Head, Australia Division",
     text: `Dr. Humzah Postwala, Pharm.D, is an expert in medical writing, clinical research, and the pharmaceutical industry. Having cleared OPRA in Australia, he combines academic excellence with industry experience to advance evidence-based practices and scientific communication.
 
-As Head of the Australia Division at Vivoclin Research Services, he leads strategic operations, fosters partnerships, and drives the organization’s growth in the Australian pharmaceutical and clinical research sector.`,
+As Head of the Australia Division, he leads strategic operations, fosters partnerships, and drives the organization’s growth in the Australian pharmaceutical and clinical research sector.`,
   },
   {
     image: Hardik,

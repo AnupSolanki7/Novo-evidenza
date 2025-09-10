@@ -251,9 +251,15 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <Link
                     className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                    href={"mailto:Vivoclinresearch@gmail.com"}
+                    href={"mailto:vivoclinresearch@gmail.com"}
                   >
                     Vivoclinresearch@gmail.com
+                  </Link>
+                  <Link
+                    className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                    href={"mailto:vivoclinaustralia@gmail.com"}
+                  >
+                    vivoclinaustralia@gmail.com
                   </Link>
                   <Link
                     className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
