@@ -34,9 +34,9 @@ export const MENU_LIST = [
     slug: "/smo",
   },
   {
-    id: "pahrma-marketing-materials",
+    id: "pharma-marketing-materials",
     title: "Pharma Marketing Materials",
-    slug: "/pahrma-marketing-materials",
+    slug: "/pharma-marketing-materials",
   },
   {
     id: "ctm",
