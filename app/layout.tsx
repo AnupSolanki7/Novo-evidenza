@@ -10,14 +10,14 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "VivoClin Research | LLP established in 2024",
+  title: "VivoClin Research",
   description:
     "VivoClin Research is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "VivoClin Research | LLP established in 2024",
+    title: "VivoClin Research",
     description:
       "VivoClin Research is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
     images:
