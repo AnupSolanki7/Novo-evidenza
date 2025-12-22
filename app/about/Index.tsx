@@ -4,7 +4,7 @@ import Page from "@/components/page";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { IconType } from "react-icons"; 
+import { IconType } from "react-icons";
 import {
   FaHospital,
   FaPencilAlt,
@@ -25,8 +25,6 @@ interface Service {
   description: string;
   icon: IconType; // or LucideIcon
 }
-
-
 
 export default function AboutPage() {
   const formRef: any = useRef(null);
@@ -103,17 +101,19 @@ export default function AboutPage() {
     {
       title: "Expert SMO Services",
       description: "Comprehensive site management for clinical trials",
-      icon: FaHospital ,
+      icon: FaHospital,
     },
     {
-      title: "Medical Writing",
-      description: "High-quality scientific and regulatory documentation",
-      icon: FaPencilAlt ,
+      title: "Pharma Marketing Materials",
+      description:
+        "Scientific, compliant, and strategically crafted marketing content for pharmaceutical and healthcare brands",
+      icon: FaPencilAlt,
     },
+
     {
       title: "Clinical Trial Support",
       description: "End-to-end assistance for research projects",
-      icon: FaClipboardCheck ,
+      icon: FaClipboardCheck,
     },
   ];
 
@@ -129,12 +129,15 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               <b>VivoClin</b> Research Services is at the forefront of advancing
-              clinical research with precision and expertise. We specialize in
-              comprehensive clinical trial site support and medical writing,
-              ensuring meticulous execution and high-quality research that
-              drives medical innovation. With dedicated operations across
+              clinical research and pharma brand communication with precision
+              and expertise. We specialize in comprehensive clinical trial site
+              support and the development of scientifically accurate,
+              compliance-driven pharma marketing materials. Our work bridges
+              clinical evidence and strategic communication to support
+              pharmaceutical innovation. With dedicated operations across
               regions, including our <b>Australia</b> division, we continue to
-              expand our global impact in pharmaceutical and clinical research.
+              expand our global presence in the pharmaceutical and clinical
+              research ecosystem.
             </p>
           </div>
 
@@ -145,10 +148,10 @@ export default function AboutPage() {
                 className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-blue-100"
               >
                 <div className="p-8 flex flex-col items-center text-center">
-                    <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
+                  <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
                     {/* eslint-disable-next-line */}
-                       {service.icon({ className: "text-3xl text-white" })}
-                    </div>
+                    {service.icon({ className: "text-3xl text-white" })}
+                  </div>
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">
                     {service.title}
                   </h3>
@@ -265,7 +268,7 @@ export default function AboutPage() {
                     className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
                     href="tel:+61425342368"
                   >
-                  Ph :  +61 425 342 368
+                    Ph : +61 425 342 368
                   </Link>
                 </div>
               </span>

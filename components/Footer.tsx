@@ -106,9 +106,9 @@ const Footer = () => {
                 "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
               )}
               color="foreground"
-              href={"/medical-writing"}
+              href={"/pharma-marketing-materials"}
             >
-              Medical Writing
+              Pharma Marketing Materials
             </Link>
             {/* <Link
               className={clsx(

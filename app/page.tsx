@@ -39,7 +39,7 @@ const smoServices = [
 export default function Home() {
   const visionPoints = [
     "To be a global leader in clinical research services, setting benchmarks for innovation, precision, and ethical excellence.",
-    "To revolutionize clinical research by delivering seamless trial management and impactful medical writing, driving advancements in patient care worldwide.",
+    "To revolutionize clinical research by delivering seamless trial management and impactful pharma marketing materials, driving advancements in patient care worldwide.",
     "To empower healthcare through flawless execution of clinical trials and transformative scientific solutions, ensuring a healthier future for all.",
   ];
 
@@ -53,11 +53,11 @@ export default function Home() {
               Advancing Clinical Research with Precision
             </h1>
             <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
-              <b>VivoClin</b> Research Services specializes in comprehensive clinical
-              trial site support and medical writing. With dedicated divisions,
-              including our <b>Australia</b> branch, our expert team ensures meticulous
-              execution and delivers high-quality research that drives medical
-              innovation.
+              <b>VivoClin</b> Research Services specializes in comprehensive
+              clinical trial site support and pharma marketing materials. With
+              dedicated divisions, including our <b>Australia</b> branch, our
+              expert team ensures meticulous execution and delivers high-quality
+              research that drives medical innovation.
             </p>
           </div>
           <div className="flex items-center space-x-4">
@@ -305,7 +305,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* section4 */}
         <Accomplishment />
         <section className="relative py-24 overflow-hidden bg-gradient-to-br from-white to-blue-50">
@@ -319,7 +318,7 @@ export default function Home() {
                 >
                   <Image
                     src={Pharma2}
-                    alt="Medical Writing Services"
+                    alt="Pharma Marketing Material Development"
                     width={1000}
                     height={1000}
                     quality={100}
@@ -332,7 +331,7 @@ export default function Home() {
               <div className="w-full md:w-3/5 space-y-8">
                 <MotionDiv>
                   <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6">
-                    Medical Writing
+                    Pharma Marketing Material Development
                   </h2>
 
                   <div className="prose prose-lg text-gray-700 mb-8">
@@ -341,18 +340,19 @@ export default function Home() {
                       <span className="text-primary-600 font-semibold">
                         Vivoclin Research Services
                       </span>
-                      , we deliver exceptional medical writing solutions
-                      tailored for healthcare, pharmaceutical, and life sciences
-                      organizations. Our expert team ensures precise, engaging,
-                      and compliant content that meets industry standards.
+                      , we develop scientifically accurate, strategically
+                      positioned, and compliance-driven pharma marketing
+                      materials. Our content bridges clinical evidence and brand
+                      communication to help pharma companies engage healthcare
+                      professionals with clarity and credibility.
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     {[
-                      "Regulatory documents for clinical trials and drug development",
-                      "Educational and training materials for healthcare professionals and patients",
-                      "Publication support, including manuscript preparation and journal submissions",
+                      "Visual aids, detailing aids, and leave-behind literature for HCP engagement",
+                      "Evidence-based brand messaging, MOA content, and guideline-aligned positioning",
+                      "Digital, launch, and lifecycle marketing content for pharma brands",
                     ].map((item, index) => (
                       <MotionCard
                         key={index}
@@ -373,19 +373,21 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* CTA */}
           <div className="mt-10 w-full flex justify-center">
             <Button
               as={Link}
-              href="/medical-writing"
+              href="/pharma-marketing-material-development"
               className="bg-primary-600 text-white hover:bg-primary-700 rounded-full px-8 py-4 font-semibold transition-transform hover:scale-105"
               endContent={<FaArrowRight />}
             >
-              Explore Medical Writing Services
+              Explore Pharma Marketing Services
             </Button>
           </div>
         </section>
-        {/* Accomplishment */}
 
+        {/* Accomplishment */}
         {/* section5 */}
       </div>
     </Page>

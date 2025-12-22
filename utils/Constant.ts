@@ -17,7 +17,6 @@ import HeorIcon3 from "@/assets/icons/HeorIcon3";
 import HeorIcon4 from "@/assets/icons/HeorIcon4";
 import HeorIcon5 from "@/assets/icons/HeorIcon5";
 
-
 export const MENU_LIST = [
   {
     id: "home",
@@ -35,9 +34,9 @@ export const MENU_LIST = [
     slug: "/smo",
   },
   {
-    id: "medical-writing",
-    title: "Medical Writing",
-    slug: "/medical-writing",
+    id: "pahrma-marketing-materials",
+    title: "Pharma Marketing Materials",
+    slug: "/pahrma-marketing-materials",
   },
   {
     id: "ctm",
@@ -70,12 +69,13 @@ export const SERVICES = [
   },
   {
     id: "2",
-    title: "Medical Writing",
+    title: "Pharma Marketing Materials",
     subtitle:
-      "Delivering clear, impactful scientific communication that resonates with global audiences.",
-    link: "/medical-writing",
+      "Scientifically accurate, compliant, and strategically positioned marketing content for pharmaceutical brands.",
+    link: "/pharma-marketing-materials",
     Icon: ServiceIcon2,
   },
+
   {
     id: "3",
     title: "Clinical Trial Monitoring",
@@ -140,19 +140,20 @@ export const FOUNDERS = [
     role: "Operation team",
     text: "Dr. Mohammad Kaif is an experienced clinical research professional with expertise in study coordination and quality assurance. As a scientific writing expert, he has contributed to impactful research through numerous authored manuscripts. His multidisciplinary experience strengthens clinical trial execution and regulatory compliance.",
   },
-//   {
-//     image: Gaurang,
-//     name: "Dr. Gaurang B. Shah",
-//     role: "Advisor",
-//     text: `Dr. Gaurang B. Shah brings over 25 years of expertise in drug discovery, preclinical research, and regulatory sciences. Having led 50+ preclinical studies for global regulatory submissions, his deep knowledge in pharmacodynamics, GCP, animal handling, and in vitro cell culture strengthens VivoClin’s capabilities in clinical trial monitoring, medical writing, and real-world evidence generation.
-// A former Principal at KBIPER and H.O.D. at L.M. College of Pharmacy, Dr. Shah has mentored numerous researchers and advised pharmaceutical industries, making him a strategic asset in advancing our research and regulatory excellence.`,
-//   },
+  //   {
+  //     image: Gaurang,
+  //     name: "Dr. Gaurang B. Shah",
+  //     role: "Advisor",
+  //     text: `Dr. Gaurang B. Shah brings over 25 years of expertise in drug discovery, preclinical research, and regulatory sciences. Having led 50+ preclinical studies for global regulatory submissions, his deep knowledge in pharmacodynamics, GCP, animal handling, and in vitro cell culture strengthens VivoClin’s capabilities in clinical trial monitoring, medical writing, and real-world evidence generation.
+  // A former Principal at KBIPER and H.O.D. at L.M. College of Pharmacy, Dr. Shah has mentored numerous researchers and advised pharmaceutical industries, making him a strategic asset in advancing our research and regulatory excellence.`,
+  //   },
   {
     image: Gopal,
     name: "Dr. Gopal Natesan",
     role: "Advisor",
     text: "Dr. Gopal Natesan is a distinguished pharmaceutical scientist with expertise in clinical research, medical writing, and regulatory sciences. With over two decades of experience, he has contributed to scientific communication, quality assurance, and research excellence. As the Director at Nirma University, Ahmedabad, he plays a key role in fostering industry collaborations and academic advancements. His expertise strengthens our commitment to high-quality research and regulatory support.",
-  }, {
+  },
+  {
     image: Hamza,
     name: "Dr. Humzah Postwala",
     role: "Head, Australia Division",
@@ -166,8 +167,6 @@ As Head of the Australia Division, he leads strategic operations, fosters partne
     role: "Advisor",
     text: "Dr. Hardik Pitroda is an experienced dermatologist with over a decade of expertise in patient care. As a principal investigator in numerous clinical trials, he has contributed to advancements in medical science and therapeutic innovations. His deep understanding of clinical trial methodologies, regulatory compliance, and investigational treatments strengthens our research capabilities. With a strong commitment to evidence-based medicine, Dr. Pitroda plays a key role in ensuring the success and integrity of clinical trials.",
   },
- 
- 
 ];
 
 export const HEORLIST = [
