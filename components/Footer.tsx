@@ -47,20 +47,20 @@ const Footer = () => {
           <span className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-white font-medium">
             <span className="flex items-center gap-2">
               <FaPhoneAlt className="text-lg text-white/80 flex-shrink-0" />
-              <Link href="tel:+61425342368" className=" transition-colors text-white">
+              <Link href="tel:+61425342368" className=" transition-colors whitespace-nowrap text-white">
                 +61 425 342 368
               </Link>
             </span>
 
             <span className="hidden sm:block text-white/40 ">|</span>
 
-            <Link href="tel:+919137989793" className="pl-6 md:pl-0 transition-colors text-white">
+            <Link href="tel:+919137989793" className="pl-6 md:pl-0 transition-colors whitespace-nowrap text-white">
               +91 91379 89793
             </Link>
 
             <span className="hidden sm:block text-white/40">|</span>
 
-            <Link href="tel:+919974525632" className="pl-6 md:pl-0 transition-colors text-white">
+            <Link href="tel:+919974525632" className="pl-6 md:pl-0 transition-colors whitespace-nowrap text-white">
               +91 99745 25632
             </Link>
           </span>
