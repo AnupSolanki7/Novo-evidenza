@@ -249,27 +249,48 @@ export default function AboutPage() {
                   </Link>
                 </div>
               </span>
-              <span className="w-full md:w-1/3 ">
-                <p className="font-bold text-xl text-blue-600 mb-4 ">Contact</p>
+              <span className="w-full md:w-1/3">
+                <p className="font-bold text-xl text-blue-600 mb-4">Contact</p>
+
                 <div className="space-y-4">
+                  {/* Emails */}
                   <Link
                     className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                    href={"mailto:vivoclinresearch@gmail.com"}
+                    href="mailto:vivoclinresearch@gmail.com"
                   >
-                    Vivoclinresearch@gmail.com
+                    vivoclinresearch@gmail.com
                   </Link>
+
                   <Link
                     className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                    href={"mailto:vivoclinaustralia@gmail.com"}
+                    href="mailto:vivoclinaustralia@gmail.com"
                   >
                     vivoclinaustralia@gmail.com
                   </Link>
-                  <Link
-                    className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                    href="tel:+61425342368"
-                  >
-                    Ph : +61 425 342 368
-                  </Link>
+
+                  {/* Phone numbers */}
+                  <div className="space-y-2">
+                    <Link
+                      className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                      href="tel:+61425342368"
+                    >
+                      Ph: +61 425 342 368
+                    </Link>
+
+                    <Link
+                      className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                      href="tel:+919137989793"
+                    >
+                      Ph: +91 91379 89793
+                    </Link>
+
+                    <Link
+                      className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
+                      href="tel:+919974525632"
+                    >
+                      Ph: +91 99745 25632
+                    </Link>
+                  </div>
                 </div>
               </span>
             </div>

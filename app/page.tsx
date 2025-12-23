@@ -378,7 +378,7 @@ export default function Home() {
           <div className="mt-10 w-full flex justify-center">
             <Button
               as={Link}
-              href="/pharma-marketing-material-development"
+              href="/pharma-marketing-materials"
               className="bg-primary-600 text-white hover:bg-primary-700 rounded-full px-8 py-4 font-semibold transition-transform hover:scale-105"
               endContent={<FaArrowRight />}
             >
