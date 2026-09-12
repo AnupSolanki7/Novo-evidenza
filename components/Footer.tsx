@@ -124,6 +124,16 @@ const Footer = () => {
             >
               Pharma Marketing Materials
             </Link>
+            <Link
+              className={clsx(
+                linkStyles({ color: "foreground" }),
+                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
+              )}
+              color="foreground"
+              href={"/clinical-data-ai"}
+            >
+              Clinical Data & AI
+            </Link>
             {/* <Link
               className={clsx(
                 linkStyles({ color: "foreground" }),

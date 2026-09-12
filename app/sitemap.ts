@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: 'https://novo-evidenza.vercel.app/clinical-data-ai',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: 'https://novo-evidenza.vercel.app/heor',
       lastModified: new Date(),
       changeFrequency: 'weekly',

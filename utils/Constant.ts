@@ -43,6 +43,11 @@ export const MENU_LIST = [
     title: "Clinical Trial Monitoring",
     slug: "/ctm",
   },
+  {
+    id: "clinical-data-ai",
+    title: "Clinical Data & AI",
+    slug: "/clinical-data-ai",
+  },
   // {
   //   id: "pv-regulatory",
   //   title: "PV and Regulatory",
@@ -83,6 +88,14 @@ export const SERVICES = [
       "Advanced monitoring solutions and specialized expertise in diverse therapeutic areas to support your clinical trials.",
     link: "/ctm",
     Icon: HiSpeakerphone,
+  },
+  {
+    id: "4",
+    title: "Clinical Data & AI Solutions",
+    subtitle:
+      "Clinical data sourcing, curation, annotation, QC, and clinical validation to build AI-ready healthcare datasets.",
+    link: "/clinical-data-ai",
+    Icon: ServiceIcon4,
   },
   // {
   //   id: "4",
