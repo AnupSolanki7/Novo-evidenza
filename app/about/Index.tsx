@@ -1,208 +1,146 @@
 "use client";
-/* eslint-disable */
-import Page from "@/components/page";
-import { title } from "@/components/primitives";
-import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
+
 import { IconType } from "react-icons";
-import {
-  FaHospital,
-  FaPencilAlt,
-  FaClipboardCheck,
-  FaLinkedin,
-} from "react-icons/fa";
-import { Input, Textarea } from "@nextui-org/input";
-import { Button } from "@nextui-org/button";
-import { ReactNode, useRef, useState } from "react";
-import toast from "react-hot-toast";
-import MotionDiv from "@/components/MotionDiv";
+import { LuClipboardCheck, LuHospital, LuLinkedin, LuMail, LuMapPin, LuPencilLine, LuPhone } from "react-icons/lu";
+
 import MotionCard from "@/components/MotionCard";
-import { FOUNDERS } from "@/utils/Constant";
+import MotionDiv from "@/components/MotionDiv";
 import FounderCard from "@/components/FounderCard";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh, { HeroMesh, HeroFade } from "@/components/site/PageMesh";
+import RFPConfigurator from "@/components/site/RFPConfigurator";
+import { Eyebrow, IconBadge, SectionHeading } from "@/components/site/ui";
+import { FOUNDERS } from "@/utils/Constant";
 
 interface Service {
   title: string;
   description: string;
-  icon: IconType; // or LucideIcon
+  icon: IconType;
 }
 
+const SERVICES: Service[] = [
+  {
+    title: "Expert SMO Services",
+    description: "Comprehensive site management for clinical trials",
+    icon: LuHospital,
+  },
+  {
+    title: "Pharma Marketing Materials",
+    description:
+      "Scientific, compliant, and strategically crafted marketing content for pharmaceutical and healthcare brands",
+    icon: LuPencilLine,
+  },
+  {
+    title: "Clinical Trial Support",
+    description: "End-to-end assistance for research projects",
+    icon: LuClipboardCheck,
+  },
+];
+
+const OFFICES = [
+  {
+    region: "India",
+    lines: ["iHub, Ahmedabad", "Gujarat 380052, India"],
+    href: "https://maps.app.goo.gl/JkRRAP1Vo663W7GN6",
+  },
+  {
+    region: "Australia",
+    lines: ["U-41, 27-29 Mary St", "Auburn, NSW 2144, Australia"],
+    href: "https://maps.app.goo.gl/xoXuZhZrZZa4Y41u9",
+  },
+];
+
+const EMAILS = ["vivoclinresearch@gmail.com", "vivoclinaustralia@gmail.com"];
+
+const PHONES = [
+  { label: "+61 425 342 368", href: "tel:+61425342368" },
+  { label: "+91 91379 89793", href: "tel:+919137989793" },
+  { label: "+91 99745 25632", href: "tel:+919974525632" },
+];
+
 export default function AboutPage() {
-  const formRef: any = useRef(null);
-  const [loader, setLoader] = useState(false);
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    phone: false,
-    message: false,
-  });
-
-  const onChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
-    setErrors({ ...errors, [name]: false });
-  };
-
-  const validateForm = () => {
-    const newErrors = {
-      name: !values.name.length,
-      email:
-        !values.email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(values.email),
-      phone: !values.phone || !/^\d{10}$/.test(values.phone),
-      message: !values.message.length,
-    };
-    setErrors(newErrors);
-    return !Object.values(newErrors).some((error) => error);
-  };
-
-  const handleSubmit = async (event: any) => {
-    setLoader(true);
-    event.preventDefault();
-    if (!validateForm()) {
-      setLoader(false);
-      return;
-    }
-
-    const formData = new FormData(event.target);
-    try {
-      const response = await fetch("/api/contact", {
-        method: "post",
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error(`response status: ${response.status}`);
-      }
-      const responseData = await response.json();
-      toast.success(
-        "Thank you for your enquiry, we will get back to you shortly!"
-      );
-      setValues({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-      setLoader(false);
-    } catch (err) {
-      setLoader(false);
-      toast.error("Error, please try resubmitting the form");
-    }
-  };
-
-  const services: Service[] = [
-    {
-      title: "Expert SMO Services",
-      description: "Comprehensive site management for clinical trials",
-      icon: FaHospital,
-    },
-    {
-      title: "Pharma Marketing Materials",
-      description:
-        "Scientific, compliant, and strategically crafted marketing content for pharmaceutical and healthcare brands",
-      icon: FaPencilAlt,
-    },
-
-    {
-      title: "Clinical Trial Support",
-      description: "End-to-end assistance for research projects",
-      icon: FaClipboardCheck,
-    },
-  ];
-
   return (
-    <Page className="relative h-max bg-white ">
-      {/* Who We Are Section */}
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
+      {/* Who We Are */}
+      <section className="relative bg-[#0B132B]">
+        <div className="relative overflow-hidden px-5 pb-20 pt-[128px] sm:px-6 lg:px-10 lg:pb-24 lg:pt-[168px]">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-40 -top-48 h-[560px] w-[560px] rounded-full bg-sky-500/20 blur-[130px]"
+          />
+          <HeroMesh />
 
-      <section className="bg-gradient-to-r mt-[100px] from-blue-50 to-white py-20">
-        <div className="container mx-auto px-8 md:px-16">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <MotionDiv
+            initialTranslateY={40}
+            className="relative mx-auto max-w-4xl text-center"
+          >
+            <Eyebrow tone="dark">Who We Are</Eyebrow>
+            <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-[3.25rem] lg:leading-[1.1]">
               About VivoClin Research Services
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              <b>VivoClin</b> Research Services is at the forefront of advancing
-              clinical research and pharma brand communication with precision
-              and expertise. We specialize in comprehensive clinical trial site
-              support and the development of scientifically accurate,
-              compliance-driven pharma marketing materials. Our work bridges
-              clinical evidence and strategic communication to support
-              pharmaceutical innovation. With dedicated operations across
-              regions, including our <b>Australia</b> division, we continue to
-              expand our global presence in the pharmaceutical and clinical
-              research ecosystem.
+            <p className="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
+              <b className="font-semibold text-white">VivoClin</b> Research
+              Services is at the forefront of advancing clinical research and
+              pharma brand communication with precision and expertise. We
+              specialize in comprehensive clinical trial site support and the
+              development of scientifically accurate, compliance-driven pharma
+              marketing materials. Our work bridges clinical evidence and strategic
+              communication to support pharmaceutical innovation. With dedicated
+              operations across regions, including our{" "}
+              <b className="font-semibold text-white">Australia</b> division, we
+              continue to expand our global presence in the pharmaceutical and
+              clinical research ecosystem.
             </p>
-          </div>
+          </MotionDiv>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-blue-100"
-              >
-                <div className="p-8 flex flex-col items-center text-center">
-                  <div className="bg-blue-600 rounded-full p-4 mb-6 transform transition-transform duration-300 hover:rotate-12">
-                    {/* eslint-disable-next-line */}
-                    {service.icon({ className: "text-3xl text-white" })}
-                  </div>
-                  <h3 className="text-2xl font-bold text-blue-800 mb-4">
+        <HeroFade />
+      </section>
+
+      {/* What we do */}
+      <section className="relative isolate overflow-hidden py-20 lg:py-24">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <div className="grid gap-6 md:grid-cols-3">
+            {SERVICES.map((service) => (
+              <MotionCard key={service.title} className="h-full">
+                <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-[0_18px_50px_rgb(2,30,62,0.10)]">
+                  <IconBadge icon={service.icon} />
+                  <h2 className="mt-6 text-xl font-bold tracking-tight text-slate-900">
                     {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  </h2>
+                  <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
                     {service.description}
                   </p>
-                </div>
-              </div>
+                </article>
+              </MotionCard>
             ))}
           </div>
         </div>
       </section>
-      {/* Team Members Section */}
-      <section className="w-full bg-gradient-to-b from-blue-600 to-blue-700 py-20">
-        <MotionDiv className="w-full max-w-7xl mx-auto px-6 mb-16">
-          <div className="text-center">
-            <h2
-              className={title({
-                size: "lg",
-                className: "text-white mb-6 font-bold tracking-tight",
-              })}
-            >
-              Meet Our Leadership Team
-            </h2>
-            <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
-              A team committed to driving innovation and excellence in
-              healthcare.
-            </p>
-          </div>
-        </MotionDiv>
 
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col gap-12">
-            {/* First row: 2 elements */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {FOUNDERS.slice(0, 2).map((item, index) => (
-                <MotionCard
-                  key={index}
-                  className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
-                >
+      {/* Leadership */}
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={40}>
+            <SectionHeading
+              eyebrow="Leadership"
+              title="Meet Our Leadership Team"
+              lead="A team committed to driving innovation and excellence in healthcare."
+            />
+          </MotionDiv>
+
+          <div className="mt-14 flex flex-col gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {FOUNDERS.slice(0, 2).map((item) => (
+                <MotionCard key={item.name} className="h-full">
                   <FounderCard item={item} />
                 </MotionCard>
               ))}
             </div>
-            {/* Second row: 3 elements */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {FOUNDERS.slice(2, 5).map((item, index) => (
-                <MotionCard
-                  key={index}
-                  className="group backdrop-blur-xl bg-white/10 border border-white/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
-                >
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {FOUNDERS.slice(2, 5).map((item) => (
+                <MotionCard key={item.name} className="h-full">
                   <FounderCard item={item} />
                 </MotionCard>
               ))}
@@ -211,210 +149,117 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section
-        id="contact"
-        className="flex flex-col md:flex-row h-full mx-auto items-center justify-around gap-4"
-      >
-        <div className="w-full md:w-1/2 flex flex-col pt-[20px] md:pt-0 px-[7%] justify-start items-center h-full">
-          <MotionDiv initialTranslateY={50} className="w-full flex flex-col">
-            <p className="font-bold text-3xl text-blue-600 mb-4 md:mb-8 ">
-              Send Us Your Enquiry
-            </p>
-            <p className="font-bold text-left w-full whitespace-pre-wrap text-sm text-slate-700 mb-4 md:mb-8 ">
-              {" "}
-              Ready for a non-obligatory chat, got a quick question or comment?
-            </p>
-            <div className="w-full flex-col lg:flex-row gap-8 lg:gap-0 flex justify-between items-start mb-4 md:mb-8">
-              <span className="w-full  md:w-1/3">
-                <p className="font-bold text-xl text-blue-600 mb-4 ">Address</p>
-                <div className="space-y-4">
-                  <Link
-                    href="https://maps.app.goo.gl/JkRRAP1Vo663W7GN6"
-                    target="_blank"
-                    className="block p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                  >
-                    <p className="text-sm text-slate-700 font-medium">
-                      iHub, Ahmedabad <br /> Gujarat 380052, India
-                    </p>
-                  </Link>
-                  <Link
-                    href="https://maps.app.goo.gl/xoXuZhZrZZa4Y41u9"
-                    target="_blank"
-                    className="block p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                  >
-                    <p className="text-sm text-slate-700 font-medium">
-                      U-41, 27-29 Mary St <br /> Auburn, NSW 2144, Australia
-                    </p>
-                  </Link>
-                </div>
-              </span>
-              <span className="w-full md:w-1/3">
-                <p className="font-bold text-xl text-blue-600 mb-4">Contact</p>
-
-                <div className="space-y-4">
-                  {/* Emails */}
-                  <Link
-                    className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                    href="mailto:vivoclinresearch@gmail.com"
-                  >
-                    vivoclinresearch@gmail.com
-                  </Link>
-
-                  <Link
-                    className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                    href="mailto:vivoclinaustralia@gmail.com"
-                  >
-                    vivoclinaustralia@gmail.com
-                  </Link>
-
-                  {/* Phone numbers */}
-                  <div className="space-y-2">
-                    <Link
-                      className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                      href="tel:+61425342368"
-                    >
-                      Ph: +61 425 342 368
-                    </Link>
-
-                    <Link
-                      className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                      href="tel:+919137989793"
-                    >
-                      Ph: +91 91379 89793
-                    </Link>
-
-                    <Link
-                      className="block text-sm text-slate-700 w-max p-2 rounded-2xl bg-white hover:bg-blue-50 shadow-md transition"
-                      href="tel:+919974525632"
-                    >
-                      Ph: +91 99745 25632
-                    </Link>
-                  </div>
-                </div>
-              </span>
-            </div>
-            <span className="w-full flex gap-4 justify-start items-center mb-8">
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/company/vivoclin-research-services/"
-                className="flex cursor-pointer justify-center items-center rounded-full w-8 h-8 bg-blue-600 "
-              >
-                <FaLinkedin className="text-lg text-white" />
-              </Link>
-            </span>
+      {/* Offices & contact details */}
+      <section className="py-20 lg:py-24">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={40}>
+            <SectionHeading
+              eyebrow="Global Offices"
+              title="Send Us Your Enquiry"
+              lead="Reach the team directly, or use the consultation request below."
+            />
           </MotionDiv>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.7773937822594!2d72.54143817509214!3d23.03194427916724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8521db921fad%3A0x8f192b2f852e333c!2siHub%20Gujarat!5e0!3m2!1sen!2sin!4v1739982132152!5m2!1sen!2sin"
-            className="border-0 h-[200px] w-full mb-8"
-            loading="lazy"
-          ></iframe>
-        </div>
 
-        <div className="contact px-[7%] pt-[80px] w-full md:w-1/2 h-full">
-          <MotionDiv>
-            <h2 className={title({ className: "text-white" })}>
-              GET IN TOUCH!
-            </h2>
-          </MotionDiv>
-          <form ref={formRef} onSubmit={handleSubmit} className="py-[7%] ">
-            <MotionDiv className="w-full flex  flex-col justify-start items-center gap-6">
-              <Input
-                onChange={onChange}
-                type="text"
-                name="name"
-                className="input "
-                placeholder="Enter your name"
-                radius="none"
-                labelPlacement="outside"
-                classNames={{
-                  label: "!text-white font-semibold",
-                  helperWrapper: "absolute bottom-[-50%] font-semibold",
-                  inputWrapper: "bg-white",
-                }}
-                value={values.name}
-                label="Name"
-                isInvalid={errors.name}
-                errorMessage={errors.name ? "Name is required" : ""}
-              />
-              <Input
-                type="email"
-                name="email"
-                onChange={onChange}
-                placeholder="Enter your email"
-                radius="none"
-                className="bg-white "
-                value={values.email}
-                labelPlacement="outside"
-                classNames={{
-                  label: "!text-white font-semibold",
-                  helperWrapper: "absolute bottom-[-50%] font-semibold",
-                  inputWrapper: "bg-white",
-                }}
-                label="Email"
-                isInvalid={errors.email}
-                errorMessage={errors.email ? "Valid email is required" : ""}
-              />
-              <Input
-                type="number"
-                name="phone"
-                className="bg-white "
-                onChange={onChange}
-                placeholder="Enter your phone"
-                radius="none"
-                value={values.phone}
-                labelPlacement="outside"
-                classNames={{
-                  label: "!text-white font-semibold",
-                  helperWrapper: "absolute bottom-[-50%] font-semibold",
-                  inputWrapper: "bg-white",
-                }}
-                label="Phone"
-                isInvalid={errors.phone}
-                errorMessage={
-                  errors.phone ? "Valid phone number is required" : ""
-                }
-              />
-              <div className="w-full relative">
-                <Textarea
-                  type="text"
-                  name="message"
-                  onChange={onChange}
-                  className="bg-white "
-                  placeholder="Enter your message"
-                  radius="none"
-                  value={values.message}
-                  labelPlacement="outside"
-                  classNames={{
-                    label: "!text-white font-semibold",
-                    helperWrapper: "absolute bottom-[-20%] font-semibold",
-                    mainWrapper: "relative",
-                    inputWrapper: "bg-white",
-                  }}
-                  label="Message"
-                  isInvalid={errors.message}
-                  errorMessage={errors.message ? "Message is required" : ""}
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            <MotionCard className="h-full">
+              <div className="h-full rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                <IconBadge icon={LuMapPin} />
+                <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                  Address
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {OFFICES.map((office) => (
+                    <li key={office.region}>
+                      <a
+                        href={office.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block rounded-xl border border-slate-100 bg-slate-50/60 p-3.5 transition-colors hover:border-sky-200 hover:bg-sky-50/50"
+                      >
+                        <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500">
+                          {office.region}
+                        </span>
+                        <span className="mt-1 block text-sm leading-relaxed text-slate-700">
+                          {office.lines[0]}
+                          <br />
+                          {office.lines[1]}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </MotionCard>
+
+            <MotionCard className="h-full">
+              <div className="h-full rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                <IconBadge icon={LuPhone} />
+                <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                  Contact
+                </h3>
+                <ul className="mt-4 space-y-2.5">
+                  {EMAILS.map((email) => (
+                    <li key={email}>
+                      <a
+                        href={`mailto:${email}`}
+                        className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-sky-700"
+                      >
+                        <LuMail
+                          className="h-4 w-4 shrink-0 text-sky-500"
+                          aria-hidden="true"
+                        />
+                        {email}
+                      </a>
+                    </li>
+                  ))}
+                  {PHONES.map((phone) => (
+                    <li key={phone.href}>
+                      <a
+                        href={phone.href}
+                        className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-sky-700"
+                      >
+                        <LuPhone
+                          className="h-4 w-4 shrink-0 text-sky-500"
+                          aria-hidden="true"
+                        />
+                        Ph: {phone.label}
+                      </a>
+                    </li>
+                  ))}
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/vivoclin-research-services/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-sky-700"
+                    >
+                      <LuLinkedin
+                        className="h-4 w-4 shrink-0 text-sky-500"
+                        aria-hidden="true"
+                      />
+                      linkedin
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </MotionCard>
+
+            <MotionCard className="h-full">
+              <div className="h-full overflow-hidden rounded-2xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                <iframe
+                  title="Vivoclin Research — iHub Ahmedabad office"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.7773937822594!2d72.54143817509214!3d23.03194427916724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8521db921fad%3A0x8f192b2f852e333c!2siHub%20Gujarat!5e0!3m2!1sen!2sin!4v1739982132152!5m2!1sen!2sin"
+                  className="h-full min-h-[280px] w-full border-0"
+                  loading="lazy"
                 />
               </div>
-              <div className="w-full justify-start items-center flex">
-                <Button
-                  isLoading={loader}
-                  className={buttonStyles({
-                    radius: "full",
-                    variant: "shadow",
-                    className:
-                      "font-bold bg-slate-700 p-6 text-white shadow-none w-max ",
-                  })}
-                  variant="flat"
-                  type="submit"
-                >
-                  Send
-                </Button>
-              </div>
-            </MotionDiv>
-          </form>
+            </MotionCard>
+          </div>
         </div>
       </section>
-    </Page>
+
+      {/* Consultation / RFP */}
+      <RFPConfigurator id="contact" />
+    </main>
   );
 }

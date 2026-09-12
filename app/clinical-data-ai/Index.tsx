@@ -1,74 +1,83 @@
 "use client";
 
 import React from "react";
-import Pages from "@/components/page";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh from "@/components/site/PageMesh";
+import PageHero from "@/components/site/PageHero";
 import MotionDiv from "@/components/MotionDiv";
 import MotionCard from "@/components/MotionCard";
-import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { Button } from "@nextui-org/button";
-import BannerItem from "../../assets/image/New-technologies-in-pharmaceuticals.jpg";
+import NextLink from "next/link";
+import BannerItem from "../../assets/image/clinical-data-imaging.jpg";
 import Image from "next/image";
 import {
-  FaSearchPlus,
-  FaLayerGroup,
-  FaTags,
-  FaShieldAlt,
-  FaCheckDouble,
-  FaUserMd,
-  FaXRay,
-  FaHeartbeat,
-  FaDatabase,
-  FaNotesMedical,
-  FaBrain,
-  FaClipboardCheck,
-  FaChartLine,
-  FaFlask,
-} from "react-icons/fa";
+  LuArrowRight,
+  LuBrain,
+  LuChartLine,
+  LuCheckCheck,
+  LuClipboardCheck,
+  LuDatabase,
+  LuFlaskConical,
+  LuLayers,
+  LuNotebookPen,
+  LuScanLine,
+  LuHeartPulse,
+  LuSearch,
+  LuShieldCheck,
+  LuTags,
+  LuUserCheck,
+} from "react-icons/lu";
+import {
+  CheckMark,
+  Eyebrow,
+  GlowCard,
+  IconBadge,
+  SectionHeading,
+  StepMarker,
+} from "@/components/site/ui";
 
 const CAPABILITIES = [
   {
     title: "Clinical Data Sourcing",
     subtitle:
       "Identification and sourcing of relevant clinical datasets through appropriate healthcare and clinical networks.",
-    Icon: FaSearchPlus,
+    Icon: LuSearch,
   },
   {
     title: "Data Curation & Structuring",
     subtitle:
       "Organizing heterogeneous clinical information into structured datasets aligned with specific AI development requirements.",
-    Icon: FaLayerGroup,
+    Icon: LuLayers,
   },
   {
     title: "Clinical Annotation",
     subtitle:
       "Expert-led annotation and labelling of clinical data using predefined protocols, ontologies, and annotation guidelines.",
-    Icon: FaTags,
+    Icon: LuTags,
   },
   {
     title: "Data De-identification",
     subtitle:
       "Supporting appropriate de-identification and privacy-focused data handling workflows for permitted use cases.",
-    Icon: FaShieldAlt,
+    Icon: LuShieldCheck,
   },
   {
     title: "Quality Control & Review",
     subtitle:
       "Multi-level review and quality-control processes to improve consistency, accuracy, and reliability of annotated datasets.",
-    Icon: FaCheckDouble,
+    Icon: LuCheckCheck,
   },
   {
     title: "Clinical Validation",
     subtitle:
       "Clinician-led review and validation of datasets, outputs, and AI models against defined clinical criteria.",
-    Icon: FaUserMd,
+    Icon: LuUserCheck,
   },
 ];
 
 const DATA_MODALITIES = [
   {
     title: "Medical Imaging",
-    Icon: FaXRay,
+    Icon: LuScanLine,
     list: [
       "X-ray",
       "CT",
@@ -79,7 +88,7 @@ const DATA_MODALITIES = [
   },
   {
     title: "Cardiology",
-    Icon: FaHeartbeat,
+    Icon: LuHeartPulse,
     list: [
       "ECG",
       "Echocardiography",
@@ -89,7 +98,7 @@ const DATA_MODALITIES = [
   },
   {
     title: "Clinical Data",
-    Icon: FaDatabase,
+    Icon: LuDatabase,
     list: [
       "Electronic health record-derived data",
       "Clinical records",
@@ -100,7 +109,7 @@ const DATA_MODALITIES = [
   },
   {
     title: "Clinical & Medical Text",
-    Icon: FaNotesMedical,
+    Icon: LuNotebookPen,
     list: [
       "Clinical notes",
       "Medical reports",
@@ -117,25 +126,25 @@ const AI_STAGES = [
     title: "AI Training",
     subtitle:
       "Develop datasets with clinically meaningful labels and annotations for supervised and multimodal AI development.",
-    Icon: FaBrain,
+    Icon: LuBrain,
   },
   {
     title: "AI Validation",
     subtitle:
       "Create independent, clinically reviewed datasets for evaluating model performance and robustness.",
-    Icon: FaClipboardCheck,
+    Icon: LuClipboardCheck,
   },
   {
     title: "AI Evaluation",
     subtitle:
       "Support structured clinical assessment of AI-generated outputs against predefined criteria.",
-    Icon: FaChartLine,
+    Icon: LuChartLine,
   },
   {
     title: "Research & Development",
     subtitle:
       "Support academic, healthcare, life-science, and technology organizations developing new clinical AI applications.",
-    Icon: FaFlask,
+    Icon: LuFlaskConical,
   },
 ];
 
@@ -214,102 +223,108 @@ const DIFFERENTIATORS = [
 
 const Page = () => {
   return (
-    <Pages className="mt-[100px] h-max min-h-screen bg-white">
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
       {/* Header */}
-      <div className="w-full bg-gradient-to-r from-blue-400 to-blue-500 py-12 px-8 md:px-16 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="md:text-6xl text-3xl w-full text-center font-extrabold text-white leading-tight">
-            Clinical Data &amp; AI Solutions
-          </h1>
-          <p className="text-white/80 text-center mt-4 max-w-3xl mx-auto text-lg">
-            Building high-quality clinical datasets for the next generation of
-            healthcare AI
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="Clinical Data & AI"
+        title={<>Clinical Data &amp; AI Solutions</>}
+        lead="Building high-quality clinical datasets for the next generation of healthcare AI"
+      />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-8 md:px-16 bg-gradient-to-br from-blue-50 to-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
-            <MotionDiv className="w-full md:w-1/2">
-              <h2 className="mb-6 text-4xl font-bold leading-tight text-blue-600 md:text-5xl">
-                Clinically Meaningful Data for Healthcare AI
-              </h2>
-              <p className="mb-4 text-lg leading-relaxed text-gray-700">
-                Healthcare AI depends on more than large volumes of data. It
-                requires{" "}
-                <span className="font-semibold text-slate-800">
-                  relevant, well-structured, clinically meaningful, and
-                  quality-controlled data
-                </span>
-                .
-              </p>
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
-                At Vivoclin, we support healthcare AI companies, technology
-                companies, research organizations, and life-science teams with
-                clinical data sourcing, curation, annotation, quality control,
-                and clinical validation &mdash; helping transform complex
-                healthcare information into AI-ready datasets and clinically
-                validated resources.
-              </p>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "primary",
-                  radius: "full",
-                  variant: "shadow",
-                  className:
-                    "font-semibold text-lg px-8 py-6 bg-blue-600 hover:bg-blue-800 transition-colors",
-                })}
-                href="/about#contact"
-              >
-                Discuss Your Data Requirements
-              </Button>
-            </MotionDiv>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
+          <MotionDiv initialTranslateY={40}>
+            <Eyebrow>AI-Ready Data</Eyebrow>
+            <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+              Clinically Meaningful Data for Healthcare AI
+            </h2>
+            <span
+              aria-hidden="true"
+              className="mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+            />
+            <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Healthcare AI depends on more than large volumes of data. It
+              requires{" "}
+              <span className="font-semibold text-slate-900">
+                relevant, well-structured, clinically meaningful, and
+                quality-controlled data
+              </span>
+              .
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+              At Vivoclin, we support healthcare AI companies, technology
+              companies, research organizations, and life-science teams with
+              clinical data sourcing, curation, annotation, quality control, and
+              clinical validation &mdash; helping transform complex healthcare
+              information into AI-ready datasets and clinically validated
+              resources.
+            </p>
+            <NextLink
+              href="/about#contact"
+              className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+            >
+              Discuss Your Data Requirements
+              <LuArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1"
+                aria-hidden="true"
+              />
+            </NextLink>
+          </MotionDiv>
 
-            <MotionDiv className="w-full md:w-1/2">
+          <MotionCard>
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-[0_28px_70px_-24px_rgb(2,30,62,0.35)]">
               <Image
                 src={BannerItem}
-                className="relative w-full rounded-2xl object-cover shadow-xl"
-                width={600}
-                height={600}
-                alt="Clinical Data and AI Solutions"
+                alt="Clinicians reviewing medical imaging data on a workstation"
+                quality={82}
+                placeholder="blur"
+                sizes="(max-width: 1024px) 92vw, 620px"
+                className="aspect-[5/4] h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
                 priority
               />
-            </MotionDiv>
-          </div>
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent"
+              />
+            </div>
+          </MotionCard>
         </div>
       </section>
 
       {/* Capabilities */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50 px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              From Clinical Data to AI-Ready Datasets
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Developing healthcare AI often requires specialized clinical data
-              that is difficult to source, structure, and accurately label.
-              Vivoclin brings together clinical expertise, data operations, and
-              quality-focused workflows to support organizations throughout the
-              data lifecycle.
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Data Lifecycle"
+              title="From Clinical Data to AI-Ready Datasets"
+              lead="Developing healthcare AI often requires specialized clinical data that is difficult to source, structure, and accurately label. Vivoclin brings together clinical expertise, data operations, and quality-focused workflows to support organizations throughout the data lifecycle."
+            />
           </MotionDiv>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CAPABILITIES.map((item) => (
-              <MotionCard key={item.title} className="h-full">
-                <div className="group h-full bg-white border-2 border-gray-100 hover:border-blue-500 rounded-xl p-8 transition-all duration-300 hover:shadow-xl">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-2xl text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
-                    <item.Icon />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">{item.subtitle}</p>
-                </div>
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {CAPABILITIES.map((item, index) => (
+              <MotionCard
+                key={item.title}
+                delay={index * 0.06}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-8">
+                    <div className="flex items-start justify-between">
+                      <IconBadge icon={item.Icon} />
+                      <StepMarker index={index + 1} />
+                    </div>
+                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                      {item.subtitle}
+                    </p>
+                  </article>
+                </GlowCard>
               </MotionCard>
             ))}
           </div>
@@ -317,39 +332,43 @@ const Page = () => {
       </section>
 
       {/* Clinical Data We Support */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Clinical Data We Support
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We can support a range of clinical data modalities depending on
-              project requirements, availability, and permitted use.
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Modalities"
+              title="Clinical Data We Support"
+              lead="We can support a range of clinical data modalities depending on project requirements, availability, and permitted use."
+            />
           </MotionDiv>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {DATA_MODALITIES.map((item) => (
-              <MotionCard key={item.title} className="h-full">
-                <div className="group h-full bg-white border-2 border-gray-100 hover:border-blue-500 rounded-xl p-8 transition-all duration-300 hover:shadow-xl">
-                  <div className="mb-4 flex items-center gap-4">
-                    <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-xl text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
-                      <item.Icon />
-                    </span>
-                    <h3 className="text-2xl font-bold text-gray-800">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {item.list.map((li, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="mr-2 mt-1 text-blue-500">&bull;</span>
-                        <span className="text-gray-600">{li}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            {DATA_MODALITIES.map((item, index) => (
+              <MotionCard
+                key={item.title}
+                delay={index * 0.07}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-7 sm:p-8">
+                    <div className="flex items-center gap-4">
+                      <IconBadge icon={item.Icon} />
+                      <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <ul className="mt-6 space-y-3">
+                      {item.list.map((li) => (
+                        <li key={li} className="flex items-start gap-2.5">
+                          <CheckMark className="mt-px" />
+                          <span className="text-sm leading-relaxed text-slate-700">
+                            {li}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </GlowCard>
               </MotionCard>
             ))}
           </div>
@@ -357,30 +376,35 @@ const Page = () => {
       </section>
 
       {/* Built for Healthcare AI */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50 px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Built for Healthcare AI
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our workflows can support different stages of AI development.
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Applications"
+              title="Built for Healthcare AI"
+              lead="Our workflows can support different stages of AI development."
+            />
           </MotionDiv>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {AI_STAGES.map((item) => (
-              <MotionCard key={item.title} className="h-full">
-                <div className="h-full p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all">
-                  <div className="flex flex-col items-center text-center">
-                    <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-2xl text-white">
-                      <item.Icon />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {AI_STAGES.map((item, index) => (
+              <MotionCard
+                key={item.title}
+                delay={index * 0.07}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <div className="group/glow relative h-full rounded-2xl bg-gradient-to-b from-slate-200 to-slate-100 p-px transition-all duration-500 hover:from-sky-300 hover:to-teal-200 hover:shadow-[0_20px_60px_-15px_rgb(2,132,199,0.25)]">
+                  <article className="relative flex h-full flex-col rounded-[calc(1rem-1px)] bg-white p-7">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-teal-400 text-slate-950">
+                      <item.Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
-                    <h3 className="text-xl font-bold text-slate-700 mb-2">
+                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600">{item.subtitle}</p>
-                  </div>
+                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                      {item.subtitle}
+                    </p>
+                  </article>
                 </div>
               </MotionCard>
             ))}
@@ -389,59 +413,68 @@ const Page = () => {
       </section>
 
       {/* Clinical Expertise Meets Data Operations */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-white px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Clinical Expertise Meets Data Operations
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Generic data annotation is not enough for healthcare. Clinical
-              datasets often require an understanding of medical terminology,
-              diagnostic context, clinical workflows, and specialty-specific
-              interpretation. Vivoclin combines clinical expertise with
-              structured data workflows to help organizations address this
-              challenge.
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Workflow"
+              title="Clinical Expertise Meets Data Operations"
+              lead="Generic data annotation is not enough for healthcare. Clinical datasets often require an understanding of medical terminology, diagnostic context, clinical workflows, and specialty-specific interpretation. Vivoclin combines clinical expertise with structured data workflows to help organizations address this challenge."
+            />
           </MotionDiv>
 
-          <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-6">
+          <ol className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {WORKFLOW_STEPS.map((step, index) => (
-              <MotionCard key={step} className="h-full">
-                <div className="h-full rounded-xl border-2 border-gray-100 bg-white p-6 text-center transition-all duration-300 hover:border-blue-500 hover:shadow-xl">
-                  <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
-                    {index + 1}
-                  </span>
-                  <p className="font-semibold text-slate-700">{step}</p>
-                </div>
+              <MotionCard
+                key={step}
+                delay={index * 0.05}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <li className="flex h-full list-none items-center gap-4 p-6">
+                    <StepMarker index={index + 1} />
+                    <p className="font-semibold leading-snug text-slate-900">
+                      {step}
+                    </p>
+                  </li>
+                </GlowCard>
               </MotionCard>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
       {/* Flexible Engagement Models */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50 px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Flexible Engagement Models
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We can support projects from initial feasibility through
-              large-scale data programs.
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Engagement"
+              title="Flexible Engagement Models"
+              lead="We can support projects from initial feasibility through large-scale data programs."
+            />
           </MotionDiv>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {ENGAGEMENT_MODELS.map((item) => (
-              <MotionCard key={item.title} className="h-full">
-                <div className="h-full bg-white border-2 border-gray-100 hover:border-blue-500 rounded-xl p-8 transition-all duration-300 hover:shadow-xl">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">{item.subtitle}</p>
-                </div>
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            {ENGAGEMENT_MODELS.map((item, index) => (
+              <MotionCard
+                key={item.title}
+                delay={index * 0.07}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-7 sm:p-8">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                        {item.title}
+                      </h3>
+                      <StepMarker index={index + 1} />
+                    </div>
+                    <p className="mt-4 text-[15px] leading-relaxed text-slate-600">
+                      {item.subtitle}
+                    </p>
+                  </article>
+                </GlowCard>
               </MotionCard>
             ))}
           </div>
@@ -449,31 +482,29 @@ const Page = () => {
       </section>
 
       {/* Designed Around Your Requirements */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Designed Around Your Requirements
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Every AI development program has different data requirements. We
-              can work with your team to define:
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Scoping"
+              title="Designed Around Your Requirements"
+              lead="Every AI development program has different data requirements. We can work with your team to define:"
+            />
           </MotionDiv>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {REQUIREMENTS.map((item) => (
-              <MotionCard key={item} className="h-full">
-                <div className="flex h-full items-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all hover:shadow-xl">
-                  <FaCheckDouble className="flex-shrink-0 text-blue-500" />
-                  <span className="font-semibold text-slate-700">{item}</span>
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {REQUIREMENTS.map((item, index) => (
+              <MotionCard key={item} delay={index * 0.04}>
+                <div className="flex h-full items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all duration-300 hover:border-sky-200 hover:shadow-[0_10px_30px_-12px_rgb(2,30,62,0.2)]">
+                  <CheckMark />
+                  <span className="font-semibold text-slate-800">{item}</span>
                 </div>
               </MotionCard>
             ))}
           </div>
 
-          <MotionDiv className="mt-10 text-center">
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <MotionDiv initialTranslateY={28} className="mx-auto mt-12 max-w-3xl text-center">
+            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
               Whether you need a small validation dataset or a scalable clinical
               data program, we can structure the engagement around your
               requirements.
@@ -483,25 +514,30 @@ const Page = () => {
       </section>
 
       {/* Why Work With Vivoclin */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50 px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Why Work With Vivoclin?
-            </h2>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading eyebrow="Differentiators" title="Why Work With Vivoclin?" />
           </MotionDiv>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {DIFFERENTIATORS.map((item) => (
-              <MotionCard key={item.title} className="h-full">
-                <div className="h-full p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all">
-                  <div className="flex flex-col items-center text-center">
-                    <h3 className="text-xl font-bold text-slate-700 mb-2">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {DIFFERENTIATORS.map((item, index) => (
+              <MotionCard
+                key={item.title}
+                delay={index * 0.06}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-8">
+                    <StepMarker index={index + 1} />
+                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600">{item.subtitle}</p>
-                  </div>
-                </div>
+                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                      {item.subtitle}
+                    </p>
+                  </article>
+                </GlowCard>
               </MotionCard>
             ))}
           </div>
@@ -509,58 +545,58 @@ const Page = () => {
       </section>
 
       {/* CTA */}
-      <section className="w-full bg-gradient-to-r from-blue-400 to-blue-500 py-16 px-8 md:px-16">
-        <MotionDiv className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <MotionDiv
+          initialTranslateY={32}
+          className="relative mx-auto max-w-3xl px-5 text-center sm:px-6 lg:px-10"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Looking for Clinical Data or AI Support?
           </h2>
-          <p className="text-lg text-white/80 mb-4">
+          <span
+            aria-hidden="true"
+            className="mx-auto mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+          />
+          <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
             Tell us what you are building and what your data requirements look
             like. Our team can work with you to assess feasibility, data
             requirements, annotation scope, and an appropriate engagement model.
           </p>
-          <p className="text-xl md:text-2xl font-bold text-white mb-8">
+          <p className="mt-6 text-xl font-bold text-slate-900 sm:text-2xl">
             Let&apos;s Build Better Healthcare AI.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              as={Link}
-              className={buttonStyles({
-                radius: "full",
-                variant: "shadow",
-                className:
-                  "font-semibold text-lg px-8 py-6 bg-white text-blue-600 hover:bg-blue-50 transition-colors",
-              })}
+
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <NextLink
               href="/about#contact"
+              className="group/cta inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 px-8 py-4 text-sm font-bold text-slate-950 shadow-[0_10px_34px_-8px_rgb(56,189,248,0.65)] transition-all duration-300 hover:shadow-[0_14px_44px_-8px_rgb(56,189,248,0.85)]"
             >
               Talk to Our Team
-            </Button>
-            <Button
-              as={Link}
-              className={buttonStyles({
-                radius: "full",
-                variant: "bordered",
-                className:
-                  "font-semibold text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-blue-600 transition-colors",
-              })}
+              <LuArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1"
+                aria-hidden="true"
+              />
+            </NextLink>
+            <NextLink
               href="/about#contact"
+              className="inline-flex items-center justify-center rounded-full border border-slate-300 px-8 py-4 text-sm font-semibold text-slate-800 transition-all duration-300 hover:border-slate-400 hover:bg-white"
             >
               Submit Your Data Requirement
-            </Button>
+            </NextLink>
           </div>
         </MotionDiv>
       </section>
 
       {/* Disclaimer */}
-      <section className="bg-white py-10 px-8 md:px-16">
-        <p className="max-w-4xl mx-auto text-center text-sm text-gray-500">
+      <section className="border-t border-slate-200/70 py-10">
+        <p className="mx-auto max-w-4xl px-5 text-center text-sm leading-relaxed text-slate-500 sm:px-6 lg:px-10">
           All data-related activities are subject to applicable laws,
           regulations, permissions, contractual requirements, and data-use
           rights. Data availability and project feasibility are assessed on a
           project-specific basis.
         </p>
       </section>
-    </Pages>
+    </main>
   );
 };
 

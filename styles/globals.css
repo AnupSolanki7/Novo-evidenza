@@ -2,7 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-.input{
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Consistent, accessible focus treatment across the redesign. */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* One continuous hairline mesh, in two tints so it stays visible across
+     the page gradient: light lines over the navy band, slate lines over the
+     light body. Both are softened by PageMesh. */
+  .mesh-on-dark {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.075) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.075) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .mesh-on-light {
+    background-image: linear-gradient(
+        to right,
+        rgba(100, 116, 139, 0.11) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(100, 116, 139, 0.11) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Hairline blueprint overlay for technical light sections. */
+  .bg-blueprint {
+    background-image: linear-gradient(
+        to right,
+        rgba(226, 232, 240, 0.9) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(226, 232, 240, 0.9) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Dot grid overlay for deep-canvas sections. */
+  .bg-dotgrid {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  /* Radial fade mask used to blend imagery into the deep canvas. */
+  .mask-radial-fade {
+    -webkit-mask-image: radial-gradient(
+      110% 85% at 60% 40%,
+      #000 45%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      110% 85% at 60% 40%,
+      #000 45%,
+      transparent 100%
+    );
+  }
+
+  /* Fine film grain — kills banding on the deep-canvas gradients. */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  /* Soft multi-point colour mesh behind hero content. */
+  .bg-mesh {
+    background-image:
+      radial-gradient(38rem 28rem at 78% 12%, rgba(14, 165, 233, 0.22), transparent 62%),
+      radial-gradient(32rem 24rem at 12% 88%, rgba(20, 184, 166, 0.14), transparent 60%),
+      radial-gradient(26rem 20rem at 52% 42%, rgba(56, 189, 248, 0.08), transparent 65%);
+  }
+
+  /* Edge-faded horizontal scroller used by the capability marquee. */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+  }
+
+  .marquee-track {
+    animation: marquee 42s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .animated-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    transition: background-size 0.3s ease;
+  }
+
+  .animated-underline:hover,
+  .group:hover .animated-underline {
+    background-size: 100% 1px;
+  }
+}
+
+.input {
   background-color: red;
 }
 
@@ -20,4 +144,21 @@
 
 .text-shadow {
   text-shadow: 0px 0px 5px rgb(155, 188, 253);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-dot,
+  .animate-float-slow,
+  .marquee-track {
+    animation: none !important;
+  }
 }

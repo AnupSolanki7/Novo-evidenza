@@ -1,5 +1,7 @@
 import React from "react";
-import Pages from "@/components/page";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh from "@/components/site/PageMesh";
+import PageHero from "@/components/site/PageHero";
 import BannerItem from "../../assets/image/homeBg.png";
 import Footprint from "../../assets/image/footprints.gif";
 import { button as buttonStyles } from "@nextui-org/theme";
@@ -15,19 +17,13 @@ import clsx from "clsx";
 
 const Page = () => {
   return (
-    <Pages className="mt-[100px] h-max min-h-screen">
-      <div className="w-full bg-danger-500 py-8 ">
-        <h1 className="text-5xl w-full text-center font-extrabold text-white">
-          PV & Regulatory Services
-        </h1>
-      </div>
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
+      <PageHero
+        eyebrow="Pharmacovigilance"
+        title={<>PV &amp; Regulatory Services</>}
+      />
       <section
-        style={{
-          backgroundImage:
-            "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
         className="flex text-center md:text-left flex-col md:flex-row my-auto h-max mx-auto items-center justify-around gap-4"
       >
         {" "}
@@ -77,7 +73,7 @@ const Page = () => {
           </div>
         </MotionDiv>
       </section>
-      <section className="pt-8 md:pt-[100px] px-4 bg-white ">
+      <section className="pt-8 md:pt-[100px] px-4 ">
         <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
           <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
             Services We Provide
@@ -138,12 +134,6 @@ const Page = () => {
         </section>
       </section>
       <section
-        style={{
-          backgroundImage:
-            "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
         className="flex text-center md:text-left flex-col md:flex-row-reverse my-auto h-max mx-auto items-center justify-around gap-4"
       >
         {" "}
@@ -192,7 +182,7 @@ const Page = () => {
           </div>
         </MotionDiv>
       </section>
-      <section className="pt-8 md:py-[100px] px-4 bg-white ">
+      <section className="pt-8 md:py-[100px] px-4 ">
         <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
           <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
             Services We Provide
@@ -208,12 +198,6 @@ const Page = () => {
           {REGULATORY_SERVICES?.map((service) => (
             <span
             key={service}
-              style={{
-                backgroundImage: 
-                  "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
               className="px-4 flex justify-center h-[70px] w-[300px] hover:ring-2 cursor-pointer items-center text-center py-3 border-2 font-semibold text-[#333091] border-[#333091] rounded-full "
             >
               {service}
@@ -221,7 +205,7 @@ const Page = () => {
           ))}
         </div>
       </section>
-    </Pages>
+    </main>
   );
 };
 

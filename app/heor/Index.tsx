@@ -4,7 +4,9 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
 import { button as buttonStyles } from "@nextui-org/theme";
-import Pages from "@/components/page";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh from "@/components/site/PageMesh";
+import PageHero from "@/components/site/PageHero";
 import { title } from "@/components/primitives";
 import { HEORLIST } from "@/utils/Constant";
 import clsx from "clsx";
@@ -17,35 +19,13 @@ const Page = () => {
   const [selected, setSelected] = useState<any>(HEORLIST[0]);
 
   return (
-    <Pages
-      style={{
-        backgroundImage:
-          "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-      className="mt-[100px] h-max min-h-screen"
-    >
-      <div className="w-full bg-danger-500 py-8 ">
-        <h1 className="text-5xl w-full text-center font-extrabold text-white">
-          Health Economics & Outcomes Research
-        </h1>
-      </div>
-      <MotionDiv className="w-full sticky px-6 py-[50px] z-10 flex flex-col text-center justify-center items-center">
-        <p className="md:text-xl text-md text-danger-500 font-semibold mb-4">
-          HEOR SERVICES
-        </p>
-        <h2
-          className={title({
-            size: "sm",
-            className:
-              "text-[#333091]  font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
-          })}
-        >
-          Providing Innovative Solutions and Services Across All HEOR & RWE
-          Domains
-        </h2>
-      </MotionDiv>
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
+      <PageHero
+        eyebrow="HEOR Services"
+        title={<>Health Economics &amp; Outcomes Research</>}
+        lead="Providing Innovative Solutions and Services Across All HEOR & RWE Domains"
+      />
       <div className="px-6 grid sticky pt-6 py-12 grid-cols-1 sm:grid-cols-2  lg:grid-cols-5 gap-12 md:gap-6 justify-between h-max items-center max-w-[1220px] mx-auto">
         {HEORLIST.map((item, index) => (
           <MotionCard
@@ -109,7 +89,7 @@ const Page = () => {
             <Image src={selected.image} className="w-full md:w-[50%] h-max" alt="img" width={500} height={500} />
         </div>
       </MotionDiv>
-    </Pages>
+    </main>
   );
 };
 

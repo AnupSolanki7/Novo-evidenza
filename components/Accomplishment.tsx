@@ -1,49 +1,34 @@
+"use client";
+
 import React from "react";
-import MotionDiv from "./MotionDiv";
-import { title } from "./primitives";
-import { ACHEIVEMENTS, SERVICES } from "@/utils/Constant";
+
 import MotionCard from "./MotionCard";
-import clsx from "clsx";
+import MotionDiv from "./MotionDiv";
 import CardItem from "./AccItemCard";
+import { ACHEIVEMENTS } from "@/utils/Constant";
+import { SectionHeading } from "./site/ui";
 
 const Accomplishment = () => {
   return (
-    <div
-      style={{
-        backgroundImage:
-          "url(https://marksmanhealthcare.com/wp-content/uploads/2021/05/funfact-1.jpg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-      className="w-full h-max min-h-[60vh] flex flex-col justify-center items-center relative text-white"
-    >
-      <div className="absolute inset-0 bg-[#06194b] opacity-90 "></div>
-      <MotionDiv className="w-full sticky px-6 py-[50px] z-10 flex flex-col text-center justify-center items-center">
-        <p className="md:text-xl text-md text-white mb-4">ACCOMPLISHMENTS</p>
-        <h2
-          className={title({
-            size: "sm",
-            className:
-              "text-white  font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
-          })}
-        >
-          Enhancing Healthcare Outcomes Through Evidence-Based Research
-        </h2>
-      </MotionDiv>
-      <div className="px-6 grid sticky pt-6 py-12 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-12 md:gap-4 justify-between h-max items-center max-w-[1220px] mx-auto">
-        {ACHEIVEMENTS.map((item, index) => (
-          <MotionCard
-            key={item.title}
-            className={clsx(
-              index < 3 && "border-r-none md:border-r-1",
-              "h-max md:h-[80px]"
-            )}
-          >
-            <CardItem item={item} />
-          </MotionCard>
-        ))}
+    <section className="relative isolate overflow-hidden py-20 lg:py-24">
+
+      <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+        <MotionDiv initialTranslateY={40}>
+          <SectionHeading
+            eyebrow="Accomplishments"
+            title="Enhancing Healthcare Outcomes Through Evidence-Based Research"
+            />
+        </MotionDiv>
+
+        <div className="relative mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-3xl bg-white/10 shadow-[0_30px_80px_-30px_rgb(2,30,62,0.5)] sm:grid-cols-2 lg:grid-cols-4">
+          {ACHEIVEMENTS.map((item) => (
+            <MotionCard key={item.title} className="bg-[#0B132B]">
+              <CardItem item={item} />
+            </MotionCard>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

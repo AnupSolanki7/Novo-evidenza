@@ -16,6 +16,14 @@ import HeorIcon2 from "@/assets/icons/HeorIcon2";
 import HeorIcon3 from "@/assets/icons/HeorIcon3";
 import HeorIcon4 from "@/assets/icons/HeorIcon4";
 import HeorIcon5 from "@/assets/icons/HeorIcon5";
+import {
+  LuActivity,
+  LuBrainCircuit,
+  LuBuilding2,
+  LuHouse,
+  LuMegaphone,
+  LuUsers,
+} from "react-icons/lu";
 
 export const MENU_LIST = [
   {
@@ -473,5 +481,107 @@ export const REGULATORY = [
   },
   {
     title: "Reporting and Analytics",
+  },
+];
+
+/**
+ * Service routes surfaced in the header "Services" dropdown and the mobile
+ * drawer. Mirrors the live service pages — no routes beyond those that exist.
+ */
+export const SERVICE_NAV = [
+  {
+    id: "smo",
+    title: "Site Management Organization",
+    slug: "/smo",
+    navSummary:
+      "Site identification, setup, recruitment and compliance oversight.",
+    Icon: LuBuilding2,
+  },
+  {
+    id: "ctm",
+    title: "Clinical Trial Monitoring",
+    slug: "/ctm",
+    navSummary:
+      "Monitoring solutions and therapeutic-area expertise across trials.",
+    Icon: LuActivity,
+  },
+  {
+    id: "pharma-marketing-materials",
+    title: "Pharma Marketing Materials",
+    slug: "/pharma-marketing-materials",
+    navSummary:
+      "Scientific, compliant promotional and medical affairs content.",
+    Icon: LuMegaphone,
+  },
+  {
+    id: "clinical-data-ai",
+    title: "Clinical Data & AI Solutions",
+    slug: "/clinical-data-ai",
+    navSummary:
+      "Sourcing, curation, annotation and clinical validation of datasets.",
+    Icon: LuBrainCircuit,
+  },
+];
+
+/** Pages reachable from the header quick-search panel. */
+export const SITE_INDEX = [
+  {
+    slug: "/",
+    title: "Home",
+    summary: "Advancing Clinical Research with Precision",
+    keywords: ["home", "vivoclin", "clinical research", "vision", "mission"],
+    Icon: LuHouse,
+  },
+  ...SERVICE_NAV.map((service) => ({
+    slug: service.slug,
+    title: service.title,
+    summary: service.navSummary,
+    keywords: [service.id, service.title],
+    Icon: service.Icon,
+  })),
+  {
+    slug: "/about",
+    title: "About Us",
+    summary: "Leadership team, offices and enquiry form",
+    keywords: ["about", "team", "leadership", "contact", "enquiry", "rfp"],
+    Icon: LuUsers,
+  },
+];
+
+
+/**
+ * Therapeutic specialties, lifted verbatim from the Clinical Trial Monitoring
+ * page so the homepage band and the CTM page stay in sync.
+ */
+export const SPECIALTIES = [
+  {
+    name: "Gastroenterology",
+    description:
+      "Our gastroenterology team excels in researching digestive system disorders, from inflammatory bowel diseases to liver conditions. We conduct trials on innovative therapies for conditions like Crohn's disease, ulcerative colitis, and GERD, pushing the boundaries of gastrointestinal health.",
+  },
+  {
+    name: "Dermatology",
+    description:
+      "In dermatology, we're at the forefront of skin health research. Our trials cover a wide spectrum, from acne and psoriasis to cutting-edge treatments for melanoma. We're committed to advancing therapies that improve both the health and aesthetics of the skin.",
+  },
+  {
+    name: "Rheumatology",
+    description:
+      "Our rheumatology specialists focus on groundbreaking research in autoimmune and inflammatory disorders. We conduct trials for conditions like rheumatoid arthritis, lupus, and osteoarthritis, aiming to develop treatments that enhance mobility and quality of life for patients.",
+  },
+  {
+    name: "Immuno-Oncology",
+    description:
+      "In the rapidly evolving field of immuno-oncology, we're pioneering trials that harness the power of the immune system to fight cancer. Our research spans various cancer types, exploring innovative approaches like CAR-T cell therapy and checkpoint inhibitors.",
+  },
+  {
+    name: "Ophthalmology",
+    description:
+      "Our ophthalmology research is dedicated to preserving and improving vision. We conduct trials on treatments for conditions such as macular degeneration, glaucoma, and diabetic retinopathy, utilizing advanced technologies to push the boundaries of eye care.",
+  },
+  {
+    name: "Oncology",
+    description:
+      "Our oncology team is committed to revolutionizing cancer treatment. We conduct trials across various cancer types, focusing on targeted therapies, combination treatments, and novel approaches to improve patient outcomes and quality of life during treatment.",
   },
 ];

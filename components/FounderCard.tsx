@@ -3,14 +3,23 @@ import React from "react";
 
 const FounderCard = ({ item }: { item: any }) => {
   return (
-    <div className="group relative h-full p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-      <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden ring-4 ring-[#333091]/20">
-        <Image fill src={item.image} alt={item.name} className="object-cover object-top" quality={100} />
+    <article className="group flex h-full flex-col items-center rounded-2xl border border-slate-200 bg-white p-7 text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgb(2,30,62,0.14)]">
+      <div className="relative mb-5 h-32 w-32 overflow-hidden rounded-full ring-4 ring-sky-100">
+        <Image
+          fill
+          src={item.image}
+          alt={item.name}
+          sizes="128px"
+          className="object-cover object-top"
+          quality={100}
+        />
       </div>
-      <h3 className="text-2xl font-bold text-gray-800 mb-2">{item.name}</h3>
-      <h5 className="text-[#333091] text-center font-semibold text-lg mb-3">{item.role}</h5>
-      <p className="text-center text-gray-600 leading-relaxed">{item.text}</p>
-    </div>
+      <h3 className="text-xl font-bold tracking-tight text-slate-900">
+        {item.name}
+      </h3>
+      <p className="mt-1.5 text-sm font-semibold text-sky-700">{item.role}</p>
+      <p className="mt-4 text-sm leading-relaxed text-slate-600">{item.text}</p>
+    </article>
   );
 };
 

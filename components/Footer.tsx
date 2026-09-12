@@ -1,189 +1,250 @@
 "use client";
 
-import { link as linkStyles } from "@nextui-org/theme";
-import { IoLocationSharp } from "react-icons/io5";
-import { IoIosMail } from "react-icons/io";
+import NextLink from "next/link";
 import React from "react";
-import { Link } from "@nextui-org/link";
-import clsx from "clsx";
-import MotionDiv from "./MotionDiv";
+import {
+  LuLinkedin,
+  LuLock,
+  LuMail,
+  LuMapPin,
+  LuPhone,
+  LuShieldCheck,
+} from "react-icons/lu";
+
 import Logo from "@/assets/icons/VivoLogo";
-import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+import MotionDiv from "./MotionDiv";
+import { SERVICE_NAV } from "@/utils/Constant";
+
+const OFFICES = [
+  {
+    region: "India",
+    address: "iHub Ahmedabad, Gujarat 380052, India",
+    href: "https://maps.app.goo.gl/JkRRAP1Vo663W7GN6",
+  },
+  {
+    region: "Australia",
+    address: "U-41, 27-29 Mary St, Auburn, NSW 2144, Australia",
+    href: "https://maps.app.goo.gl/X8gx9HQbd3M1dJ5V9",
+  },
+];
+
+const PHONES = [
+  { label: "+61 425 342 368", href: "tel:+61425342368" },
+  { label: "+91 91379 89793", href: "tel:+919137989793" },
+  { label: "+91 99745 25632", href: "tel:+919974525632" },
+];
+
+/**
+ * Guideline frameworks the site states it works to. These are alignment
+ * statements drawn from existing page copy, not certification seals.
+ */
+const GUIDELINE_ALIGNMENT = [
+  "ICH-GCP",
+  "FDA Guidelines",
+  "Local Regulatory Guidelines",
+  "Ethics Committee Approvals",
+];
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-[1990px] mx-auto px-2 md:px-16 flex-col bg-[#004493] flex items-center justify-center py-3">
-      <MotionDiv className="px-6 mx-auto  flex justify-start w-full mt-6 ">
-        <span className="flex items-center">
-          <Logo />{" "}
-          {/* <h2 className="md:text-3xl text-xl w-full text-center font-extrabold text-white">
-            VivoClin Research
-          </h2> */}
-        </span>
-      </MotionDiv>
-      <MotionDiv className="px-6 mx-auto flex overflow-hidden flex-col md:flex-row justify-start w-full mt-6 gap-12 md:gap-0 ">
-        <div className="w-full md:w-1/3 justify-start items-start flex flex-col gap-4">
-          {/* India Address */}
-          <Link
-            href="https://maps.app.goo.gl/JkRRAP1Vo663W7GN6"
-            target="_blank"
-            className="flex justify-start gap-1 text-white font-semibold items-start"
-          >
-            <IoLocationSharp className="text-xl w-6 flex-shrink-0" />
-            <p>iHub Ahmedabad, Gujarat 380052, India</p>
-          </Link>
+    <footer className="relative bg-[#070D1E] pb-16 pt-16 text-slate-400">
+      {/* Seam: dissolves the page gradient into the footer, no hard edge. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -top-28 h-28 bg-gradient-to-b from-transparent via-[#8FA3BE]/40 to-[#070D1E]"
+      />
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+        <MotionDiv
+          initialTranslateY={40}
+          className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8"
+        >
+          {/* 1 — Brand + offices */}
+          <div className="lg:pr-6">
+            <NextLink href="/" aria-label="Vivoclin Research — home">
+              <span className="block h-[46px] w-[150px] overflow-hidden [&>svg]:h-full [&>svg]:w-full">
+                <Logo />
+              </span>
+            </NextLink>
 
-          {/* Australia Address */}
-          <Link
-            href="https://maps.app.goo.gl/X8gx9HQbd3M1dJ5V9"
-            target="_blank"
-            className="flex justify-start gap-1 text-white font-semibold items-start"
-          >
-            <IoLocationSharp className="text-xl w-6 flex-shrink-0" />
-            <p>U-41, 27-29 Mary St, Auburn, NSW 2144, Australia</p>
-          </Link>
-
-          {/* Phone */}
-          <span className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-white font-medium">
-            <span className="flex items-center gap-2">
-              <FaPhoneAlt className="text-lg text-white/80 flex-shrink-0" />
-              <Link href="tel:+61425342368" className=" transition-colors whitespace-nowrap text-white">
-                +61 425 342 368
-              </Link>
-            </span>
-
-            <span className="hidden sm:block text-white/40 ">|</span>
-
-            <Link href="tel:+919137989793" className="pl-6 md:pl-0 transition-colors whitespace-nowrap text-white">
-              +91 91379 89793
-            </Link>
-
-            <span className="hidden sm:block text-white/40">|</span>
-
-            <Link href="tel:+919974525632" className="pl-6 md:pl-0 transition-colors whitespace-nowrap text-white">
-              +91 99745 25632
-            </Link>
-          </span>
-
-          {/* Email */}
-          <span className="flex justify-start gap-1 text-white font-semibold items-center">
-            <IoIosMail className="text-xl w-6 flex-shrink-0" />
-            <Link
-              className="flex-wrap text-white"
-              href="mailto:Vivoclinresearch@gmail.com"
-            >
-              Vivoclinresearch@gmail.com
-            </Link>
-          </span>
-
-          {/* LinkedIn */}
-          <span className="w-full flex gap-4 justify-start items-center mb-8">
-            <Link
-              target="_blank"
-              href="https://www.linkedin.com/company/vivoclin-research-services/"
-              className="flex cursor-pointer justify-center items-center text-white rounded-full"
-            >
-              <FaLinkedin className="text-xl w-6 flex-shrink-0" />{" "}
-              &nbsp;linkedin
-            </Link>
-          </span>
-        </div>
-
-        <div className=" w-full md:w-1/3  justify-start items-start md:items-center flex flex-col gap-4 ">
-          <span className="flex flex-col gap-2">
-            <span className="border-b-2 text-white font-semibold ">
-              <p>Quick Links</p>
-            </span>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"/smo"}
-            >
-              SMO
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"/ctm"}
-            >
-              Clinical Trial Monitoring
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"/pharma-marketing-materials"}
-            >
-              Pharma Marketing Materials
-            </Link>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"/clinical-data-ai"}
-            >
-              Clinical Data & AI
-            </Link>
-            {/* <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"/publications"}
-            >
-              Publications
-            </Link> */}
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-              )}
-              color="foreground"
-              href={"/about"}
-            >
-              About Us
-            </Link>
-          </span>
-        </div>
-        <div className=" w-full md:w-1/3  justify-start items-start flex flex-col gap-4 ">
-          <span className="border-b-2 text-white font-semibold">
-            <p>Join Us on a Global Journey of Innovation</p>
-          </span>
-          <span className="flex justify-start gap-1 text-white font-semibold items-center">
-            <p className="">
+            <p className="mt-5 text-sm leading-relaxed text-slate-400">
               Partner with Vivoclin Research to experience a partnership rooted
-              in expertise and innovation. Together, we’ll navigate the
+              in expertise and innovation. Together, we&rsquo;ll navigate the
               intricate pharmaceutical landscape, unlocking potential and
               creating lasting impact on a global scale.
             </p>
-          </span>
-        </div>
-      </MotionDiv>
-      <div className="border-t-2 text-white w-full text-sm mt-6">
-        <div className="flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between px-6 my-4">
+
+            <ul className="mt-6 space-y-3">
+              {OFFICES.map((office) => (
+                <li key={office.region}>
+                  <a
+                    href={office.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start gap-2.5 text-sm text-slate-400 transition-colors hover:text-white"
+                  >
+                    <LuMapPin
+                      className="mt-0.5 h-4 w-4 shrink-0 text-sky-400"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      <span className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">
+                        {office.region}
+                      </span>
+                      <span className="block leading-relaxed">
+                        {office.address}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 2 — Navigation + services */}
+          <nav aria-label="Footer navigation">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              Services
+            </h2>
+            <ul className="mt-5 space-y-3">
+              {SERVICE_NAV.map((service) => (
+                <li key={service.id}>
+                  <NextLink
+                    href={service.slug}
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
+                  >
+                    {service.title}
+                  </NextLink>
+                </li>
+              ))}
+            </ul>
+
+            <h2 className="mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              Company
+            </h2>
+            <ul className="mt-5 space-y-3">
+              <li>
+                <NextLink
+                  href="/"
+                  className="text-sm text-slate-400 transition-colors hover:text-white"
+                >
+                  Home
+                </NextLink>
+              </li>
+              <li>
+                <NextLink
+                  href="/about"
+                  className="text-sm text-slate-400 transition-colors hover:text-white"
+                >
+                  About Us
+                </NextLink>
+              </li>
+              <li>
+                <NextLink
+                  href="/about#contact"
+                  className="text-sm text-slate-400 transition-colors hover:text-white"
+                >
+                  Schedule RFP / Proposal
+                </NextLink>
+              </li>
+            </ul>
+          </nav>
+
+          {/* 3 — Guideline alignment */}
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              Guideline Alignment
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-slate-400">
+              Trial conduct and documentation are delivered in adherence to the
+              following frameworks.
+            </p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {GUIDELINE_ALIGNMENT.map((item) => (
+                <li key={item}>
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-800 bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">
+                    <LuShieldCheck
+                      className="h-3.5 w-3.5 text-teal-400"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 4 — Contact */}
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              Contact
+            </h2>
+
+            <ul className="mt-5 space-y-3">
+              <li>
+                <a
+                  href="mailto:Vivoclinresearch@gmail.com"
+                  className="flex items-center gap-2.5 text-sm text-slate-400 transition-colors hover:text-white"
+                >
+                  <LuMail className="h-4 w-4 shrink-0 text-sky-400" aria-hidden="true" />
+                  Vivoclinresearch@gmail.com
+                </a>
+              </li>
+              {PHONES.map((phone) => (
+                <li key={phone.href}>
+                  <a
+                    href={phone.href}
+                    className="flex items-center gap-2.5 text-sm text-slate-400 transition-colors hover:text-white"
+                  >
+                    <LuPhone
+                      className="h-4 w-4 shrink-0 text-sky-400"
+                      aria-hidden="true"
+                    />
+                    {phone.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/vivoclin-research-services/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2.5 text-sm text-slate-400 transition-colors hover:text-white"
+                >
+                  <LuLinkedin
+                    className="h-4 w-4 shrink-0 text-sky-400"
+                    aria-hidden="true"
+                  />
+                  linkedin
+                </a>
+              </li>
+            </ul>
+
+            <NextLink
+              href="/about#contact"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition-colors hover:bg-sky-400"
+            >
+              Send Us Your Enquiry
+            </NextLink>
+          </div>
+        </MotionDiv>
+
+        {/* Baseline */}
+        <div className="mt-14 flex flex-col gap-4 border-t border-slate-800 pt-8 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
           <p>copyright Vivoclin Research 2025. All rights reserved.</p>
-          <Link
-            className={clsx(
-              linkStyles({ color: "foreground" }),
-              "data-[active=true]:text-primary text-white data-[active=true]:font-extrabold"
-            )}
-            color="foreground"
+
+          <p className="flex items-center gap-2">
+            <LuLock className="h-3.5 w-3.5 text-slate-600" aria-hidden="true" />
+            Protocol documents are handled under confidentiality agreement.
+          </p>
+
+          <a
+            href="https://anup-gamma.vercel.app/"
             target="_blank"
-            href={"https://anup-gamma.vercel.app/"}
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-slate-300"
           >
-            <p>Crafted by Anup Solanki</p>
-          </Link>
+            Crafted by Anup Solanki
+          </a>
         </div>
       </div>
     </footer>

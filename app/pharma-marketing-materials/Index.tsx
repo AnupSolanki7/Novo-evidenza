@@ -1,15 +1,22 @@
 "use client";
 
 import React from "react";
-import Pages from "@/components/page";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh from "@/components/site/PageMesh";
+import PageHero from "@/components/site/PageHero";
 import MotionDiv from "@/components/MotionDiv";
 import MotionCard from "@/components/MotionCard";
-import { Link } from "@nextui-org/link";
-import White from "../../assets/image/white.jpg";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { Button } from "@nextui-org/button";
-import BannerItem from "../../assets/image/MedicalWriting.png";
+import NextLink from "next/link";
+import BannerItem from "../../assets/image/medical-writing-review.jpg";
 import Image from "next/image";
+import { LuArrowRight } from "react-icons/lu";
+import {
+  CheckMark,
+  Eyebrow,
+  GlowCard,
+  SectionHeading,
+  StepMarker,
+} from "@/components/site/ui";
 
 const MARKETING_CONTENT = [
   {
@@ -63,173 +70,183 @@ const MARKETING_CONTENT = [
 
 const Page = () => {
   return (
-    <Pages className="mt-[100px] h-max min-h-screen bg-white">
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
       {/* Header */}
-      <div className="w-full bg-gradient-to-r from-blue-400 to-blue-500 py-12 px-8 md:px-16 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="md:text-6xl text-3xl w-full text-center font-extrabold text-white leading-tight">
-            Pharma Marketing Material Development
-          </h1>
-          <p className="text-white/80 text-center mt-4 max-w-2xl mx-auto text-lg">
-            Scientific, compliant, and insight-driven marketing content for
-            pharma and healthcare brands
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="Medical Affairs"
+        title="Pharma Marketing Material Development"
+        lead="Scientific, compliant, and insight-driven marketing content for pharma and healthcare brands"
+      />
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Why Choose Us?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We develop pharma marketing materials that balance scientific
-              credibility, regulatory compliance, and brand objectives.
-            </p>
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Why Vivoclin"
+              title="Why Choose Us?"
+              lead="We develop pharma marketing materials that balance scientific credibility, regulatory compliance, and brand objectives."
+            />
           </MotionDiv>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <MotionCard className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all">
-              <div className="flex flex-col items-center text-center">
-                <h3 className="text-xl font-bold text-slate-700 mb-2">
-                  Strong clinical pharmacy & life sciences foundation
-                </h3>
-              </div>
-            </MotionCard>
-
-            <MotionCard className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all">
-              <div className="flex flex-col items-center text-center">
-                <h3 className="text-xl font-bold text-slate-700 mb-2">
-                  Experience across multiple therapeutic areas
-                </h3>
-              </div>
-            </MotionCard>
-
-            <MotionCard className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all">
-              <div className="flex flex-col items-center text-center">
-                <h3 className="text-xl font-bold text-slate-700 mb-2">
-                  Ethical, evidence-based & compliance-focused content
-                </h3>
-              </div>
-            </MotionCard>
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden px-8 md:px-16 bg-gradient-to-br from-blue-50 to-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
-            <MotionDiv className="w-full md:w-1/2">
-              <h2 className="mb-6 text-4xl font-bold leading-tight text-blue-600 md:text-5xl">
-                Evidence-Led Pharma Brand Communication
-              </h2>
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
-                Vivoclin helps pharma brands translate complex clinical and
-                scientific data into clear, credible, and compliant marketing
-                materials that resonate with healthcare professionals.
-              </p>
-              <Button
-                as={Link}
-                className={buttonStyles({
-                  color: "primary",
-                  radius: "full",
-                  variant: "shadow",
-                  className:
-                    "font-semibold text-lg px-8 py-6 bg-blue-600 hover:bg-blue-800 transition-colors",
-                })}
-                href="/about"
-              >
-                Let&apos;s Connect
-              </Button>
-            </MotionDiv>
-
-            <MotionDiv className="w-full md:w-1/2">
-              <Image
-                src={BannerItem}
-                className="relative w-full object-contain"
-                width={600}
-                height={600}
-                alt="Pharma Marketing Material Development"
-                priority
-              />
-            </MotionDiv>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
-        <MotionDiv className="w-full px-6 mb-16 z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Our Pharma Marketing Material Services
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              We support pharma brands with scientifically sound, strategically
-              positioned marketing content across the product lifecycle.
-            </p>
-          </div>
-        </MotionDiv>
-
-        <div className="px-6 grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {MARKETING_CONTENT.map((item) => (
-            <MotionCard key={item.title} className="h-full">
-              <div className="group h-full bg-white border-2 border-gray-100 hover:border-blue-500 rounded-xl p-8 transition-all duration-300 hover:shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{item.subtitle}</p>
-                <ul className="space-y-3">
-                  {item.list.map((li, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="mr-2 mt-1 text-blue-500">•</span>
-                      <span className="text-gray-600">{li}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </MotionCard>
-          ))}
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white px-8 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <MotionDiv className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
-              Our Approach
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A structured approach balancing brand strategy, scientific
-              evidence, and compliance.
-            </p>
-          </MotionDiv>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
             {[
-              "Medical & Market Understanding",
-              "Strategic Positioning & Content Development",
-              "Medical Review & Final Delivery",
-            ].map((step, i) => (
+              "Strong clinical pharmacy & life sciences foundation",
+              "Experience across multiple therapeutic areas",
+              "Ethical, evidence-based & compliance-focused content",
+            ].map((reason, index) => (
               <MotionCard
-                key={i}
-                className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all"
+                key={reason}
+                delay={index * 0.08}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
               >
-                <div className="flex flex-col items-center text-center">
-                  <h3 className="text-xl font-bold text-slate-700 mb-4">
-                    {step}
-                  </h3>
-                </div>
+                <GlowCard>
+                  <article className="flex h-full flex-col p-8">
+                    <StepMarker index={index + 1} />
+                    <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-slate-900">
+                      {reason}
+                    </h3>
+                  </article>
+                </GlowCard>
               </MotionCard>
             ))}
           </div>
         </div>
       </section>
-    </Pages>
+
+      {/* Hero Section */}
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
+          <MotionDiv initialTranslateY={40}>
+            <Eyebrow>Brand Communication</Eyebrow>
+            <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+              Evidence-Led Pharma Brand Communication
+            </h2>
+            <span
+              aria-hidden="true"
+              className="mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+            />
+            <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Vivoclin helps pharma brands translate complex clinical and
+              scientific data into clear, credible, and compliant marketing
+              materials that resonate with healthcare professionals.
+            </p>
+            <NextLink
+              href="/about"
+              className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+            >
+              Let&apos;s Connect
+              <LuArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1"
+                aria-hidden="true"
+              />
+            </NextLink>
+          </MotionDiv>
+
+          <MotionCard>
+            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-[0_24px_60px_-22px_rgb(2,30,62,0.3)]">
+              <Image
+                src={BannerItem}
+                alt="Scientific content being reviewed and annotated"
+                quality={82}
+                placeholder="blur"
+                sizes="(max-width: 1024px) 92vw, 620px"
+                className="aspect-[5/4] h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
+                priority
+              />
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent"
+              />
+            </figure>
+          </MotionCard>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Deliverables"
+              title="Our Pharma Marketing Material Services"
+              lead="We support pharma brands with scientifically sound, strategically positioned marketing content across the product lifecycle."
+            />
+          </MotionDiv>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            {MARKETING_CONTENT.map((item, index) => (
+              <MotionCard
+                key={item.title}
+                delay={index * 0.07}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-7 sm:p-8">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                        {item.title}
+                      </h3>
+                      <StepMarker index={index + 1} />
+                    </div>
+                    <p className="mt-4 text-[15px] leading-relaxed text-slate-600">
+                      {item.subtitle}
+                    </p>
+                    <ul className="mt-6 space-y-3">
+                      {item.list.map((li) => (
+                        <li key={li} className="flex items-start gap-2.5">
+                          <CheckMark className="mt-px" />
+                          <span className="text-sm leading-relaxed text-slate-700">
+                            {li}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </GlowCard>
+              </MotionCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="relative isolate overflow-hidden py-20 lg:py-28">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Process"
+              title="Our Approach"
+              lead="A structured approach balancing brand strategy, scientific evidence, and compliance."
+            />
+          </MotionDiv>
+
+          <ol className="mt-14 grid gap-5 md:grid-cols-3">
+            {[
+              "Medical & Market Understanding",
+              "Strategic Positioning & Content Development",
+              "Medical Review & Final Delivery",
+            ].map((step, index) => (
+              <MotionCard
+                key={step}
+                delay={index * 0.08}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <li className="group/glow relative h-full list-none rounded-2xl bg-gradient-to-b from-slate-200 to-slate-100 p-px transition-all duration-500 hover:from-sky-300 hover:to-teal-200 hover:shadow-[0_20px_60px_-15px_rgb(2,132,199,0.25)]">
+                  <div className="relative flex h-full flex-col rounded-[calc(1rem-1px)] bg-white p-8">
+                    <StepMarker index={index + 1} />
+                    <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-slate-900">
+                      {step}
+                    </h3>
+                  </div>
+                </li>
+              </MotionCard>
+            ))}
+          </ol>
+        </div>
+      </section>
+    </main>
   );
 };
 

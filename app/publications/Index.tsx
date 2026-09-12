@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import Pages from "@/components/page";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh from "@/components/site/PageMesh";
+import PageHero from "@/components/site/PageHero";
 import MotionDiv from "@/components/MotionDiv";
 import { title } from "@/components/primitives";
 import clsx from "clsx";
@@ -12,33 +14,14 @@ import { FaFilePdf } from "react-icons/fa";
 
 const Page = () => {
   return (
-    <Pages
-      style={{
-        backgroundImage:
-          "url(https://uploads-ssl.webflow.com/60656386cb77057bb09f78eb/606c5ca05beae50a3e02e799_Fill_1_Copy_3_%2B_Fill_1_Copy_Mask.jpg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-      className="mt-[100px] h-max min-h-screen"
-    >
-      <div className="w-full bg-danger-500 py-8 ">
-        <h1 className="text-5xl w-full text-center font-extrabold text-white">
-          PUBLICATIONS
-        </h1>
-      </div>
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
+      <PageHero
+        eyebrow="Publications"
+        title="Research Publications"
+        lead="Research Publications in which our contribution was acknowledged"
+      />
       <MotionDiv className="w-full sticky px-6 py-[50px] z-10 flex flex-col text-center justify-center items-center">
-        <p className="md:text-xl text-md text-danger-500 font-semibold mb-4">
-          Publications
-        </p>
-        <h2
-          className={title({
-            size: "sm",
-            className:
-              "text-[#333091]  font-bold text-center text-2xl leading-[28px] md:!text-3xl md:!leading-[35px] ",
-          })}
-        >
-          Research Publications in which our contribution was acknowledged
-        </h2>
         <p className="md:text-lg max-w-[70%] text-md text-gray-500 font-semibold my-4">
           The highly experienced medico-writing team have developed procedures
           and templates to ensure the modules of CTD’s are detail-oriented and
@@ -72,7 +55,7 @@ const Page = () => {
           </MotionCard>
         ))}
       </div>
-    </Pages>
+    </main>
   );
 };
 

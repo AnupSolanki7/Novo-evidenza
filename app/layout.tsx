@@ -5,7 +5,7 @@ import Script from "next/script";
 
 import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
-import { fontPoppins } from "@/config/fonts";
+import { fontJakarta } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 
@@ -20,8 +20,9 @@ export const metadata: Metadata = {
     title: "VivoClin Research",
     description:
       "VivoClin Research is Global Solutions and Services Provider Supporting, Large, Mid & Small global Life Sciences companies",
-    images:
-      "https://novo-evidenza.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLogo.64d38d4b.png&w=96&q=75",
+    // Stable public asset — the previous value pointed at a hashed build
+    // artefact (Logo.64d38d4b.png) that no longer exists, so previews 404'd.
+    images: "https://novo-evidenza.vercel.app/image_novo_evidenza-removebg-preview.png",
   },
 };
 
@@ -54,19 +55,15 @@ export default function RootLayout({
             gtag('config', 'G-JSJTN6N91K');
           `}
         </Script>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        />
       </head>
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontPoppins.className
+          "min-h-screen bg-[#F4F8FC] font-sans antialiased",
+          fontJakarta.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col">
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+          <div className="relative flex min-h-screen flex-col">
             <Navbar />
             <Toaster />
             {children}

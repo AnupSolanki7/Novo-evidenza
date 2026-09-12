@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from "next";
-import Page from './index';
+import Page from './Index';
 
 export const metadata: Metadata = {
   title: "Site Management Organization (SMO) | Vivoclin Research",

@@ -1,190 +1,212 @@
+"use client";
+
+import NextLink from "next/link";
 import React from "react";
-import Pages from "@/components/page";
-import { Button } from "@nextui-org/button";
 import {
-  FaBandAid,
-  FaBone,
-  FaChartBar,
-  FaClipboardCheck,
-  FaDatabase,
-  FaDna,
-  FaEye,
-  FaMicroscope,
-  FaStethoscope,
-  FaWifi,
-} from "react-icons/fa";
-import { GiDrop } from "react-icons/gi";
-import Link from "next/link";
+  LuArrowRight,
+  LuChartColumn,
+  LuClipboardCheck,
+  LuDatabase,
+  LuMicroscope,
+  LuWifi,
+} from "react-icons/lu";
 
-const index = () => {
-  const services = [
-    {
-      title: "On-Site Monitoring",
-      description:
-        "Ensuring protocol compliance at investigational sites, verifying source data accuracy, and assessing site performance.",
-      icon: <FaMicroscope className="h-12 w-12 text-blue-600 mb-4" />,
-    },
-    {
-      title: "Remote Monitoring",
-      description:
-        "Using advanced tools to review data and documentation remotely, with real-time risk assessment and issue identification.",
-      icon: <FaWifi className="h-12 w-12 text-blue-600 mb-4" />,
-    },
-    {
-      title: "Risk-Based Monitoring (RBM)",
-      description:
-        "Focusing resources on critical data and processes, adopting a data-driven approach to identify and mitigate risks.",
-      icon: <FaChartBar className="h-12 w-12 text-blue-600 mb-4" />,
-    },
-    {
-      title: "Compliance Audits",
-      description:
-        "Ensuring adherence to ICH-GCP, regulatory guidelines, and study protocols. Preparing sites for regulatory inspections.",
-      icon: <FaClipboardCheck className="h-12 w-12 text-blue-600 mb-4" />,
-    },
-    {
-      title: "Data Monitoring and Quality Assurance",
-      description:
-        "Identifying and resolving data discrepancies, overseeing safety reporting and adverse event documentation.",
-      icon: <FaDatabase className="h-12 w-12 text-blue-600 mb-4" />,
-    },
-  ];
+import MotionCard from "@/components/MotionCard";
+import MotionDiv from "@/components/MotionDiv";
+import { pageBackdrop } from "@/components/site/PageBackdrop";
+import PageMesh from "@/components/site/PageMesh";
+import PageHero from "@/components/site/PageHero";
+import {
+  GlowCard,
+  IconBadge,
+  SectionHeading,
+  StepMarker,
+} from "@/components/site/ui";
+import { SPECIALTIES } from "@/utils/Constant";
 
-  const specialties = [
-    {
-      name: "Gastroenterology",
-      icon: <FaStethoscope className="w-8 h-8 text-blue-600" />,
-      description:
-        "Our gastroenterology team excels in researching digestive system disorders, from inflammatory bowel diseases to liver conditions. We conduct trials on innovative therapies for conditions like Crohn's disease, ulcerative colitis, and GERD, pushing the boundaries of gastrointestinal health.",
-    },
-    {
-      name: "Dermatology",
-      icon: <GiDrop className="w-8 h-8 text-blue-600" />,
-      description:
-        "In dermatology, we're at the forefront of skin health research. Our trials cover a wide spectrum, from acne and psoriasis to cutting-edge treatments for melanoma. We're committed to advancing therapies that improve both the health and aesthetics of the skin.",
-    },
-    {
-      name: "Rheumatology",
-      icon: <FaBone className="w-8 h-8 text-blue-600" />,
-      description:
-        "Our rheumatology specialists focus on groundbreaking research in autoimmune and inflammatory disorders. We conduct trials for conditions like rheumatoid arthritis, lupus, and osteoarthritis, aiming to develop treatments that enhance mobility and quality of life for patients.",
-    },
-    {
-      name: "Immuno-Oncology",
-      icon: <FaDna className="w-8 h-8 text-blue-600" />,
-      description:
-        "In the rapidly evolving field of immuno-oncology, we're pioneering trials that harness the power of the immune system to fight cancer. Our research spans various cancer types, exploring innovative approaches like CAR-T cell therapy and checkpoint inhibitors.",
-    },
-    {
-      name: "Ophthalmology",
-      icon: <FaEye className="w-8 h-8 text-blue-600" />,
-      description:
-        "Our ophthalmology research is dedicated to preserving and improving vision. We conduct trials on treatments for conditions such as macular degeneration, glaucoma, and diabetic retinopathy, utilizing advanced technologies to push the boundaries of eye care.",
-    },
-    {
-      name: "Oncology",
-      icon: <FaBandAid className="w-8 h-8 text-blue-600" />,
-      description:
-        "Our oncology team is committed to revolutionizing cancer treatment. We conduct trials across various cancer types, focusing on targeted therapies, combination treatments, and novel approaches to improve patient outcomes and quality of life during treatment.",
-    },
-  ];
+const services = [
+  {
+    title: "On-Site Monitoring",
+    description:
+      "Ensuring protocol compliance at investigational sites, verifying source data accuracy, and assessing site performance.",
+    icon: LuMicroscope,
+  },
+  {
+    title: "Remote Monitoring",
+    description:
+      "Using advanced tools to review data and documentation remotely, with real-time risk assessment and issue identification.",
+    icon: LuWifi,
+  },
+  {
+    title: "Risk-Based Monitoring (RBM)",
+    description:
+      "Focusing resources on critical data and processes, adopting a data-driven approach to identify and mitigate risks.",
+    icon: LuChartColumn,
+  },
+  {
+    title: "Compliance Audits",
+    description:
+      "Ensuring adherence to ICH-GCP, regulatory guidelines, and study protocols. Preparing sites for regulatory inspections.",
+    icon: LuClipboardCheck,
+  },
+  {
+    title: "Data Monitoring and Quality Assurance",
+    description:
+      "Identifying and resolving data discrepancies, overseeing safety reporting and adverse event documentation.",
+    icon: LuDatabase,
+  },
+];
 
+const Index = () => {
   return (
-    <Pages className="mt-[100px] h-max min-h-screen bg-white">
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Your Partner in Clinical Excellence
-          </h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+    <main className="relative isolate" style={pageBackdrop()}>
+      <PageMesh />
+      <PageHero
+        eyebrow="Clinical Trial Monitoring"
+        title="Your Partner in Clinical Excellence"
+        lead={
+          <>
             Advanced monitoring solutions and specialized expertise in diverse
             therapeutic areas to support your clinical trials.
-          </p>
-          <div className="space-x-4">
-            <Link
-              href={"/about"}
-              className="bg-white px-6 py-3 rounded-xl font-semibold text-blue-600 hover:bg-blue-50"
-            >
-              Learn More About Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section id="services" className="py-20 bg-white">
-        <div className="container mx-auto px-8 md:px-16">
-          <h2 className="text-3xl font-bold text-black text-center mb-12">
-            Comprehensive Monitoring Solutions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`bg-gray-50 p-6 rounded-lg shadow-md transition-transform hover:scale-105 ${
-                  index < 2 ? "lg:col-span-3" : "lg:col-span-2"
-                } ${index < 2 ? "transform hover:-translate-y-2" : ""}`}
+            <span className="mt-8 block">
+              <NextLink
+                href="/about"
+                className="group/cta inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_30px_-6px_rgb(56,189,248,0.6)] transition-all duration-300 hover:shadow-[0_12px_40px_-6px_rgb(56,189,248,0.8)]"
               >
-                <div className={`${index < 2 ? "transform scale-10" : ""}`}>
-                  {service.icon}
-                </div>
-                <h3
-                  className={`text-xl font-semibold mb-2 ${
-                    index < 2 ? "text-2xl text-blue-600" : "text-2xl text-blue-600"
-                  }`}
-                >
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
+                Learn More About Our Services
+                <LuArrowRight
+                  className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1"
+                  aria-hidden="true"
+                />
+              </NextLink>
+            </span>
+          </>
+        }
+      />
+
+      {/* Monitoring solutions */}
+      <section id="services" className="relative isolate py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Capabilities"
+              title="Comprehensive Monitoring Solutions"
+            />
+          </MotionDiv>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-6">
+            {services.map((service, index) => (
+              <MotionCard
+                key={service.title}
+                delay={index * 0.06}
+                className={`h-full transition-transform duration-500 hover:-translate-y-1.5 ${
+                  index < 2 ? "lg:col-span-3" : "lg:col-span-2"
+                }`}
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-7 sm:p-8">
+                    <div className="flex items-start justify-between">
+                      <IconBadge icon={service.icon} />
+                      <StepMarker index={index + 1} />
+                    </div>
+                    <h3
+                      className={`mt-6 font-bold tracking-tight text-slate-900 ${
+                        index < 2 ? "text-2xl" : "text-xl"
+                      }`}
+                    >
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                      {service.description}
+                    </p>
+                  </article>
+                </GlowCard>
+              </MotionCard>
             ))}
           </div>
         </div>
       </section>
-      <section id="specialties" className="py-20 bg-gray-50 px-8 md:px-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6 text-black">
-            Therapeutic Expertise Across Diverse Areas
+
+      {/* Therapeutic specialties */}
+      <section
+        id="specialties"
+        className="relative isolate overflow-hidden py-20 lg:py-28"
+      >
+
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
+          <MotionDiv initialTranslateY={32}>
+            <SectionHeading
+              eyebrow="Therapeutic Expertise"
+              title="Therapeutic Expertise Across Diverse Areas"
+              lead="Our investigational sites specialize in a wide range of therapeutic areas, providing comprehensive support for clinical trials. Each specialty is backed by a team of experienced researchers and state-of-the-art facilities, ensuring high-quality, reliable results."
+            />
+          </MotionDiv>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {SPECIALTIES.map((specialty, index) => (
+              <MotionCard
+                key={specialty.name}
+                delay={index * 0.06}
+                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              >
+                <GlowCard>
+                  <article className="flex h-full flex-col p-7">
+                    <div className="flex items-center gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="h-8 w-1 rounded-full bg-gradient-to-b from-sky-500 to-teal-400"
+                      />
+                      <h3 className="text-lg font-bold tracking-tight text-slate-900">
+                        {specialty.name}
+                      </h3>
+                    </div>
+                    <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                      {specialty.description}
+                    </p>
+                  </article>
+                </GlowCard>
+              </MotionCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section
+        id="contact"
+        className="relative isolate overflow-hidden py-20 lg:py-28"
+      >
+
+        <MotionDiv
+          initialTranslateY={32}
+          className="relative mx-auto max-w-3xl px-5 text-center sm:px-6 lg:px-10"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+            Let&apos;s Work Together
           </h2>
-          <p className="text-center mb-12 max-w-3xl mx-auto text-black">
-            Our investigational sites specialize in a wide range of therapeutic
-            areas, providing comprehensive support for clinical trials. Each
-            specialty is backed by a team of experienced researchers and
-            state-of-the-art facilities, ensuring high-quality, reliable
-            results.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {specialties.map((specialty, index) => (
-              <div key={index} className="bg-white shadow-md p-4 rounded-xl">
-                <div className="flex gap-3 justify-start items-center">
-                  {specialty.icon}
-                  <h3 className="text-xl text-black font-semibold">{specialty.name}</h3>
-                </div>
-                <div className="mt-4" >
-                  <p className="text-sm text-black">{specialty.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section id="contact" className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <span
+            aria-hidden="true"
+            className="mx-auto mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+          />
+          <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
             Ready to elevate your clinical trials? Contact us today to learn how
             our monitoring services and therapeutic expertise can help.
           </p>
-          <div className="space-x-4">
-            <Link
-              href={"/about"}
-              className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-xl font-semibold"
-            >
-              Contact Us Now
-            </Link>
-          </div>
-        </div>
+
+          <NextLink
+            href="/about#contact"
+            className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 px-8 py-4 text-sm font-bold text-slate-950 shadow-[0_10px_34px_-8px_rgb(56,189,248,0.65)] transition-all duration-300 hover:shadow-[0_14px_44px_-8px_rgb(56,189,248,0.85)]"
+          >
+            Contact Us Now
+            <LuArrowRight
+              className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1"
+              aria-hidden="true"
+            />
+          </NextLink>
+        </MotionDiv>
       </section>
-    </Pages>
+    </main>
   );
 };
 
-export default index;
+export default Index;
