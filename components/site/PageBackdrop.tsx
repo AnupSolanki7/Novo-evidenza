@@ -1,18 +1,15 @@
 /**
- * The page-wide background gradient.
+ * The page-wide background.
  *
- * This covers the light body of the page only. The navy at the top is painted
- * by the hero itself (see HeroSection / PageHero), which then hands over via a
- * fade block placed directly after its content.
- *
- * That split is deliberate: an earlier version anchored the navy band in pixels
- * via a `heroHeight` prop, which meant the hand-over drifted whenever the hero
- * rendered taller or shorter than the guess — different copy lengths, and every
- * breakpoint. Letting the hero own its own background removes the guess: the
- * fade is always exactly at the end of the hero, at any size.
+ * Deliberately almost flat: a near-white canvas with only a faint cool tint at
+ * the top and bottom, so sections separate by whitespace and rule weight rather
+ * than by colour blocks. The navy at the top of a page is painted by the hero
+ * itself (see HeroSection / PageHero), which hands over via a fade block placed
+ * directly after its content — that keeps the hand-over correct at every
+ * breakpoint without anchoring anything in pixels.
  */
 export const pageGradient = () =>
-  "linear-gradient(to bottom, #EEF3F9 0%, #F8FAFC 20%, #FFFFFF 58%, #F4F8FC 100%)";
+  "linear-gradient(to bottom, #F7F9FB 0%, #FFFFFF 26%, #FFFFFF 74%, #F7F9FB 100%)";
 
 /** The style object a page's <main> spreads onto itself. */
 export const pageBackdrop = () => ({

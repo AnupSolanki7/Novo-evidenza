@@ -6,7 +6,7 @@ import { LuArrowRight } from "react-icons/lu";
 
 import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
-import SiteImage from "../../assets/image/smo-investigational-site.jpg";
+import SiteImage from "../../assets/image/smo-site-collaboration.jpg";
 import { CheckMark, Eyebrow, StatusDot } from "./ui";
 
 const SMO_SERVICES = [
@@ -49,10 +49,10 @@ const SmoFeatureSplit = () => {
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
         {/* Visual side */}
         <MotionCard className="order-2 lg:order-1">
-          <figure className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_20px_60px_-20px_rgb(2,30,62,0.25)]">
+          <figure className="group relative overflow-hidden rounded-md border border-brand-line bg-white shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
             <Image
               src={SiteImage}
-              alt="Equipped investigational site procedure room"
+              alt="Clinical research staff reviewing a case together at an investigational site"
               quality={82}
               placeholder="blur"
               sizes="(max-width: 1024px) 92vw, 620px"
@@ -73,7 +73,7 @@ const SmoFeatureSplit = () => {
               <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500">
                 Documentation
               </span>
-              <span className="block text-sm font-bold text-slate-900">
+              <span className="block text-sm font-bold text-brand-ink">
                 ICH-GCP Aligned
               </span>
             </div>
@@ -83,10 +83,10 @@ const SmoFeatureSplit = () => {
         {/* Content side */}
         <MotionDiv initialTranslateY={50} className="order-1 lg:order-2">
           <Eyebrow>Site Operations</Eyebrow>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+          <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Site Management Organization
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mt-5 text-base leading-relaxed text-brand-body sm:text-lg">
             Comprehensive clinical trial management solutions ensuring quality,
             compliance, and efficiency
           </p>
@@ -106,10 +106,10 @@ const SmoFeatureSplit = () => {
               <li key={service.title} className="flex items-start gap-3">
                 <CheckMark className="mt-0.5" />
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-900">
+                  <h3 className="text-sm font-semibold text-brand-ink">
                     {service.title}
                   </h3>
-                  <p className="mt-1 text-[13px] leading-relaxed text-slate-600">
+                  <p className="mt-1 text-[13px] leading-relaxed text-brand-body">
                     {service.description}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ const SmoFeatureSplit = () => {
           </ul>
 
           {/* Dark metric strip */}
-          <dl className="relative mt-9 grid grid-cols-3 overflow-hidden rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#0B132B] shadow-[0_16px_40px_-16px_rgb(2,30,62,0.5)]">
+          <dl className="relative mt-9 grid grid-cols-3 overflow-hidden rounded-md bg-[#0F172A] shadow-none">
             <span
               aria-hidden="true"
               className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-sky-400/10 blur-2xl"
@@ -134,7 +134,7 @@ const SmoFeatureSplit = () => {
               >
                 <dt className="sr-only">{metric.label}</dt>
                 <dd>
-                  <span className="block bg-gradient-to-br from-white to-slate-400 bg-clip-text text-xl font-bold tracking-tight text-transparent sm:text-2xl">
+                  <span className="block text-xl font-semibold tracking-tight text-white sm:text-2xl">
                     {metric.value}
                   </span>
                   <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.1em] text-slate-400 sm:text-[11px]">
@@ -147,7 +147,7 @@ const SmoFeatureSplit = () => {
 
           <NextLink
             href="/smo"
-            className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+            className="group/cta mt-9 inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-7 py-3.5 text-sm font-bold "
           >
             Discover Our SMO Services
             <LuArrowRight

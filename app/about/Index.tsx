@@ -7,7 +7,6 @@ import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
 import FounderCard from "@/components/FounderCard";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh, { HeroMesh, HeroFade } from "@/components/site/PageMesh";
 import RFPConfigurator from "@/components/site/RFPConfigurator";
 import { Eyebrow, IconBadge, SectionHeading } from "@/components/site/ui";
 import { FOUNDERS } from "@/utils/Constant";
@@ -61,22 +60,16 @@ const PHONES = [
 export default function AboutPage() {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       {/* Who We Are */}
       <section className="relative bg-[#0B132B]">
         <div className="relative overflow-hidden px-5 pb-20 pt-[128px] sm:px-6 lg:px-10 lg:pb-24 lg:pt-[168px]">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-40 -top-48 h-[560px] w-[560px] rounded-full bg-sky-500/20 blur-[130px]"
-          />
-          <HeroMesh />
 
           <MotionDiv
             initialTranslateY={40}
             className="relative mx-auto max-w-4xl text-center"
           >
             <Eyebrow tone="dark">Who We Are</Eyebrow>
-            <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-[3.25rem] lg:leading-[1.1]">
+            <h1 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-[3.25rem] lg:leading-[1.1]">
               About VivoClin Research Services
             </h1>
             <p className="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
@@ -94,8 +87,6 @@ export default function AboutPage() {
             </p>
           </MotionDiv>
         </div>
-
-        <HeroFade />
       </section>
 
       {/* What we do */}
@@ -104,12 +95,12 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {SERVICES.map((service) => (
               <MotionCard key={service.title} className="h-full">
-                <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-[0_18px_50px_rgb(2,30,62,0.10)]">
+                <article className="flex h-full flex-col rounded-md border border-brand-line bg-white p-8 shadow-[0_1px_3px_rgb(16,24,40,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-accent/40 hover:shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
                   <IconBadge icon={service.icon} />
-                  <h2 className="mt-6 text-xl font-bold tracking-tight text-slate-900">
+                  <h2 className="mt-6 text-xl font-semibold tracking-tight text-brand-ink">
                     {service.title}
                   </h2>
-                  <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                  <p className="mt-3 text-[15px] leading-relaxed text-brand-body">
                     {service.description}
                   </p>
                 </article>
@@ -162,9 +153,9 @@ export default function AboutPage() {
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             <MotionCard className="h-full">
-              <div className="h-full rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+              <div className="h-full rounded-md border border-brand-line bg-white p-7 shadow-[0_1px_3px_rgb(16,24,40,0.04)]">
                 <IconBadge icon={LuMapPin} />
-                <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                <h3 className="mt-6 text-lg font-semibold tracking-tight text-brand-ink">
                   Address
                 </h3>
                 <ul className="mt-4 space-y-3">
@@ -174,7 +165,7 @@ export default function AboutPage() {
                         href={office.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block rounded-xl border border-slate-100 bg-slate-50/60 p-3.5 transition-colors hover:border-sky-200 hover:bg-sky-50/50"
+                        className="block rounded-xl border border-brand-line bg-slate-50/60 p-3.5 transition-colors hover:border-brand-accent/40 hover:bg-brand-accentSoft/50"
                       >
                         <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500">
                           {office.region}
@@ -192,9 +183,9 @@ export default function AboutPage() {
             </MotionCard>
 
             <MotionCard className="h-full">
-              <div className="h-full rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+              <div className="h-full rounded-md border border-brand-line bg-white p-7 shadow-[0_1px_3px_rgb(16,24,40,0.04)]">
                 <IconBadge icon={LuPhone} />
-                <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                <h3 className="mt-6 text-lg font-semibold tracking-tight text-brand-ink">
                   Contact
                 </h3>
                 <ul className="mt-4 space-y-2.5">
@@ -202,7 +193,7 @@ export default function AboutPage() {
                     <li key={email}>
                       <a
                         href={`mailto:${email}`}
-                        className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-sky-700"
+                        className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-brand-accent"
                       >
                         <LuMail
                           className="h-4 w-4 shrink-0 text-sky-500"
@@ -216,7 +207,7 @@ export default function AboutPage() {
                     <li key={phone.href}>
                       <a
                         href={phone.href}
-                        className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-sky-700"
+                        className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-brand-accent"
                       >
                         <LuPhone
                           className="h-4 w-4 shrink-0 text-sky-500"
@@ -231,7 +222,7 @@ export default function AboutPage() {
                       href="https://www.linkedin.com/company/vivoclin-research-services/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-sky-700"
+                      className="flex items-center gap-2.5 text-sm text-slate-700 transition-colors hover:text-brand-accent"
                     >
                       <LuLinkedin
                         className="h-4 w-4 shrink-0 text-sky-500"
@@ -245,7 +236,7 @@ export default function AboutPage() {
             </MotionCard>
 
             <MotionCard className="h-full">
-              <div className="h-full overflow-hidden rounded-2xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+              <div className="h-full overflow-hidden rounded-md border border-brand-line shadow-[0_1px_3px_rgb(16,24,40,0.04)]">
                 <iframe
                   title="Vivoclin Research — iHub Ahmedabad office"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.7773937822594!2d72.54143817509214!3d23.03194427916724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8521db921fad%3A0x8f192b2f852e333c!2siHub%20Gujarat!5e0!3m2!1sen!2sin!4v1739982132152!5m2!1sen!2sin"

@@ -580,8 +580,8 @@ export const SPECIALTIES = [
       "Our ophthalmology research is dedicated to preserving and improving vision. We conduct trials on treatments for conditions such as macular degeneration, glaucoma, and diabetic retinopathy, utilizing advanced technologies to push the boundaries of eye care.",
   },
   {
-    name: "Oncology",
+    name: "Endocrinology",
     description:
-      "Our oncology team is committed to revolutionizing cancer treatment. We conduct trials across various cancer types, focusing on targeted therapies, combination treatments, and novel approaches to improve patient outcomes and quality of life during treatment.",
+      "Our endocrinology team is dedicated to advancing the management of hormonal and metabolic disorders. We conduct trials across areas such as diabetes, thyroid disease, and metabolic conditions, focusing on therapies that improve long-term disease control and quality of life for patients.",
   },
 ];

@@ -14,7 +14,6 @@ import {
 import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import {
   GlowCard,
@@ -60,7 +59,6 @@ const services = [
 const Index = () => {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       <PageHero
         eyebrow="Clinical Trial Monitoring"
         title="Your Partner in Clinical Excellence"
@@ -71,7 +69,7 @@ const Index = () => {
             <span className="mt-8 block">
               <NextLink
                 href="/about"
-                className="group/cta inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_30px_-6px_rgb(56,189,248,0.6)] transition-all duration-300 hover:shadow-[0_12px_40px_-6px_rgb(56,189,248,0.8)]"
+                className="group/cta inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-7 py-3.5 text-sm font-bold "
               >
                 Learn More About Our Services
                 <LuArrowRight
@@ -99,7 +97,7 @@ const Index = () => {
               <MotionCard
                 key={service.title}
                 delay={index * 0.06}
-                className={`h-full transition-transform duration-500 hover:-translate-y-1.5 ${
+                className={`h-full transition-transform duration-500 hover:-translate-y-0.5 ${
                   index < 2 ? "lg:col-span-3" : "lg:col-span-2"
                 }`}
               >
@@ -110,13 +108,13 @@ const Index = () => {
                       <StepMarker index={index + 1} />
                     </div>
                     <h3
-                      className={`mt-6 font-bold tracking-tight text-slate-900 ${
+                      className={`mt-6 font-semibold tracking-tight text-brand-ink ${
                         index < 2 ? "text-2xl" : "text-xl"
                       }`}
                     >
                       {service.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-3 text-[15px] leading-relaxed text-brand-body">
                       {service.description}
                     </p>
                   </article>
@@ -147,20 +145,20 @@ const Index = () => {
               <MotionCard
                 key={specialty.name}
                 delay={index * 0.06}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-7">
                     <div className="flex items-center gap-3">
                       <span
                         aria-hidden="true"
-                        className="h-8 w-1 rounded-full bg-gradient-to-b from-sky-500 to-teal-400"
+                        className="h-8 w-1 rounded-full bg-brand-accent"
                       />
-                      <h3 className="text-lg font-bold tracking-tight text-slate-900">
+                      <h3 className="text-lg font-semibold tracking-tight text-brand-ink">
                         {specialty.name}
                       </h3>
                     </div>
-                    <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                    <p className="mt-4 text-sm leading-relaxed text-brand-body">
                       {specialty.description}
                     </p>
                   </article>
@@ -181,21 +179,21 @@ const Index = () => {
           initialTranslateY={32}
           className="relative mx-auto max-w-3xl px-5 text-center sm:px-6 lg:px-10"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+          <h2 className="text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Let&apos;s Work Together
           </h2>
           <span
             aria-hidden="true"
-            className="mx-auto mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+            className="mx-auto mt-6 block h-px w-16 bg-brand-accent"
           />
-          <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-brand-body sm:text-lg">
             Ready to elevate your clinical trials? Contact us today to learn how
             our monitoring services and therapeutic expertise can help.
           </p>
 
           <NextLink
             href="/about#contact"
-            className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 px-8 py-4 text-sm font-bold text-slate-950 shadow-[0_10px_34px_-8px_rgb(56,189,248,0.65)] transition-all duration-300 hover:shadow-[0_14px_44px_-8px_rgb(56,189,248,0.85)]"
+            className="group/cta mt-9 inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-8 py-4 text-sm font-bold "
           >
             Contact Us Now
             <LuArrowRight

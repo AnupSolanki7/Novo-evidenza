@@ -9,7 +9,7 @@ recorded here so the origin of every asset is traceable.
 | File | Used on | Unsplash photo ID |
 | --- | --- | --- |
 | `hero-dna-research.jpg` | Homepage hero | `photo-1628595351029-c2bf17511435` |
-| `smo-investigational-site.jpg` | Homepage — Site Management Organization split | `photo-1516549655169-df83a0774514` |
+| `smo-site-collaboration.jpg` | Homepage — Site Management Organization split | `photo-1666214280557-f1b5022eb634` |
 | `smo-clinical-facility.jpg` | `/smo` — intro split | `photo-1631248055158-edec7a3c072b` |
 | `smo-laboratory-analysis.jpg` | `/smo` — Our Core Expertise | `photo-1532187863486-abf9dbad1b69` |
 | `medical-writing-review.jpg` | `/pharma-marketing-materials` — intro split | `photo-1454165804606-c3d57bc86b40` |
@@ -26,6 +26,15 @@ Candidates were rejected where they would have misrepresented Vivoclin:
   does not exist.
 - A laboratory photo was discarded for prominent third-party vendor branding on
   the consumables.
+- A hospital exterior was discarded because the building signage read "Mayo
+  Clinic" — again, an affiliation that does not exist.
+
+The Site Management Organization split originally used an empty operating
+theatre. It was replaced because a surgical suite with nobody in it did not
+match a section about coordinated site operations, and sat oddly beside the
+"Investigator Active" tag overlaid on it. Note that the replacement is from the
+same shoot as `clinical-data-imaging.jpg`, so the two should not be placed on
+the same screen.
 
 These are illustrative stock photographs of clinical and laboratory settings.
 They are not photographs of Vivoclin facilities, staff, or studies, and should

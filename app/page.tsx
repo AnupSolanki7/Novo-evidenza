@@ -1,7 +1,6 @@
 import Accomplishment from "@/components/Accomplishment";
 import HeroSection from "@/components/site/HeroSection";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import MedicalAffairsSplit from "@/components/site/MedicalAffairsSplit";
 import RFPConfigurator from "@/components/site/RFPConfigurator";
 import ServicesBento from "@/components/site/ServicesBento";
@@ -13,7 +12,6 @@ import VisionSection from "@/components/site/VisionSection";
 export default function Home() {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       <HeroSection />
       <ValuePillars />
       <ServicesBento />

@@ -25,7 +25,7 @@ const CardItem = ({ item }: { item: any }) => {
         <item.icon />
       </span>
       <div>
-        <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <p className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {visible && <CountUp end={item.number} />}+
         </p>
         <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400 sm:text-xs">

@@ -16,48 +16,9 @@
 }
 
 @layer components {
-  /* One continuous hairline mesh, in two tints so it stays visible across
-     the page gradient: light lines over the navy band, slate lines over the
-     light body. Both are softened by PageMesh. */
-  .mesh-on-dark {
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.075) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.075) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
 
-  .mesh-on-light {
-    background-image: linear-gradient(
-        to right,
-        rgba(100, 116, 139, 0.11) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(100, 116, 139, 0.11) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
 
-  /* Hairline blueprint overlay for technical light sections. */
-  .bg-blueprint {
-    background-image: linear-gradient(
-        to right,
-        rgba(226, 232, 240, 0.9) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(226, 232, 240, 0.9) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
 
-  /* Dot grid overlay for deep-canvas sections. */
-  .bg-dotgrid {
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    );
-    background-size: 22px 22px;
-  }
 
   /* Radial fade mask used to blend imagery into the deep canvas. */
   .mask-radial-fade {
@@ -73,18 +34,7 @@
     );
   }
 
-  /* Fine film grain — kills banding on the deep-canvas gradients. */
-  .bg-grain {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  }
 
-  /* Soft multi-point colour mesh behind hero content. */
-  .bg-mesh {
-    background-image:
-      radial-gradient(38rem 28rem at 78% 12%, rgba(14, 165, 233, 0.22), transparent 62%),
-      radial-gradient(32rem 24rem at 12% 88%, rgba(20, 184, 166, 0.14), transparent 60%),
-      radial-gradient(26rem 20rem at 52% 42%, rgba(56, 189, 248, 0.08), transparent 65%);
-  }
 
   /* Edge-faded horizontal scroller used by the capability marquee. */
   .marquee-mask {

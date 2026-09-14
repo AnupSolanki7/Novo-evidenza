@@ -28,12 +28,12 @@ const WORKFLOW = [
 
 /** Clean document-workflow dashboard mockup used as the visual side. */
 const DeliverableDashboard = () => (
-  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_28px_70px_-24px_rgb(2,30,62,0.35)]">
+  <div className="overflow-hidden rounded-md border border-brand-line bg-white shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
     {/* Dashboard chrome */}
-    <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50/80 px-5 py-3.5">
+    <div className="flex items-center justify-between border-b border-brand-line bg-slate-50/80 px-5 py-3.5">
       <div className="flex items-center gap-2.5">
-        <LuFileText className="h-4 w-4 text-sky-600" aria-hidden="true" />
-        <span className="text-sm font-semibold text-slate-800">
+        <LuFileText className="h-4 w-4 text-brand-accent" aria-hidden="true" />
+        <span className="text-sm font-semibold text-brand-ink">
           Content Deliverables
         </span>
       </div>
@@ -48,7 +48,7 @@ const DeliverableDashboard = () => (
       {PIPELINE.map((item) => (
         <div key={item.name}>
           <div className="mb-2 flex items-baseline justify-between gap-3">
-            <span className="truncate text-[13px] font-semibold text-slate-800">
+            <span className="truncate text-[13px] font-semibold text-brand-ink">
               {item.name}
             </span>
             <span className="shrink-0 text-[11px] font-medium text-slate-500">
@@ -57,7 +57,7 @@ const DeliverableDashboard = () => (
           </div>
           <div className="h-1.5 overflow-hidden rounded-full bg-slate-100">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-sky-500 to-teal-400"
+              className="h-full rounded-full bg-brand-accent"
               style={{ width: `${item.progress}%` }}
             />
           </div>
@@ -66,7 +66,7 @@ const DeliverableDashboard = () => (
     </div>
 
     {/* Verification workflow */}
-    <div className="border-t border-slate-200 bg-slate-50/60 px-5 py-5">
+    <div className="border-t border-brand-line bg-slate-50/60 px-5 py-5">
       <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500">
         Review Workflow
       </p>
@@ -96,13 +96,13 @@ const MedicalAffairsSplit = () => {
         {/* Content side */}
         <MotionDiv initialTranslateY={50}>
           <Eyebrow>Medical Affairs</Eyebrow>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+          <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Pharma Marketing Material Development
           </h2>
 
-          <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-brand-body sm:text-lg">
             At{" "}
-            <span className="font-semibold text-sky-700">
+            <span className="font-semibold text-brand-accent">
               Vivoclin Research Services
             </span>
             , we develop scientifically accurate, strategically positioned, and
@@ -124,7 +124,7 @@ const MedicalAffairsSplit = () => {
 
           <NextLink
             href="/pharma-marketing-materials"
-            className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+            className="group/cta mt-9 inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-7 py-3.5 text-sm font-bold "
           >
             Explore Pharma Marketing Services
             <LuArrowRight

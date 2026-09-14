@@ -5,7 +5,6 @@ import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import { title } from "@/components/primitives";
 import { HEORLIST } from "@/utils/Constant";
@@ -20,7 +19,6 @@ const Page = () => {
 
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       <PageHero
         eyebrow="HEOR Services"
         title={<>Health Economics &amp; Outcomes Research</>}
@@ -57,7 +55,7 @@ const Page = () => {
 
       <MotionDiv className="my-8 flex flex-col md:flex-row max-w-[1220px] mx-auto px-6">
         <div className="md:w-1/2 w-full">
-          <h3 className="text-2xl mb-8 text-[#333091] font-bold">
+          <h3 className="text-2xl mb-8 text-[#333091] font-semibold">
             -{selected.title}
           </h3>
           <p className="font-semibold pl-3 text-danger-500">

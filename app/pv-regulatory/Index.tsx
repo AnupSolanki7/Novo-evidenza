@@ -1,6 +1,5 @@
 import React from "react";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import BannerItem from "../../assets/image/homeBg.png";
 import Footprint from "../../assets/image/footprints.gif";
@@ -18,7 +17,6 @@ import clsx from "clsx";
 const Page = () => {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       <PageHero
         eyebrow="Pharmacovigilance"
         title={<>PV &amp; Regulatory Services</>}
@@ -75,7 +73,7 @@ const Page = () => {
       </section>
       <section className="pt-8 md:pt-[100px] px-4 ">
         <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
-          <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
+          <h1 className="text-3xl md:text-5xl w-full text-center font-semibold text-danger-500">
             Services We Provide
           </h1>
           <p className="mt-4 text-sm md:text-md font-semibold text-[#333091] text-center">
@@ -98,7 +96,7 @@ const Page = () => {
                 <span className="w-12 h-12 [&>*]:fill-[#333091] [&>*]:w-12 [&>*]:h-12">
                   <item.icon />
                 </span>
-                <h1 className="text-2xl w-full text-center font-extrabold text-[#333091]">
+                <h1 className="text-2xl w-full text-center font-semibold text-[#333091]">
                   {item?.title}
                 </h1>
                 <p className="mt-4 text-sm font-semibold text-[#333091] text-center">
@@ -122,7 +120,7 @@ const Page = () => {
                 <span className="w-12 h-12 [&>*]:fill-[#333091] [&>*]:w-12 [&>*]:h-12">
                   <item.icon />
                 </span>
-                <h1 className="text-2xl w-full text-center font-extrabold text-[#333091]">
+                <h1 className="text-2xl w-full text-center font-semibold text-[#333091]">
                   {item?.title}
                 </h1>
                 <p className="mt-4 text-sm font-semibold text-[#333091] text-center">
@@ -184,7 +182,7 @@ const Page = () => {
       </section>
       <section className="pt-8 md:py-[100px] px-4 ">
         <div className="w-full py-8 mx-auto max-w-full md:max-w-[50%] ">
-          <h1 className="text-3xl md:text-5xl w-full text-center font-extrabold text-danger-500">
+          <h1 className="text-3xl md:text-5xl w-full text-center font-semibold text-danger-500">
             Services We Provide
           </h1>
           <p className="mt-4 text-sm md:text-md font-semibold text-[#333091] text-center">

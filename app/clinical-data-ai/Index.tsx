@@ -2,7 +2,6 @@
 
 import React from "react";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import MotionDiv from "@/components/MotionDiv";
 import MotionCard from "@/components/MotionCard";
@@ -224,7 +223,6 @@ const DIFFERENTIATORS = [
 const Page = () => {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       {/* Header */}
       <PageHero
         eyebrow="Clinical Data & AI"
@@ -237,23 +235,23 @@ const Page = () => {
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
           <MotionDiv initialTranslateY={40}>
             <Eyebrow>AI-Ready Data</Eyebrow>
-            <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
               Clinically Meaningful Data for Healthcare AI
             </h2>
             <span
               aria-hidden="true"
-              className="mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+              className="mt-6 block h-px w-16 bg-brand-accent"
             />
-            <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-brand-body sm:text-lg">
               Healthcare AI depends on more than large volumes of data. It
               requires{" "}
-              <span className="font-semibold text-slate-900">
+              <span className="font-semibold text-brand-ink">
                 relevant, well-structured, clinically meaningful, and
                 quality-controlled data
               </span>
               .
             </p>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-brand-body sm:text-lg">
               At Vivoclin, we support healthcare AI companies, technology
               companies, research organizations, and life-science teams with
               clinical data sourcing, curation, annotation, quality control, and
@@ -263,7 +261,7 @@ const Page = () => {
             </p>
             <NextLink
               href="/about#contact"
-              className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+              className="group/cta mt-9 inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-7 py-3.5 text-sm font-bold "
             >
               Discuss Your Data Requirements
               <LuArrowRight
@@ -274,7 +272,7 @@ const Page = () => {
           </MotionDiv>
 
           <MotionCard>
-            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-[0_28px_70px_-24px_rgb(2,30,62,0.35)]">
+            <div className="group relative overflow-hidden rounded-md border border-brand-line shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
               <Image
                 src={BannerItem}
                 alt="Clinicians reviewing medical imaging data on a workstation"
@@ -309,7 +307,7 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.06}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-8">
@@ -317,10 +315,10 @@ const Page = () => {
                       <IconBadge icon={item.Icon} />
                       <StepMarker index={index + 1} />
                     </div>
-                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                    <h3 className="mt-6 text-lg font-semibold tracking-tight text-brand-ink">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-3 text-[15px] leading-relaxed text-brand-body">
                       {item.subtitle}
                     </p>
                   </article>
@@ -347,13 +345,13 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.07}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-7 sm:p-8">
                     <div className="flex items-center gap-4">
                       <IconBadge icon={item.Icon} />
-                      <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                      <h3 className="text-xl font-semibold tracking-tight text-brand-ink sm:text-2xl">
                         {item.title}
                       </h3>
                     </div>
@@ -391,17 +389,17 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.07}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
-                <div className="group/glow relative h-full rounded-2xl bg-gradient-to-b from-slate-200 to-slate-100 p-px transition-all duration-500 hover:from-sky-300 hover:to-teal-200 hover:shadow-[0_20px_60px_-15px_rgb(2,132,199,0.25)]">
-                  <article className="relative flex h-full flex-col rounded-[calc(1rem-1px)] bg-white p-7">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-teal-400 text-slate-950">
+                <div className="group/glow relative h-full rounded-md border border-brand-line bg-white transition-colors duration-300 hover:border-brand-accent/40 hover:">
+                  <article className="relative flex h-full flex-col rounded-md bg-white p-7">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-accent text-white">
                       <item.Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
-                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                    <h3 className="mt-6 text-lg font-semibold tracking-tight text-brand-ink">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-3 text-[15px] leading-relaxed text-brand-body">
                       {item.subtitle}
                     </p>
                   </article>
@@ -428,12 +426,12 @@ const Page = () => {
               <MotionCard
                 key={step}
                 delay={index * 0.05}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <li className="flex h-full list-none items-center gap-4 p-6">
                     <StepMarker index={index + 1} />
-                    <p className="font-semibold leading-snug text-slate-900">
+                    <p className="font-semibold leading-snug text-brand-ink">
                       {step}
                     </p>
                   </li>
@@ -460,17 +458,17 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.07}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-7 sm:p-8">
                     <div className="flex items-start justify-between gap-4">
-                      <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                      <h3 className="text-xl font-semibold tracking-tight text-brand-ink sm:text-2xl">
                         {item.title}
                       </h3>
                       <StepMarker index={index + 1} />
                     </div>
-                    <p className="mt-4 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-4 text-[15px] leading-relaxed text-brand-body">
                       {item.subtitle}
                     </p>
                   </article>
@@ -495,16 +493,16 @@ const Page = () => {
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {REQUIREMENTS.map((item, index) => (
               <MotionCard key={item} delay={index * 0.04}>
-                <div className="flex h-full items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all duration-300 hover:border-sky-200 hover:shadow-[0_10px_30px_-12px_rgb(2,30,62,0.2)]">
+                <div className="flex h-full items-center gap-3 rounded-xl border border-brand-line bg-white px-5 py-4 transition-all duration-300 hover:border-brand-accent/40 hover:shadow-[0_10px_30px_-12px_rgb(2,30,62,0.2)]">
                   <CheckMark />
-                  <span className="font-semibold text-slate-800">{item}</span>
+                  <span className="font-semibold text-brand-ink">{item}</span>
                 </div>
               </MotionCard>
             ))}
           </div>
 
           <MotionDiv initialTranslateY={28} className="mx-auto mt-12 max-w-3xl text-center">
-            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="text-base leading-relaxed text-brand-body sm:text-lg">
               Whether you need a small validation dataset or a scalable clinical
               data program, we can structure the engagement around your
               requirements.
@@ -525,15 +523,15 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.06}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-8">
                     <StepMarker index={index + 1} />
-                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                    <h3 className="mt-6 text-lg font-semibold tracking-tight text-brand-ink">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-3 text-[15px] leading-relaxed text-brand-body">
                       {item.subtitle}
                     </p>
                   </article>
@@ -550,26 +548,26 @@ const Page = () => {
           initialTranslateY={32}
           className="relative mx-auto max-w-3xl px-5 text-center sm:px-6 lg:px-10"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+          <h2 className="text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Looking for Clinical Data or AI Support?
           </h2>
           <span
             aria-hidden="true"
-            className="mx-auto mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+            className="mx-auto mt-6 block h-px w-16 bg-brand-accent"
           />
-          <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-brand-body sm:text-lg">
             Tell us what you are building and what your data requirements look
             like. Our team can work with you to assess feasibility, data
             requirements, annotation scope, and an appropriate engagement model.
           </p>
-          <p className="mt-6 text-xl font-bold text-slate-900 sm:text-2xl">
+          <p className="mt-6 text-xl font-semibold text-brand-ink sm:text-2xl">
             Let&apos;s Build Better Healthcare AI.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <NextLink
               href="/about#contact"
-              className="group/cta inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 px-8 py-4 text-sm font-bold text-slate-950 shadow-[0_10px_34px_-8px_rgb(56,189,248,0.65)] transition-all duration-300 hover:shadow-[0_14px_44px_-8px_rgb(56,189,248,0.85)]"
+              className="group/cta inline-flex items-center justify-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-8 py-4 text-sm font-bold "
             >
               Talk to Our Team
               <LuArrowRight
@@ -579,7 +577,7 @@ const Page = () => {
             </NextLink>
             <NextLink
               href="/about#contact"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 px-8 py-4 text-sm font-semibold text-slate-800 transition-all duration-300 hover:border-slate-400 hover:bg-white"
+              className="inline-flex items-center justify-center rounded-md border border-brand-line px-8 py-4 text-sm font-semibold text-brand-ink transition-all duration-300 hover:border-slate-400 hover:bg-white"
             >
               Submit Your Data Requirement
             </NextLink>
@@ -588,7 +586,7 @@ const Page = () => {
       </section>
 
       {/* Disclaimer */}
-      <section className="border-t border-slate-200/70 py-10">
+      <section className="border-t border-brand-line/70 py-10">
         <p className="mx-auto max-w-4xl px-5 text-center text-sm leading-relaxed text-slate-500 sm:px-6 lg:px-10">
           All data-related activities are subject to applicable laws,
           regulations, permissions, contractual requirements, and data-use

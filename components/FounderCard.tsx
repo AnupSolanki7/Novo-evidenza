@@ -3,7 +3,7 @@ import React from "react";
 
 const FounderCard = ({ item }: { item: any }) => {
   return (
-    <article className="group flex h-full flex-col items-center rounded-2xl border border-slate-200 bg-white p-7 text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgb(2,30,62,0.14)]">
+    <article className="group flex h-full flex-col items-center rounded-md border border-brand-line bg-white p-7 text-center shadow-[0_1px_3px_rgb(16,24,40,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
       <div className="relative mb-5 h-32 w-32 overflow-hidden rounded-full ring-4 ring-sky-100">
         <Image
           fill
@@ -14,11 +14,11 @@ const FounderCard = ({ item }: { item: any }) => {
           quality={100}
         />
       </div>
-      <h3 className="text-xl font-bold tracking-tight text-slate-900">
+      <h3 className="text-xl font-semibold tracking-tight text-brand-ink">
         {item.name}
       </h3>
-      <p className="mt-1.5 text-sm font-semibold text-sky-700">{item.role}</p>
-      <p className="mt-4 text-sm leading-relaxed text-slate-600">{item.text}</p>
+      <p className="mt-1.5 text-sm font-semibold text-brand-accent">{item.role}</p>
+      <p className="mt-4 text-sm leading-relaxed text-brand-body">{item.text}</p>
     </article>
   );
 };

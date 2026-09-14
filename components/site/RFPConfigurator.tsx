@@ -115,20 +115,20 @@ const RFPConfigurator = ({
       <div className="relative mx-auto max-w-3xl px-5 sm:px-6 lg:px-10">
         <MotionDiv initialTranslateY={32} className="text-center">
           <Eyebrow>Consultation Request</Eyebrow>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl">
             Schedule a Consultation &amp; Request for Proposal (RFP)
           </h2>
           <span
             aria-hidden="true"
-            className="mx-auto mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+            className="mx-auto mt-6 block h-px w-16 bg-brand-accent"
           />
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-body">
             Ready for a non-obligatory chat, got a quick question or comment?
           </p>
         </MotionDiv>
 
         <MotionDiv initialTranslateY={40} delay={0.1} className="mt-12">
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_28px_70px_-24px_rgb(2,30,62,0.28)] sm:p-9">
+          <div className="overflow-hidden rounded-md border border-brand-line bg-white p-6 shadow-[0_2px_10px_rgb(16,24,40,0.05)] sm:p-9">
             <form onSubmit={handleSubmit} noValidate>
               <div className="grid gap-5 sm:grid-cols-2">
                 <TextField
@@ -172,9 +172,9 @@ const RFPConfigurator = ({
               <div className="mt-5">
                 <label
                   htmlFor={`${uid}-message`}
-                  className="mb-1.5 block text-sm font-semibold text-slate-800"
+                  className="mb-1.5 block text-sm font-semibold text-brand-ink"
                 >
-                  Message <span className="text-sky-600">*</span>
+                  Message <span className="text-brand-accent">*</span>
                 </label>
                 <textarea
                   id={`${uid}-message`}
@@ -188,10 +188,10 @@ const RFPConfigurator = ({
                     errors.message ? `${uid}-message-error` : undefined
                   }
                   className={clsx(
-                    "w-full resize-y rounded-xl border bg-white px-4 py-3 text-[15px] text-slate-900 outline-none transition-colors placeholder:text-slate-400",
+                    "w-full resize-y rounded-xl border bg-white px-4 py-3 text-[15px] text-brand-ink outline-none transition-colors placeholder:text-slate-400",
                     errors.message
                       ? "border-red-400 focus:border-red-500"
-                      : "border-slate-200 focus:border-sky-500"
+                      : "border-brand-line focus:border-sky-500"
                   )}
                 />
                 {errors.message ? (
@@ -207,7 +207,7 @@ const RFPConfigurator = ({
               <button
                 type="submit"
                 disabled={loader}
-                className="group/cta mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-8 py-4 text-sm font-bold text-slate-950 shadow-[0_10px_30px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_14px_38px_-8px_rgb(14,165,233,0.85)] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                className="group/cta mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-8 py-4 text-sm font-bold  disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
               >
                 {loader ? "Sending…" : "Send Enquiry"}
                 {!loader ? (
@@ -249,9 +249,9 @@ const TextField = ({
   <div>
     <label
       htmlFor={id}
-      className="mb-1.5 block text-sm font-semibold text-slate-800"
+      className="mb-1.5 block text-sm font-semibold text-brand-ink"
     >
-      {label} <span className="text-sky-600">*</span>
+      {label} <span className="text-brand-accent">*</span>
     </label>
     <input
       id={id}
@@ -264,10 +264,10 @@ const TextField = ({
       aria-invalid={Boolean(error) || undefined}
       aria-describedby={error ? `${id}-error` : undefined}
       className={clsx(
-        "w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-slate-900 outline-none transition-colors placeholder:text-slate-400",
+        "w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-brand-ink outline-none transition-colors placeholder:text-slate-400",
         error
           ? "border-red-400 focus:border-red-500"
-          : "border-slate-200 focus:border-sky-500"
+          : "border-brand-line focus:border-sky-500"
       )}
     />
     {error ? (

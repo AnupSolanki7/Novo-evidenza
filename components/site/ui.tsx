@@ -20,10 +20,8 @@ export const Eyebrow = ({
 }) => (
   <span
     className={clsx(
-      "inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em]",
-      tone === "light"
-        ? "bg-sky-50 text-sky-700 ring-1 ring-inset ring-sky-100"
-        : "bg-white/5 text-sky-300 ring-1 ring-inset ring-white/10",
+      "inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.18em]",
+      tone === "light" ? "text-brand-accent" : "text-sky-300",
       className
     )}
   >
@@ -60,8 +58,8 @@ export const SectionHeading = ({
     ) : null}
     <h2
       className={clsx(
-        "text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]",
-        tone === "light" ? "text-slate-900" : "text-white"
+        "text-[2rem] font-semibold leading-[1.15] tracking-[-0.015em] sm:text-[2.5rem] lg:text-[3rem]",
+        tone === "light" ? "text-brand-ink" : "text-white"
       )}
     >
       {title}
@@ -69,15 +67,15 @@ export const SectionHeading = ({
     <span
       aria-hidden="true"
       className={clsx(
-        "mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400",
+        "mt-7 block h-[3px] w-10 bg-brand-accent",
         align === "center" && "mx-auto"
       )}
     />
     {lead ? (
       <p
         className={clsx(
-          "mt-6 text-base leading-relaxed sm:text-lg",
-          tone === "light" ? "text-slate-600" : "text-slate-300",
+          "mt-7 text-[1.0625rem] leading-[1.7]",
+          tone === "light" ? "text-brand-body" : "text-slate-300",
           align === "center" && "mx-auto"
         )}
       >
@@ -99,17 +97,15 @@ export const IconBadge = ({
 }) => (
   <span
     className={clsx(
-      "inline-flex h-12 w-12 items-center justify-center rounded-xl",
-      tone === "cyan" && "bg-sky-50 text-sky-600 ring-1 ring-inset ring-sky-100",
-      tone === "teal" &&
-        "bg-teal-50 text-teal-600 ring-1 ring-inset ring-teal-100",
-      tone === "slate" &&
-        "bg-slate-100 text-slate-700 ring-1 ring-inset ring-slate-200",
-      tone === "onDark" && "bg-white/5 text-sky-300 ring-1 ring-inset ring-white/10",
+      "inline-flex h-11 w-11 items-center justify-center rounded-md",
+      tone === "cyan" && "bg-brand-accentSoft text-brand-accent",
+      tone === "teal" && "bg-brand-accentSoft text-brand-accent",
+      tone === "slate" && "bg-slate-100 text-brand-body",
+      tone === "onDark" && "bg-white/[0.06] text-sky-300",
       className
     )}
   >
-    <Icon className="h-6 w-6" aria-hidden="true" />
+    <Icon className="h-[22px] w-[22px]" aria-hidden="true" />
   </span>
 );
 
@@ -126,7 +122,7 @@ export const ArrowLink = ({
   <NextLink
     href={href}
     className={clsx(
-      "group/link inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition-colors hover:text-sky-800",
+      "group/link inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-accentDark",
       className
     )}
   >
@@ -148,10 +144,10 @@ export const Tag = ({
 }) => (
   <span
     className={clsx(
-      "inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-wide",
-      tone === "slate" && "bg-slate-100 text-slate-600",
-      tone === "cyan" && "bg-sky-50 text-sky-700 ring-1 ring-inset ring-sky-100",
-      tone === "teal" && "bg-teal-50 text-teal-700 ring-1 ring-inset ring-teal-100"
+      "inline-flex items-center rounded px-2 py-1 text-[11px] font-medium tracking-wide",
+      tone === "slate" && "bg-slate-100 text-brand-body",
+      tone === "cyan" && "bg-brand-accentSoft text-brand-accent",
+      tone === "teal" && "bg-brand-accentSoft text-brand-accent"
     )}
   >
     {children}
@@ -166,10 +162,9 @@ export const CheckMark = ({ className }: { className?: string }) => (
     aria-hidden="true"
     className={clsx("h-5 w-5 flex-shrink-0", className)}
   >
-    <circle cx="10" cy="10" r="9" className="fill-sky-50 stroke-sky-200" strokeWidth="1" />
     <path
-      d="M6 10.2l2.6 2.6L14 7.4"
-      className="stroke-sky-600"
+      d="M4.5 10.5l3.4 3.4L15.5 6.3"
+      className="stroke-brand-accent"
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -216,22 +211,12 @@ export const GlowCard = ({
 }) => (
   <div
     className={clsx(
-      "group/glow relative h-full rounded-2xl bg-gradient-to-b from-slate-200 to-slate-100 p-px transition-all duration-500",
-      "hover:from-sky-300 hover:to-teal-200 hover:shadow-[0_20px_60px_-15px_rgb(2,132,199,0.25)]",
+      "group/glow relative h-full rounded-md border border-brand-line bg-white transition-colors duration-300",
+      "hover:border-brand-accent/40",
       className
     )}
   >
-    <div
-      className={clsx(
-        "relative h-full overflow-hidden rounded-[calc(1rem-1px)] bg-white",
-        innerClassName
-      )}
-    >
-      {/* Corner sheen that fades in on hover */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sky-400/0 blur-3xl transition-colors duration-500 group-hover/glow:bg-sky-400/10"
-      />
+    <div className={clsx("relative h-full rounded-md", innerClassName)}>
       {children}
     </div>
   </div>
@@ -249,20 +234,11 @@ export const GlowCardDark = ({
 }) => (
   <div
     className={clsx(
-      "group/glow relative h-full rounded-2xl bg-gradient-to-b from-white/15 to-white/5 p-px transition-all duration-500 hover:from-sky-400/50 hover:to-teal-300/20",
+      "group/glow relative h-full rounded-md border border-white/10 bg-white/[0.03] transition-colors duration-300 hover:border-white/25",
       className
     )}
   >
-    <div
-      className={clsx(
-        "relative h-full overflow-hidden rounded-[calc(1rem-1px)] bg-[#0B132B]",
-        innerClassName
-      )}
-    >
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sky-400/0 blur-3xl transition-colors duration-500 group-hover/glow:bg-sky-400/15"
-      />
+    <div className={clsx("relative h-full rounded-md", innerClassName)}>
       {children}
     </div>
   </div>
@@ -278,10 +254,8 @@ export const StepMarker = ({
 }) => (
   <span
     className={clsx(
-      "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xs font-bold tabular-nums",
-      tone === "light"
-        ? "bg-slate-900 text-white"
-        : "bg-gradient-to-br from-cyan-400 to-teal-400 text-slate-950"
+      "inline-flex shrink-0 items-center text-xs font-semibold tabular-nums tracking-[0.1em]",
+      tone === "light" ? "text-brand-muted" : "text-sky-300/70"
     )}
   >
     {String(index).padStart(2, "0")}

@@ -2,7 +2,6 @@
 
 import React from "react";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import MotionDiv from "@/components/MotionDiv";
 import { title } from "@/components/primitives";
@@ -15,7 +14,6 @@ import { FaFilePdf } from "react-icons/fa";
 const Page = () => {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       <PageHero
         eyebrow="Publications"
         title="Research Publications"

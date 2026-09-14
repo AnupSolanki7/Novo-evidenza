@@ -2,7 +2,6 @@
 
 import React from "react";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import MotionDiv from "@/components/MotionDiv";
 import MotionCard from "@/components/MotionCard";
@@ -71,7 +70,6 @@ const MARKETING_CONTENT = [
 const Page = () => {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       {/* Header */}
       <PageHero
         eyebrow="Medical Affairs"
@@ -99,12 +97,12 @@ const Page = () => {
               <MotionCard
                 key={reason}
                 delay={index * 0.08}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-8">
                     <StepMarker index={index + 1} />
-                    <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-slate-900">
+                    <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-brand-ink">
                       {reason}
                     </h3>
                   </article>
@@ -120,21 +118,21 @@ const Page = () => {
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
           <MotionDiv initialTranslateY={40}>
             <Eyebrow>Brand Communication</Eyebrow>
-            <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
               Evidence-Led Pharma Brand Communication
             </h2>
             <span
               aria-hidden="true"
-              className="mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+              className="mt-6 block h-px w-16 bg-brand-accent"
             />
-            <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-brand-body sm:text-lg">
               Vivoclin helps pharma brands translate complex clinical and
               scientific data into clear, credible, and compliant marketing
               materials that resonate with healthcare professionals.
             </p>
             <NextLink
               href="/about"
-              className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+              className="group/cta mt-9 inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-7 py-3.5 text-sm font-bold "
             >
               Let&apos;s Connect
               <LuArrowRight
@@ -145,7 +143,7 @@ const Page = () => {
           </MotionDiv>
 
           <MotionCard>
-            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-[0_24px_60px_-22px_rgb(2,30,62,0.3)]">
+            <figure className="group relative overflow-hidden rounded-md border border-brand-line shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
               <Image
                 src={BannerItem}
                 alt="Scientific content being reviewed and annotated"
@@ -180,17 +178,17 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.07}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-7 sm:p-8">
                     <div className="flex items-start justify-between gap-4">
-                      <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                      <h3 className="text-xl font-semibold tracking-tight text-brand-ink sm:text-2xl">
                         {item.title}
                       </h3>
                       <StepMarker index={index + 1} />
                     </div>
-                    <p className="mt-4 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-4 text-[15px] leading-relaxed text-brand-body">
                       {item.subtitle}
                     </p>
                     <ul className="mt-6 space-y-3">
@@ -231,12 +229,12 @@ const Page = () => {
               <MotionCard
                 key={step}
                 delay={index * 0.08}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
-                <li className="group/glow relative h-full list-none rounded-2xl bg-gradient-to-b from-slate-200 to-slate-100 p-px transition-all duration-500 hover:from-sky-300 hover:to-teal-200 hover:shadow-[0_20px_60px_-15px_rgb(2,132,199,0.25)]">
-                  <div className="relative flex h-full flex-col rounded-[calc(1rem-1px)] bg-white p-8">
+                <li className="group/glow relative h-full list-none rounded-md border border-brand-line bg-white transition-colors duration-300 hover:border-brand-accent/40 hover:">
+                  <div className="relative flex h-full flex-col rounded-md bg-white p-8">
                     <StepMarker index={index + 1} />
-                    <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-slate-900">
+                    <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight text-brand-ink">
                       {step}
                     </h3>
                   </div>

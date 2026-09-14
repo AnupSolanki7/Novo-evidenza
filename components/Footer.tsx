@@ -8,7 +8,6 @@ import {
   LuMail,
   LuMapPin,
   LuPhone,
-  LuShieldCheck,
 } from "react-icons/lu";
 
 import Logo from "@/assets/icons/VivoLogo";
@@ -34,25 +33,9 @@ const PHONES = [
   { label: "+91 99745 25632", href: "tel:+919974525632" },
 ];
 
-/**
- * Guideline frameworks the site states it works to. These are alignment
- * statements drawn from existing page copy, not certification seals.
- */
-const GUIDELINE_ALIGNMENT = [
-  "ICH-GCP",
-  "FDA Guidelines",
-  "Local Regulatory Guidelines",
-  "Ethics Committee Approvals",
-];
-
 const Footer = () => {
   return (
     <footer className="relative bg-[#070D1E] pb-16 pt-16 text-slate-400">
-      {/* Seam: dissolves the page gradient into the footer, no hard edge. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -top-28 h-28 bg-gradient-to-b from-transparent via-[#8FA3BE]/40 to-[#070D1E]"
-      />
       <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10">
         <MotionDiv
           initialTranslateY={40}
@@ -100,8 +83,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 2 — Navigation + services */}
-          <nav aria-label="Footer navigation">
+          {/* 2 — Services */}
+          <nav aria-label="Footer services">
             <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
               Services
             </h2>
@@ -117,8 +100,11 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+          </nav>
 
-            <h2 className="mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-white">
+          {/* 3 — Company */}
+          <nav aria-label="Footer company links">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
               Company
             </h2>
             <ul className="mt-5 space-y-3">
@@ -148,30 +134,6 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-
-          {/* 3 — Guideline alignment */}
-          <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
-              Guideline Alignment
-            </h2>
-            <p className="mt-5 text-sm leading-relaxed text-slate-400">
-              Trial conduct and documentation are delivered in adherence to the
-              following frameworks.
-            </p>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {GUIDELINE_ALIGNMENT.map((item) => (
-                <li key={item}>
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-800 bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">
-                    <LuShieldCheck
-                      className="h-3.5 w-3.5 text-teal-400"
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* 4 — Contact */}
           <div>
@@ -221,7 +183,7 @@ const Footer = () => {
 
             <NextLink
               href="/about#contact"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition-colors hover:bg-sky-400"
+              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand-accent px-5 py-2.5 text-sm font-semibold text-slate-950 transition-colors hover:bg-brand-accentDark"
             >
               Send Us Your Enquiry
             </NextLink>
@@ -233,7 +195,7 @@ const Footer = () => {
           <p>copyright Vivoclin Research 2025. All rights reserved.</p>
 
           <p className="flex items-center gap-2">
-            <LuLock className="h-3.5 w-3.5 text-slate-600" aria-hidden="true" />
+            <LuLock className="h-3.5 w-3.5 text-brand-body" aria-hidden="true" />
             Protocol documents are handled under confidentiality agreement.
           </p>
 

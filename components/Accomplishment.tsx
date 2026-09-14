@@ -20,7 +20,7 @@ const Accomplishment = () => {
             />
         </MotionDiv>
 
-        <div className="relative mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-3xl bg-white/10 shadow-[0_30px_80px_-30px_rgb(2,30,62,0.5)] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-md bg-white/10 shadow-[0_2px_10px_rgb(16,24,40,0.06)] sm:grid-cols-2 lg:grid-cols-4">
           {ACHEIVEMENTS.map((item) => (
             <MotionCard key={item.title} className="bg-[#0B132B]">
               <CardItem item={item} />

@@ -11,6 +11,14 @@ module.exports = {
     extend: {
       colors: {
         brand: {
+          /* Calm, single-accent palette — flat, no gradient pairs. */
+          accent: "#0C7BC0",
+          accentDark: "#0A6396",
+          accentSoft: "#EAF3FA",
+          ink: "#2E353B",
+          body: "#444444",
+          muted: "#959CA0",
+          line: "#E4E8EB",
           dark: "#0B132B",
           navy: "#0F172A",
           cyan: "#0EA5E9",

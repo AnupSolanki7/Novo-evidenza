@@ -103,8 +103,8 @@ const SiteSearch = ({
         onClick={onClose}
       />
 
-      <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
-        <div className="flex items-center gap-3 border-b border-slate-200 px-4">
+      <div className="relative w-full max-w-xl overflow-hidden rounded-md border border-brand-line bg-white shadow-2xl">
+        <div className="flex items-center gap-3 border-b border-brand-line px-4">
           <LuSearch className="h-5 w-5 shrink-0 text-slate-400" aria-hidden="true" />
           <input
             ref={inputRef}
@@ -113,7 +113,7 @@ const SiteSearch = ({
             type="search"
             placeholder="Search services, capabilities and pages…"
             aria-label="Search services, capabilities and pages"
-            className="h-14 w-full border-0 bg-transparent text-[15px] text-slate-900 outline-none placeholder:text-slate-400"
+            className="h-14 w-full border-0 bg-transparent text-[15px] text-brand-ink outline-none placeholder:text-slate-400"
           />
           <button
             type="button"
@@ -142,14 +142,14 @@ const SiteSearch = ({
                   }}
                   className={clsx(
                     "flex w-full items-start gap-3 rounded-xl px-3 py-3 text-left transition-colors",
-                    index === activeIndex ? "bg-sky-50" : "hover:bg-slate-50"
+                    index === activeIndex ? "bg-brand-accentSoft" : "hover:bg-slate-50"
                   )}
                 >
-                  <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-sky-50 text-sky-600 ring-1 ring-inset ring-sky-100">
+                  <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-accentSoft text-brand-accent ring-1 ring-inset ring-sky-100">
                     <entry.Icon className="h-4 w-4" aria-hidden="true" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-semibold text-slate-900">
+                    <span className="block text-sm font-semibold text-brand-ink">
                       {entry.title}
                     </span>
                     <span className="mt-0.5 block truncate text-xs text-slate-500">

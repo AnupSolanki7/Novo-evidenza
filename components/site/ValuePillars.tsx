@@ -53,7 +53,7 @@ const ValuePillars = () => {
             <MotionCard
               key={pillar.title}
               delay={index * 0.08}
-              className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              className="h-full transition-transform duration-500 hover:-translate-y-0.5"
             >
               <GlowCard>
                 <article className="flex h-full flex-col p-8">
@@ -63,13 +63,13 @@ const ValuePillars = () => {
                       0{index + 1}
                     </span>
                   </div>
-                  <h3 className="mt-6 text-xl font-bold tracking-tight text-slate-900">
+                  <h3 className="mt-6 text-xl font-semibold tracking-tight text-brand-ink">
                     {pillar.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-brand-body">
                     {pillar.description}
                   </p>
-                  <div className="mt-6 border-t border-slate-100 pt-5">
+                  <div className="mt-6 border-t border-brand-line pt-5">
                     <ArrowLink href={pillar.href}>Learn more</ArrowLink>
                   </div>
                 </article>

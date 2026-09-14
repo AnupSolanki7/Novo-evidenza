@@ -14,7 +14,6 @@ import {
 import MotionCard from "@/components/MotionCard";
 import MotionDiv from "@/components/MotionDiv";
 import { pageBackdrop } from "@/components/site/PageBackdrop";
-import PageMesh from "@/components/site/PageMesh";
 import PageHero from "@/components/site/PageHero";
 import {
   ArrowLink,
@@ -82,7 +81,6 @@ const servicePortfolio = [
 const Page = () => {
   return (
     <main className="relative isolate" style={pageBackdrop()}>
-      <PageMesh />
       <PageHero
         eyebrow="Site Operations"
         title="Clinical Trial SMO Services"
@@ -94,7 +92,7 @@ const Page = () => {
 
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
           <MotionCard className="order-2 lg:order-1">
-            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-[0_24px_60px_-22px_rgb(2,30,62,0.3)]">
+            <figure className="group relative overflow-hidden rounded-md border border-brand-line shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
               <Image
                 src={FacilityImage}
                 alt="Modern clinical research facility interior"
@@ -113,17 +111,17 @@ const Page = () => {
 
           <MotionDiv initialTranslateY={40} className="order-1 lg:order-2">
             <Eyebrow>SMO Division</Eyebrow>
-            <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
               Discover the Power of{" "}
-              <span className="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent">
+              <span className="text-brand-accent">
                 Clinical Excellence
               </span>
             </h2>
             <span
               aria-hidden="true"
-              className="mt-6 block h-px w-16 bg-gradient-to-r from-sky-500 to-teal-400"
+              className="mt-7 block h-[3px] w-10 bg-brand-accent"
             />
-            <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-brand-body sm:text-lg">
               At Vivoclin Research SMO Division, we provide end-to-end Site
               Management Organization (SMO) services to streamline your clinical
               trials. From site selection and patient recruitment to regulatory
@@ -134,7 +132,7 @@ const Page = () => {
 
             <NextLink
               href="/about"
-              className="group/cta mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_8px_24px_-8px_rgb(14,165,233,0.7)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgb(14,165,233,0.85)]"
+              className="group/cta mt-9 inline-flex items-center gap-2 rounded-md bg-brand-accent text-white shadow-sm transition-colors hover:bg-brand-accentDark px-7 py-3.5 text-sm font-bold "
             >
               Let&apos;s Connect
               <LuArrowRight
@@ -162,20 +160,20 @@ const Page = () => {
               <MotionCard
                 key={item.title}
                 delay={index * 0.06}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
                 <GlowCard>
                   <article className="flex h-full flex-col p-8">
                     <div className="flex items-start justify-between">
-                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 ring-1 ring-inset ring-sky-100 [&>*]:h-6 [&>*]:w-6 [&>*]:fill-sky-600">
+                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-accentSoft ring-1 ring-inset ring-sky-100 [&>*]:h-6 [&>*]:w-6 [&>*]:fill-sky-600">
                         <item.icon />
                       </span>
                       <StepMarker index={index + 1} />
                     </div>
-                    <h3 className="mt-6 text-lg font-bold tracking-tight text-slate-900">
+                    <h3 className="mt-6 text-lg font-semibold tracking-tight text-brand-ink">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mt-3 text-[15px] leading-relaxed text-brand-body">
                       {item.description}
                     </p>
                   </article>
@@ -200,15 +198,15 @@ const Page = () => {
                 <MotionCard
                   key={service.title}
                   delay={index * 0.07}
-                  className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                  className="h-full transition-transform duration-500 hover:-translate-y-0.5"
                 >
                   <GlowCard>
                     <article className="flex h-full flex-col p-7">
                       <StepMarker index={index + 1} />
-                      <h3 className="mt-5 text-lg font-bold tracking-tight text-slate-900">
+                      <h3 className="mt-5 text-lg font-semibold tracking-tight text-brand-ink">
                         {service.title}
                       </h3>
-                      <p className="mt-2.5 text-[15px] leading-relaxed text-slate-600">
+                      <p className="mt-2.5 text-[15px] leading-relaxed text-brand-body">
                         {service.description}
                       </p>
                     </article>
@@ -218,7 +216,7 @@ const Page = () => {
             </div>
 
             <MotionCard>
-              <figure className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-[0_24px_60px_-22px_rgb(2,30,62,0.3)]">
+              <figure className="group relative overflow-hidden rounded-md border border-brand-line shadow-[0_2px_10px_rgb(16,24,40,0.05)]">
                 <Image
                   src={LabImage}
                   alt="Researcher pipetting samples into a multi-well plate"
@@ -238,7 +236,7 @@ const Page = () => {
           <MotionDiv initialTranslateY={28} className="mt-14 flex justify-center">
             <NextLink
               href="/about"
-              className="group/cta inline-flex items-center gap-2 rounded-full bg-slate-900 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-slate-800"
+              className="group/cta inline-flex items-center gap-2 rounded-md bg-brand-ink px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-slate-800"
             >
               Explore Our Services
               <LuArrowRight
@@ -267,16 +265,16 @@ const Page = () => {
               <MotionCard
                 key={service.title}
                 delay={index * 0.07}
-                className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+                className="h-full transition-transform duration-500 hover:-translate-y-0.5"
               >
-                <div className="group/glow relative h-full rounded-2xl bg-gradient-to-b from-slate-200 to-slate-100 p-px transition-all duration-500 hover:from-sky-300 hover:to-teal-200 hover:shadow-[0_20px_60px_-15px_rgb(2,132,199,0.25)]">
-                  <article className="relative flex h-full items-start gap-4 rounded-[calc(1rem-1px)] bg-white p-7">
+                <div className="group/glow relative h-full rounded-md border border-brand-line bg-white transition-colors duration-300 hover:border-brand-accent/40 hover:">
+                  <article className="relative flex h-full items-start gap-4 rounded-md bg-white p-7">
                     <IconBadge icon={service.icon} />
                     <div>
-                      <h3 className="text-lg font-bold tracking-tight text-slate-900">
+                      <h3 className="text-lg font-semibold tracking-tight text-brand-ink">
                         {service.title}
                       </h3>
-                      <p className="mt-2 text-[15px] leading-relaxed text-slate-600">
+                      <p className="mt-2 text-[15px] leading-relaxed text-brand-body">
                         {service.description}
                       </p>
                     </div>

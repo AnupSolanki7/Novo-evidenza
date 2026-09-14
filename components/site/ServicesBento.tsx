@@ -78,12 +78,12 @@ const STANDARD = [
 
 /** Compact site-lifecycle flow shown inside the SMO featured card. */
 const FlowDiagram = () => (
-  <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-4">
+  <div className="rounded-xl border border-brand-line bg-slate-50/70 p-4">
     <div className="flex items-center justify-between gap-1.5">
       {["Identify", "Initiate", "Recruit", "Comply"].map((step, index) => (
         <React.Fragment key={step}>
           <div className="flex flex-1 flex-col items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[11px] font-bold text-sky-600 ring-1 ring-inset ring-sky-200">
+            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-white text-[11px] font-semibold text-brand-accent ring-1 ring-inset ring-sky-200">
               {index + 1}
             </span>
             <span className="text-center text-[10px] font-semibold uppercase tracking-wide text-slate-500">
@@ -93,7 +93,7 @@ const FlowDiagram = () => (
           {index < 3 ? (
             <span
               aria-hidden="true"
-              className="mb-5 h-px flex-1 bg-gradient-to-r from-sky-200 to-slate-200"
+              className="mb-5 h-px flex-1 bg-brand-line"
             />
           ) : null}
         </React.Fragment>
@@ -104,7 +104,7 @@ const FlowDiagram = () => (
 
 /** Monitoring-mode coverage strip shown inside the CTM featured card. */
 const CoverageDiagram = () => (
-  <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-4">
+  <div className="rounded-xl border border-brand-line bg-slate-50/70 p-4">
     <div className="mb-3 flex items-center gap-2">
       <StatusDot tone="cyan" />
       <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500">
@@ -123,7 +123,7 @@ const CoverageDiagram = () => (
           </span>
           <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-slate-200">
             <span
-              className={`block h-full rounded-full bg-gradient-to-r from-sky-500 to-teal-400 ${row.width}`}
+              className={`block h-full rounded-full bg-brand-accent ${row.width}`}
             />
           </span>
         </div>
@@ -167,12 +167,12 @@ const ServicesBento = () => {
 };
 
 const FeaturedCard = ({ service }: { service: (typeof FEATURED)[number] }) => (
-  <GlowCard className="transition-transform duration-500 hover:-translate-y-1.5">
+  <GlowCard className="transition-transform duration-500 hover:-translate-y-0.5">
     <article className="flex h-full flex-col p-7 sm:p-8">
     <div className="flex flex-wrap items-start justify-between gap-4">
       <div className="flex items-center gap-4">
         <IconBadge icon={service.icon} />
-        <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+        <h3 className="text-xl font-semibold tracking-tight text-brand-ink sm:text-2xl">
           {service.title}
         </h3>
       </div>
@@ -185,7 +185,7 @@ const FeaturedCard = ({ service }: { service: (typeof FEATURED)[number] }) => (
       </div>
     </div>
 
-    <p className="mt-5 text-[15px] leading-relaxed text-slate-600">
+    <p className="mt-5 text-[15px] leading-relaxed text-brand-body">
       {service.summary}
     </p>
 
@@ -207,10 +207,10 @@ const FeaturedCard = ({ service }: { service: (typeof FEATURED)[number] }) => (
       </div>
     </div>
 
-    <div className="mt-7 border-t border-slate-100 pt-5">
+    <div className="mt-7 border-t border-brand-line pt-5">
       <NextLink
         href={service.href}
-        className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition-colors hover:text-sky-800"
+        className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-accentDark"
       >
         <span className="animated-underline">Explore {service.title}</span>
         <LuArrowRight
@@ -224,13 +224,13 @@ const FeaturedCard = ({ service }: { service: (typeof FEATURED)[number] }) => (
 );
 
 const StandardCard = ({ service }: { service: (typeof STANDARD)[number] }) => (
-  <GlowCard className="transition-transform duration-500 hover:-translate-y-1.5">
+  <GlowCard className="transition-transform duration-500 hover:-translate-y-0.5">
     <article className="flex h-full flex-col p-7 sm:p-8">
     <IconBadge icon={service.icon} />
-    <h3 className="mt-6 text-xl font-bold tracking-tight text-slate-900">
+    <h3 className="mt-6 text-xl font-semibold tracking-tight text-brand-ink">
       {service.title}
     </h3>
-    <p className="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+    <p className="mt-3 flex-1 text-[15px] leading-relaxed text-brand-body">
       {service.summary}
     </p>
     <div className="mt-5 flex flex-wrap gap-1.5">
@@ -238,10 +238,10 @@ const StandardCard = ({ service }: { service: (typeof STANDARD)[number] }) => (
         <Tag key={tag}>{tag}</Tag>
       ))}
     </div>
-    <div className="mt-6 border-t border-slate-100 pt-5">
+    <div className="mt-6 border-t border-brand-line pt-5">
       <NextLink
         href={service.href}
-        className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition-colors hover:text-sky-800"
+        className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-accentDark"
       >
         <span className="animated-underline">Read more</span>
         <LuArrowRight

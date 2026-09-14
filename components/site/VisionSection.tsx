@@ -30,14 +30,14 @@ const VisionSection = () => {
             <MotionCard
               key={point}
               delay={index * 0.08}
-              className="h-full transition-transform duration-500 hover:-translate-y-1.5"
+              className="h-full transition-transform duration-500 hover:-translate-y-0.5"
             >
               <GlowCard>
                 <article className="flex h-full flex-col p-8">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-teal-400 text-base font-bold text-slate-950">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-brand-accentSoft text-base font-semibold text-brand-accent">
                     {index + 1}
                   </span>
-                  <p className="mt-6 text-[15px] leading-relaxed text-slate-600">
+                  <p className="mt-6 text-[15px] leading-relaxed text-brand-body">
                     {point}
                   </p>
                 </article>
@@ -49,7 +49,7 @@ const VisionSection = () => {
         <MotionDiv initialTranslateY={30} className="mt-12 flex justify-center">
           <NextLink
             href="/about"
-            className="group/cta inline-flex items-center gap-2 rounded-full bg-slate-900 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:bg-slate-800"
+            className="group/cta inline-flex items-center gap-2 rounded-md bg-brand-ink px-7 py-3.5 text-sm font-bold text-white transition-colors hover:bg-slate-800"
           >
             Discover More About Us
             <LuArrowRight

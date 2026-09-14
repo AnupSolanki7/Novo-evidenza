@@ -159,7 +159,7 @@ export const Navbar = () => {
               </button>
 
               {isServicesOpen ? (
-                <div className="absolute left-1/2 top-[calc(100%+14px)] w-[380px] -translate-x-1/2 overflow-hidden rounded-2xl border border-white/10 bg-[#0B132B]/95 p-2 shadow-[0_10px_40px_rgb(2,12,34,0.35)] backdrop-blur-md">
+                <div className="absolute left-1/2 top-[calc(100%+14px)] w-[380px] -translate-x-1/2 overflow-hidden rounded-md border border-white/10 bg-[#0B132B]/95 p-2 shadow-[0_10px_40px_rgb(2,12,34,0.35)] backdrop-blur-md">
                   {SERVICE_NAV.map((service) => (
                     <NextLink
                       key={service.id}
@@ -210,7 +210,7 @@ export const Navbar = () => {
             <NextLink
               href="/about#contact"
               onClick={closeAll}
-              className="hidden items-center gap-2 rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-sm transition-colors hover:bg-sky-400 sm:inline-flex"
+              className="hidden items-center gap-2 rounded-md bg-brand-accent px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-sm transition-colors hover:bg-brand-accentDark sm:inline-flex"
             >
               Schedule RFP / Proposal
               <LuArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -294,7 +294,7 @@ export const Navbar = () => {
             <NextLink
               href="/about#contact"
               onClick={closeAll}
-              className="mt-6 flex items-center justify-center gap-2 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-sky-400"
+              className="mt-6 flex items-center justify-center gap-2 rounded-md bg-brand-accent px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-brand-accentDark"
             >
               Schedule RFP / Proposal
               <LuArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -308,7 +308,7 @@ export const Navbar = () => {
           className="absolute inset-x-0 bottom-0 h-px bg-transparent"
         >
           <div
-            className="h-full bg-gradient-to-r from-sky-400 to-teal-300 transition-[width] duration-150 ease-out"
+            className="h-full bg-brand-accent transition-[width] duration-150 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>
