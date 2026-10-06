@@ -144,11 +144,11 @@ const Footer = () => {
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="mailto:Vivoclinresearch@gmail.com"
+                  href="mailto:research@vivoclin.com"
                   className="flex items-center gap-2.5 text-sm text-slate-400 transition-colors hover:text-white"
                 >
                   <LuMail className="h-4 w-4 shrink-0 text-sky-400" aria-hidden="true" />
-                  Vivoclinresearch@gmail.com
+                  research@vivoclin.com
                 </a>
               </li>
               {PHONES.map((phone) => (
@@ -183,7 +183,7 @@ const Footer = () => {
 
             <NextLink
               href="/about#contact"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand-accent px-5 py-2.5 text-sm font-semibold text-slate-950 transition-colors hover:bg-brand-accentDark"
+              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-accentDark"
             >
               Send Us Your Enquiry
             </NextLink>

@@ -210,7 +210,7 @@ export const Navbar = () => {
             <NextLink
               href="/about#contact"
               onClick={closeAll}
-              className="hidden items-center gap-2 rounded-md bg-brand-accent px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-sm transition-colors hover:bg-brand-accentDark sm:inline-flex"
+              className="hidden items-center gap-2 rounded-md bg-brand-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-accentDark sm:inline-flex"
             >
               Schedule RFP / Proposal
               <LuArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -294,7 +294,7 @@ export const Navbar = () => {
             <NextLink
               href="/about#contact"
               onClick={closeAll}
-              className="mt-6 flex items-center justify-center gap-2 rounded-md bg-brand-accent px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-brand-accentDark"
+              className="mt-6 flex items-center justify-center gap-2 rounded-md bg-brand-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-accentDark"
             >
               Schedule RFP / Proposal
               <LuArrowRight className="h-4 w-4" aria-hidden="true" />

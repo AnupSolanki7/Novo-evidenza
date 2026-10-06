@@ -49,7 +49,7 @@ const OFFICES = [
   },
 ];
 
-const EMAILS = ["vivoclinresearch@gmail.com", "vivoclinaustralia@gmail.com"];
+const EMAILS = ["research@vivoclin.com", "vivoclinaustralia@gmail.com"];
 
 const PHONES = [
   { label: "+61 425 342 368", href: "tel:+61425342368" },

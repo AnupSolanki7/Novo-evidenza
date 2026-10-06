@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { LuMail } from "react-icons/lu";
 
 const FounderCard = ({ item }: { item: any }) => {
   return (
@@ -19,6 +20,17 @@ const FounderCard = ({ item }: { item: any }) => {
       </h3>
       <p className="mt-1.5 text-sm font-semibold text-brand-accent">{item.role}</p>
       <p className="mt-4 text-sm leading-relaxed text-brand-body">{item.text}</p>
+
+      {/* Only some of the team publish a direct address. */}
+      {item.email ? (
+        <a
+          href={`mailto:${item.email}`}
+          className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-accent transition-colors hover:text-brand-accentDark"
+        >
+          <LuMail className="h-4 w-4 shrink-0" aria-hidden="true" />
+          {item.email}
+        </a>
+      ) : null}
     </article>
   );
 };

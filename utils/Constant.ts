@@ -153,12 +153,14 @@ export const FOUNDERS = [
     image: Kunal,
     name: "Dr. Kunal Maheshwari",
     role: "Operation team",
+    email: "Dr.kunal@vivoclin.com",
     text: "Dr. Kunal Maheshwari is an experienced medical writer and clinical research professional with expertise in scientific writing, regulatory documentation, and medical communications. His proficiency in crafting high-quality manuscripts, clinical study reports, and regulatory submissions ensures clarity, accuracy, and compliance with industry standards. With a strong background in clinical research, he bridges the gap between scientific data and effective communication, contributing to impactful medical literature and research excellence.",
   },
   {
     image: Kaif,
     name: "Dr. Mohammad Kaif",
     role: "Operation team",
+    email: "Dr.Kaif@vivoclin.com",
     text: "Dr. Mohammad Kaif is an experienced clinical research professional with expertise in study coordination and quality assurance. As a scientific writing expert, he has contributed to impactful research through numerous authored manuscripts. His multidisciplinary experience strengthens clinical trial execution and regulatory compliance.",
   },
   //   {
